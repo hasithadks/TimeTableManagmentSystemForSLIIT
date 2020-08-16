@@ -52,16 +52,22 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="IT18049114\Forms\Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IT18049114\Forms\Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
     <Compile Include="IT18063288\Forms\LocationForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="IT18063288\Forms\LocationForm.Designer.cs">
       <DependentUpon>LocationForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="IT18063288\UserControls\ViewLocationUC.cs">
+    <Compile Include="IT18063288\UserControllers\ViewLocationUC.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="IT18063288\UserControls\ViewLocationUC.Designer.cs">
+    <Compile Include="IT18063288\UserControllers\ViewLocationUC.Designer.cs">
       <DependentUpon>ViewLocationUC.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
@@ -69,7 +75,7 @@
     <EmbeddedResource Include="IT18063288\Forms\LocationForm.resx">
       <DependentUpon>LocationForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="IT18063288\UserControls\ViewLocationUC.resx">
+    <EmbeddedResource Include="IT18063288\UserControllers\ViewLocationUC.resx">
       <DependentUpon>ViewLocationUC.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -96,7 +102,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="CommonFiles\" />
-    <Folder Include="IT18049114\" />
+    <Folder Include="IT18049114\UserControllers\" />
     <Folder Include="IT18050240\" />
     <Folder Include="IT18058338\" />
   </ItemGroup>
