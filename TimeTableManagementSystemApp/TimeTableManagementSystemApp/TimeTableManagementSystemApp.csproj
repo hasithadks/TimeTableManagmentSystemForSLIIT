@@ -58,6 +58,12 @@
     <Compile Include="IT18049114\Forms\Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="IT18049114\UserControllers\UserControl1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="IT18049114\UserControllers\UserControl1.Designer.cs">
+      <DependentUpon>UserControl1.cs</DependentUpon>
+    </Compile>
     <Compile Include="IT18063288\Forms\LocationForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -102,7 +108,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="CommonFiles\" />
-    <Folder Include="IT18049114\UserControllers\" />
     <Folder Include="IT18050240\" />
     <Folder Include="IT18058338\" />
   </ItemGroup>
