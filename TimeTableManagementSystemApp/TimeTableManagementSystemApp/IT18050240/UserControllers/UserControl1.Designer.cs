@@ -1,6 +1,6 @@
-﻿namespace TimeTableManagementSystemApp.IT18063288.UserControls
+﻿namespace TimeTableManagementSystemApp.IT18050240.UserControllers
 {
-    partial class ViewLocationUC
+    partial class UserControl1
     {
         /// <summary> 
         /// Required designer variable.
@@ -28,17 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.SuspendLayout();
-            // 
-            // ViewLocationUC
-            // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            components = new System.ComponentModel.Container();
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.Name = "ViewLocationUC";
-            this.Size = new System.Drawing.Size(1025, 700);
-            this.ResumeLayout(false);
-
         }
 
         #endregion
