@@ -47,6 +47,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CommonFiles\CommonClass.cs" />
+    <Compile Include="CommonFiles\TopManuBarUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CommonFiles\TopManuBarUC.Designer.cs">
+      <DependentUpon>TopManuBarUC.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -95,6 +101,18 @@
     <Compile Include="IT18063288\Forms\LocationForm.Designer.cs">
       <DependentUpon>LocationForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="IT18063288\UserControllers\AddLocationUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="IT18063288\UserControllers\AddLocationUC.Designer.cs">
+      <DependentUpon>AddLocationUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IT18063288\UserControllers\SubUserControllers\EditLocationDataUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="IT18063288\UserControllers\SubUserControllers\EditLocationDataUC.Designer.cs">
+      <DependentUpon>EditLocationDataUC.cs</DependentUpon>
+    </Compile>
     <Compile Include="IT18063288\UserControllers\ViewLocationUC.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -103,8 +121,17 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="CommonFiles\TopManuBarUC.resx">
+      <DependentUpon>TopManuBarUC.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="IT18063288\Forms\LocationForm.resx">
       <DependentUpon>LocationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IT18063288\UserControllers\AddLocationUC.resx">
+      <DependentUpon>AddLocationUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IT18063288\UserControllers\SubUserControllers\EditLocationDataUC.resx">
+      <DependentUpon>EditLocationDataUC.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="IT18063288\UserControllers\ViewLocationUC.resx">
       <DependentUpon>ViewLocationUC.cs</DependentUpon>
