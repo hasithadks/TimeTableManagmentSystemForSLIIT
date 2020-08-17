@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TimeTableManagementSystemApp.CommonFiles;
+using TimeTableManagementSystemApp.IT18063288.UserControls;
 
 namespace TimeTableManagementSystemApp.IT18063288
 {
@@ -15,6 +17,13 @@ namespace TimeTableManagementSystemApp.IT18063288
         public LocationForm()
         {
             InitializeComponent();
+        }
+
+        
+        private void btnViewLocation_Click(object sender, EventArgs e)
+        {
+            ViewLocationUC viewLocationUC = new ViewLocationUC();
+            CommonClass.showControl(viewLocationUC, panelContent); 
         }
     }
 }
