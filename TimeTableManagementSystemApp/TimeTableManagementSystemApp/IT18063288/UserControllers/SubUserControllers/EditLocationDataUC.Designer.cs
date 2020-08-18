@@ -53,7 +53,7 @@
             // 
             // textBox1
             // 
-            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.textBox1.BackColor = System.Drawing.Color.DimGray;
             this.textBox1.Location = new System.Drawing.Point(384, 106);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(200, 20);
@@ -72,7 +72,7 @@
             // 
             // checkedListBox1
             // 
-            this.checkedListBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.checkedListBox1.BackColor = System.Drawing.Color.DimGray;
             this.checkedListBox1.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkedListBox1.ForeColor = System.Drawing.Color.White;
             this.checkedListBox1.FormattingEnabled = true;
@@ -81,7 +81,7 @@
             "Lab"});
             this.checkedListBox1.Location = new System.Drawing.Point(384, 142);
             this.checkedListBox1.Name = "checkedListBox1";
-            this.checkedListBox1.Size = new System.Drawing.Size(202, 49);
+            this.checkedListBox1.Size = new System.Drawing.Size(202, 48);
             this.checkedListBox1.TabIndex = 4;
             // 
             // label3
@@ -130,10 +130,10 @@
             // 
             // btnEditLocationUC
             // 
-            this.btnEditLocationUC.BackColor = System.Drawing.Color.Goldenrod;
+            this.btnEditLocationUC.BackColor = System.Drawing.Color.DimGray;
             this.btnEditLocationUC.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btnEditLocationUC.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnEditLocationUC.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEditLocationUC.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEditLocationUC.ForeColor = System.Drawing.Color.White;
             this.btnEditLocationUC.Location = new System.Drawing.Point(485, 228);
             this.btnEditLocationUC.Margin = new System.Windows.Forms.Padding(0);
@@ -147,7 +147,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.BackColor = System.Drawing.Color.DimGray;
             this.Controls.Add(this.btnEditLocationUC);
             this.Controls.Add(this.lblRoom);
             this.Controls.Add(this.lblBuilding);

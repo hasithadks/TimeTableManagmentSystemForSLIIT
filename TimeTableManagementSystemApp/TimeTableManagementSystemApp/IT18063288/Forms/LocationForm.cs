@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using TimeTableManagementSystemApp.CommonFiles;
+using TimeTableManagementSystemApp.IT18063288.UserControllers;
 using TimeTableManagementSystemApp.IT18063288.UserControls;
 
 namespace TimeTableManagementSystemApp.IT18063288
@@ -44,6 +45,15 @@ namespace TimeTableManagementSystemApp.IT18063288
             panelLeft.Height = btnAddLocation.Height;
             panelLeft.Top = btnAddLocation.Top;
             panelLeft.BackColor = btnAddLocation.BackColor;
+
+            AddLocationUC addLocationUC = new AddLocationUC();
+            CommonClass.showControl(addLocationUC, panelContent);
+        }
+
+        private void btnStatistic_Click(object sender, EventArgs e)
+        {
+            StatisticUC statisticUC = new StatisticUC();
+            CommonClass.showControl(statisticUC, panelContent);
         }
     }
 }

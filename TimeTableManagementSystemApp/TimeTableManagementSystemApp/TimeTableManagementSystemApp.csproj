@@ -107,11 +107,29 @@
     <Compile Include="IT18063288\UserControllers\AddLocationUC.Designer.cs">
       <DependentUpon>AddLocationUC.cs</DependentUpon>
     </Compile>
+    <Compile Include="IT18063288\UserControllers\StatisticUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="IT18063288\UserControllers\StatisticUC.Designer.cs">
+      <DependentUpon>StatisticUC.cs</DependentUpon>
+    </Compile>
     <Compile Include="IT18063288\UserControllers\SubUserControllers\EditLocationDataUC.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="IT18063288\UserControllers\SubUserControllers\EditLocationDataUC.Designer.cs">
       <DependentUpon>EditLocationDataUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IT18063288\UserControllers\SubUserControllers\MoreRoomDetailsUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="IT18063288\UserControllers\SubUserControllers\MoreRoomDetailsUC.Designer.cs">
+      <DependentUpon>MoreRoomDetailsUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IT18063288\UserControllers\SubUserControllers\StatisticInnerUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="IT18063288\UserControllers\SubUserControllers\StatisticInnerUC.Designer.cs">
+      <DependentUpon>StatisticInnerUC.cs</DependentUpon>
     </Compile>
     <Compile Include="IT18063288\UserControllers\ViewLocationUC.cs">
       <SubType>UserControl</SubType>
@@ -130,8 +148,17 @@
     <EmbeddedResource Include="IT18063288\UserControllers\AddLocationUC.resx">
       <DependentUpon>AddLocationUC.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="IT18063288\UserControllers\StatisticUC.resx">
+      <DependentUpon>StatisticUC.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="IT18063288\UserControllers\SubUserControllers\EditLocationDataUC.resx">
       <DependentUpon>EditLocationDataUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IT18063288\UserControllers\SubUserControllers\MoreRoomDetailsUC.resx">
+      <DependentUpon>MoreRoomDetailsUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IT18063288\UserControllers\SubUserControllers\StatisticInnerUC.resx">
+      <DependentUpon>StatisticInnerUC.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="IT18063288\UserControllers\ViewLocationUC.resx">
       <DependentUpon>ViewLocationUC.cs</DependentUpon>

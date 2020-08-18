@@ -34,6 +34,7 @@
             this.panelLeft = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnAddLocation = new System.Windows.Forms.Button();
+            this.btnStatistic = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -84,6 +85,7 @@
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.btnStatistic);
             this.panel2.Controls.Add(this.btnAddLocation);
             this.panel2.Controls.Add(this.btnViewLocation);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
@@ -98,7 +100,7 @@
             this.btnAddLocation.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnAddLocation.BackColor = System.Drawing.Color.Purple;
+            this.btnAddLocation.BackColor = System.Drawing.Color.Plum;
             this.btnAddLocation.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAddLocation.FlatAppearance.BorderSize = 0;
             this.btnAddLocation.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -111,6 +113,25 @@
             this.btnAddLocation.Text = "Add, Edit, Delete Location";
             this.btnAddLocation.UseVisualStyleBackColor = false;
             this.btnAddLocation.Click += new System.EventHandler(this.btnAddLocation_Click_1);
+            // 
+            // btnStatistic
+            // 
+            this.btnStatistic.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnStatistic.BackColor = System.Drawing.Color.Orchid;
+            this.btnStatistic.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnStatistic.FlatAppearance.BorderSize = 0;
+            this.btnStatistic.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnStatistic.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnStatistic.ForeColor = System.Drawing.Color.White;
+            this.btnStatistic.Location = new System.Drawing.Point(0, 125);
+            this.btnStatistic.Name = "btnStatistic";
+            this.btnStatistic.Size = new System.Drawing.Size(250, 54);
+            this.btnStatistic.TabIndex = 2;
+            this.btnStatistic.Text = "Statistics";
+            this.btnStatistic.UseVisualStyleBackColor = false;
+            this.btnStatistic.Click += new System.EventHandler(this.btnStatistic_Click);
             // 
             // LocationForm
             // 
@@ -138,5 +159,6 @@
         private System.Windows.Forms.Panel panelLeft;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button btnAddLocation;
+        private System.Windows.Forms.Button btnStatistic;
     }
 }
