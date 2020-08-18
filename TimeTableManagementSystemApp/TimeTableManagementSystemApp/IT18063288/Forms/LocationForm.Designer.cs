@@ -90,7 +90,7 @@
             this.panel2.Location = new System.Drawing.Point(0, 60);
             this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(250, 708);
+            this.panel2.Size = new System.Drawing.Size(263, 708);
             this.panel2.TabIndex = 1;
             // 
             // btnAddLocation
@@ -106,7 +106,7 @@
             this.btnAddLocation.ForeColor = System.Drawing.Color.White;
             this.btnAddLocation.Location = new System.Drawing.Point(3, 65);
             this.btnAddLocation.Name = "btnAddLocation";
-            this.btnAddLocation.Size = new System.Drawing.Size(250, 54);
+            this.btnAddLocation.Size = new System.Drawing.Size(263, 54);
             this.btnAddLocation.TabIndex = 1;
             this.btnAddLocation.Text = "Add, Edit, Delete Location";
             this.btnAddLocation.UseVisualStyleBackColor = false;
