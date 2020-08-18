@@ -71,23 +71,35 @@
     <Compile Include="IT18049114\UserControllers\UserControl1.Designer.cs">
       <DependentUpon>UserControl1.cs</DependentUpon>
     </Compile>
-    <Compile Include="IT18050240\Forms\Form1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="IT18050240\Forms\Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="IT18050240\UserControllers\UserControl1.cs">
+    <Compile Include="IT18050240\UserControllers\GenerateTimeTableUC.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="IT18050240\UserControllers\UserControl1.Designer.cs">
-      <DependentUpon>UserControl1.cs</DependentUpon>
+    <Compile Include="IT18050240\UserControllers\GenerateTimeTableUC.Designer.cs">
+      <DependentUpon>GenerateTimeTableUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IT18050240\UserControllers\ViewTimeTableUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="IT18050240\UserControllers\ViewTimeTableUC.Designer.cs">
+      <DependentUpon>ViewTimeTableUC.cs</DependentUpon>
     </Compile>
     <Compile Include="IT18058338\Forms\Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="IT18058338\Forms\Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IT18050240\Forms\WorkingDaysForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IT18050240\Forms\WorkingDaysForm.Designer.cs">
+      <DependentUpon>WorkingDaysForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IT18050240\UserControllers\AddWorkingDaysUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="IT18050240\UserControllers\AddWorkingDaysUC.Designer.cs">
+      <DependentUpon>AddWorkingDaysUC.cs</DependentUpon>
     </Compile>
     <Compile Include="IT18058338\UserControllers\UserControl1.cs">
       <SubType>UserControl</SubType>
@@ -139,8 +151,17 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="CommonFiles\TopManuBarUC.resx">
-      <DependentUpon>TopManuBarUC.cs</DependentUpon>
+    <EmbeddedResource Include="IT18050240\Forms\WorkingDaysForm.resx">
+      <DependentUpon>WorkingDaysForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IT18050240\UserControllers\AddWorkingDaysUC.resx">
+      <DependentUpon>AddWorkingDaysUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IT18050240\UserControllers\GenerateTimeTableUC.resx">
+      <DependentUpon>GenerateTimeTableUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IT18050240\UserControllers\ViewTimeTableUC.resx">
+      <DependentUpon>ViewTimeTableUC.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="IT18063288\Forms\LocationForm.resx">
       <DependentUpon>LocationForm.cs</DependentUpon>
@@ -195,6 +216,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Resources\add-square-button.png" />
+    <None Include="Resources\SLIIT.png" />
+    <None Include="Resources\minibtn.png" />
+    <None Include="Resources\Maxibtn.png" />
+    <None Include="Resources\closebtn.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
