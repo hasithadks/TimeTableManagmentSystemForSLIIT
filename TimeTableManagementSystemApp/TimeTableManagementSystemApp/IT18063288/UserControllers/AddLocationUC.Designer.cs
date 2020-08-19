@@ -44,13 +44,12 @@
             this.txtNewRoom = new System.Windows.Forms.TextBox();
             this.comboBoxRoom = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.lblRoomDetails = new System.Windows.Forms.Label();
             this.panelRoomDetails = new System.Windows.Forms.Panel();
             this.SuspendLayout();
             // 
             // btnBuildingSave
             // 
-            this.btnBuildingSave.BackColor = System.Drawing.Color.DimGray;
+            this.btnBuildingSave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(43)))), ((int)(((byte)(104)))));
             this.btnBuildingSave.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnBuildingSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBuildingSave.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -61,6 +60,7 @@
             this.btnBuildingSave.TabIndex = 15;
             this.btnBuildingSave.Text = "Save";
             this.btnBuildingSave.UseVisualStyleBackColor = false;
+            this.btnBuildingSave.Click += new System.EventHandler(this.btnBuildingSave_Click);
             // 
             // txtNewBuilding
             // 
@@ -89,7 +89,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.ForeColor = System.Drawing.Color.Black;
             this.label1.Location = new System.Drawing.Point(99, 63);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(133, 23);
@@ -98,7 +98,7 @@
             // 
             // btnBuildingUpdate
             // 
-            this.btnBuildingUpdate.BackColor = System.Drawing.Color.DimGray;
+            this.btnBuildingUpdate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(43)))), ((int)(((byte)(104)))));
             this.btnBuildingUpdate.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnBuildingUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBuildingUpdate.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -112,7 +112,7 @@
             // 
             // btnChangeBuildingName
             // 
-            this.btnChangeBuildingName.BackColor = System.Drawing.Color.DimGray;
+            this.btnChangeBuildingName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(43)))), ((int)(((byte)(104)))));
             this.btnChangeBuildingName.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnChangeBuildingName.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnChangeBuildingName.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -127,7 +127,7 @@
             // 
             // btnDeleteBuilding
             // 
-            this.btnDeleteBuilding.BackColor = System.Drawing.Color.DimGray;
+            this.btnDeleteBuilding.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(43)))), ((int)(((byte)(104)))));
             this.btnDeleteBuilding.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDeleteBuilding.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDeleteBuilding.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -141,7 +141,7 @@
             // 
             // btnAddNewBuilding
             // 
-            this.btnAddNewBuilding.BackColor = System.Drawing.Color.DimGray;
+            this.btnAddNewBuilding.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(43)))), ((int)(((byte)(104)))));
             this.btnAddNewBuilding.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAddNewBuilding.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAddNewBuilding.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -156,7 +156,7 @@
             // 
             // btnAddNewRoom
             // 
-            this.btnAddNewRoom.BackColor = System.Drawing.Color.DimGray;
+            this.btnAddNewRoom.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(43)))), ((int)(((byte)(104)))));
             this.btnAddNewRoom.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAddNewRoom.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAddNewRoom.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -171,7 +171,7 @@
             // 
             // btnDeleteRoom
             // 
-            this.btnDeleteRoom.BackColor = System.Drawing.Color.DimGray;
+            this.btnDeleteRoom.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(43)))), ((int)(((byte)(104)))));
             this.btnDeleteRoom.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDeleteRoom.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDeleteRoom.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -185,7 +185,7 @@
             // 
             // btnChangeRoomName
             // 
-            this.btnChangeRoomName.BackColor = System.Drawing.Color.DimGray;
+            this.btnChangeRoomName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(43)))), ((int)(((byte)(104)))));
             this.btnChangeRoomName.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnChangeRoomName.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnChangeRoomName.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -200,7 +200,7 @@
             // 
             // btnRoomUpdate
             // 
-            this.btnRoomUpdate.BackColor = System.Drawing.Color.DimGray;
+            this.btnRoomUpdate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(43)))), ((int)(((byte)(104)))));
             this.btnRoomUpdate.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnRoomUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRoomUpdate.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -214,7 +214,7 @@
             // 
             // btnRoomSave
             // 
-            this.btnRoomSave.BackColor = System.Drawing.Color.DimGray;
+            this.btnRoomSave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(43)))), ((int)(((byte)(104)))));
             this.btnRoomSave.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnRoomSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRoomSave.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -225,6 +225,7 @@
             this.btnRoomSave.TabIndex = 23;
             this.btnRoomSave.Text = "Save";
             this.btnRoomSave.UseVisualStyleBackColor = false;
+            this.btnRoomSave.Click += new System.EventHandler(this.btnRoomSave_Click);
             // 
             // txtNewRoom
             // 
@@ -247,34 +248,22 @@
             this.comboBoxRoom.Name = "comboBoxRoom";
             this.comboBoxRoom.Size = new System.Drawing.Size(329, 27);
             this.comboBoxRoom.TabIndex = 21;
+            this.comboBoxRoom.SelectedIndexChanged += new System.EventHandler(this.comboBoxRoom_SelectedIndexChanged);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.ForeColor = System.Drawing.Color.Black;
             this.label2.Location = new System.Drawing.Point(109, 179);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(114, 23);
             this.label2.TabIndex = 20;
             this.label2.Text = "Select Room";
             // 
-            // lblRoomDetails
-            // 
-            this.lblRoomDetails.AutoSize = true;
-            this.lblRoomDetails.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.lblRoomDetails.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRoomDetails.ForeColor = System.Drawing.Color.White;
-            this.lblRoomDetails.Location = new System.Drawing.Point(362, 299);
-            this.lblRoomDetails.Name = "lblRoomDetails";
-            this.lblRoomDetails.Size = new System.Drawing.Size(153, 23);
-            this.lblRoomDetails.TabIndex = 28;
-            this.lblRoomDetails.Text = "Room Details >>";
-            this.lblRoomDetails.Click += new System.EventHandler(this.lblRoomDetails_Click);
-            // 
             // panelRoomDetails
             // 
-            this.panelRoomDetails.Location = new System.Drawing.Point(3, 335);
+            this.panelRoomDetails.Location = new System.Drawing.Point(2, 286);
             this.panelRoomDetails.Name = "panelRoomDetails";
             this.panelRoomDetails.Size = new System.Drawing.Size(1020, 365);
             this.panelRoomDetails.TabIndex = 35;
@@ -283,8 +272,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.DimGray;
-            this.Controls.Add(this.lblRoomDetails);
+            this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.btnAddNewRoom);
             this.Controls.Add(this.btnDeleteRoom);
             this.Controls.Add(this.btnChangeRoomName);
@@ -303,7 +291,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panelRoomDetails);
             this.Name = "AddLocationUC";
-            this.Size = new System.Drawing.Size(1025, 700);
+            this.Size = new System.Drawing.Size(1027, 641);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -326,7 +314,6 @@
         private System.Windows.Forms.TextBox txtNewRoom;
         private System.Windows.Forms.ComboBox comboBoxRoom;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label lblRoomDetails;
         private System.Windows.Forms.Panel panelRoomDetails;
     }
 }

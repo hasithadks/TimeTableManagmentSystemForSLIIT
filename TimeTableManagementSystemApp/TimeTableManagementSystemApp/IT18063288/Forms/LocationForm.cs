@@ -20,16 +20,18 @@ namespace TimeTableManagementSystemApp.IT18063288
             InitializeComponent();
             TopManuBarUC topManuBarUC = new TopManuBarUC();
             CommonClass.showControl(topManuBarUC, panelMainMenubar);
-            panelLeft.Height = btnViewLocation.Height;
-            panelLeft.Top = btnViewLocation.Top;
+            //panelLeft.Height = btnViewLocation.Height;
+            //  panelLeft.Top = btnViewLocation.Top;
+            panelLeft.Visible = false;
         }
 
         
         private void btnViewLocation_Click(object sender, EventArgs e)
         {
+            panelLeft.Visible = true;
             panelLeft.Height = btnViewLocation.Height;
             panelLeft.Top = btnViewLocation.Top;
-            panelLeft.BackColor = btnViewLocation.BackColor;
+           // panelLeft.BackColor = btnViewLocation.BackColor;
             ViewLocationUC viewLocationUC = new ViewLocationUC();
             CommonClass.showControl(viewLocationUC, panelContent); 
         }
@@ -42,9 +44,10 @@ namespace TimeTableManagementSystemApp.IT18063288
 
         private void btnAddLocation_Click_1(object sender, EventArgs e)
         {
+            panelLeft.Visible = true;
             panelLeft.Height = btnAddLocation.Height;
             panelLeft.Top = btnAddLocation.Top;
-            panelLeft.BackColor = btnAddLocation.BackColor;
+           // panelLeft.BackColor = btnAddLocation.BackColor;
 
             AddLocationUC addLocationUC = new AddLocationUC();
             CommonClass.showControl(addLocationUC, panelContent);
@@ -52,8 +55,21 @@ namespace TimeTableManagementSystemApp.IT18063288
 
         private void btnStatistic_Click(object sender, EventArgs e)
         {
+            panelLeft.Visible = true;
+            panelLeft.Height = btnStatistic.Height;
+            panelLeft.Top = btnStatistic.Top;
             StatisticUC statisticUC = new StatisticUC();
             CommonClass.showControl(statisticUC, panelContent);
+        }
+
+        private void closeBtn_Click(object sender, EventArgs e)
+        {
+            Environment.Exit(0);
+        }
+
+        private void miniBtn_Click(object sender, EventArgs e)
+        {
+            WindowState = FormWindowState.Minimized;
         }
     }
 }

@@ -43,7 +43,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.ForeColor = System.Drawing.Color.Black;
             this.label1.Location = new System.Drawing.Point(153, 106);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(197, 23);
@@ -53,7 +53,7 @@
             // 
             // textBox1
             // 
-            this.textBox1.BackColor = System.Drawing.Color.DimGray;
+            this.textBox1.BackColor = System.Drawing.Color.White;
             this.textBox1.Location = new System.Drawing.Point(384, 106);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(200, 20);
@@ -63,7 +63,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.ForeColor = System.Drawing.Color.Black;
             this.label2.Location = new System.Drawing.Point(232, 142);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(118, 23);
@@ -72,9 +72,9 @@
             // 
             // checkedListBox1
             // 
-            this.checkedListBox1.BackColor = System.Drawing.Color.DimGray;
+            this.checkedListBox1.BackColor = System.Drawing.Color.White;
             this.checkedListBox1.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkedListBox1.ForeColor = System.Drawing.Color.White;
+            this.checkedListBox1.ForeColor = System.Drawing.Color.Black;
             this.checkedListBox1.FormattingEnabled = true;
             this.checkedListBox1.Items.AddRange(new object[] {
             "Lecture Hall",
@@ -88,7 +88,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.ForeColor = System.Drawing.Color.Black;
             this.label3.Location = new System.Drawing.Point(262, 42);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(90, 23);
@@ -99,7 +99,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.ForeColor = System.Drawing.Color.Black;
             this.label4.Location = new System.Drawing.Point(279, 74);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(71, 23);
@@ -110,7 +110,7 @@
             // 
             this.lblBuilding.AutoSize = true;
             this.lblBuilding.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBuilding.ForeColor = System.Drawing.Color.White;
+            this.lblBuilding.ForeColor = System.Drawing.Color.Gray;
             this.lblBuilding.Location = new System.Drawing.Point(380, 42);
             this.lblBuilding.Name = "lblBuilding";
             this.lblBuilding.Size = new System.Drawing.Size(120, 23);
@@ -121,7 +121,7 @@
             // 
             this.lblRoom.AutoSize = true;
             this.lblRoom.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRoom.ForeColor = System.Drawing.Color.White;
+            this.lblRoom.ForeColor = System.Drawing.Color.Gray;
             this.lblRoom.Location = new System.Drawing.Point(380, 74);
             this.lblRoom.Name = "lblRoom";
             this.lblRoom.Size = new System.Drawing.Size(51, 23);
@@ -130,15 +130,15 @@
             // 
             // btnEditLocationUC
             // 
-            this.btnEditLocationUC.BackColor = System.Drawing.Color.DimGray;
+            this.btnEditLocationUC.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(43)))), ((int)(((byte)(104)))));
             this.btnEditLocationUC.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btnEditLocationUC.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnEditLocationUC.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEditLocationUC.ForeColor = System.Drawing.Color.White;
-            this.btnEditLocationUC.Location = new System.Drawing.Point(485, 228);
+            this.btnEditLocationUC.Location = new System.Drawing.Point(437, 214);
             this.btnEditLocationUC.Margin = new System.Windows.Forms.Padding(0);
             this.btnEditLocationUC.Name = "btnEditLocationUC";
-            this.btnEditLocationUC.Size = new System.Drawing.Size(101, 30);
+            this.btnEditLocationUC.Size = new System.Drawing.Size(149, 44);
             this.btnEditLocationUC.TabIndex = 9;
             this.btnEditLocationUC.Text = "EDIT";
             this.btnEditLocationUC.UseVisualStyleBackColor = false;
@@ -147,7 +147,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.DimGray;
+            this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.btnEditLocationUC);
             this.Controls.Add(this.lblRoom);
             this.Controls.Add(this.lblBuilding);

@@ -9,11 +9,14 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using TimeTableManagementSystemApp.IT18063288.UserControllers.SubUserControllers;
 using TimeTableManagementSystemApp.CommonFiles;
+using BusinessLayers.Location;
 
 namespace TimeTableManagementSystemApp.IT18063288.UserControllers
 {
     public partial class AddLocationUC : UserControl
     {
+        private LocationBO locationBO;
+
         public AddLocationUC()
         {
             InitializeComponent();
@@ -56,8 +59,8 @@ namespace TimeTableManagementSystemApp.IT18063288.UserControllers
 
         private void lblRoomDetails_Click(object sender, EventArgs e)
         {
-            MoreRoomDetailsUC moreRoomDetailsUC = new MoreRoomDetailsUC();
-            CommonClass.showControl(moreRoomDetailsUC, panelRoomDetails);
+            //MoreRoomDetailsUC moreRoomDetailsUC = new MoreRoomDetailsUC();
+            //CommonClass.showControl(moreRoomDetailsUC, panelRoomDetails);
         }
 
         private void btnAddNewRoom_Click(object sender, EventArgs e)
@@ -76,6 +79,26 @@ namespace TimeTableManagementSystemApp.IT18063288.UserControllers
             btnRoomUpdate.Visible = true;
             btnDeleteRoom.Visible = true;
             btnRoomSave.Visible = false;
+        }
+
+        private void btnRoomSave_Click(object sender, EventArgs e)
+        {
+            MoreRoomDetailsUC moreRoomDetailsUC = new MoreRoomDetailsUC();
+            CommonClass.showControl(moreRoomDetailsUC, panelRoomDetails);
+        }
+
+        private void comboBoxRoom_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            MoreRoomDetailsUC moreRoomDetailsUC = new MoreRoomDetailsUC();
+            CommonClass.showControl(moreRoomDetailsUC, panelRoomDetails);
+        }
+
+        private void btnBuildingSave_Click(object sender, EventArgs e)
+        {
+            string buildingName = string.Empty;
+            locationBO = new LocationBO();
+            buildingName = txtNewBuilding.Text;
+            locationBO.RoomName = buildingName;
         }
     }
 }

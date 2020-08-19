@@ -1,0 +1,232 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="TimetableManagementSystemModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Buildings">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="BuidingName" Type="varchar" MaxLength="255" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Location">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="BuildingID" Type="int" />
+          <Property Name="RoomID" Type="int" />
+        </EntityType>
+        <EntityType Name="Rooms">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="RoomName" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="Capacity" Type="int" />
+          <Property Name="RoomType" Type="int" />
+          <Property Name="BuildingID" Type="int" />
+        </EntityType>
+        <Association Name="FK_BuildingID">
+          <End Role="Buildings" Type="Self.Buildings" Multiplicity="0..1" />
+          <End Role="Rooms" Type="Self.Rooms" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Buildings">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Rooms">
+              <PropertyRef Name="BuildingID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_BuildingIDLocation">
+          <End Role="Buildings" Type="Self.Buildings" Multiplicity="0..1" />
+          <End Role="Location" Type="Self.Location" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Buildings">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Location">
+              <PropertyRef Name="BuildingID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_RoomIDLocation">
+          <End Role="Rooms" Type="Self.Rooms" Multiplicity="0..1" />
+          <End Role="Location" Type="Self.Location" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Rooms">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Location">
+              <PropertyRef Name="RoomID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="TimetableManagementSystemModelStoreContainer">
+          <EntitySet Name="Buildings" EntityType="Self.Buildings" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Location" EntityType="Self.Location" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Rooms" EntityType="Self.Rooms" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_BuildingID" Association="Self.FK_BuildingID">
+            <End Role="Buildings" EntitySet="Buildings" />
+            <End Role="Rooms" EntitySet="Rooms" />
+          </AssociationSet>
+          <AssociationSet Name="FK_BuildingIDLocation" Association="Self.FK_BuildingIDLocation">
+            <End Role="Buildings" EntitySet="Buildings" />
+            <End Role="Location" EntitySet="Location" />
+          </AssociationSet>
+          <AssociationSet Name="FK_RoomIDLocation" Association="Self.FK_RoomIDLocation">
+            <End Role="Rooms" EntitySet="Rooms" />
+            <End Role="Location" EntitySet="Location" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="TimetableManagementSystemModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Building">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="BuidingName" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="Rooms" Relationship="Self.FK_BuildingID" FromRole="Buildings" ToRole="Rooms" />
+          <NavigationProperty Name="Locations" Relationship="Self.FK_BuildingIDLocation" FromRole="Buildings" ToRole="Location" />
+        </EntityType>
+        <EntityType Name="Location">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="BuildingID" Type="Int32" />
+          <Property Name="RoomID" Type="Int32" />
+          <NavigationProperty Name="Building" Relationship="Self.FK_BuildingIDLocation" FromRole="Location" ToRole="Buildings" />
+          <NavigationProperty Name="Room" Relationship="Self.FK_RoomIDLocation" FromRole="Location" ToRole="Rooms" />
+        </EntityType>
+        <EntityType Name="Room">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="RoomName" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Capacity" Type="Int32" />
+          <Property Name="RoomType" Type="Int32" />
+          <Property Name="BuildingID" Type="Int32" />
+          <NavigationProperty Name="Building" Relationship="Self.FK_BuildingID" FromRole="Rooms" ToRole="Buildings" />
+          <NavigationProperty Name="Locations" Relationship="Self.FK_RoomIDLocation" FromRole="Rooms" ToRole="Location" />
+        </EntityType>
+        <Association Name="FK_BuildingID">
+          <End Role="Buildings" Type="Self.Building" Multiplicity="0..1" />
+          <End Role="Rooms" Type="Self.Room" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Buildings">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Rooms">
+              <PropertyRef Name="BuildingID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_BuildingIDLocation">
+          <End Role="Buildings" Type="Self.Building" Multiplicity="0..1" />
+          <End Role="Location" Type="Self.Location" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Buildings">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Location">
+              <PropertyRef Name="BuildingID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_RoomIDLocation">
+          <End Role="Rooms" Type="Self.Room" Multiplicity="0..1" />
+          <End Role="Location" Type="Self.Location" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Rooms">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Location">
+              <PropertyRef Name="RoomID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="TimetableManagementSystemEntities2" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Buildings" EntityType="Self.Building" />
+          <EntitySet Name="Locations" EntityType="Self.Location" />
+          <EntitySet Name="Rooms" EntityType="Self.Room" />
+          <AssociationSet Name="FK_BuildingID" Association="Self.FK_BuildingID">
+            <End Role="Buildings" EntitySet="Buildings" />
+            <End Role="Rooms" EntitySet="Rooms" />
+          </AssociationSet>
+          <AssociationSet Name="FK_BuildingIDLocation" Association="Self.FK_BuildingIDLocation">
+            <End Role="Buildings" EntitySet="Buildings" />
+            <End Role="Location" EntitySet="Locations" />
+          </AssociationSet>
+          <AssociationSet Name="FK_RoomIDLocation" Association="Self.FK_RoomIDLocation">
+            <End Role="Rooms" EntitySet="Rooms" />
+            <End Role="Location" EntitySet="Locations" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="TimetableManagementSystemModelStoreContainer" CdmEntityContainer="TimetableManagementSystemEntities2">
+          <EntitySetMapping Name="Buildings">
+            <EntityTypeMapping TypeName="TimetableManagementSystemModel.Building">
+              <MappingFragment StoreEntitySet="Buildings">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="BuidingName" ColumnName="BuidingName" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Locations">
+            <EntityTypeMapping TypeName="TimetableManagementSystemModel.Location">
+              <MappingFragment StoreEntitySet="Location">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="BuildingID" ColumnName="BuildingID" />
+                <ScalarProperty Name="RoomID" ColumnName="RoomID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Rooms">
+            <EntityTypeMapping TypeName="TimetableManagementSystemModel.Room">
+              <MappingFragment StoreEntitySet="Rooms">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="RoomName" ColumnName="RoomName" />
+                <ScalarProperty Name="Capacity" ColumnName="Capacity" />
+                <ScalarProperty Name="RoomType" ColumnName="RoomType" />
+                <ScalarProperty Name="BuildingID" ColumnName="BuildingID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

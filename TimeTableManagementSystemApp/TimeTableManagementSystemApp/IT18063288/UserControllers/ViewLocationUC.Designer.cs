@@ -51,6 +51,7 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ControlLight;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(86, 71);
             this.dataGridView1.Name = "dataGridView1";
@@ -59,6 +60,7 @@
             // 
             // dataGridView2
             // 
+            this.dataGridView2.BackgroundColor = System.Drawing.SystemColors.ControlLight;
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView2.Location = new System.Drawing.Point(543, 71);
             this.dataGridView2.Name = "dataGridView2";
@@ -84,15 +86,15 @@
             // 
             // btnEditRecordLocationUC
             // 
-            this.btnEditRecordLocationUC.BackColor = System.Drawing.Color.DarkGoldenrod;
+            this.btnEditRecordLocationUC.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(43)))), ((int)(((byte)(104)))));
             this.btnEditRecordLocationUC.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btnEditRecordLocationUC.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnEditRecordLocationUC.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEditRecordLocationUC.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnEditRecordLocationUC.Location = new System.Drawing.Point(790, 308);
+            this.btnEditRecordLocationUC.ForeColor = System.Drawing.Color.White;
+            this.btnEditRecordLocationUC.Location = new System.Drawing.Point(754, 302);
             this.btnEditRecordLocationUC.Margin = new System.Windows.Forms.Padding(0);
             this.btnEditRecordLocationUC.Name = "btnEditRecordLocationUC";
-            this.btnEditRecordLocationUC.Size = new System.Drawing.Size(127, 36);
+            this.btnEditRecordLocationUC.Size = new System.Drawing.Size(163, 42);
             this.btnEditRecordLocationUC.TabIndex = 10;
             this.btnEditRecordLocationUC.Text = "Edit Records";
             this.btnEditRecordLocationUC.UseVisualStyleBackColor = false;
@@ -102,7 +104,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.btnEditRecordLocationUC);
             this.Controls.Add(this.pnlEditRecords);
             this.Controls.Add(this.label2);
