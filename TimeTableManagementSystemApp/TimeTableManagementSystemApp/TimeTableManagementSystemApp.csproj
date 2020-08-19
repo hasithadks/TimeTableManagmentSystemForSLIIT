@@ -53,11 +53,11 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="IT18049114\Forms\Form1.cs">
+    <Compile Include="IT18049114\Forms\StudentManagement.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="IT18049114\Forms\Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="IT18049114\Forms\StudentManagement.Designer.cs">
+      <DependentUpon>StudentManagement.cs</DependentUpon>
     </Compile>
     <Compile Include="IT18049114\UserControllers\AddStudent.cs">
       <SubType>UserControl</SubType>
@@ -115,8 +115,8 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="IT18049114\Forms\Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="IT18049114\Forms\StudentManagement.resx">
+      <DependentUpon>StudentManagement.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="IT18049114\UserControllers\AddStudent.resx">
       <DependentUpon>AddStudent.cs</DependentUpon>

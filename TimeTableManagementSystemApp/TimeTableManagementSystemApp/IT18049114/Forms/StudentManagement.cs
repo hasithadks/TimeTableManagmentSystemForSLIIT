@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace TimeTableManagementSystemApp.IT18049114.Forms
 {
-    public partial class Form1 : Form
+    public partial class StudentManagement : Form
     {
-        public Form1()
+        public StudentManagement()
         {
             InitializeComponent();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
