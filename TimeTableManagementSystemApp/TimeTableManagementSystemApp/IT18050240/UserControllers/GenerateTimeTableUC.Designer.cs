@@ -1,6 +1,6 @@
-﻿namespace TimeTableManagementSystemApp.IT18058338.UserControllers
+﻿namespace TimeTableManagementSystemApp.IT18050240.UserControllers
 {
-    partial class UserControl1
+    partial class GenerateTimeTableUC
     {
         /// <summary> 
         /// Required designer variable.
@@ -28,18 +28,30 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
             this.SuspendLayout();
             // 
-            // UserControl1
+            // checkedListBox1
+            // 
+            this.checkedListBox1.FormattingEnabled = true;
+            this.checkedListBox1.Location = new System.Drawing.Point(504, 227);
+            this.checkedListBox1.Name = "checkedListBox1";
+            this.checkedListBox1.Size = new System.Drawing.Size(120, 94);
+            this.checkedListBox1.TabIndex = 0;
+            // 
+            // GenerateTimeTableUC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Name = "UserControl1";
-            this.Size = new System.Drawing.Size(1025, 700);
+            this.Controls.Add(this.checkedListBox1);
+            this.Name = "GenerateTimeTableUC";
+            this.Size = new System.Drawing.Size(1080, 700);
             this.ResumeLayout(false);
 
         }
 
         #endregion
+
+        private System.Windows.Forms.CheckedListBox checkedListBox1;
     }
 }

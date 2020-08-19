@@ -8,13 +8,18 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace TimeTableManagementSystemApp.IT18050240.UserControllers
+namespace TimeTableManagementSystemApp.IT18063288.UserControllers.SubUserControllers
 {
-    public partial class UserControl1 : UserControl
+    public partial class EditLocationDataUC : UserControl
     {
-        public UserControl1()
+        public EditLocationDataUC()
         {
             InitializeComponent();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
