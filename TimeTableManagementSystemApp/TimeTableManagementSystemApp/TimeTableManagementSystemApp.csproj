@@ -89,12 +89,6 @@
     <Compile Include="IT18049114\UserControllers\Tags.Designer.cs">
       <DependentUpon>Tags.cs</DependentUpon>
     </Compile>
-    <Compile Include="IT18049114\UserControllers\UserControl1.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="IT18049114\UserControllers\UserControl1.Designer.cs">
-      <DependentUpon>UserControl1.cs</DependentUpon>
-    </Compile>
     <Compile Include="IT18049114\UserControllers\ViewStudent.cs">
       <SubType>UserControl</SubType>
     </Compile>
