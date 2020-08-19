@@ -69,18 +69,6 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="IT18049114\Forms\Form1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="IT18049114\Forms\Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="IT18049114\UserControllers\UserControl1.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="IT18049114\UserControllers\UserControl1.Designer.cs">
-      <DependentUpon>UserControl1.cs</DependentUpon>
-    </Compile>
     <Compile Include="IT18050240\UserControllers\GenerateTimeTableUC.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -266,6 +254,10 @@
     <None Include="Resources\minibtn.png" />
     <None Include="Resources\Maxibtn.png" />
     <None Include="Resources\closebtn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="IT18049114\Forms\" />
+    <Folder Include="IT18049114\UserControllers\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
