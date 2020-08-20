@@ -33,14 +33,13 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.Tagsname = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ShortName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Action = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.addedittagbut = new System.Windows.Forms.Button();
+            this.editstdpagebut = new System.Windows.Forms.Button();
+            this.deletestdbut = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -92,26 +91,6 @@
             this.textBox2.TabIndex = 23;
             this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
-            // button1
-            // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(686, 140);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(147, 24);
-            this.button1.TabIndex = 24;
-            this.button1.Text = "ADD / EDIT";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(-15, -15);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 25;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -146,37 +125,56 @@
             this.Action.ReadOnly = true;
             this.Action.Width = 200;
             // 
-            // button3
+            // addedittagbut
             // 
-            this.button3.BackColor = System.Drawing.Color.IndianRed;
-            this.button3.Location = new System.Drawing.Point(752, 251);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(55, 20);
-            this.button3.TabIndex = 28;
-            this.button3.Text = "Delete";
-            this.button3.UseVisualStyleBackColor = false;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.addedittagbut.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(43)))), ((int)(((byte)(104)))));
+            this.addedittagbut.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.addedittagbut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.addedittagbut.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addedittagbut.ForeColor = System.Drawing.Color.White;
+            this.addedittagbut.Location = new System.Drawing.Point(701, 136);
+            this.addedittagbut.Name = "addedittagbut";
+            this.addedittagbut.Size = new System.Drawing.Size(123, 31);
+            this.addedittagbut.TabIndex = 29;
+            this.addedittagbut.Text = "Add / Edit";
+            this.addedittagbut.UseVisualStyleBackColor = false;
             // 
-            // button4
+            // editstdpagebut
             // 
-            this.button4.BackColor = System.Drawing.Color.Yellow;
-            this.button4.Location = new System.Drawing.Point(665, 251);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(55, 20);
-            this.button4.TabIndex = 27;
-            this.button4.Text = "Edit";
-            this.button4.UseVisualStyleBackColor = false;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.editstdpagebut.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(43)))), ((int)(((byte)(104)))));
+            this.editstdpagebut.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.editstdpagebut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.editstdpagebut.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.editstdpagebut.ForeColor = System.Drawing.Color.White;
+            this.editstdpagebut.Location = new System.Drawing.Point(665, 250);
+            this.editstdpagebut.Name = "editstdpagebut";
+            this.editstdpagebut.Size = new System.Drawing.Size(55, 21);
+            this.editstdpagebut.TabIndex = 30;
+            this.editstdpagebut.Text = "Edit";
+            this.editstdpagebut.UseVisualStyleBackColor = false;
+            // 
+            // deletestdbut
+            // 
+            this.deletestdbut.BackColor = System.Drawing.Color.Red;
+            this.deletestdbut.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.deletestdbut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.deletestdbut.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.deletestdbut.ForeColor = System.Drawing.Color.White;
+            this.deletestdbut.Location = new System.Drawing.Point(758, 250);
+            this.deletestdbut.Name = "deletestdbut";
+            this.deletestdbut.Size = new System.Drawing.Size(55, 21);
+            this.deletestdbut.TabIndex = 31;
+            this.deletestdbut.Text = "Delete";
+            this.deletestdbut.UseVisualStyleBackColor = false;
             // 
             // Tags
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button4);
+            this.Controls.Add(this.deletestdbut);
+            this.Controls.Add(this.editstdpagebut);
+            this.Controls.Add(this.addedittagbut);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.textBox1);
@@ -198,13 +196,12 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Tagsname;
         private System.Windows.Forms.DataGridViewTextBoxColumn ShortName;
         private System.Windows.Forms.DataGridViewTextBoxColumn Action;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button addedittagbut;
+        private System.Windows.Forms.Button editstdpagebut;
+        private System.Windows.Forms.Button deletestdbut;
     }
 }

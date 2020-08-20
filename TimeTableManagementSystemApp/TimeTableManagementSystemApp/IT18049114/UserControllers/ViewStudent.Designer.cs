@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.StudentID = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -37,8 +37,13 @@
             this.Programme = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SubGroupID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Action = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.editstdpagebut = new System.Windows.Forms.Button();
+            this.deletestdbut = new System.Windows.Forms.Button();
+            this.testlabel = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -71,9 +76,9 @@
             // 
             // StudentID
             // 
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.StudentID.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.StudentID.DefaultCellStyle = dataGridViewCellStyle2;
             this.StudentID.HeaderText = "Student ID";
             this.StudentID.Name = "StudentID";
             this.StudentID.ReadOnly = true;
@@ -111,34 +116,90 @@
             this.Action.ReadOnly = true;
             this.Action.Width = 180;
             // 
-            // button1
+            // editstdpagebut
             // 
-            this.button1.BackColor = System.Drawing.Color.Yellow;
-            this.button1.Location = new System.Drawing.Point(791, 142);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(55, 20);
-            this.button1.TabIndex = 21;
-            this.button1.Text = "Edit";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.editstdpagebut.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(43)))), ((int)(((byte)(104)))));
+            this.editstdpagebut.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.editstdpagebut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.editstdpagebut.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.editstdpagebut.ForeColor = System.Drawing.Color.White;
+            this.editstdpagebut.Location = new System.Drawing.Point(790, 142);
+            this.editstdpagebut.Name = "editstdpagebut";
+            this.editstdpagebut.Size = new System.Drawing.Size(55, 21);
+            this.editstdpagebut.TabIndex = 23;
+            this.editstdpagebut.Text = "Edit";
+            this.editstdpagebut.UseVisualStyleBackColor = false;
             // 
-            // button2
+            // deletestdbut
             // 
-            this.button2.BackColor = System.Drawing.Color.IndianRed;
-            this.button2.Location = new System.Drawing.Point(874, 142);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(55, 20);
-            this.button2.TabIndex = 22;
-            this.button2.Text = "Delete";
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.deletestdbut.BackColor = System.Drawing.Color.Red;
+            this.deletestdbut.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.deletestdbut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.deletestdbut.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.deletestdbut.ForeColor = System.Drawing.Color.White;
+            this.deletestdbut.Location = new System.Drawing.Point(871, 142);
+            this.deletestdbut.Name = "deletestdbut";
+            this.deletestdbut.Size = new System.Drawing.Size(54, 21);
+            this.deletestdbut.TabIndex = 24;
+            this.deletestdbut.Text = "Delete";
+            this.deletestdbut.UseVisualStyleBackColor = false;
+            // 
+            // testlabel
+            // 
+            this.testlabel.AutoSize = true;
+            this.testlabel.Location = new System.Drawing.Point(125, 148);
+            this.testlabel.Name = "testlabel";
+            this.testlabel.Size = new System.Drawing.Size(65, 13);
+            this.testlabel.TabIndex = 25;
+            this.testlabel.Text = "IT18049114";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(230, 147);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(92, 13);
+            this.label2.TabIndex = 26;
+            this.label2.Text = "Hansaka H. M. P.";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(441, 147);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(36, 13);
+            this.label3.TabIndex = 27;
+            this.label3.Text = "Y3.S2";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(547, 147);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(21, 13);
+            this.label4.TabIndex = 28;
+            this.label4.Text = "SE";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(646, 147);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(77, 13);
+            this.label5.TabIndex = 29;
+            this.label5.Text = "Y3.S2.SE.09.2";
             // 
             // ViewStudent
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.testlabel);
+            this.Controls.Add(this.deletestdbut);
+            this.Controls.Add(this.editstdpagebut);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label1);
             this.Name = "ViewStudent";
@@ -160,7 +221,12 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Programme;
         private System.Windows.Forms.DataGridViewTextBoxColumn SubGroupID;
         private System.Windows.Forms.DataGridViewTextBoxColumn Action;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button editstdpagebut;
+        private System.Windows.Forms.Button deletestdbut;
+        private System.Windows.Forms.Label testlabel;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
     }
 }

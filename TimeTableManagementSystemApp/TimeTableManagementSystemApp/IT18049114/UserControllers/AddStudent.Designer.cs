@@ -36,8 +36,6 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
             this.checkedListBox2 = new System.Windows.Forms.CheckedListBox();
@@ -45,6 +43,8 @@
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
             this.textBox3 = new System.Windows.Forms.TextBox();
+            this.addstdbut = new System.Windows.Forms.Button();
+            this.resetbut = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
             this.SuspendLayout();
@@ -53,7 +53,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(458, 19);
+            this.label1.Location = new System.Drawing.Point(458, 21);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(184, 33);
             this.label1.TabIndex = 0;
@@ -133,28 +133,6 @@
             this.label8.TabIndex = 7;
             this.label8.Text = "Sub-Group Number";
             // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.DodgerBlue;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(440, 584);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(80, 23);
-            this.button1.TabIndex = 8;
-            this.button1.Text = "Add Student";
-            this.button1.UseVisualStyleBackColor = false;
-            // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.Chartreuse;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(542, 584);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(88, 23);
-            this.button2.TabIndex = 9;
-            this.button2.Text = "Reset";
-            this.button2.UseVisualStyleBackColor = false;
-            // 
             // textBox1
             // 
             this.textBox1.Location = new System.Drawing.Point(427, 111);
@@ -226,10 +204,40 @@
             this.textBox3.Size = new System.Drawing.Size(159, 20);
             this.textBox3.TabIndex = 16;
             // 
+            // addstdbut
+            // 
+            this.addstdbut.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(43)))), ((int)(((byte)(104)))));
+            this.addstdbut.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.addstdbut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.addstdbut.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addstdbut.ForeColor = System.Drawing.Color.White;
+            this.addstdbut.Location = new System.Drawing.Point(417, 584);
+            this.addstdbut.Name = "addstdbut";
+            this.addstdbut.Size = new System.Drawing.Size(102, 31);
+            this.addstdbut.TabIndex = 17;
+            this.addstdbut.Text = "Add ";
+            this.addstdbut.UseVisualStyleBackColor = false;
+            // 
+            // resetbut
+            // 
+            this.resetbut.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(43)))), ((int)(((byte)(104)))));
+            this.resetbut.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.resetbut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.resetbut.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.resetbut.ForeColor = System.Drawing.Color.White;
+            this.resetbut.Location = new System.Drawing.Point(554, 584);
+            this.resetbut.Name = "resetbut";
+            this.resetbut.Size = new System.Drawing.Size(102, 31);
+            this.resetbut.TabIndex = 18;
+            this.resetbut.Text = "Reset";
+            this.resetbut.UseVisualStyleBackColor = false;
+            // 
             // AddStudent
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.resetbut);
+            this.Controls.Add(this.addstdbut);
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.numericUpDown2);
             this.Controls.Add(this.textBox2);
@@ -237,8 +245,6 @@
             this.Controls.Add(this.checkedListBox2);
             this.Controls.Add(this.checkedListBox1);
             this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
@@ -266,8 +272,6 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.CheckedListBox checkedListBox1;
         private System.Windows.Forms.CheckedListBox checkedListBox2;
@@ -275,5 +279,7 @@
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.NumericUpDown numericUpDown2;
         private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.Button addstdbut;
+        private System.Windows.Forms.Button resetbut;
     }
 }

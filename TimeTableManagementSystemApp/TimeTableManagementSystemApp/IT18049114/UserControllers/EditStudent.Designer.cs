@@ -35,8 +35,6 @@
             this.checkedListBox2 = new System.Windows.Forms.CheckedListBox();
             this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -45,6 +43,8 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.editstdbut = new System.Windows.Forms.Button();
+            this.cancelbut = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.SuspendLayout();
@@ -118,28 +118,6 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(229, 20);
             this.textBox1.TabIndex = 27;
-            // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.LightCoral;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(544, 595);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(88, 23);
-            this.button2.TabIndex = 26;
-            this.button2.Text = "Cancel";
-            this.button2.UseVisualStyleBackColor = false;
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.Yellow;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(442, 595);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(80, 23);
-            this.button1.TabIndex = 25;
-            this.button1.Text = "Update";
-            this.button1.UseVisualStyleBackColor = false;
             // 
             // label8
             // 
@@ -221,10 +199,40 @@
             this.label1.TabIndex = 17;
             this.label1.Text = "Edit Student";
             // 
+            // editstdbut
+            // 
+            this.editstdbut.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(43)))), ((int)(((byte)(104)))));
+            this.editstdbut.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.editstdbut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.editstdbut.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.editstdbut.ForeColor = System.Drawing.Color.White;
+            this.editstdbut.Location = new System.Drawing.Point(429, 589);
+            this.editstdbut.Name = "editstdbut";
+            this.editstdbut.Size = new System.Drawing.Size(102, 31);
+            this.editstdbut.TabIndex = 34;
+            this.editstdbut.Text = "Update";
+            this.editstdbut.UseVisualStyleBackColor = false;
+            // 
+            // cancelbut
+            // 
+            this.cancelbut.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(43)))), ((int)(((byte)(104)))));
+            this.cancelbut.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cancelbut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cancelbut.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cancelbut.ForeColor = System.Drawing.Color.White;
+            this.cancelbut.Location = new System.Drawing.Point(556, 589);
+            this.cancelbut.Name = "cancelbut";
+            this.cancelbut.Size = new System.Drawing.Size(102, 31);
+            this.cancelbut.TabIndex = 35;
+            this.cancelbut.Text = "Cancel";
+            this.cancelbut.UseVisualStyleBackColor = false;
+            // 
             // EditStudent
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.cancelbut);
+            this.Controls.Add(this.editstdbut);
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.numericUpDown2);
             this.Controls.Add(this.textBox2);
@@ -232,8 +240,6 @@
             this.Controls.Add(this.checkedListBox2);
             this.Controls.Add(this.checkedListBox1);
             this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
@@ -260,8 +266,6 @@
         private System.Windows.Forms.CheckedListBox checkedListBox2;
         private System.Windows.Forms.CheckedListBox checkedListBox1;
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
@@ -270,5 +274,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button editstdbut;
+        private System.Windows.Forms.Button cancelbut;
     }
 }

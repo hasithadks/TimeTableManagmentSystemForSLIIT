@@ -40,7 +40,6 @@
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.textBox6 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.Name = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Date = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -62,6 +61,7 @@
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.addnotavalbut = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).BeginInit();
@@ -176,18 +176,6 @@
             this.textBox6.Name = "textBox6";
             this.textBox6.Size = new System.Drawing.Size(100, 20);
             this.textBox6.TabIndex = 31;
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.RoyalBlue;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(873, 203);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(78, 30);
-            this.button1.TabIndex = 32;
-            this.button1.Text = "ADD";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // dataGridView2
             // 
@@ -371,10 +359,25 @@
             this.comboBox2.Size = new System.Drawing.Size(350, 21);
             this.comboBox2.TabIndex = 54;
             // 
+            // addnotavalbut
+            // 
+            this.addnotavalbut.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(43)))), ((int)(((byte)(104)))));
+            this.addnotavalbut.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.addnotavalbut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.addnotavalbut.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addnotavalbut.ForeColor = System.Drawing.Color.White;
+            this.addnotavalbut.Location = new System.Drawing.Point(860, 198);
+            this.addnotavalbut.Name = "addnotavalbut";
+            this.addnotavalbut.Size = new System.Drawing.Size(102, 31);
+            this.addnotavalbut.TabIndex = 55;
+            this.addnotavalbut.Text = "Add ";
+            this.addnotavalbut.UseVisualStyleBackColor = false;
+            // 
             // NotAvailableTimes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.addnotavalbut);
             this.Controls.Add(this.comboBox2);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
@@ -384,7 +387,6 @@
             this.Controls.Add(this.dataGridView5);
             this.Controls.Add(this.dataGridView3);
             this.Controls.Add(this.dataGridView2);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.textBox6);
             this.Controls.Add(this.textBox5);
             this.Controls.Add(this.textBox4);
@@ -397,7 +399,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Name = "NotAvailableTimes";
+            //this.Name = "NotAvailableTimes";
             this.Size = new System.Drawing.Size(1025, 700);
             this.Load += new System.EventHandler(this.NotAvailableTimes_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
@@ -423,7 +425,6 @@
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.DataGridView dataGridView2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Name;
         private System.Windows.Forms.DataGridViewTextBoxColumn Date;
@@ -445,5 +446,6 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.Button addnotavalbut;
     }
 }

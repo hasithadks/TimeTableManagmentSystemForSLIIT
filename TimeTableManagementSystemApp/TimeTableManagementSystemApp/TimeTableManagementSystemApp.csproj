@@ -75,11 +75,53 @@
     <Compile Include="IT18049114\Forms\Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="IT18049114\Forms\StudentManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IT18049114\Forms\StudentManagement.Designer.cs">
+      <DependentUpon>StudentManagement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IT18049114\UserControllers\AddStudent.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="IT18049114\UserControllers\AddStudent.Designer.cs">
+      <DependentUpon>AddStudent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IT18049114\UserControllers\ConsecutiveSessions.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="IT18049114\UserControllers\ConsecutiveSessions.Designer.cs">
+      <DependentUpon>ConsecutiveSessions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IT18049114\UserControllers\EditStudent.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="IT18049114\UserControllers\EditStudent.Designer.cs">
+      <DependentUpon>EditStudent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IT18049114\UserControllers\NotAvailableTimes.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="IT18049114\UserControllers\NotAvailableTimes.Designer.cs">
+      <DependentUpon>NotAvailableTimes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IT18049114\UserControllers\Tags.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="IT18049114\UserControllers\Tags.Designer.cs">
+      <DependentUpon>Tags.cs</DependentUpon>
+    </Compile>
     <Compile Include="IT18049114\UserControllers\UserControl1.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="IT18049114\UserControllers\UserControl1.Designer.cs">
       <DependentUpon>UserControl1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IT18049114\UserControllers\ViewStudent.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="IT18049114\UserControllers\ViewStudent.Designer.cs">
+      <DependentUpon>ViewStudent.cs</DependentUpon>
     </Compile>
     <Compile Include="IT18050240\UserControllers\GenerateTimeTableUC.cs">
       <SubType>UserControl</SubType>
@@ -181,6 +223,27 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="CommonFiles\TopManuBarUC.resx">
       <DependentUpon>TopManuBarUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IT18049114\Forms\StudentManagement.resx">
+      <DependentUpon>StudentManagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IT18049114\UserControllers\AddStudent.resx">
+      <DependentUpon>AddStudent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IT18049114\UserControllers\ConsecutiveSessions.resx">
+      <DependentUpon>ConsecutiveSessions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IT18049114\UserControllers\EditStudent.resx">
+      <DependentUpon>EditStudent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IT18049114\UserControllers\NotAvailableTimes.resx">
+      <DependentUpon>NotAvailableTimes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IT18049114\UserControllers\Tags.resx">
+      <DependentUpon>Tags.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IT18049114\UserControllers\ViewStudent.resx">
+      <DependentUpon>ViewStudent.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="IT18050240\Forms\WorkingDaysForm.resx">
       <DependentUpon>WorkingDaysForm.cs</DependentUpon>

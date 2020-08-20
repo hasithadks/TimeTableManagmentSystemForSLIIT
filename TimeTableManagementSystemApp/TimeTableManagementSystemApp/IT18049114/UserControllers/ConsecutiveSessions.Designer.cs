@@ -44,8 +44,6 @@
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
             this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
             this.checkedListBox2 = new System.Windows.Forms.CheckedListBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
@@ -61,6 +59,8 @@
             this.Subjects = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Dates = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Times = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.addconsbut = new System.Windows.Forms.Button();
+            this.addsetofbut = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.SuspendLayout();
@@ -207,28 +207,6 @@
             this.label10.TabIndex = 47;
             this.label10.Text = "Add Set of Sessions";
             this.label10.Click += new System.EventHandler(this.label10_Click);
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.RoyalBlue;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(837, 202);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(78, 30);
-            this.button1.TabIndex = 48;
-            this.button1.Text = "ADD";
-            this.button1.UseVisualStyleBackColor = false;
-            // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.RoyalBlue;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(837, 416);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(78, 30);
-            this.button2.TabIndex = 49;
-            this.button2.Text = "ADD";
-            this.button2.UseVisualStyleBackColor = false;
             // 
             // checkedListBox1
             // 
@@ -377,10 +355,40 @@
             this.Times.Name = "Times";
             this.Times.ReadOnly = true;
             // 
+            // addconsbut
+            // 
+            this.addconsbut.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(43)))), ((int)(((byte)(104)))));
+            this.addconsbut.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.addconsbut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.addconsbut.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addconsbut.ForeColor = System.Drawing.Color.White;
+            this.addconsbut.Location = new System.Drawing.Point(813, 203);
+            this.addconsbut.Name = "addconsbut";
+            this.addconsbut.Size = new System.Drawing.Size(102, 31);
+            this.addconsbut.TabIndex = 58;
+            this.addconsbut.Text = "Add ";
+            this.addconsbut.UseVisualStyleBackColor = false;
+            // 
+            // addsetofbut
+            // 
+            this.addsetofbut.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(43)))), ((int)(((byte)(104)))));
+            this.addsetofbut.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.addsetofbut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.addsetofbut.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addsetofbut.ForeColor = System.Drawing.Color.White;
+            this.addsetofbut.Location = new System.Drawing.Point(813, 417);
+            this.addsetofbut.Name = "addsetofbut";
+            this.addsetofbut.Size = new System.Drawing.Size(102, 31);
+            this.addsetofbut.TabIndex = 59;
+            this.addsetofbut.Text = "Add ";
+            this.addsetofbut.UseVisualStyleBackColor = false;
+            // 
             // ConsecutiveSessions
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.addsetofbut);
+            this.Controls.Add(this.addconsbut);
             this.Controls.Add(this.dataGridView2);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label11);
@@ -389,8 +397,6 @@
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.checkedListBox2);
             this.Controls.Add(this.checkedListBox1);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.label3);
@@ -434,8 +440,6 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.CheckedListBox checkedListBox1;
         private System.Windows.Forms.CheckedListBox checkedListBox2;
         private System.Windows.Forms.ComboBox comboBox1;
@@ -451,5 +455,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Subjects;
         private System.Windows.Forms.DataGridViewTextBoxColumn Dates;
         private System.Windows.Forms.DataGridViewTextBoxColumn Times;
+        private System.Windows.Forms.Button addconsbut;
+        private System.Windows.Forms.Button addsetofbut;
     }
 }
