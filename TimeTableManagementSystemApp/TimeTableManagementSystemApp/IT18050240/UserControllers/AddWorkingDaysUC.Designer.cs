@@ -238,7 +238,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.comboBox1);
             this.Name = "AddWorkingDaysUC";
-            this.Size = new System.Drawing.Size(1040, 700);
+            this.Size = new System.Drawing.Size(1040, 741);
             this.ResumeLayout(false);
             this.PerformLayout();
 

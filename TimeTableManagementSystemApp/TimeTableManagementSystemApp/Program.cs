@@ -19,7 +19,7 @@ namespace TimeTableManagementSystemApp
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new WorkingDaysForm());
+            Application.Run(new StudentManagement());
         }
     }
 }

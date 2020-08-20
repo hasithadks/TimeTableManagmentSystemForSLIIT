@@ -18,7 +18,7 @@ namespace TimeTableManagementSystemApp.IT18049114.Forms
         {
             InitializeComponent();
             TopManuBarUC topManuBarUC = new TopManuBarUC();
-            CommonClass.showControl(topManuBarUC, topPanel);
+            //CommonClass.showControl(topManuBarUC, topPanel);
             
         }
 
@@ -78,6 +78,21 @@ namespace TimeTableManagementSystemApp.IT18049114.Forms
         {
             Tags Tags = new Tags();
             CommonClass.showControl(Tags, contentPanel);
+        }
+
+        private void closeBtn_Click(object sender, EventArgs e)
+        {
+            Environment.Exit(0);
+        }
+
+        private void miniBtn_Click(object sender, EventArgs e)
+        {
+            WindowState = FormWindowState.Minimized;
+        }
+
+        private void maxBtn_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

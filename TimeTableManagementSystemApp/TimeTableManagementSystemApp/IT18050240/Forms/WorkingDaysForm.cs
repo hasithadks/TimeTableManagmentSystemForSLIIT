@@ -33,6 +33,7 @@ namespace TimeTableManagementSystemApp.IT18058338.Forms
         private void miniBtn_Click(object sender, EventArgs e)
         {
             WindowState = FormWindowState.Minimized;
+            
         }
 
         private void closeBtn_Click(object sender, EventArgs e)

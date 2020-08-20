@@ -68,25 +68,27 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(109, 41);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(386, 33);
+            this.label1.Size = new System.Drawing.Size(315, 28);
             this.label1.TabIndex = 21;
             this.label1.Text = "Add Consecutive Sessions";
             // 
             // textBox6
             // 
+            this.textBox6.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox6.Location = new System.Drawing.Point(815, 167);
             this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(100, 20);
+            this.textBox6.Size = new System.Drawing.Size(100, 27);
             this.textBox6.TabIndex = 37;
             // 
             // textBox5
             // 
+            this.textBox5.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox5.Location = new System.Drawing.Point(651, 169);
             this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(100, 20);
+            this.textBox5.Size = new System.Drawing.Size(100, 27);
             this.textBox5.TabIndex = 36;
             // 
             // label6
@@ -131,86 +133,90 @@
             // 
             // textBox1
             // 
+            this.textBox1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox1.Location = new System.Drawing.Point(603, 109);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(312, 20);
+            this.textBox1.Size = new System.Drawing.Size(312, 27);
             this.textBox1.TabIndex = 39;
             // 
             // textBox2
             // 
+            this.textBox2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox2.Location = new System.Drawing.Point(603, 320);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(312, 20);
+            this.textBox2.Size = new System.Drawing.Size(312, 27);
             this.textBox2.TabIndex = 46;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(527, 321);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(37, 20);
+            this.label3.Size = new System.Drawing.Size(41, 21);
             this.label3.TabIndex = 45;
             this.label3.Text = "Day";
             // 
             // textBox3
             // 
+            this.textBox3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox3.Location = new System.Drawing.Point(815, 378);
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 20);
+            this.textBox3.Size = new System.Drawing.Size(100, 27);
             this.textBox3.TabIndex = 44;
             // 
             // textBox4
             // 
+            this.textBox4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox4.Location = new System.Drawing.Point(651, 380);
             this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(100, 20);
+            this.textBox4.Size = new System.Drawing.Size(100, 27);
             this.textBox4.TabIndex = 43;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(773, 378);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(27, 20);
+            this.label7.Size = new System.Drawing.Size(28, 21);
             this.label7.TabIndex = 42;
             this.label7.Text = "To";
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.Location = new System.Drawing.Point(599, 378);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(46, 20);
+            this.label8.Size = new System.Drawing.Size(48, 21);
             this.label8.TabIndex = 41;
             this.label8.Text = "From";
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.Location = new System.Drawing.Point(527, 378);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(43, 20);
+            this.label9.Size = new System.Drawing.Size(46, 21);
             this.label9.TabIndex = 40;
             this.label9.Text = "Time";
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.Location = new System.Drawing.Point(109, 253);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(295, 33);
+            this.label10.Size = new System.Drawing.Size(234, 28);
             this.label10.TabIndex = 47;
             this.label10.Text = "Add Set of Sessions";
             this.label10.Click += new System.EventHandler(this.label10_Click);
             // 
             // checkedListBox1
             // 
-            this.checkedListBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkedListBox1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkedListBox1.FormattingEnabled = true;
             this.checkedListBox1.Items.AddRange(new object[] {
             "Lecture",
@@ -225,7 +231,7 @@
             // 
             // checkedListBox2
             // 
-            this.checkedListBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkedListBox2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkedListBox2.FormattingEnabled = true;
             this.checkedListBox2.Items.AddRange(new object[] {
             "Android",
@@ -241,6 +247,7 @@
             // 
             // comboBox1
             // 
+            this.comboBox1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Items.AddRange(new object[] {
             "Category 1",
@@ -250,11 +257,12 @@
             "Category 5"});
             this.comboBox1.Location = new System.Drawing.Point(115, 323);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(179, 21);
+            this.comboBox1.Size = new System.Drawing.Size(179, 29);
             this.comboBox1.TabIndex = 52;
             // 
             // comboBox2
             // 
+            this.comboBox2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox2.FormattingEnabled = true;
             this.comboBox2.Items.AddRange(new object[] {
             "SPM",
@@ -263,27 +271,27 @@
             "DS"});
             this.comboBox2.Location = new System.Drawing.Point(115, 110);
             this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(179, 21);
+            this.comboBox2.Size = new System.Drawing.Size(179, 29);
             this.comboBox2.TabIndex = 53;
             this.comboBox2.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
             // 
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.Location = new System.Drawing.Point(710, 471);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(74, 20);
+            this.label11.Size = new System.Drawing.Size(69, 21);
             this.label11.TabIndex = 55;
             this.label11.Text = "Sessions";
             // 
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.Location = new System.Drawing.Point(265, 471);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(76, 20);
+            this.label12.Size = new System.Drawing.Size(80, 21);
             this.label12.TabIndex = 54;
             this.label12.Text = "Lecturers";
             this.label12.Click += new System.EventHandler(this.label12_Click);
@@ -360,7 +368,7 @@
             this.addconsbut.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(43)))), ((int)(((byte)(104)))));
             this.addconsbut.Cursor = System.Windows.Forms.Cursors.Hand;
             this.addconsbut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.addconsbut.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addconsbut.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.addconsbut.ForeColor = System.Drawing.Color.White;
             this.addconsbut.Location = new System.Drawing.Point(813, 203);
             this.addconsbut.Name = "addconsbut";
@@ -374,7 +382,7 @@
             this.addsetofbut.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(43)))), ((int)(((byte)(104)))));
             this.addsetofbut.Cursor = System.Windows.Forms.Cursors.Hand;
             this.addsetofbut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.addsetofbut.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addsetofbut.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.addsetofbut.ForeColor = System.Drawing.Color.White;
             this.addsetofbut.Location = new System.Drawing.Point(813, 417);
             this.addsetofbut.Name = "addsetofbut";

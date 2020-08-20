@@ -224,6 +224,9 @@
     <EmbeddedResource Include="CommonFiles\TopManuBarUC.resx">
       <DependentUpon>TopManuBarUC.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="IT18049114\Forms\StudentManagement.resx">
       <DependentUpon>StudentManagement.cs</DependentUpon>
     </EmbeddedResource>
