@@ -28,14 +28,20 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.label2 = new System.Windows.Forms.Label();
             this.pnlEditRecords = new System.Windows.Forms.Panel();
             this.btnEditRecordLocationUC = new System.Windows.Forms.Button();
+            this.timetableManagementSystemDataSet = new TimeTableManagementSystemApp.TimetableManagementSystemDataSet();
+            this.buildingsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.buildingsTableAdapter = new TimeTableManagementSystemApp.TimetableManagementSystemDataSetTableAdapters.BuildingsTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.timetableManagementSystemDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.buildingsBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -51,12 +57,14 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToOrderColumns = true;
             this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ControlLight;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(86, 71);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(376, 216);
             this.dataGridView1.TabIndex = 1;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // dataGridView2
             // 
@@ -100,6 +108,20 @@
             this.btnEditRecordLocationUC.UseVisualStyleBackColor = false;
             this.btnEditRecordLocationUC.Click += new System.EventHandler(this.btnEditRecordLocationUC_Click);
             // 
+            // timetableManagementSystemDataSet
+            // 
+            this.timetableManagementSystemDataSet.DataSetName = "TimetableManagementSystemDataSet";
+            this.timetableManagementSystemDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // buildingsBindingSource
+            // 
+            this.buildingsBindingSource.DataMember = "Buildings";
+            this.buildingsBindingSource.DataSource = this.timetableManagementSystemDataSet;
+            // 
+            // buildingsTableAdapter
+            // 
+            this.buildingsTableAdapter.ClearBeforeFill = true;
+            // 
             // ViewLocationUC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -116,6 +138,8 @@
             this.Size = new System.Drawing.Size(1025, 700);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.timetableManagementSystemDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.buildingsBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -129,5 +153,8 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel pnlEditRecords;
         private System.Windows.Forms.Button btnEditRecordLocationUC;
+        private System.Windows.Forms.BindingSource buildingsBindingSource;
+        private TimetableManagementSystemDataSet timetableManagementSystemDataSet;
+        private TimetableManagementSystemDataSetTableAdapters.BuildingsTableAdapter buildingsTableAdapter;
     }
 }
