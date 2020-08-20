@@ -29,5 +29,10 @@ namespace TimeTableManagementSystemApp.IT18063288.UserControls
             EditLocationDataUC editLocationDataUC = new EditLocationDataUC();
             CommonClass.showControl(editLocationDataUC, pnlEditRecords);
         }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

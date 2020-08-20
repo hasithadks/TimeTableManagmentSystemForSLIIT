@@ -179,6 +179,11 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TimetableManagementSystemDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TimetableManagementSystemDataSet.xsd</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="CommonFiles\TopManuBarUC.resx">
       <DependentUpon>TopManuBarUC.cs</DependentUpon>
     </EmbeddedResource>
@@ -244,6 +249,17 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="TimetableManagementSystemDataSet.xsc">
+      <DependentUpon>TimetableManagementSystemDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="TimetableManagementSystemDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TimetableManagementSystemDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="TimetableManagementSystemDataSet.xss">
+      <DependentUpon>TimetableManagementSystemDataSet.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

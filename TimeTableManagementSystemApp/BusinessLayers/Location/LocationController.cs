@@ -10,11 +10,12 @@ namespace BusinessLayers.Location
     {
         private LocationData locationData;
 
-        //public int saveBuilding(string buildingname)
-        //{
-        //    int id = locationData.saveBuildingData(buildingname);
+        public int saveBuilding(string buildingname)
+        {
+            locationData = new LocationData();
+            int id = locationData.saveBuildingData(buildingname);
 
-        //    return id;
-        //}
+            return id;
+        }
     }
 }

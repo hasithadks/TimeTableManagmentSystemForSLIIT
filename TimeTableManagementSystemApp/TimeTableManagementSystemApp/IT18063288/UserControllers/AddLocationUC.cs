@@ -16,6 +16,9 @@ namespace TimeTableManagementSystemApp.IT18063288.UserControllers
     public partial class AddLocationUC : UserControl
     {
         private LocationBO locationBO;
+        private LocationController locationContol;
+
+        private int buildingID = 0;
 
         public AddLocationUC()
         {
@@ -95,10 +98,12 @@ namespace TimeTableManagementSystemApp.IT18063288.UserControllers
 
         private void btnBuildingSave_Click(object sender, EventArgs e)
         {
+            locationContol = new LocationController();
             string buildingName = string.Empty;
             locationBO = new LocationBO();
             buildingName = txtNewBuilding.Text;
-            locationBO.RoomName = buildingName;
+            locationBO.RoomName = buildingName.ToString();
+            buildingID = locationContol.saveBuilding(buildingName);
         }
     }
 }
