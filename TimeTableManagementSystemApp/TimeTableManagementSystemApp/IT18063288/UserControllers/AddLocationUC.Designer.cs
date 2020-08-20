@@ -241,9 +241,10 @@
             this.comboBoxRoom.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxRoom.FormattingEnabled = true;
             this.comboBoxRoom.Items.AddRange(new object[] {
-            "Main Building",
-            "New Building",
-            "Engineering Building"});
+            "B501",
+            "B502",
+            "503",
+            "A505"});
             this.comboBoxRoom.Location = new System.Drawing.Point(282, 183);
             this.comboBoxRoom.Name = "comboBoxRoom";
             this.comboBoxRoom.Size = new System.Drawing.Size(329, 27);

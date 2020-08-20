@@ -64,5 +64,11 @@ namespace TimeTableManagementSystemApp.IT18058338.Forms
             else
                 ViewTimeTableUC.ViewTimeTableInstance.BringToFront();
         }
+
+        private void homeBtn_Click(object sender, EventArgs e)
+        {
+            Form1 f = new Form1();
+            f.Show();
+        }
     }
 }

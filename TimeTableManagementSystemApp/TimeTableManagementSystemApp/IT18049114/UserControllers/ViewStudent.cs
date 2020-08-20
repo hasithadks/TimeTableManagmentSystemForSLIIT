@@ -46,5 +46,11 @@ namespace TimeTableManagementSystemApp.IT18049114.UserControllers
         {
 
         }
+
+        private void editstdpagebut_Click(object sender, EventArgs e)
+        {
+            EditStudent AddStudent = new EditStudent();
+            AddStudent.Show();
+        }
     }
 }

@@ -1,6 +1,6 @@
 ﻿namespace TimeTableManagementSystemApp.IT18049114.Forms
 {
-    partial class Form1
+    partial class Form1ha
     {
         /// <summary>
         /// Required designer variable.

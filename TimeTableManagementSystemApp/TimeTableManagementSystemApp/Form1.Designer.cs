@@ -44,6 +44,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.studentBtn = new System.Windows.Forms.Button();
+            this.lecBtn = new System.Windows.Forms.Button();
             this.topPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.maxBtn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.miniBtn)).BeginInit();
@@ -249,11 +250,28 @@
             this.studentBtn.UseVisualStyleBackColor = false;
             this.studentBtn.Click += new System.EventHandler(this.studentBtn_Click);
             // 
+            // lecBtn
+            // 
+            this.lecBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(43)))), ((int)(((byte)(104)))));
+            this.lecBtn.FlatAppearance.BorderSize = 0;
+            this.lecBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lecBtn.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lecBtn.ForeColor = System.Drawing.Color.White;
+            this.lecBtn.Location = new System.Drawing.Point(549, 600);
+            this.lecBtn.Margin = new System.Windows.Forms.Padding(2);
+            this.lecBtn.Name = "lecBtn";
+            this.lecBtn.Size = new System.Drawing.Size(220, 40);
+            this.lecBtn.TabIndex = 71;
+            this.lecBtn.Text = "Lecturer Management";
+            this.lecBtn.UseVisualStyleBackColor = false;
+            this.lecBtn.Click += new System.EventHandler(this.lecBtn_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1280, 768);
+            this.Controls.Add(this.lecBtn);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label3);
@@ -268,6 +286,7 @@
             this.Controls.Add(this.daysBtn);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.topPanel.ResumeLayout(false);
             this.topPanel.PerformLayout();
@@ -297,6 +316,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button studentBtn;
+        private System.Windows.Forms.Button lecBtn;
     }
 }
 

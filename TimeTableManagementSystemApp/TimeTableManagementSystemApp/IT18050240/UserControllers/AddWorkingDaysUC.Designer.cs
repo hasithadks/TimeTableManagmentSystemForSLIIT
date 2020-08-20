@@ -55,9 +55,9 @@
             this.label2.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(403, 4);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(258, 20);
+            this.label2.Size = new System.Drawing.Size(253, 20);
             this.label2.TabIndex = 3;
-            this.label2.Text = "Manage Working Days andHhours";
+            this.label2.Text = "Manage Working Days and Hours";
             // 
             // comboBox2
             // 
@@ -228,10 +228,7 @@
             "1",
             "2",
             "3",
-            "4",
-            "5",
-            "6",
-            "7"});
+            "4"});
             this.comboBox9.Location = new System.Drawing.Point(683, 73);
             this.comboBox9.Name = "comboBox9";
             this.comboBox9.Size = new System.Drawing.Size(121, 29);
@@ -243,12 +240,7 @@
             this.comboBox10.FormattingEnabled = true;
             this.comboBox10.Items.AddRange(new object[] {
             "1",
-            "2",
-            "3",
-            "4",
-            "5",
-            "6",
-            "7"});
+            "2"});
             this.comboBox10.Location = new System.Drawing.Point(949, 73);
             this.comboBox10.Name = "comboBox10";
             this.comboBox10.Size = new System.Drawing.Size(58, 29);
@@ -269,13 +261,8 @@
             this.comboBox11.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.comboBox11.FormattingEnabled = true;
             this.comboBox11.Items.AddRange(new object[] {
-            "1",
-            "2",
-            "3",
-            "4",
-            "5",
-            "6",
-            "7"});
+            "Y1.S1.SE.09.2",
+            "Y2.S2.IT.06.05"});
             this.comboBox11.Location = new System.Drawing.Point(460, 73);
             this.comboBox11.Name = "comboBox11";
             this.comboBox11.Size = new System.Drawing.Size(121, 29);

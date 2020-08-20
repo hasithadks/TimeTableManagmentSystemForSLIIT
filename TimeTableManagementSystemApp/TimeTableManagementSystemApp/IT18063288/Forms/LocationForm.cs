@@ -19,7 +19,7 @@ namespace TimeTableManagementSystemApp.IT18063288
         {
             InitializeComponent();
             TopManuBarUC topManuBarUC = new TopManuBarUC();
-            CommonClass.showControl(topManuBarUC, panelMainMenubar);
+           // CommonClass.showControl(topManuBarUC, panelMainMenubar);
             //panelLeft.Height = btnViewLocation.Height;
             //  panelLeft.Top = btnViewLocation.Top;
             panelLeft.Visible = false;
@@ -70,6 +70,17 @@ namespace TimeTableManagementSystemApp.IT18063288
         private void miniBtn_Click(object sender, EventArgs e)
         {
             WindowState = FormWindowState.Minimized;
+        }
+
+        private void homeBtn_Click(object sender, EventArgs e)
+        {
+            Form1 f = new Form1();
+            f.Show();
+        }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+            Environment.Exit(0);
         }
     }
 }

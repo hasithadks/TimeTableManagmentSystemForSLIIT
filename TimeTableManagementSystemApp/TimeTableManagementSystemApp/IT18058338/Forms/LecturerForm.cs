@@ -18,7 +18,7 @@ namespace TimeTableManagementSystemApp.IT18058338.Forms
         {
             InitializeComponent();
             TopManuBarUC topManuBarUC = new TopManuBarUC();
-            CommonClass.showControl(topManuBarUC, headerpanel);
+           // CommonClass.showControl(topManuBarUC, headerpanel);
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -42,6 +42,12 @@ namespace TimeTableManagementSystemApp.IT18058338.Forms
         {
             ViewLecturerUC viewLecturerUC = new ViewLecturerUC();
             CommonClass.showControl(viewLecturerUC, mainpanel);
+        }
+
+        private void homeBtn_Click(object sender, EventArgs e)
+        {
+            Form1 f = new Form1();
+            f.Show();
         }
     }
 }

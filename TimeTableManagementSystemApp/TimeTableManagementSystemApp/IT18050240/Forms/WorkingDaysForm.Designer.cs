@@ -34,6 +34,7 @@
             this.workingDaysPanel = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.homeBtn = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.maxBtn = new System.Windows.Forms.PictureBox();
@@ -120,6 +121,7 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.White;
+            this.panel3.Controls.Add(this.homeBtn);
             this.panel3.Controls.Add(this.panel4);
             this.panel3.Controls.Add(this.genarateTimeTableBtn);
             this.panel3.Controls.Add(this.viewTimeTableBtn);
@@ -128,6 +130,26 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(224, 780);
             this.panel3.TabIndex = 1;
+            // 
+            // homeBtn
+            // 
+            this.homeBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.homeBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(43)))), ((int)(((byte)(104)))));
+            this.homeBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.homeBtn.FlatAppearance.BorderSize = 0;
+            this.homeBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.homeBtn.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.homeBtn.ForeColor = System.Drawing.Color.White;
+            this.homeBtn.Location = new System.Drawing.Point(4, 242);
+            this.homeBtn.Name = "homeBtn";
+            this.homeBtn.Size = new System.Drawing.Size(220, 40);
+            this.homeBtn.TabIndex = 15;
+            this.homeBtn.Text = "HOME";
+            this.homeBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.homeBtn.UseVisualStyleBackColor = false;
+            this.homeBtn.Click += new System.EventHandler(this.homeBtn_Click);
             // 
             // panel4
             // 
@@ -245,5 +267,6 @@
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button homeBtn;
     }
 }

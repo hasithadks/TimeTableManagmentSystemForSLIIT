@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace TimeTableManagementSystemApp.IT18049114.Forms
 {
-    public partial class Form1 : Form
+    public partial class Form1ha : Form
     {
-        public Form1()
+        public Form1ha()
         {
             InitializeComponent();
         }

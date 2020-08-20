@@ -53,12 +53,22 @@ namespace TimeTableManagementSystemApp
 
         private void SubjectBtn_Click(object sender, EventArgs e)
         {
-           
+            this.Hide();
+            SubjectForm att = new SubjectForm();
+            att.Show();
+
         }
 
         private void tagbtn_Click(object sender, EventArgs e)
         {
            
+        }
+
+        private void lecBtn_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            LecturerForm att = new LecturerForm();
+            att.Show();
         }
     }
 }

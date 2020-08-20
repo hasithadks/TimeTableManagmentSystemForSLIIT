@@ -129,6 +129,7 @@
             this.editstdpagebut.TabIndex = 23;
             this.editstdpagebut.Text = "Edit";
             this.editstdpagebut.UseVisualStyleBackColor = false;
+            this.editstdpagebut.Click += new System.EventHandler(this.editstdpagebut_Click);
             // 
             // deletestdbut
             // 
