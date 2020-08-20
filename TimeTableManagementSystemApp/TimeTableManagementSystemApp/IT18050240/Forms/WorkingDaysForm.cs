@@ -17,6 +17,8 @@ namespace TimeTableManagementSystemApp.IT18058338.Forms
         public WorkingDaysForm()
         {
             InitializeComponent();
+            workingDaysPanel.Controls.Add(AddWorkingDaysUC.AddWorkingInstance);
+            AddWorkingDaysUC.AddWorkingInstance.BringToFront();
         }
 
         private void addWorkingDaysBtn_Click(object sender, EventArgs e)

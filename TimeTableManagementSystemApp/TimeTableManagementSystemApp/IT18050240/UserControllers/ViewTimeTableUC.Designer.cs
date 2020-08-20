@@ -31,7 +31,6 @@
             this.comboBox31 = new System.Windows.Forms.ComboBox();
             this.comboBox32 = new System.Windows.Forms.ComboBox();
             this.comboBox33 = new System.Windows.Forms.ComboBox();
-            this.addWorkingDaysBtn = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
@@ -49,6 +48,9 @@
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.addWorkingDaysBtn = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -64,7 +66,7 @@
             "Friday",
             "Saturday",
             "Sunday"});
-            this.comboBox31.Location = new System.Drawing.Point(613, 2);
+            this.comboBox31.Location = new System.Drawing.Point(528, 3);
             this.comboBox31.Name = "comboBox31";
             this.comboBox31.Size = new System.Drawing.Size(159, 29);
             this.comboBox31.TabIndex = 63;
@@ -82,7 +84,7 @@
             "Friday",
             "Saturday",
             "Sunday"});
-            this.comboBox32.Location = new System.Drawing.Point(789, 2);
+            this.comboBox32.Location = new System.Drawing.Point(704, 3);
             this.comboBox32.Name = "comboBox32";
             this.comboBox32.Size = new System.Drawing.Size(159, 29);
             this.comboBox32.TabIndex = 62;
@@ -100,26 +102,11 @@
             "Friday",
             "Saturday",
             "Sunday"});
-            this.comboBox33.Location = new System.Drawing.Point(434, 2);
+            this.comboBox33.Location = new System.Drawing.Point(349, 3);
             this.comboBox33.Name = "comboBox33";
             this.comboBox33.Size = new System.Drawing.Size(159, 29);
             this.comboBox33.TabIndex = 61;
             this.comboBox33.Text = "Select Lecturer";
-            // 
-            // addWorkingDaysBtn
-            // 
-            this.addWorkingDaysBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(43)))), ((int)(((byte)(104)))));
-            this.addWorkingDaysBtn.FlatAppearance.BorderSize = 0;
-            this.addWorkingDaysBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.addWorkingDaysBtn.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.addWorkingDaysBtn.ForeColor = System.Drawing.Color.White;
-            this.addWorkingDaysBtn.Location = new System.Drawing.Point(953, 2);
-            this.addWorkingDaysBtn.Margin = new System.Windows.Forms.Padding(2);
-            this.addWorkingDaysBtn.Name = "addWorkingDaysBtn";
-            this.addWorkingDaysBtn.Size = new System.Drawing.Size(82, 29);
-            this.addWorkingDaysBtn.TabIndex = 64;
-            this.addWorkingDaysBtn.Text = "Search";
-            this.addWorkingDaysBtn.UseVisualStyleBackColor = false;
             // 
             // dataGridView1
             // 
@@ -289,11 +276,61 @@
             this.label1.TabIndex = 74;
             this.label1.Text = "9.30";
             // 
+            // addWorkingDaysBtn
+            // 
+            this.addWorkingDaysBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(43)))), ((int)(((byte)(104)))));
+            this.addWorkingDaysBtn.FlatAppearance.BorderSize = 0;
+            this.addWorkingDaysBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.addWorkingDaysBtn.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addWorkingDaysBtn.ForeColor = System.Drawing.Color.White;
+            this.addWorkingDaysBtn.Location = new System.Drawing.Point(868, 3);
+            this.addWorkingDaysBtn.Margin = new System.Windows.Forms.Padding(2);
+            this.addWorkingDaysBtn.Name = "addWorkingDaysBtn";
+            this.addWorkingDaysBtn.Size = new System.Drawing.Size(82, 29);
+            this.addWorkingDaysBtn.TabIndex = 64;
+            this.addWorkingDaysBtn.Text = "Search";
+            this.addWorkingDaysBtn.UseVisualStyleBackColor = false;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(43)))), ((int)(((byte)(104)))));
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(953, 3);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(82, 29);
+            this.button1.TabIndex = 82;
+            this.button1.Text = "Edit";
+            this.button1.UseVisualStyleBackColor = false;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"});
+            this.comboBox1.Location = new System.Drawing.Point(184, 3);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(159, 29);
+            this.comboBox1.TabIndex = 83;
+            this.comboBox1.Text = "Select Group";
+            // 
             // ViewTimeTableUC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.label16);
             this.Controls.Add(this.label15);
             this.Controls.Add(this.label14);
@@ -327,7 +364,6 @@
         private System.Windows.Forms.ComboBox comboBox31;
         private System.Windows.Forms.ComboBox comboBox32;
         private System.Windows.Forms.ComboBox comboBox33;
-        private System.Windows.Forms.Button addWorkingDaysBtn;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
@@ -345,5 +381,8 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button addWorkingDaysBtn;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }
