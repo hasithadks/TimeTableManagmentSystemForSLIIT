@@ -4,6 +4,8 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using TimeTableManagementSystemApp.IT18063288;
+using TimeTableManagementSystemApp.IT18058338;
+using TimeTableManagementSystemApp.IT18058338.Forms;
 
 namespace TimeTableManagementSystemApp
 {
@@ -17,7 +19,7 @@ namespace TimeTableManagementSystemApp
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new LocationForm());
+            Application.Run(new SubjectForm());
         }
     }
 }

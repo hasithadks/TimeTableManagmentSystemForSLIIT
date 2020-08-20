@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace TimeTableManagementSystemApp.IT18058338.UserControllers
 {
-    public partial class UserControl1 : UserControl
+    public partial class EditSubjectUC : UserControl
     {
-        public UserControl1()
+        public EditSubjectUC()
         {
             InitializeComponent();
         }

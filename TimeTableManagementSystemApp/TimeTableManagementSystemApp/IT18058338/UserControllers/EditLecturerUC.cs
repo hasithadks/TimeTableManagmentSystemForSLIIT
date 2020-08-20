@@ -1,18 +1,18 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Data;
 using System.Drawing;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace TimeTableManagementSystemApp.IT18058338.Forms
+namespace TimeTableManagementSystemApp.IT18058338.UserControllers
 {
-    public partial class Form1 : Form
+    public partial class EditLecturerUC : UserControl
     {
-        public Form1()
+        public EditLecturerUC()
         {
             InitializeComponent();
         }
