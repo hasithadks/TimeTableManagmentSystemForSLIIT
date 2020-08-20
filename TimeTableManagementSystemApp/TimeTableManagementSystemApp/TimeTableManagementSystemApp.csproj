@@ -149,11 +149,59 @@
     <Compile Include="IT18050240\UserControllers\AddWorkingDaysUC.Designer.cs">
       <DependentUpon>AddWorkingDaysUC.cs</DependentUpon>
     </Compile>
+    <Compile Include="IT18058338\Forms\LecturerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IT18058338\Forms\LecturerForm.designer.cs">
+      <DependentUpon>LecturerForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IT18058338\Forms\SubjectForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IT18058338\Forms\SubjectForm.designer.cs">
+      <DependentUpon>SubjectForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IT18058338\UserControllers\AddLecturerUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="IT18058338\UserControllers\AddLecturerUC.designer.cs">
+      <DependentUpon>AddLecturerUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IT18058338\UserControllers\AddSubjectUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="IT18058338\UserControllers\AddSubjectUC.designer.cs">
+      <DependentUpon>AddSubjectUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IT18058338\UserControllers\EditLecturerUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="IT18058338\UserControllers\EditLecturerUC.designer.cs">
+      <DependentUpon>EditLecturerUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IT18058338\UserControllers\EditSubjectUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="IT18058338\UserControllers\EditSubjectUC.designer.cs">
+      <DependentUpon>EditSubjectUC.cs</DependentUpon>
+    </Compile>
     <Compile Include="IT18058338\UserControllers\UserControl1.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="IT18058338\UserControllers\UserControl1.Designer.cs">
       <DependentUpon>UserControl1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IT18058338\UserControllers\ViewLecturerUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="IT18058338\UserControllers\ViewLecturerUC.designer.cs">
+      <DependentUpon>ViewLecturerUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IT18058338\UserControllers\ViewSubjectUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="IT18058338\UserControllers\ViewSubjectUC.designer.cs">
+      <DependentUpon>ViewSubjectUC.cs</DependentUpon>
     </Compile>
     <Compile Include="IT18063288\Forms\LocationForm.cs">
       <SubType>Form</SubType>
@@ -261,6 +309,30 @@
     <EmbeddedResource Include="IT18050240\UserControllers\ViewTimeTableUC.resx">
       <DependentUpon>ViewTimeTableUC.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="IT18058338\Forms\LecturerForm.resx">
+      <DependentUpon>LecturerForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IT18058338\Forms\SubjectForm.resx">
+      <DependentUpon>SubjectForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IT18058338\UserControllers\AddLecturerUC.resx">
+      <DependentUpon>AddLecturerUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IT18058338\UserControllers\AddSubjectUC.resx">
+      <DependentUpon>AddSubjectUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IT18058338\UserControllers\EditLecturerUC.resx">
+      <DependentUpon>EditLecturerUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IT18058338\UserControllers\EditSubjectUC.resx">
+      <DependentUpon>EditSubjectUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IT18058338\UserControllers\ViewLecturerUC.resx">
+      <DependentUpon>ViewLecturerUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IT18058338\UserControllers\ViewSubjectUC.resx">
+      <DependentUpon>ViewSubjectUC.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="IT18063288\Forms\LocationForm.resx">
       <DependentUpon>LocationForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -345,10 +417,7 @@
     <None Include="Resources\Maxibtn.png" />
     <None Include="Resources\closebtn.png" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="IT18058338\Forms\" />
-    <Folder Include="IT18058338\UserControllers\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
