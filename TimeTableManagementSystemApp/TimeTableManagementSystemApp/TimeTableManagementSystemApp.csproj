@@ -1,5 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" />
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -12,6 +13,8 @@
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -33,7 +36,14 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -65,71 +75,89 @@
     <Compile Include="IT18049114\Forms\Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="IT18049114\Forms\StudentManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IT18049114\Forms\StudentManagement.Designer.cs">
+      <DependentUpon>StudentManagement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IT18049114\UserControllers\AddStudent.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="IT18049114\UserControllers\AddStudent.Designer.cs">
+      <DependentUpon>AddStudent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IT18049114\UserControllers\ConsecutiveSessions.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="IT18049114\UserControllers\ConsecutiveSessions.Designer.cs">
+      <DependentUpon>ConsecutiveSessions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IT18049114\UserControllers\EditStudent.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="IT18049114\UserControllers\EditStudent.Designer.cs">
+      <DependentUpon>EditStudent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IT18049114\UserControllers\NotAvailableTimes.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="IT18049114\UserControllers\NotAvailableTimes.Designer.cs">
+      <DependentUpon>NotAvailableTimes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IT18049114\UserControllers\Tags.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="IT18049114\UserControllers\Tags.Designer.cs">
+      <DependentUpon>Tags.cs</DependentUpon>
+    </Compile>
     <Compile Include="IT18049114\UserControllers\UserControl1.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="IT18049114\UserControllers\UserControl1.Designer.cs">
       <DependentUpon>UserControl1.cs</DependentUpon>
     </Compile>
-    <Compile Include="IT18050240\Forms\Form1.cs">
+    <Compile Include="IT18049114\UserControllers\ViewStudent.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="IT18049114\UserControllers\ViewStudent.Designer.cs">
+      <DependentUpon>ViewStudent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IT18050240\UserControllers\GenerateTimeTableUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="IT18050240\UserControllers\GenerateTimeTableUC.Designer.cs">
+      <DependentUpon>GenerateTimeTableUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IT18050240\UserControllers\ViewTimeTableUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="IT18050240\UserControllers\ViewTimeTableUC.Designer.cs">
+      <DependentUpon>ViewTimeTableUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IT18058338\Forms\Form1.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="IT18050240\Forms\Form1.Designer.cs">
+    <Compile Include="IT18058338\Forms\Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="IT18050240\UserControllers\UserControl1.cs">
+    <Compile Include="IT18050240\Forms\WorkingDaysForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IT18050240\Forms\WorkingDaysForm.Designer.cs">
+      <DependentUpon>WorkingDaysForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IT18050240\UserControllers\AddWorkingDaysUC.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="IT18050240\UserControllers\UserControl1.Designer.cs">
+    <Compile Include="IT18050240\UserControllers\AddWorkingDaysUC.Designer.cs">
+      <DependentUpon>AddWorkingDaysUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IT18058338\UserControllers\UserControl1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="IT18058338\UserControllers\UserControl1.Designer.cs">
       <DependentUpon>UserControl1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="IT18058338\Forms\LecturerForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="IT18058338\Forms\LecturerForm.Designer.cs">
-      <DependentUpon>LecturerForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="IT18058338\Forms\SubjectForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="IT18058338\Forms\SubjectForm.Designer.cs">
-      <DependentUpon>SubjectForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="IT18058338\UserControllers\AddLecturerUC.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="IT18058338\UserControllers\AddLecturerUC.Designer.cs">
-      <DependentUpon>AddLecturerUC.cs</DependentUpon>
-    </Compile>
-    <Compile Include="IT18058338\UserControllers\AddSubjectUC.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="IT18058338\UserControllers\AddSubjectUC.Designer.cs">
-      <DependentUpon>AddSubjectUC.cs</DependentUpon>
-    </Compile>
-    <Compile Include="IT18058338\UserControllers\EditLecturerUC.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="IT18058338\UserControllers\EditLecturerUC.Designer.cs">
-      <DependentUpon>EditLecturerUC.cs</DependentUpon>
-    </Compile>
-    <Compile Include="IT18058338\UserControllers\EditSubjectUC.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="IT18058338\UserControllers\EditSubjectUC.Designer.cs">
-      <DependentUpon>EditSubjectUC.cs</DependentUpon>
-    </Compile>
-    <Compile Include="IT18058338\UserControllers\ViewLecturerUC.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="IT18058338\UserControllers\ViewLecturerUC.Designer.cs">
-      <DependentUpon>ViewLecturerUC.cs</DependentUpon>
-    </Compile>
-    <Compile Include="IT18058338\UserControllers\ViewSubjectUC.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="IT18058338\UserControllers\ViewSubjectUC.Designer.cs">
-      <DependentUpon>ViewSubjectUC.cs</DependentUpon>
     </Compile>
     <Compile Include="IT18063288\Forms\LocationForm.cs">
       <SubType>Form</SubType>
@@ -143,11 +171,47 @@
     <Compile Include="IT18063288\UserControllers\AddLocationUC.Designer.cs">
       <DependentUpon>AddLocationUC.cs</DependentUpon>
     </Compile>
+    <Compile Include="IT18063288\UserControllers\StatisticUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="IT18063288\UserControllers\StatisticUC.Designer.cs">
+      <DependentUpon>StatisticUC.cs</DependentUpon>
+    </Compile>
     <Compile Include="IT18063288\UserControllers\SubUserControllers\EditLocationDataUC.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="IT18063288\UserControllers\SubUserControllers\EditLocationDataUC.Designer.cs">
       <DependentUpon>EditLocationDataUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IT18063288\UserControllers\SubUserControllers\LecturerStatisticUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="IT18063288\UserControllers\SubUserControllers\LecturerStatisticUC.Designer.cs">
+      <DependentUpon>LecturerStatisticUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IT18063288\UserControllers\SubUserControllers\MoreRoomDetailsUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="IT18063288\UserControllers\SubUserControllers\MoreRoomDetailsUC.Designer.cs">
+      <DependentUpon>MoreRoomDetailsUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IT18063288\UserControllers\SubUserControllers\StatisticInnerUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="IT18063288\UserControllers\SubUserControllers\StatisticInnerUC.Designer.cs">
+      <DependentUpon>StatisticInnerUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IT18063288\UserControllers\SubUserControllers\StudentStatisticUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="IT18063288\UserControllers\SubUserControllers\StudentStatisticUC.Designer.cs">
+      <DependentUpon>StudentStatisticUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IT18063288\UserControllers\SubUserControllers\SubjectStatisticUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="IT18063288\UserControllers\SubUserControllers\SubjectStatisticUC.Designer.cs">
+      <DependentUpon>SubjectStatisticUC.cs</DependentUpon>
     </Compile>
     <Compile Include="IT18063288\UserControllers\ViewLocationUC.cs">
       <SubType>UserControl</SubType>
@@ -157,29 +221,49 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="IT18058338\Forms\LecturerForm.resx">
-      <DependentUpon>LecturerForm.cs</DependentUpon>
+    <Compile Include="TimetableManagementSystemDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TimetableManagementSystemDataSet.xsd</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="CommonFiles\TopManuBarUC.resx">
+      <DependentUpon>TopManuBarUC.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="IT18058338\Forms\SubjectForm.resx">
-      <DependentUpon>SubjectForm.cs</DependentUpon>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="IT18058338\UserControllers\AddLecturerUC.resx">
-      <DependentUpon>AddLecturerUC.cs</DependentUpon>
+    <EmbeddedResource Include="IT18049114\Forms\StudentManagement.resx">
+      <DependentUpon>StudentManagement.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="IT18058338\UserControllers\AddSubjectUC.resx">
-      <DependentUpon>AddSubjectUC.cs</DependentUpon>
+    <EmbeddedResource Include="IT18049114\UserControllers\AddStudent.resx">
+      <DependentUpon>AddStudent.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="IT18058338\UserControllers\EditLecturerUC.resx">
-      <DependentUpon>EditLecturerUC.cs</DependentUpon>
+    <EmbeddedResource Include="IT18049114\UserControllers\ConsecutiveSessions.resx">
+      <DependentUpon>ConsecutiveSessions.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="IT18058338\UserControllers\EditSubjectUC.resx">
-      <DependentUpon>EditSubjectUC.cs</DependentUpon>
+    <EmbeddedResource Include="IT18049114\UserControllers\EditStudent.resx">
+      <DependentUpon>EditStudent.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="IT18058338\UserControllers\ViewLecturerUC.resx">
-      <DependentUpon>ViewLecturerUC.cs</DependentUpon>
+    <EmbeddedResource Include="IT18049114\UserControllers\NotAvailableTimes.resx">
+      <DependentUpon>NotAvailableTimes.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="IT18058338\UserControllers\ViewSubjectUC.resx">
-      <DependentUpon>ViewSubjectUC.cs</DependentUpon>
+    <EmbeddedResource Include="IT18049114\UserControllers\Tags.resx">
+      <DependentUpon>Tags.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IT18049114\UserControllers\ViewStudent.resx">
+      <DependentUpon>ViewStudent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IT18050240\Forms\WorkingDaysForm.resx">
+      <DependentUpon>WorkingDaysForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IT18050240\UserControllers\AddWorkingDaysUC.resx">
+      <DependentUpon>AddWorkingDaysUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IT18050240\UserControllers\GenerateTimeTableUC.resx">
+      <DependentUpon>GenerateTimeTableUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IT18050240\UserControllers\ViewTimeTableUC.resx">
+      <DependentUpon>ViewTimeTableUC.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="IT18063288\Forms\LocationForm.resx">
       <DependentUpon>LocationForm.cs</DependentUpon>
@@ -187,8 +271,26 @@
     <EmbeddedResource Include="IT18063288\UserControllers\AddLocationUC.resx">
       <DependentUpon>AddLocationUC.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="IT18063288\UserControllers\StatisticUC.resx">
+      <DependentUpon>StatisticUC.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="IT18063288\UserControllers\SubUserControllers\EditLocationDataUC.resx">
       <DependentUpon>EditLocationDataUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IT18063288\UserControllers\SubUserControllers\LecturerStatisticUC.resx">
+      <DependentUpon>LecturerStatisticUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IT18063288\UserControllers\SubUserControllers\MoreRoomDetailsUC.resx">
+      <DependentUpon>MoreRoomDetailsUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IT18063288\UserControllers\SubUserControllers\StatisticInnerUC.resx">
+      <DependentUpon>StatisticInnerUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IT18063288\UserControllers\SubUserControllers\StudentStatisticUC.resx">
+      <DependentUpon>StudentStatisticUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IT18063288\UserControllers\SubUserControllers\SubjectStatisticUC.resx">
+      <DependentUpon>SubjectStatisticUC.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="IT18063288\UserControllers\ViewLocationUC.resx">
       <DependentUpon>ViewLocationUC.cs</DependentUpon>
@@ -203,6 +305,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -212,11 +315,27 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="TimetableManagementSystemDataSet.xsc">
+      <DependentUpon>TimetableManagementSystemDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="TimetableManagementSystemDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TimetableManagementSystemDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="TimetableManagementSystemDataSet.xss">
+      <DependentUpon>TimetableManagementSystemDataSet.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\BusinessLayers\BusinessLayers.csproj">
+      <Project>{2a5c5aac-9032-4ca5-aa39-7e186585b03a}</Project>
+      <Name>BusinessLayers</Name>
+    </ProjectReference>
+  </ItemGroup>
   <ItemGroup>
     <None Include="Resources\plus-black-symbol.png" />
   </ItemGroup>
@@ -225,6 +344,19 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Resources\add-square-button.png" />
+    <None Include="Resources\SLIIT.png" />
+    <None Include="Resources\minibtn.png" />
+    <None Include="Resources\Maxibtn.png" />
+    <None Include="Resources\closebtn.png" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.targets'))" />
+  </Target>
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" />
 </Project>

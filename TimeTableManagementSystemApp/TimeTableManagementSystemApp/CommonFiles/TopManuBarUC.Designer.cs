@@ -34,12 +34,14 @@
             // 
             // button1
             // 
-            this.button1.BackColor = System.Drawing.Color.OrangeRed;
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(43)))), ((int)(((byte)(104)))));
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(1188, 21);
+            this.button1.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(919, 13);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.Size = new System.Drawing.Size(89, 36);
             this.button1.TabIndex = 0;
             this.button1.Text = "logOut";
             this.button1.UseVisualStyleBackColor = false;
@@ -47,22 +49,22 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Tahoma", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Tahoma", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(14, 10);
+            this.label1.Location = new System.Drawing.Point(26, 11);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(115, 42);
+            this.label1.Size = new System.Drawing.Size(456, 33);
             this.label1.TabIndex = 1;
-            this.label1.Text = "SLIIT";
+            this.label1.Text = "Time Table Management System";
             // 
             // TopManuBarUC
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.BackColor = System.Drawing.Color.DarkSlateBlue;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(43)))), ((int)(((byte)(104)))));
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button1);
             this.Name = "TopManuBarUC";
-            this.Size = new System.Drawing.Size(1280, 60);
+            this.Size = new System.Drawing.Size(1027, 76);
             this.ResumeLayout(false);
             this.PerformLayout();
 

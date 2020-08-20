@@ -73,9 +73,49 @@ namespace TimeTableManagementSystemApp.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap closebtn {
+            get {
+                object obj = ResourceManager.GetObject("closebtn", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Maxibtn {
+            get {
+                object obj = ResourceManager.GetObject("Maxibtn", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap minibtn {
+            get {
+                object obj = ResourceManager.GetObject("minibtn", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap plus_black_symbol {
             get {
                 object obj = ResourceManager.GetObject("plus-black-symbol", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap SLIIT {
+            get {
+                object obj = ResourceManager.GetObject("SLIIT", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
