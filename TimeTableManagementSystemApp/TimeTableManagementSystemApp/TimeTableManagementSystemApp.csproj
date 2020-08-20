@@ -149,6 +149,12 @@
     <Compile Include="IT18050240\UserControllers\AddWorkingDaysUC.Designer.cs">
       <DependentUpon>AddWorkingDaysUC.cs</DependentUpon>
     </Compile>
+    <Compile Include="IT18058338\UserControllers\UserControl1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="IT18058338\UserControllers\UserControl1.Designer.cs">
+      <DependentUpon>UserControl1.cs</DependentUpon>
+    </Compile>
     <Compile Include="IT18063288\Forms\LocationForm.cs">
       <SubType>Form</SubType>
     </Compile>
