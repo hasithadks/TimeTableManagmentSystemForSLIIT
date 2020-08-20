@@ -135,12 +135,6 @@
     <Compile Include="IT18050240\UserControllers\ViewTimeTableUC.Designer.cs">
       <DependentUpon>ViewTimeTableUC.cs</DependentUpon>
     </Compile>
-    <Compile Include="IT18058338\Forms\Form1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="IT18058338\Forms\Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </Compile>
     <Compile Include="IT18050240\Forms\WorkingDaysForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -152,6 +146,12 @@
     </Compile>
     <Compile Include="IT18050240\UserControllers\AddWorkingDaysUC.Designer.cs">
       <DependentUpon>AddWorkingDaysUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IT18058338\Forms\Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IT18058338\Forms\Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="IT18058338\UserControllers\UserControl1.cs">
       <SubType>UserControl</SubType>
