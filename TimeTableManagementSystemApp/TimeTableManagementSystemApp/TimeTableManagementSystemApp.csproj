@@ -42,7 +42,9 @@
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
-    <Reference Include="System" />
+    <Reference Include="System">
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.dll</HintPath>
+    </Reference>
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -135,12 +137,6 @@
     <Compile Include="IT18050240\UserControllers\ViewTimeTableUC.Designer.cs">
       <DependentUpon>ViewTimeTableUC.cs</DependentUpon>
     </Compile>
-    <Compile Include="IT18058338\Forms\Form1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="IT18058338\Forms\Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </Compile>
     <Compile Include="IT18050240\Forms\WorkingDaysForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -152,12 +148,6 @@
     </Compile>
     <Compile Include="IT18050240\UserControllers\AddWorkingDaysUC.Designer.cs">
       <DependentUpon>AddWorkingDaysUC.cs</DependentUpon>
-    </Compile>
-    <Compile Include="IT18058338\UserControllers\UserControl1.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="IT18058338\UserControllers\UserControl1.Designer.cs">
-      <DependentUpon>UserControl1.cs</DependentUpon>
     </Compile>
     <Compile Include="IT18063288\Forms\LocationForm.cs">
       <SubType>Form</SubType>
@@ -349,7 +339,10 @@
     <None Include="Resources\Maxibtn.png" />
     <None Include="Resources\closebtn.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="IT18058338\Forms\" />
+    <Folder Include="IT18058338\UserControllers\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
