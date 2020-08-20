@@ -42,7 +42,9 @@
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
-    <Reference Include="System" />
+    <Reference Include="System">
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.dll</HintPath>
+    </Reference>
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -135,12 +137,6 @@
     <Compile Include="IT18050240\UserControllers\ViewTimeTableUC.Designer.cs">
       <DependentUpon>ViewTimeTableUC.cs</DependentUpon>
     </Compile>
-    <Compile Include="IT18058338\Forms\Form1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="IT18058338\Forms\Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </Compile>
     <Compile Include="IT18050240\Forms\WorkingDaysForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -153,11 +149,59 @@
     <Compile Include="IT18050240\UserControllers\AddWorkingDaysUC.Designer.cs">
       <DependentUpon>AddWorkingDaysUC.cs</DependentUpon>
     </Compile>
+    <Compile Include="IT18058338\Forms\LecturerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IT18058338\Forms\LecturerForm.designer.cs">
+      <DependentUpon>LecturerForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IT18058338\Forms\SubjectForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IT18058338\Forms\SubjectForm.designer.cs">
+      <DependentUpon>SubjectForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IT18058338\UserControllers\AddLecturerUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="IT18058338\UserControllers\AddLecturerUC.designer.cs">
+      <DependentUpon>AddLecturerUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IT18058338\UserControllers\AddSubjectUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="IT18058338\UserControllers\AddSubjectUC.designer.cs">
+      <DependentUpon>AddSubjectUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IT18058338\UserControllers\EditLecturerUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="IT18058338\UserControllers\EditLecturerUC.designer.cs">
+      <DependentUpon>EditLecturerUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IT18058338\UserControllers\EditSubjectUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="IT18058338\UserControllers\EditSubjectUC.designer.cs">
+      <DependentUpon>EditSubjectUC.cs</DependentUpon>
+    </Compile>
     <Compile Include="IT18058338\UserControllers\UserControl1.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="IT18058338\UserControllers\UserControl1.Designer.cs">
       <DependentUpon>UserControl1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IT18058338\UserControllers\ViewLecturerUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="IT18058338\UserControllers\ViewLecturerUC.designer.cs">
+      <DependentUpon>ViewLecturerUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IT18058338\UserControllers\ViewSubjectUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="IT18058338\UserControllers\ViewSubjectUC.designer.cs">
+      <DependentUpon>ViewSubjectUC.cs</DependentUpon>
     </Compile>
     <Compile Include="IT18063288\Forms\LocationForm.cs">
       <SubType>Form</SubType>
@@ -264,6 +308,30 @@
     </EmbeddedResource>
     <EmbeddedResource Include="IT18050240\UserControllers\ViewTimeTableUC.resx">
       <DependentUpon>ViewTimeTableUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IT18058338\Forms\LecturerForm.resx">
+      <DependentUpon>LecturerForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IT18058338\Forms\SubjectForm.resx">
+      <DependentUpon>SubjectForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IT18058338\UserControllers\AddLecturerUC.resx">
+      <DependentUpon>AddLecturerUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IT18058338\UserControllers\AddSubjectUC.resx">
+      <DependentUpon>AddSubjectUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IT18058338\UserControllers\EditLecturerUC.resx">
+      <DependentUpon>EditLecturerUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IT18058338\UserControllers\EditSubjectUC.resx">
+      <DependentUpon>EditSubjectUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IT18058338\UserControllers\ViewLecturerUC.resx">
+      <DependentUpon>ViewLecturerUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IT18058338\UserControllers\ViewSubjectUC.resx">
+      <DependentUpon>ViewSubjectUC.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="IT18063288\Forms\LocationForm.resx">
       <DependentUpon>LocationForm.cs</DependentUpon>
