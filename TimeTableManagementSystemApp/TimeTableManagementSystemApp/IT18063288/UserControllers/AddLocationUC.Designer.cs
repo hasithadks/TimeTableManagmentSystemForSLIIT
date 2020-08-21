@@ -28,9 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddLocationUC));
             this.btnBuildingSave = new System.Windows.Forms.Button();
             this.txtNewBuilding = new System.Windows.Forms.TextBox();
             this.comboBoxBuilding = new System.Windows.Forms.ComboBox();
+            this.buildingsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.timetableManagementSystemDataSet = new TimeTableManagementSystemApp.TimetableManagementSystemDataSet();
             this.label1 = new System.Windows.Forms.Label();
             this.btnBuildingUpdate = new System.Windows.Forms.Button();
             this.btnChangeBuildingName = new System.Windows.Forms.Button();
@@ -45,6 +49,16 @@
             this.comboBoxRoom = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.panelRoomDetails = new System.Windows.Forms.Panel();
+            this.buildingsTableAdapter = new TimeTableManagementSystemApp.TimetableManagementSystemDataSetTableAdapters.BuildingsTableAdapter();
+            this.fillByToolStrip = new System.Windows.Forms.ToolStrip();
+            this.fillByToolStripButton = new System.Windows.Forms.ToolStripButton();
+            this.fillToolStrip = new System.Windows.Forms.ToolStrip();
+            this.fillToolStripButton = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
+            ((System.ComponentModel.ISupportInitialize)(this.buildingsBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.timetableManagementSystemDataSet)).BeginInit();
+            this.fillByToolStrip.SuspendLayout();
+            this.fillToolStrip.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnBuildingSave
@@ -76,14 +90,20 @@
             // 
             this.comboBoxBuilding.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxBuilding.FormattingEnabled = true;
-            this.comboBoxBuilding.Items.AddRange(new object[] {
-            "Main Building",
-            "New Building",
-            "Engineering Building"});
             this.comboBoxBuilding.Location = new System.Drawing.Point(282, 65);
             this.comboBoxBuilding.Name = "comboBoxBuilding";
             this.comboBoxBuilding.Size = new System.Drawing.Size(329, 27);
             this.comboBoxBuilding.TabIndex = 10;
+            // 
+            // buildingsBindingSource
+            // 
+            this.buildingsBindingSource.DataMember = "Buildings";
+            this.buildingsBindingSource.DataSource = this.timetableManagementSystemDataSet;
+            // 
+            // timetableManagementSystemDataSet
+            // 
+            this.timetableManagementSystemDataSet.DataSetName = "TimetableManagementSystemDataSet";
+            this.timetableManagementSystemDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // label1
             // 
@@ -269,11 +289,66 @@
             this.panelRoomDetails.Size = new System.Drawing.Size(1020, 365);
             this.panelRoomDetails.TabIndex = 35;
             // 
+            // buildingsTableAdapter
+            // 
+            this.buildingsTableAdapter.ClearBeforeFill = true;
+            // 
+            // fillByToolStrip
+            // 
+            this.fillByToolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.fillByToolStripButton});
+            this.fillByToolStrip.Location = new System.Drawing.Point(0, 0);
+            this.fillByToolStrip.Name = "fillByToolStrip";
+            this.fillByToolStrip.Size = new System.Drawing.Size(1042, 25);
+            this.fillByToolStrip.TabIndex = 36;
+            this.fillByToolStrip.Text = "fillByToolStrip";
+            this.fillByToolStrip.Visible = false;
+            // 
+            // fillByToolStripButton
+            // 
+            this.fillByToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.fillByToolStripButton.Name = "fillByToolStripButton";
+            this.fillByToolStripButton.Size = new System.Drawing.Size(39, 22);
+            this.fillByToolStripButton.Text = "FillBy";
+            this.fillByToolStripButton.Click += new System.EventHandler(this.fillByToolStripButton_Click);
+            // 
+            // fillToolStrip
+            // 
+            this.fillToolStrip.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
+            this.fillToolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.fillToolStripButton,
+            this.toolStripButton1});
+            this.fillToolStrip.Location = new System.Drawing.Point(0, 0);
+            this.fillToolStrip.Name = "fillToolStrip";
+            this.fillToolStrip.Size = new System.Drawing.Size(1042, 25);
+            this.fillToolStrip.TabIndex = 37;
+            this.fillToolStrip.Text = "fillToolStrip";
+            this.fillToolStrip.Visible = false;
+            // 
+            // fillToolStripButton
+            // 
+            this.fillToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.fillToolStripButton.Name = "fillToolStripButton";
+            this.fillToolStripButton.Size = new System.Drawing.Size(26, 22);
+            this.fillToolStripButton.Text = "Fill";
+            this.fillToolStripButton.Click += new System.EventHandler(this.fillToolStripButton_Click);
+            // 
+            // toolStripButton1
+            // 
+            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
+            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton1.Name = "toolStripButton1";
+            this.toolStripButton1.Size = new System.Drawing.Size(23, 22);
+            this.toolStripButton1.Text = "toolStripButton1";
+            // 
             // AddLocationUC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.fillToolStrip);
+            this.Controls.Add(this.fillByToolStrip);
             this.Controls.Add(this.btnAddNewRoom);
             this.Controls.Add(this.btnDeleteRoom);
             this.Controls.Add(this.btnChangeRoomName);
@@ -292,7 +367,13 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panelRoomDetails);
             this.Name = "AddLocationUC";
-            this.Size = new System.Drawing.Size(1027, 641);
+            this.Size = new System.Drawing.Size(1042, 671);
+            ((System.ComponentModel.ISupportInitialize)(this.buildingsBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.timetableManagementSystemDataSet)).EndInit();
+            this.fillByToolStrip.ResumeLayout(false);
+            this.fillByToolStrip.PerformLayout();
+            this.fillToolStrip.ResumeLayout(false);
+            this.fillToolStrip.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -316,5 +397,13 @@
         private System.Windows.Forms.ComboBox comboBoxRoom;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panelRoomDetails;
+        private System.Windows.Forms.BindingSource buildingsBindingSource;
+        private TimetableManagementSystemDataSet timetableManagementSystemDataSet;
+        private TimetableManagementSystemDataSetTableAdapters.BuildingsTableAdapter buildingsTableAdapter;
+        private System.Windows.Forms.ToolStrip fillByToolStrip;
+        private System.Windows.Forms.ToolStripButton fillByToolStripButton;
+        private System.Windows.Forms.ToolStrip fillToolStrip;
+        private System.Windows.Forms.ToolStripButton fillToolStripButton;
+        private System.Windows.Forms.ToolStripButton toolStripButton1;
     }
 }

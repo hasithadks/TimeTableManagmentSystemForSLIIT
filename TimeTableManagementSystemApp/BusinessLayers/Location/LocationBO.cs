@@ -22,7 +22,6 @@ namespace BusinessLayers.Location
         //    1- LectureHall
         //    2- Lab
 
-
         public LocationBO()
         {
             this.locationID = 0;

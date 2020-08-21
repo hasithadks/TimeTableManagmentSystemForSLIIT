@@ -1,6 +1,8 @@
 ﻿using System;
 using System.CodeDom;
 using System.Collections.Generic;
+using System.Data.Entity;
+using System.Data.Entity.Infrastructure;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -20,9 +22,9 @@ namespace BusinessLayers.Location
 
                 //insert
                 Building newBuilding = new Building()
-               {
-                   BuidingName = bName
-               };
+                {
+                    BuidingName = bName
+                };
 
                 context.Buildings.Add(newBuilding);
                 context.SaveChanges();
@@ -62,5 +64,20 @@ namespace BusinessLayers.Location
         }
 
 
+        public List<Building> GetAllBuildingName()
+        {
+
+            using (var context = new TimetableManagementSystemEntities2())
+            {
+
+               List<Building> multiple = context.Buildings.ToList();
+
+
+
+                return multiple;
+            }
+
+            
+        }
     }
 }

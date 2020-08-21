@@ -10,6 +10,8 @@ using System.Windows.Forms;
 using TimeTableManagementSystemApp.IT18063288.UserControllers.SubUserControllers;
 using TimeTableManagementSystemApp.CommonFiles;
 using BusinessLayers.Location;
+using DataLayer;
+using System.Data.Entity;
 
 namespace TimeTableManagementSystemApp.IT18063288.UserControllers
 {
@@ -33,6 +35,8 @@ namespace TimeTableManagementSystemApp.IT18063288.UserControllers
             btnRoomUpdate.Visible = false;
             btnDeleteRoom.Visible = false;
 
+           setBuildingDropdown();
+
         }
 
         private void txtNewBuilding_TextChanged(object sender, EventArgs e)
@@ -44,6 +48,8 @@ namespace TimeTableManagementSystemApp.IT18063288.UserControllers
         private void btnChangeBuildingName_Click(object sender, EventArgs e)
         {
             txtNewBuilding.Text = comboBoxBuilding.Text;
+            locationBO = new LocationBO();
+            locationBO.BuildingID = comboBoxBuilding.SelectedIndex;
             txtNewBuilding.Visible = true;
             btnBuildingUpdate.Visible = true;
             btnDeleteBuilding.Visible = true;
@@ -104,6 +110,64 @@ namespace TimeTableManagementSystemApp.IT18063288.UserControllers
             buildingName = txtNewBuilding.Text;
             locationBO.RoomName = buildingName.ToString();
             buildingID = locationContol.saveBuilding(buildingName);
+            txtNewBuilding.Text = "";
+
+            if (buildingID != null)
+            {
+                locationBO.BuildingID = buildingID;
+            }
+
+        }
+
+        public void setBuildingDropdown()
+        {
+            locationContol = new LocationController();
+            List<Building> buildingList = locationContol.getAllBuilding();
+           //comboBoxBuilding.DataSource = buildingList;
+
+            var employmentStatus = new BindingList<KeyValuePair<string, string>>();
+
+            foreach(Building building in buildingList)
+            {
+
+                employmentStatus.Add(new KeyValuePair<string, string>(building.id.ToString(), building.BuidingName.ToString()));
+
+            }
+
+            comboBoxBuilding.DataSource = employmentStatus;
+            comboBoxBuilding.ValueMember = "Key";
+            comboBoxBuilding.DisplayMember = "Value";
+            comboBoxBuilding.SelectedIndex = 0;
+
+            //comboBox1.ItemsSource = c.Customers.toList();
+            //comboBox1.ValueMemberPath = "Id";
+            //comboBox1.DisplayMemberPath = "Name";
+        }
+
+        private void fillByToolStripButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                this.buildingsTableAdapter.FillBy(this.timetableManagementSystemDataSet.Buildings);
+            }
+            catch (System.Exception ex)
+            {
+                System.Windows.Forms.MessageBox.Show(ex.Message);
+            }
+
+        }
+
+        private void fillToolStripButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                this.buildingsTableAdapter.Fill(this.timetableManagementSystemDataSet.Buildings);
+            }
+            catch (System.Exception ex)
+            {
+                System.Windows.Forms.MessageBox.Show(ex.Message);
+            }
+
         }
     }
 }

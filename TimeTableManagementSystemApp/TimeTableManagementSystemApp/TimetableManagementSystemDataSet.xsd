@@ -52,7 +52,16 @@ SELECT id, BuidingName FROM Buildings WHERE (id = @id)</CommandText>
               <Mapping SourceColumn="id" DataSetColumn="id" />
               <Mapping SourceColumn="BuidingName" DataSetColumn="BuidingName" />
             </Mappings>
-            <Sources />
+            <Sources>
+              <DbSource ConnectionRef="TimetableManagementSystemConnectionString (Settings)" DbObjectName="TimetableManagementSystem.dbo.Buildings" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillBy" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="FillBy" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="FillBy">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT id, BuidingName FROM dbo.Buildings</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
           </TableAdapter>
         </Tables>
         <Sources />
@@ -62,7 +71,7 @@ SELECT id, BuidingName FROM Buildings WHERE (id = @id)</CommandText>
   <xs:element name="TimetableManagementSystemDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="TimetableManagementSystemDataSet" msprop:Generator_UserDSName="TimetableManagementSystemDataSet">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="Buildings" msprop:Generator_TableClassName="BuildingsDataTable" msprop:Generator_TableVarName="tableBuildings" msprop:Generator_TablePropName="Buildings" msprop:Generator_RowDeletingName="BuildingsRowDeleting" msprop:Generator_RowChangingName="BuildingsRowChanging" msprop:Generator_RowEvHandlerName="BuildingsRowChangeEventHandler" msprop:Generator_RowDeletedName="BuildingsRowDeleted" msprop:Generator_UserTableName="Buildings" msprop:Generator_RowChangedName="BuildingsRowChanged" msprop:Generator_RowEvArgName="BuildingsRowChangeEvent" msprop:Generator_RowClassName="BuildingsRow">
+        <xs:element name="Buildings" msprop:Generator_TableClassName="BuildingsDataTable" msprop:Generator_TableVarName="tableBuildings" msprop:Generator_RowChangedName="BuildingsRowChanged" msprop:Generator_TablePropName="Buildings" msprop:Generator_RowDeletingName="BuildingsRowDeleting" msprop:Generator_RowChangingName="BuildingsRowChanging" msprop:Generator_RowEvHandlerName="BuildingsRowChangeEventHandler" msprop:Generator_RowDeletedName="BuildingsRowDeleted" msprop:Generator_RowClassName="BuildingsRow" msprop:Generator_UserTableName="Buildings" msprop:Generator_RowEvArgName="BuildingsRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnid" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnPropNameInTable="idColumn" msprop:Generator_UserColumnName="id" type="xs:int" />
