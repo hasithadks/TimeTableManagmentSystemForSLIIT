@@ -28,10 +28,11 @@ namespace TimeTableManagementSystemApp.IT18063288
         
         private void btnViewLocation_Click(object sender, EventArgs e)
         {
-            panelLeft.Visible = true;
+            
             panelLeft.Height = btnViewLocation.Height;
             panelLeft.Top = btnViewLocation.Top;
-           // panelLeft.BackColor = btnViewLocation.BackColor;
+            panelLeft.Visible = true;
+            // panelLeft.BackColor = btnViewLocation.BackColor;
             ViewLocationUC viewLocationUC = new ViewLocationUC();
             CommonClass.showControl(viewLocationUC, panelContent); 
         }

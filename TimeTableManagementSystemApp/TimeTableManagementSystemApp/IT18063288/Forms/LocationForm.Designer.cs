@@ -68,7 +68,7 @@
             this.btnViewLocation.Margin = new System.Windows.Forms.Padding(0);
             this.btnViewLocation.Name = "btnViewLocation";
             this.btnViewLocation.Padding = new System.Windows.Forms.Padding(3);
-            this.btnViewLocation.Size = new System.Drawing.Size(220, 40);
+            this.btnViewLocation.Size = new System.Drawing.Size(207, 40);
             this.btnViewLocation.TabIndex = 0;
             this.btnViewLocation.Text = "Location";
             this.btnViewLocation.UseVisualStyleBackColor = false;
@@ -96,11 +96,11 @@
             this.btnAddLocation.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAddLocation.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddLocation.ForeColor = System.Drawing.Color.White;
-            this.btnAddLocation.Location = new System.Drawing.Point(3, 197);
+            this.btnAddLocation.Location = new System.Drawing.Point(4, 154);
             this.btnAddLocation.Name = "btnAddLocation";
-            this.btnAddLocation.Size = new System.Drawing.Size(220, 40);
+            this.btnAddLocation.Size = new System.Drawing.Size(207, 40);
             this.btnAddLocation.TabIndex = 1;
-            this.btnAddLocation.Text = "Add, Edit, Delete Location";
+            this.btnAddLocation.Text = "Add Location";
             this.btnAddLocation.UseVisualStyleBackColor = false;
             this.btnAddLocation.Click += new System.EventHandler(this.btnAddLocation_Click_1);
             // 
@@ -115,9 +115,9 @@
             this.btnStatistic.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnStatistic.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnStatistic.ForeColor = System.Drawing.Color.White;
-            this.btnStatistic.Location = new System.Drawing.Point(4, 153);
+            this.btnStatistic.Location = new System.Drawing.Point(6, 198);
             this.btnStatistic.Name = "btnStatistic";
-            this.btnStatistic.Size = new System.Drawing.Size(220, 40);
+            this.btnStatistic.Size = new System.Drawing.Size(205, 40);
             this.btnStatistic.TabIndex = 2;
             this.btnStatistic.Text = "Statistics";
             this.btnStatistic.UseVisualStyleBackColor = false;
@@ -126,13 +126,14 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
+            this.panel2.Controls.Add(this.panel4);
+            this.panel2.Controls.Add(this.panelLeft);
+            this.panel2.Controls.Add(this.btnStatistic);
             this.panel2.Controls.Add(this.homeBtn);
             this.panel2.Controls.Add(this.panel3);
             this.panel2.Controls.Add(this.btnAddLocation);
-            this.panel2.Controls.Add(this.btnStatistic);
-            this.panel2.Controls.Add(this.panelLeft);
             this.panel2.Controls.Add(this.btnViewLocation);
-            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Location = new System.Drawing.Point(3, 0);
             this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(224, 780);
@@ -149,9 +150,9 @@
             this.homeBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.homeBtn.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.homeBtn.ForeColor = System.Drawing.Color.White;
-            this.homeBtn.Location = new System.Drawing.Point(5, 240);
+            this.homeBtn.Location = new System.Drawing.Point(6, 242);
             this.homeBtn.Name = "homeBtn";
-            this.homeBtn.Size = new System.Drawing.Size(220, 40);
+            this.homeBtn.Size = new System.Drawing.Size(205, 40);
             this.homeBtn.TabIndex = 14;
             this.homeBtn.Text = "Home";
             this.homeBtn.UseVisualStyleBackColor = false;
@@ -160,9 +161,9 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(165)))), ((int)(((byte)(0)))));
-            this.panel3.Location = new System.Drawing.Point(1, 0);
+            this.panel3.Location = new System.Drawing.Point(-4, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(5, 780);
+            this.panel3.Size = new System.Drawing.Size(10, 780);
             this.panel3.TabIndex = 13;
             // 
             // panelLeft
@@ -173,11 +174,11 @@
             this.panelLeft.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.panelLeft.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panelLeft.ForeColor = System.Drawing.Color.White;
-            this.panelLeft.Location = new System.Drawing.Point(124, 9);
+            this.panelLeft.Location = new System.Drawing.Point(214, 110);
             this.panelLeft.Margin = new System.Windows.Forms.Padding(0);
             this.panelLeft.Name = "panelLeft";
             this.panelLeft.Padding = new System.Windows.Forms.Padding(3);
-            this.panelLeft.Size = new System.Drawing.Size(16, 54);
+            this.panelLeft.Size = new System.Drawing.Size(10, 40);
             this.panelLeft.TabIndex = 3;
             this.panelLeft.UseVisualStyleBackColor = false;
             // 
@@ -217,7 +218,7 @@
             // 
             this.panel4.BackColor = System.Drawing.Color.White;
             this.panel4.Controls.Add(this.pictureBox1);
-            this.panel4.Location = new System.Drawing.Point(5, 2);
+            this.panel4.Location = new System.Drawing.Point(6, 3);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(218, 100);
             this.panel4.TabIndex = 10;
@@ -281,7 +282,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1280, 768);
-            this.Controls.Add(this.panel4);
             this.Controls.Add(this.topPanel);
             this.Controls.Add(this.closeBtn);
             this.Controls.Add(this.miniBtn);
