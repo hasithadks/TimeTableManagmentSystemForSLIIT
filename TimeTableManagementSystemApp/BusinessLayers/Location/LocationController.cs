@@ -20,11 +20,43 @@ namespace BusinessLayers.Location
             return id;
         }
 
+        public int saveRoom(string roomName, int buildingId)
+        {
+            locationData = new LocationData();
+            int id = locationData.SaveRoomData(roomName, buildingId);
+
+            return id;
+        }
+
         public List<Building> getAllBuilding()
         {
             locationData = new LocationData();
               
             return locationData.GetAllBuildingName();
+
+        }
+
+        public List<Room> getAllRooms(int buildingID)
+        {
+            locationData = new LocationData();
+
+            return locationData.GetAllRoomDetails(buildingID);
+
+        }
+
+        public LocationBO GetRoomDetails(int RoomID)
+        {
+            locationData = new LocationData();
+
+            return locationData.GetRoomDetails(RoomID);
+
+        }
+
+        public int SaveRoomOtherDetails(LocationBO locationBO)
+        {
+
+            locationData = new LocationData();
+            return locationData.SaveRoomOtherDetails(locationBO);
 
         }
     }

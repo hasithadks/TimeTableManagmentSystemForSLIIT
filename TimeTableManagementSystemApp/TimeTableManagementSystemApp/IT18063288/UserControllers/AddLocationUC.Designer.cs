@@ -47,7 +47,7 @@
             this.btnRoomSave = new System.Windows.Forms.Button();
             this.txtNewRoom = new System.Windows.Forms.TextBox();
             this.comboBoxRoom = new System.Windows.Forms.ComboBox();
-            this.label2 = new System.Windows.Forms.Label();
+            this.labelRoom = new System.Windows.Forms.Label();
             this.panelRoomDetails = new System.Windows.Forms.Panel();
             this.buildingsTableAdapter = new TimeTableManagementSystemApp.TimetableManagementSystemDataSetTableAdapters.BuildingsTableAdapter();
             this.fillByToolStrip = new System.Windows.Forms.ToolStrip();
@@ -55,6 +55,7 @@
             this.fillToolStrip = new System.Windows.Forms.ToolStrip();
             this.fillToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
+            this.btnViewRoomDetails = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.buildingsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.timetableManagementSystemDataSet)).BeginInit();
             this.fillByToolStrip.SuspendLayout();
@@ -94,6 +95,7 @@
             this.comboBoxBuilding.Name = "comboBoxBuilding";
             this.comboBoxBuilding.Size = new System.Drawing.Size(329, 27);
             this.comboBoxBuilding.TabIndex = 10;
+            this.comboBoxBuilding.SelectedIndexChanged += new System.EventHandler(this.comboBoxBuilding_SelectedIndexChanged);
             // 
             // buildingsBindingSource
             // 
@@ -260,31 +262,26 @@
             // 
             this.comboBoxRoom.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxRoom.FormattingEnabled = true;
-            this.comboBoxRoom.Items.AddRange(new object[] {
-            "B501",
-            "B502",
-            "503",
-            "A505"});
             this.comboBoxRoom.Location = new System.Drawing.Point(282, 183);
             this.comboBoxRoom.Name = "comboBoxRoom";
             this.comboBoxRoom.Size = new System.Drawing.Size(329, 27);
             this.comboBoxRoom.TabIndex = 21;
             this.comboBoxRoom.SelectedIndexChanged += new System.EventHandler(this.comboBoxRoom_SelectedIndexChanged);
             // 
-            // label2
+            // labelRoom
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(109, 179);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(114, 23);
-            this.label2.TabIndex = 20;
-            this.label2.Text = "Select Room";
+            this.labelRoom.AutoSize = true;
+            this.labelRoom.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelRoom.ForeColor = System.Drawing.Color.Black;
+            this.labelRoom.Location = new System.Drawing.Point(109, 179);
+            this.labelRoom.Name = "labelRoom";
+            this.labelRoom.Size = new System.Drawing.Size(114, 23);
+            this.labelRoom.TabIndex = 20;
+            this.labelRoom.Text = "Select Room";
             // 
             // panelRoomDetails
             // 
-            this.panelRoomDetails.Location = new System.Drawing.Point(2, 286);
+            this.panelRoomDetails.Location = new System.Drawing.Point(3, 303);
             this.panelRoomDetails.Name = "panelRoomDetails";
             this.panelRoomDetails.Size = new System.Drawing.Size(1020, 365);
             this.panelRoomDetails.TabIndex = 35;
@@ -342,11 +339,27 @@
             this.toolStripButton1.Size = new System.Drawing.Size(23, 22);
             this.toolStripButton1.Text = "toolStripButton1";
             // 
+            // btnViewRoomDetails
+            // 
+            this.btnViewRoomDetails.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(43)))), ((int)(((byte)(104)))));
+            this.btnViewRoomDetails.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnViewRoomDetails.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnViewRoomDetails.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnViewRoomDetails.ForeColor = System.Drawing.Color.White;
+            this.btnViewRoomDetails.Location = new System.Drawing.Point(282, 269);
+            this.btnViewRoomDetails.Name = "btnViewRoomDetails";
+            this.btnViewRoomDetails.Size = new System.Drawing.Size(329, 31);
+            this.btnViewRoomDetails.TabIndex = 38;
+            this.btnViewRoomDetails.Text = "View Room Details";
+            this.btnViewRoomDetails.UseVisualStyleBackColor = false;
+            this.btnViewRoomDetails.Click += new System.EventHandler(this.btnViewRoomDetails_Click);
+            // 
             // AddLocationUC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.btnViewRoomDetails);
             this.Controls.Add(this.fillToolStrip);
             this.Controls.Add(this.fillByToolStrip);
             this.Controls.Add(this.btnAddNewRoom);
@@ -356,7 +369,7 @@
             this.Controls.Add(this.btnRoomSave);
             this.Controls.Add(this.txtNewRoom);
             this.Controls.Add(this.comboBoxRoom);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.labelRoom);
             this.Controls.Add(this.btnAddNewBuilding);
             this.Controls.Add(this.btnDeleteBuilding);
             this.Controls.Add(this.btnChangeBuildingName);
@@ -395,7 +408,7 @@
         private System.Windows.Forms.Button btnRoomSave;
         private System.Windows.Forms.TextBox txtNewRoom;
         private System.Windows.Forms.ComboBox comboBoxRoom;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label labelRoom;
         private System.Windows.Forms.Panel panelRoomDetails;
         private System.Windows.Forms.BindingSource buildingsBindingSource;
         private TimetableManagementSystemDataSet timetableManagementSystemDataSet;
@@ -405,5 +418,6 @@
         private System.Windows.Forms.ToolStrip fillToolStrip;
         private System.Windows.Forms.ToolStripButton fillToolStripButton;
         private System.Windows.Forms.ToolStripButton toolStripButton1;
+        private System.Windows.Forms.Button btnViewRoomDetails;
     }
 }
