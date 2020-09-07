@@ -63,6 +63,29 @@ namespace BusinessLayers.Location
             return BuildingID;
         }
 
+        public int SaveRoomData(string rName, int buildingID)
+        {
+            int RoomID = 0;
+
+            using (var context = new TimetableManagementSystemEntities2())
+            {
+
+                //insert
+                var building = context.Buildings.Where(p => p.id == buildingID).FirstOrDefault();
+                Room NewRoom = new Room()
+                {
+                    RoomName = rName,
+                    BuildingID = building.id
+                };
+
+                context.Rooms.Add(NewRoom);
+                context.SaveChanges();
+
+                RoomID = NewRoom.id;
+            }
+            return RoomID;
+        }
+
 
         public List<Building> GetAllBuildingName()
         {
@@ -78,6 +101,73 @@ namespace BusinessLayers.Location
             }
 
             
+        }
+
+
+        public List<Room> GetAllRoomDetails(int buildingID)
+        {
+
+            using (var context = new TimetableManagementSystemEntities2())
+            {
+
+                List<Room> multiple = context.Rooms.Where(q => q.BuildingID == buildingID).ToList();
+
+
+
+                return multiple;
+            }
+
+
+        }
+
+
+        public LocationBO GetRoomDetails(int RoomID)
+        {
+            LocationBO locationBO = new LocationBO();
+
+            using (var context = new TimetableManagementSystemEntities2())
+            {
+
+                var Roomdetails = context.Rooms.Where(q => q.id == RoomID).FirstOrDefault();
+
+                if(Roomdetails != null)
+                {
+                    locationBO.RoomID = Roomdetails.id;
+                    locationBO.RoomName = Roomdetails.RoomName.ToString();
+                    locationBO.RoomCapacity = (int)Roomdetails.Capacity;  // Handle If != null 
+                    locationBO.RoomType = (int)Roomdetails.RoomType;
+                }
+                
+
+                return locationBO;
+            }
+
+
+        }
+
+        public int SaveRoomOtherDetails(LocationBO locationBO)
+        {
+            int RoomID = 0;
+
+            using (var context = new TimetableManagementSystemEntities2())
+            {
+
+                //Update
+                //var updatingBuilding = context.Buildings.Where(q => q.id == 12).FirstOrDefault();
+                var updatingRoom = context.Rooms.Where(p => p.id == locationBO.RoomID).FirstOrDefault();
+
+                if(updatingRoom != null)
+                {
+                    updatingRoom.Capacity = locationBO.RoomCapacity;
+                    updatingRoom.RoomType = locationBO.RoomType;
+                    context.SaveChanges();
+                    RoomID = updatingRoom.id;
+                }
+                
+               
+            }
+
+            return RoomID;
         }
     }
 }
