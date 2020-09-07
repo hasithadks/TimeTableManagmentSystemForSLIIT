@@ -29,23 +29,23 @@
         private void InitializeComponent()
         {
             this.label2 = new System.Windows.Forms.Label();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
-            this.comboBox5 = new System.Windows.Forms.ComboBox();
-            this.comboBox6 = new System.Windows.Forms.ComboBox();
-            this.comboBox7 = new System.Windows.Forms.ComboBox();
-            this.comboBox8 = new System.Windows.Forms.ComboBox();
+            this.MWDMonday = new System.Windows.Forms.ComboBox();
+            this.MWDTuesday = new System.Windows.Forms.ComboBox();
+            this.MWDWednesday = new System.Windows.Forms.ComboBox();
+            this.MWDThursday = new System.Windows.Forms.ComboBox();
+            this.MWDFriday = new System.Windows.Forms.ComboBox();
+            this.MWDSaturday = new System.Windows.Forms.ComboBox();
+            this.MWDSunday = new System.Windows.Forms.ComboBox();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.checkBox2 = new System.Windows.Forms.CheckBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.comboBox9 = new System.Windows.Forms.ComboBox();
-            this.comboBox10 = new System.Windows.Forms.ComboBox();
+            this.SelectYear = new System.Windows.Forms.ComboBox();
+            this.SelectSem = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.comboBox11 = new System.Windows.Forms.ComboBox();
+            this.SelectGroup = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.NoOfDaysPerWeek = new System.Windows.Forms.ComboBox();
             this.addWorkingDaysBtn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -53,17 +53,99 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(403, 4);
+            this.label2.Location = new System.Drawing.Point(537, 5);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(253, 20);
+            this.label2.Size = new System.Drawing.Size(316, 22);
             this.label2.TabIndex = 3;
             this.label2.Text = "Manage Working Days and Hours";
             // 
-            // comboBox2
+            // MWDMonday
             // 
-            this.comboBox2.Font = new System.Drawing.Font("Century Gothic", 12F);
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
+            this.MWDMonday.Font = new System.Drawing.Font("Century Gothic", 12F);
+            this.MWDMonday.FormattingEnabled = true;
+            this.MWDMonday.Items.AddRange(new object[] {
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday"});
+            this.MWDMonday.Location = new System.Drawing.Point(44, 276);
+            this.MWDMonday.Margin = new System.Windows.Forms.Padding(4);
+            this.MWDMonday.Name = "MWDMonday";
+            this.MWDMonday.Size = new System.Drawing.Size(160, 31);
+            this.MWDMonday.TabIndex = 4;
+            this.MWDMonday.SelectedIndexChanged += new System.EventHandler(this.MWDMonday_SelectedIndexChanged);
+            // 
+            // MWDTuesday
+            // 
+            this.MWDTuesday.Font = new System.Drawing.Font("Century Gothic", 12F);
+            this.MWDTuesday.FormattingEnabled = true;
+            this.MWDTuesday.Items.AddRange(new object[] {
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday"});
+            this.MWDTuesday.Location = new System.Drawing.Point(245, 276);
+            this.MWDTuesday.Margin = new System.Windows.Forms.Padding(4);
+            this.MWDTuesday.Name = "MWDTuesday";
+            this.MWDTuesday.Size = new System.Drawing.Size(160, 31);
+            this.MWDTuesday.TabIndex = 5;
+            // 
+            // MWDWednesday
+            // 
+            this.MWDWednesday.Font = new System.Drawing.Font("Century Gothic", 12F);
+            this.MWDWednesday.FormattingEnabled = true;
+            this.MWDWednesday.Items.AddRange(new object[] {
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday"});
+            this.MWDWednesday.Location = new System.Drawing.Point(438, 276);
+            this.MWDWednesday.Margin = new System.Windows.Forms.Padding(4);
+            this.MWDWednesday.Name = "MWDWednesday";
+            this.MWDWednesday.Size = new System.Drawing.Size(160, 31);
+            this.MWDWednesday.TabIndex = 6;
+            // 
+            // MWDThursday
+            // 
+            this.MWDThursday.Font = new System.Drawing.Font("Century Gothic", 12F);
+            this.MWDThursday.FormattingEnabled = true;
+            this.MWDThursday.Items.AddRange(new object[] {
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday"});
+            this.MWDThursday.Location = new System.Drawing.Point(630, 276);
+            this.MWDThursday.Margin = new System.Windows.Forms.Padding(4);
+            this.MWDThursday.Name = "MWDThursday";
+            this.MWDThursday.Size = new System.Drawing.Size(160, 31);
+            this.MWDThursday.TabIndex = 7;
+            // 
+            // MWDFriday
+            // 
+            this.MWDFriday.Font = new System.Drawing.Font("Century Gothic", 12F);
+            this.MWDFriday.FormattingEnabled = true;
+            this.MWDFriday.Items.AddRange(new object[] {
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday"});
+            this.MWDFriday.Location = new System.Drawing.Point(819, 276);
+            this.MWDFriday.Margin = new System.Windows.Forms.Padding(4);
+            this.MWDFriday.Name = "MWDFriday";
+            this.MWDFriday.Size = new System.Drawing.Size(160, 31);
+            this.MWDFriday.TabIndex = 8;
+            // 
+            // MWDSaturday
+            // 
+            this.MWDSaturday.Font = new System.Drawing.Font("Century Gothic", 12F);
+            this.MWDSaturday.FormattingEnabled = true;
+            this.MWDSaturday.Items.AddRange(new object[] {
             "Monday",
             "Tuesday",
             "Wednesday",
@@ -71,16 +153,18 @@
             "Friday",
             "Saturday",
             "Sunday"});
-            this.comboBox2.Location = new System.Drawing.Point(31, 128);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(121, 29);
-            this.comboBox2.TabIndex = 4;
+            this.MWDSaturday.Location = new System.Drawing.Point(1007, 276);
+            this.MWDSaturday.Margin = new System.Windows.Forms.Padding(4);
+            this.MWDSaturday.Name = "MWDSaturday";
+            this.MWDSaturday.Size = new System.Drawing.Size(160, 31);
+            this.MWDSaturday.TabIndex = 9;
+            this.MWDSaturday.Text = "Saturday";
             // 
-            // comboBox3
+            // MWDSunday
             // 
-            this.comboBox3.Font = new System.Drawing.Font("Century Gothic", 12F);
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Items.AddRange(new object[] {
+            this.MWDSunday.Font = new System.Drawing.Font("Century Gothic", 12F);
+            this.MWDSunday.FormattingEnabled = true;
+            this.MWDSunday.Items.AddRange(new object[] {
             "Monday",
             "Tuesday",
             "Wednesday",
@@ -88,103 +172,21 @@
             "Friday",
             "Saturday",
             "Sunday"});
-            this.comboBox3.Location = new System.Drawing.Point(179, 128);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(121, 29);
-            this.comboBox3.TabIndex = 5;
-            // 
-            // comboBox4
-            // 
-            this.comboBox4.Font = new System.Drawing.Font("Century Gothic", 12F);
-            this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Items.AddRange(new object[] {
-            "Monday",
-            "Tuesday",
-            "Wednesday",
-            "Thursday",
-            "Friday",
-            "Saturday",
-            "Sunday"});
-            this.comboBox4.Location = new System.Drawing.Point(326, 128);
-            this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(121, 29);
-            this.comboBox4.TabIndex = 6;
-            // 
-            // comboBox5
-            // 
-            this.comboBox5.Font = new System.Drawing.Font("Century Gothic", 12F);
-            this.comboBox5.FormattingEnabled = true;
-            this.comboBox5.Items.AddRange(new object[] {
-            "Monday",
-            "Tuesday",
-            "Wednesday",
-            "Thursday",
-            "Friday",
-            "Saturday",
-            "Sunday"});
-            this.comboBox5.Location = new System.Drawing.Point(470, 128);
-            this.comboBox5.Name = "comboBox5";
-            this.comboBox5.Size = new System.Drawing.Size(121, 29);
-            this.comboBox5.TabIndex = 7;
-            // 
-            // comboBox6
-            // 
-            this.comboBox6.Font = new System.Drawing.Font("Century Gothic", 12F);
-            this.comboBox6.FormattingEnabled = true;
-            this.comboBox6.Items.AddRange(new object[] {
-            "Monday",
-            "Tuesday",
-            "Wednesday",
-            "Thursday",
-            "Friday",
-            "Saturday",
-            "Sunday"});
-            this.comboBox6.Location = new System.Drawing.Point(612, 128);
-            this.comboBox6.Name = "comboBox6";
-            this.comboBox6.Size = new System.Drawing.Size(121, 29);
-            this.comboBox6.TabIndex = 8;
-            // 
-            // comboBox7
-            // 
-            this.comboBox7.Font = new System.Drawing.Font("Century Gothic", 12F);
-            this.comboBox7.FormattingEnabled = true;
-            this.comboBox7.Items.AddRange(new object[] {
-            "Monday",
-            "Tuesday",
-            "Wednesday",
-            "Thursday",
-            "Friday",
-            "Saturday",
-            "Sunday"});
-            this.comboBox7.Location = new System.Drawing.Point(748, 128);
-            this.comboBox7.Name = "comboBox7";
-            this.comboBox7.Size = new System.Drawing.Size(121, 29);
-            this.comboBox7.TabIndex = 9;
-            // 
-            // comboBox8
-            // 
-            this.comboBox8.Font = new System.Drawing.Font("Century Gothic", 12F);
-            this.comboBox8.FormattingEnabled = true;
-            this.comboBox8.Items.AddRange(new object[] {
-            "Monday",
-            "Tuesday",
-            "Wednesday",
-            "Thursday",
-            "Friday",
-            "Saturday",
-            "Sunday"});
-            this.comboBox8.Location = new System.Drawing.Point(886, 128);
-            this.comboBox8.Name = "comboBox8";
-            this.comboBox8.Size = new System.Drawing.Size(121, 29);
-            this.comboBox8.TabIndex = 10;
+            this.MWDSunday.Location = new System.Drawing.Point(1195, 276);
+            this.MWDSunday.Margin = new System.Windows.Forms.Padding(4);
+            this.MWDSunday.Name = "MWDSunday";
+            this.MWDSunday.Size = new System.Drawing.Size(160, 31);
+            this.MWDSunday.TabIndex = 10;
+            this.MWDSunday.Text = "Sunday";
             // 
             // checkBox1
             // 
             this.checkBox1.AutoSize = true;
             this.checkBox1.Font = new System.Drawing.Font("Century Gothic", 12F);
-            this.checkBox1.Location = new System.Drawing.Point(404, 605);
+            this.checkBox1.Location = new System.Drawing.Point(1101, 85);
+            this.checkBox1.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(177, 25);
+            this.checkBox1.Size = new System.Drawing.Size(218, 27);
             this.checkBox1.TabIndex = 13;
             this.checkBox1.Text = "One hour time slots";
             this.checkBox1.UseVisualStyleBackColor = true;
@@ -193,9 +195,10 @@
             // 
             this.checkBox2.AutoSize = true;
             this.checkBox2.Font = new System.Drawing.Font("Century Gothic", 12F);
-            this.checkBox2.Location = new System.Drawing.Point(404, 646);
+            this.checkBox2.Location = new System.Drawing.Point(1101, 126);
+            this.checkBox2.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(210, 25);
+            this.checkBox2.Size = new System.Drawing.Size(254, 27);
             this.checkBox2.TabIndex = 14;
             this.checkBox2.Text = "Thirty minutes time slots";
             this.checkBox2.UseVisualStyleBackColor = true;
@@ -204,9 +207,10 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(579, 76);
+            this.label3.Location = new System.Drawing.Point(40, 161);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(99, 21);
+            this.label3.Size = new System.Drawing.Size(123, 23);
             this.label3.TabIndex = 15;
             this.label3.Text = "Select Year";
             // 
@@ -214,86 +218,93 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(810, 73);
+            this.label4.Location = new System.Drawing.Point(40, 201);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(133, 21);
+            this.label4.Size = new System.Drawing.Size(166, 23);
             this.label4.TabIndex = 16;
             this.label4.Text = "Select Semester";
             // 
-            // comboBox9
+            // SelectYear
             // 
-            this.comboBox9.Font = new System.Drawing.Font("Century Gothic", 12F);
-            this.comboBox9.FormattingEnabled = true;
-            this.comboBox9.Items.AddRange(new object[] {
+            this.SelectYear.Font = new System.Drawing.Font("Century Gothic", 12F);
+            this.SelectYear.FormattingEnabled = true;
+            this.SelectYear.Items.AddRange(new object[] {
             "1",
             "2",
             "3",
             "4"});
-            this.comboBox9.Location = new System.Drawing.Point(683, 73);
-            this.comboBox9.Name = "comboBox9";
-            this.comboBox9.Size = new System.Drawing.Size(121, 29);
-            this.comboBox9.TabIndex = 17;
+            this.SelectYear.Location = new System.Drawing.Point(396, 161);
+            this.SelectYear.Margin = new System.Windows.Forms.Padding(4);
+            this.SelectYear.Name = "SelectYear";
+            this.SelectYear.Size = new System.Drawing.Size(160, 31);
+            this.SelectYear.TabIndex = 17;
             // 
-            // comboBox10
+            // SelectSem
             // 
-            this.comboBox10.Font = new System.Drawing.Font("Century Gothic", 12F);
-            this.comboBox10.FormattingEnabled = true;
-            this.comboBox10.Items.AddRange(new object[] {
+            this.SelectSem.Font = new System.Drawing.Font("Century Gothic", 12F);
+            this.SelectSem.FormattingEnabled = true;
+            this.SelectSem.Items.AddRange(new object[] {
             "1",
             "2"});
-            this.comboBox10.Location = new System.Drawing.Point(949, 73);
-            this.comboBox10.Name = "comboBox10";
-            this.comboBox10.Size = new System.Drawing.Size(58, 29);
-            this.comboBox10.TabIndex = 18;
+            this.SelectSem.Location = new System.Drawing.Point(396, 201);
+            this.SelectSem.Margin = new System.Windows.Forms.Padding(4);
+            this.SelectSem.Name = "SelectSem";
+            this.SelectSem.Size = new System.Drawing.Size(160, 31);
+            this.SelectSem.TabIndex = 18;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(342, 76);
+            this.label5.Location = new System.Drawing.Point(40, 122);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(112, 21);
+            this.label5.Size = new System.Drawing.Size(139, 23);
             this.label5.TabIndex = 19;
             this.label5.Text = "Select Group";
             // 
-            // comboBox11
+            // SelectGroup
             // 
-            this.comboBox11.Font = new System.Drawing.Font("Century Gothic", 12F);
-            this.comboBox11.FormattingEnabled = true;
-            this.comboBox11.Items.AddRange(new object[] {
+            this.SelectGroup.Font = new System.Drawing.Font("Century Gothic", 12F);
+            this.SelectGroup.FormattingEnabled = true;
+            this.SelectGroup.Items.AddRange(new object[] {
             "Y1.S1.SE.09.2",
             "Y2.S2.IT.06.05"});
-            this.comboBox11.Location = new System.Drawing.Point(460, 73);
-            this.comboBox11.Name = "comboBox11";
-            this.comboBox11.Size = new System.Drawing.Size(121, 29);
-            this.comboBox11.TabIndex = 20;
+            this.SelectGroup.Location = new System.Drawing.Point(396, 122);
+            this.SelectGroup.Margin = new System.Windows.Forms.Padding(4);
+            this.SelectGroup.Name = "SelectGroup";
+            this.SelectGroup.Size = new System.Drawing.Size(160, 31);
+            this.SelectGroup.TabIndex = 20;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(24, 76);
+            this.label1.Location = new System.Drawing.Point(40, 81);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(185, 21);
+            this.label1.Size = new System.Drawing.Size(331, 23);
             this.label1.TabIndex = 2;
-            this.label1.Text = "Select Number of Days";
+            this.label1.Text = "Select Number of Days Per Week";
             // 
-            // comboBox1
+            // NoOfDaysPerWeek
             // 
-            this.comboBox1.Font = new System.Drawing.Font("Century Gothic", 12F);
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.NoOfDaysPerWeek.Font = new System.Drawing.Font("Century Gothic", 12F);
+            this.NoOfDaysPerWeek.FormattingEnabled = true;
+            this.NoOfDaysPerWeek.Items.AddRange(new object[] {
             "1",
             "2",
             "3",
             "4",
             "5",
-            "6",
-            "7"});
-            this.comboBox1.Location = new System.Drawing.Point(215, 73);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 29);
-            this.comboBox1.TabIndex = 1;
+            "Weekend"});
+            this.NoOfDaysPerWeek.Location = new System.Drawing.Point(396, 81);
+            this.NoOfDaysPerWeek.Margin = new System.Windows.Forms.Padding(4);
+            this.NoOfDaysPerWeek.Name = "NoOfDaysPerWeek";
+            this.NoOfDaysPerWeek.Size = new System.Drawing.Size(160, 31);
+            this.NoOfDaysPerWeek.TabIndex = 1;
+            this.NoOfDaysPerWeek.SelectedIndexChanged += new System.EventHandler(this.NoOfDaysPerWeek_SelectedIndexChanged);
             // 
             // addWorkingDaysBtn
             // 
@@ -302,40 +313,41 @@
             this.addWorkingDaysBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.addWorkingDaysBtn.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.addWorkingDaysBtn.ForeColor = System.Drawing.Color.White;
-            this.addWorkingDaysBtn.Location = new System.Drawing.Point(940, 680);
-            this.addWorkingDaysBtn.Margin = new System.Windows.Forms.Padding(2);
+            this.addWorkingDaysBtn.Location = new System.Drawing.Point(1195, 835);
+            this.addWorkingDaysBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.addWorkingDaysBtn.Name = "addWorkingDaysBtn";
-            this.addWorkingDaysBtn.Size = new System.Drawing.Size(82, 29);
+            this.addWorkingDaysBtn.Size = new System.Drawing.Size(160, 36);
             this.addWorkingDaysBtn.TabIndex = 275;
             this.addWorkingDaysBtn.Text = "Done";
             this.addWorkingDaysBtn.UseVisualStyleBackColor = false;
             // 
             // AddWorkingDaysUC
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.addWorkingDaysBtn);
-            this.Controls.Add(this.comboBox11);
+            this.Controls.Add(this.SelectGroup);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.comboBox10);
-            this.Controls.Add(this.comboBox9);
+            this.Controls.Add(this.SelectSem);
+            this.Controls.Add(this.SelectYear);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.checkBox2);
             this.Controls.Add(this.checkBox1);
-            this.Controls.Add(this.comboBox8);
-            this.Controls.Add(this.comboBox7);
-            this.Controls.Add(this.comboBox6);
-            this.Controls.Add(this.comboBox5);
-            this.Controls.Add(this.comboBox4);
-            this.Controls.Add(this.comboBox3);
-            this.Controls.Add(this.comboBox2);
+            this.Controls.Add(this.MWDSunday);
+            this.Controls.Add(this.MWDSaturday);
+            this.Controls.Add(this.MWDFriday);
+            this.Controls.Add(this.MWDThursday);
+            this.Controls.Add(this.MWDWednesday);
+            this.Controls.Add(this.MWDTuesday);
+            this.Controls.Add(this.MWDMonday);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.NoOfDaysPerWeek);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "AddWorkingDaysUC";
-            this.Size = new System.Drawing.Size(1040, 741);
+            this.Size = new System.Drawing.Size(1387, 912);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -343,23 +355,23 @@
 
         #endregion
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.ComboBox comboBox3;
-        private System.Windows.Forms.ComboBox comboBox4;
-        private System.Windows.Forms.ComboBox comboBox5;
-        private System.Windows.Forms.ComboBox comboBox6;
-        private System.Windows.Forms.ComboBox comboBox7;
-        private System.Windows.Forms.ComboBox comboBox8;
+        private System.Windows.Forms.ComboBox MWDMonday;
+        private System.Windows.Forms.ComboBox MWDTuesday;
+        private System.Windows.Forms.ComboBox MWDWednesday;
+        private System.Windows.Forms.ComboBox MWDThursday;
+        private System.Windows.Forms.ComboBox MWDFriday;
+        private System.Windows.Forms.ComboBox MWDSaturday;
+        private System.Windows.Forms.ComboBox MWDSunday;
         private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.CheckBox checkBox2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.ComboBox comboBox9;
-        private System.Windows.Forms.ComboBox comboBox10;
+        private System.Windows.Forms.ComboBox SelectYear;
+        private System.Windows.Forms.ComboBox SelectSem;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.ComboBox comboBox11;
+        private System.Windows.Forms.ComboBox SelectGroup;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox NoOfDaysPerWeek;
         private System.Windows.Forms.Button addWorkingDaysBtn;
     }
 }

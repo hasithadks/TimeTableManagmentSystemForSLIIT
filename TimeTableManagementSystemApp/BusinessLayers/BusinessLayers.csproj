@@ -56,6 +56,9 @@
     <Compile Include="Location\LocationController.cs" />
     <Compile Include="Location\LocationData.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="WorkingDays\WorkingDaysClass.cs" />
+    <Compile Include="WorkingDays\WorkingDaysController.cs" />
+    <Compile Include="WorkingDays\WorkingDaysData.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -67,6 +70,7 @@
       <Name>DataLayer</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

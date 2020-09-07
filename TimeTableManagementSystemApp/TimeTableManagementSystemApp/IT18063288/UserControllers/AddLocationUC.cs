@@ -137,7 +137,7 @@ namespace TimeTableManagementSystemApp.IT18063288.UserControllers
             comboBoxBuilding.DataSource = employmentStatus;
             comboBoxBuilding.ValueMember = "Key";
             comboBoxBuilding.DisplayMember = "Value";
-            comboBoxBuilding.SelectedIndex = 0;
+            //comboBoxBuilding.SelectedIndex = 0;
 
             //comboBox1.ItemsSource = c.Customers.toList();
             //comboBox1.ValueMemberPath = "Id";
