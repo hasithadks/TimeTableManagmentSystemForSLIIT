@@ -28,5 +28,6 @@ namespace DataLayer
         public virtual DbSet<Building> Buildings { get; set; }
         public virtual DbSet<Location> Locations { get; set; }
         public virtual DbSet<Room> Rooms { get; set; }
+        public virtual DbSet<WorkingDay> WorkingDays { get; set; }
     }
 }

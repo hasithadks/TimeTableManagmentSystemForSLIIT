@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using BusinessLayers.WorkingDays;
 
 namespace TimeTableManagementSystemApp.IT18058338.UserControllers
 {
@@ -83,6 +84,27 @@ namespace TimeTableManagementSystemApp.IT18058338.UserControllers
             
             }
 
+        }
+
+        private void addWorkingDaysBtn_Click(object sender, EventArgs e)
+        {
+            WorkingDaysController workingDaysController = new WorkingDaysController();
+            workingDaysController.InsertWorkingDays();
+            // string buildingName = string.Empty;
+
+            // buildingName = txtNewBuilding.Text;
+            //locationBO.BuildingName = buildingName.ToString();
+            // buildingID = locationContol.saveBuilding(buildingName);
+            // txtNewBuilding.Text = "";
+
+            //if (buildingID > 0)
+            //{
+            //    locationBO.BuildingID = buildingID;
+            //}
+            //else
+            //{
+            //    locationBO.BuildingID = 0;
+            //}
         }
     }
 }

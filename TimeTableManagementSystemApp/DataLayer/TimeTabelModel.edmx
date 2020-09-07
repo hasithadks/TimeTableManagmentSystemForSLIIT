@@ -4,86 +4,105 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-    <Schema Namespace="TimetableManagementSystemModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2012" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
-  <EntityContainer Name="TimetableManagementSystemModelStoreContainer">
-    <EntitySet Name="Buildings" EntityType="TimetableManagementSystemModel.Store.Buildings" store:Type="Tables" Schema="dbo" />
-    <EntitySet Name="Locations" EntityType="TimetableManagementSystemModel.Store.Locations" store:Type="Tables" Schema="dbo" />
-    <EntitySet Name="Rooms" EntityType="TimetableManagementSystemModel.Store.Rooms" store:Type="Tables" Schema="dbo" />
-    <AssociationSet Name="FK_BuildingID" Association="TimetableManagementSystemModel.Store.FK_BuildingID">
-      <End Role="Buildings" EntitySet="Buildings" />
-      <End Role="Rooms" EntitySet="Rooms" />
-    </AssociationSet>
-    <AssociationSet Name="FK_BuildingIDLocation" Association="TimetableManagementSystemModel.Store.FK_BuildingIDLocation">
-      <End Role="Buildings" EntitySet="Buildings" />
-      <End Role="Location" EntitySet="Locations" />
-    </AssociationSet>
-    <AssociationSet Name="FK_RoomIDLocation" Association="TimetableManagementSystemModel.Store.FK_RoomIDLocation">
-      <End Role="Rooms" EntitySet="Rooms" />
-      <End Role="Location" EntitySet="Locations" />
-    </AssociationSet>
-  </EntityContainer>
-  <EntityType Name="Buildings">
-    <Key>
-      <PropertyRef Name="id" />
-    </Key>
-    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="BuidingName" Type="varchar" Nullable="false" MaxLength="255" />
-  </EntityType>
-  <EntityType Name="Locations">
-    <Key>
-      <PropertyRef Name="id" />
-    </Key>
-    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="BuildingID" Type="int" Nullable="true" />
-    <Property Name="RoomID" Type="int" Nullable="true" />
-  </EntityType>
-  <EntityType Name="Rooms">
-    <Key>
-      <PropertyRef Name="id" />
-    </Key>
-    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="RoomName" Type="varchar" Nullable="false" MaxLength="255" />
-    <Property Name="Capacity" Type="int" Nullable="true" />
-    <Property Name="RoomType" Type="int" Nullable="true" />
-    <Property Name="BuildingID" Type="int" Nullable="true" />
-  </EntityType>
-  <Association Name="FK_BuildingID">
-    <End Role="Buildings" Type="TimetableManagementSystemModel.Store.Buildings" Multiplicity="0..1" />
-    <End Role="Rooms" Type="TimetableManagementSystemModel.Store.Rooms" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Buildings">
-        <PropertyRef Name="id" />
-      </Principal>
-      <Dependent Role="Rooms">
-        <PropertyRef Name="BuildingID" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK_BuildingIDLocation">
-    <End Role="Buildings" Type="TimetableManagementSystemModel.Store.Buildings" Multiplicity="0..1" />
-    <End Role="Location" Type="TimetableManagementSystemModel.Store.Locations" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Buildings">
-        <PropertyRef Name="id" />
-      </Principal>
-      <Dependent Role="Location">
-        <PropertyRef Name="BuildingID" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK_RoomIDLocation">
-    <End Role="Rooms" Type="TimetableManagementSystemModel.Store.Rooms" Multiplicity="0..1" />
-    <End Role="Location" Type="TimetableManagementSystemModel.Store.Locations" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Rooms">
-        <PropertyRef Name="id" />
-      </Principal>
-      <Dependent Role="Location">
-        <PropertyRef Name="RoomID" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-</Schema></edmx:StorageModels>
+    <Schema Namespace="TimetableManagementSystemModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Buildings">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="BuidingName" Type="varchar" MaxLength="255" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Locations">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="BuildingID" Type="int" />
+          <Property Name="RoomID" Type="int" />
+        </EntityType>
+        <EntityType Name="Rooms">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="RoomName" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="Capacity" Type="int" />
+          <Property Name="RoomType" Type="int" />
+          <Property Name="BuildingID" Type="int" />
+        </EntityType>
+        <EntityType Name="WorkingDays">
+          <Key>
+            <PropertyRef Name="WorkingDayID" />
+          </Key>
+          <Property Name="WorkingDayID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="workingdayGroup" Type="varchar" MaxLength="100" />
+          <Property Name="workingdayYear" Type="int" />
+          <Property Name="workingdaySemester" Type="int" />
+          <Property Name="workingday1" Type="varchar" MaxLength="100" />
+          <Property Name="workingday2" Type="varchar" MaxLength="100" />
+          <Property Name="workingday3" Type="varchar" MaxLength="100" />
+          <Property Name="workingday4" Type="varchar" MaxLength="100" />
+          <Property Name="workingday5" Type="varchar" MaxLength="100" />
+          <Property Name="workingday6" Type="varchar" MaxLength="100" />
+          <Property Name="workingday7" Type="varchar" MaxLength="100" />
+          <Property Name="workingdayOneHourTimeSlots" Type="int" />
+          <Property Name="ThirtyMinutesTimeSlots" Type="int" />
+        </EntityType>
+        <Association Name="FK_BuildingID">
+          <End Role="Buildings" Type="Self.Buildings" Multiplicity="0..1" />
+          <End Role="Rooms" Type="Self.Rooms" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Buildings">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Rooms">
+              <PropertyRef Name="BuildingID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_BuildingIDLocation">
+          <End Role="Buildings" Type="Self.Buildings" Multiplicity="0..1" />
+          <End Role="Locations" Type="Self.Locations" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Buildings">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Locations">
+              <PropertyRef Name="BuildingID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_RoomIDLocation">
+          <End Role="Rooms" Type="Self.Rooms" Multiplicity="0..1" />
+          <End Role="Locations" Type="Self.Locations" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Rooms">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Locations">
+              <PropertyRef Name="RoomID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="TimetableManagementSystemModelStoreContainer">
+          <EntitySet Name="Buildings" EntityType="Self.Buildings" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Locations" EntityType="Self.Locations" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Rooms" EntityType="Self.Rooms" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="WorkingDays" EntityType="Self.WorkingDays" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_BuildingID" Association="Self.FK_BuildingID">
+            <End Role="Buildings" EntitySet="Buildings" />
+            <End Role="Rooms" EntitySet="Rooms" />
+          </AssociationSet>
+          <AssociationSet Name="FK_BuildingIDLocation" Association="Self.FK_BuildingIDLocation">
+            <End Role="Buildings" EntitySet="Buildings" />
+            <End Role="Locations" EntitySet="Locations" />
+          </AssociationSet>
+          <AssociationSet Name="FK_RoomIDLocation" Association="Self.FK_RoomIDLocation">
+            <End Role="Rooms" EntitySet="Rooms" />
+            <End Role="Locations" EntitySet="Locations" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="TimetableManagementSystemModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -170,7 +189,26 @@
             <End Role="Rooms" EntitySet="Rooms" />
             <End Role="Location" EntitySet="Locations" />
           </AssociationSet>
+          <EntitySet Name="WorkingDays" EntityType="TimetableManagementSystemModel.WorkingDay" />
         </EntityContainer>
+        <EntityType Name="WorkingDay">
+          <Key>
+            <PropertyRef Name="WorkingDayID" />
+          </Key>
+          <Property Name="WorkingDayID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="workingdayGroup" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="workingdayYear" Type="Int32" />
+          <Property Name="workingdaySemester" Type="Int32" />
+          <Property Name="workingday1" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="workingday2" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="workingday3" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="workingday4" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="workingday5" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="workingday6" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="workingday7" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="workingdayOneHourTimeSlots" Type="Int32" />
+          <Property Name="ThirtyMinutesTimeSlots" Type="Int32" />
+        </EntityType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -205,6 +243,25 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+          <EntitySetMapping Name="WorkingDays">
+            <EntityTypeMapping TypeName="TimetableManagementSystemModel.WorkingDay">
+              <MappingFragment StoreEntitySet="WorkingDays">
+                <ScalarProperty Name="ThirtyMinutesTimeSlots" ColumnName="ThirtyMinutesTimeSlots" />
+                <ScalarProperty Name="workingdayOneHourTimeSlots" ColumnName="workingdayOneHourTimeSlots" />
+                <ScalarProperty Name="workingday7" ColumnName="workingday7" />
+                <ScalarProperty Name="workingday6" ColumnName="workingday6" />
+                <ScalarProperty Name="workingday5" ColumnName="workingday5" />
+                <ScalarProperty Name="workingday4" ColumnName="workingday4" />
+                <ScalarProperty Name="workingday3" ColumnName="workingday3" />
+                <ScalarProperty Name="workingday2" ColumnName="workingday2" />
+                <ScalarProperty Name="workingday1" ColumnName="workingday1" />
+                <ScalarProperty Name="workingdaySemester" ColumnName="workingdaySemester" />
+                <ScalarProperty Name="workingdayYear" ColumnName="workingdayYear" />
+                <ScalarProperty Name="workingdayGroup" ColumnName="workingdayGroup" />
+                <ScalarProperty Name="WorkingDayID" ColumnName="WorkingDayID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
   </EntityContainerMapping>
 </Mapping></edmx:Mappings>
   </edmx:Runtime>

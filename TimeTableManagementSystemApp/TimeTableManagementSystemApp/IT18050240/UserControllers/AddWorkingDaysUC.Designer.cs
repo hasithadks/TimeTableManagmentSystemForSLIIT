@@ -53,10 +53,9 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(537, 5);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(403, 4);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(316, 22);
+            this.label2.Size = new System.Drawing.Size(253, 20);
             this.label2.TabIndex = 3;
             this.label2.Text = "Manage Working Days and Hours";
             // 
@@ -70,10 +69,9 @@
             "Wednesday",
             "Thursday",
             "Friday"});
-            this.MWDMonday.Location = new System.Drawing.Point(44, 276);
-            this.MWDMonday.Margin = new System.Windows.Forms.Padding(4);
+            this.MWDMonday.Location = new System.Drawing.Point(33, 224);
             this.MWDMonday.Name = "MWDMonday";
-            this.MWDMonday.Size = new System.Drawing.Size(160, 31);
+            this.MWDMonday.Size = new System.Drawing.Size(121, 29);
             this.MWDMonday.TabIndex = 4;
             this.MWDMonday.SelectedIndexChanged += new System.EventHandler(this.MWDMonday_SelectedIndexChanged);
             // 
@@ -87,10 +85,9 @@
             "Wednesday",
             "Thursday",
             "Friday"});
-            this.MWDTuesday.Location = new System.Drawing.Point(245, 276);
-            this.MWDTuesday.Margin = new System.Windows.Forms.Padding(4);
+            this.MWDTuesday.Location = new System.Drawing.Point(184, 224);
             this.MWDTuesday.Name = "MWDTuesday";
-            this.MWDTuesday.Size = new System.Drawing.Size(160, 31);
+            this.MWDTuesday.Size = new System.Drawing.Size(121, 29);
             this.MWDTuesday.TabIndex = 5;
             // 
             // MWDWednesday
@@ -103,10 +100,9 @@
             "Wednesday",
             "Thursday",
             "Friday"});
-            this.MWDWednesday.Location = new System.Drawing.Point(438, 276);
-            this.MWDWednesday.Margin = new System.Windows.Forms.Padding(4);
+            this.MWDWednesday.Location = new System.Drawing.Point(328, 224);
             this.MWDWednesday.Name = "MWDWednesday";
-            this.MWDWednesday.Size = new System.Drawing.Size(160, 31);
+            this.MWDWednesday.Size = new System.Drawing.Size(121, 29);
             this.MWDWednesday.TabIndex = 6;
             // 
             // MWDThursday
@@ -119,10 +115,9 @@
             "Wednesday",
             "Thursday",
             "Friday"});
-            this.MWDThursday.Location = new System.Drawing.Point(630, 276);
-            this.MWDThursday.Margin = new System.Windows.Forms.Padding(4);
+            this.MWDThursday.Location = new System.Drawing.Point(472, 224);
             this.MWDThursday.Name = "MWDThursday";
-            this.MWDThursday.Size = new System.Drawing.Size(160, 31);
+            this.MWDThursday.Size = new System.Drawing.Size(121, 29);
             this.MWDThursday.TabIndex = 7;
             // 
             // MWDFriday
@@ -135,10 +130,9 @@
             "Wednesday",
             "Thursday",
             "Friday"});
-            this.MWDFriday.Location = new System.Drawing.Point(819, 276);
-            this.MWDFriday.Margin = new System.Windows.Forms.Padding(4);
+            this.MWDFriday.Location = new System.Drawing.Point(614, 224);
             this.MWDFriday.Name = "MWDFriday";
-            this.MWDFriday.Size = new System.Drawing.Size(160, 31);
+            this.MWDFriday.Size = new System.Drawing.Size(121, 29);
             this.MWDFriday.TabIndex = 8;
             // 
             // MWDSaturday
@@ -153,10 +147,9 @@
             "Friday",
             "Saturday",
             "Sunday"});
-            this.MWDSaturday.Location = new System.Drawing.Point(1007, 276);
-            this.MWDSaturday.Margin = new System.Windows.Forms.Padding(4);
+            this.MWDSaturday.Location = new System.Drawing.Point(755, 224);
             this.MWDSaturday.Name = "MWDSaturday";
-            this.MWDSaturday.Size = new System.Drawing.Size(160, 31);
+            this.MWDSaturday.Size = new System.Drawing.Size(121, 29);
             this.MWDSaturday.TabIndex = 9;
             this.MWDSaturday.Text = "Saturday";
             // 
@@ -172,10 +165,9 @@
             "Friday",
             "Saturday",
             "Sunday"});
-            this.MWDSunday.Location = new System.Drawing.Point(1195, 276);
-            this.MWDSunday.Margin = new System.Windows.Forms.Padding(4);
+            this.MWDSunday.Location = new System.Drawing.Point(896, 224);
             this.MWDSunday.Name = "MWDSunday";
-            this.MWDSunday.Size = new System.Drawing.Size(160, 31);
+            this.MWDSunday.Size = new System.Drawing.Size(121, 29);
             this.MWDSunday.TabIndex = 10;
             this.MWDSunday.Text = "Sunday";
             // 
@@ -183,10 +175,9 @@
             // 
             this.checkBox1.AutoSize = true;
             this.checkBox1.Font = new System.Drawing.Font("Century Gothic", 12F);
-            this.checkBox1.Location = new System.Drawing.Point(1101, 85);
-            this.checkBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.checkBox1.Location = new System.Drawing.Point(826, 69);
             this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(218, 27);
+            this.checkBox1.Size = new System.Drawing.Size(177, 25);
             this.checkBox1.TabIndex = 13;
             this.checkBox1.Text = "One hour time slots";
             this.checkBox1.UseVisualStyleBackColor = true;
@@ -195,10 +186,9 @@
             // 
             this.checkBox2.AutoSize = true;
             this.checkBox2.Font = new System.Drawing.Font("Century Gothic", 12F);
-            this.checkBox2.Location = new System.Drawing.Point(1101, 126);
-            this.checkBox2.Margin = new System.Windows.Forms.Padding(4);
+            this.checkBox2.Location = new System.Drawing.Point(826, 102);
             this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(254, 27);
+            this.checkBox2.Size = new System.Drawing.Size(210, 25);
             this.checkBox2.TabIndex = 14;
             this.checkBox2.Text = "Thirty minutes time slots";
             this.checkBox2.UseVisualStyleBackColor = true;
@@ -207,10 +197,9 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(40, 161);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(30, 131);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(123, 23);
+            this.label3.Size = new System.Drawing.Size(99, 21);
             this.label3.TabIndex = 15;
             this.label3.Text = "Select Year";
             // 
@@ -218,10 +207,9 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(40, 201);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Location = new System.Drawing.Point(30, 163);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(166, 23);
+            this.label4.Size = new System.Drawing.Size(133, 21);
             this.label4.TabIndex = 16;
             this.label4.Text = "Select Semester";
             // 
@@ -234,10 +222,9 @@
             "2",
             "3",
             "4"});
-            this.SelectYear.Location = new System.Drawing.Point(396, 161);
-            this.SelectYear.Margin = new System.Windows.Forms.Padding(4);
+            this.SelectYear.Location = new System.Drawing.Point(297, 131);
             this.SelectYear.Name = "SelectYear";
-            this.SelectYear.Size = new System.Drawing.Size(160, 31);
+            this.SelectYear.Size = new System.Drawing.Size(121, 29);
             this.SelectYear.TabIndex = 17;
             // 
             // SelectSem
@@ -247,20 +234,18 @@
             this.SelectSem.Items.AddRange(new object[] {
             "1",
             "2"});
-            this.SelectSem.Location = new System.Drawing.Point(396, 201);
-            this.SelectSem.Margin = new System.Windows.Forms.Padding(4);
+            this.SelectSem.Location = new System.Drawing.Point(297, 163);
             this.SelectSem.Name = "SelectSem";
-            this.SelectSem.Size = new System.Drawing.Size(160, 31);
+            this.SelectSem.Size = new System.Drawing.Size(121, 29);
             this.SelectSem.TabIndex = 18;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(40, 122);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Location = new System.Drawing.Point(30, 99);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(139, 23);
+            this.label5.Size = new System.Drawing.Size(112, 21);
             this.label5.TabIndex = 19;
             this.label5.Text = "Select Group";
             // 
@@ -271,20 +256,18 @@
             this.SelectGroup.Items.AddRange(new object[] {
             "Y1.S1.SE.09.2",
             "Y2.S2.IT.06.05"});
-            this.SelectGroup.Location = new System.Drawing.Point(396, 122);
-            this.SelectGroup.Margin = new System.Windows.Forms.Padding(4);
+            this.SelectGroup.Location = new System.Drawing.Point(297, 99);
             this.SelectGroup.Name = "SelectGroup";
-            this.SelectGroup.Size = new System.Drawing.Size(160, 31);
+            this.SelectGroup.Size = new System.Drawing.Size(121, 29);
             this.SelectGroup.TabIndex = 20;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(40, 81);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(30, 66);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(331, 23);
+            this.label1.Size = new System.Drawing.Size(260, 21);
             this.label1.TabIndex = 2;
             this.label1.Text = "Select Number of Days Per Week";
             // 
@@ -299,10 +282,9 @@
             "4",
             "5",
             "Weekend"});
-            this.NoOfDaysPerWeek.Location = new System.Drawing.Point(396, 81);
-            this.NoOfDaysPerWeek.Margin = new System.Windows.Forms.Padding(4);
+            this.NoOfDaysPerWeek.Location = new System.Drawing.Point(297, 66);
             this.NoOfDaysPerWeek.Name = "NoOfDaysPerWeek";
-            this.NoOfDaysPerWeek.Size = new System.Drawing.Size(160, 31);
+            this.NoOfDaysPerWeek.Size = new System.Drawing.Size(121, 29);
             this.NoOfDaysPerWeek.TabIndex = 1;
             this.NoOfDaysPerWeek.SelectedIndexChanged += new System.EventHandler(this.NoOfDaysPerWeek_SelectedIndexChanged);
             // 
@@ -313,17 +295,18 @@
             this.addWorkingDaysBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.addWorkingDaysBtn.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.addWorkingDaysBtn.ForeColor = System.Drawing.Color.White;
-            this.addWorkingDaysBtn.Location = new System.Drawing.Point(1195, 835);
-            this.addWorkingDaysBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.addWorkingDaysBtn.Location = new System.Drawing.Point(896, 678);
+            this.addWorkingDaysBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.addWorkingDaysBtn.Name = "addWorkingDaysBtn";
-            this.addWorkingDaysBtn.Size = new System.Drawing.Size(160, 36);
+            this.addWorkingDaysBtn.Size = new System.Drawing.Size(120, 29);
             this.addWorkingDaysBtn.TabIndex = 275;
             this.addWorkingDaysBtn.Text = "Done";
             this.addWorkingDaysBtn.UseVisualStyleBackColor = false;
+            this.addWorkingDaysBtn.Click += new System.EventHandler(this.addWorkingDaysBtn_Click);
             // 
             // AddWorkingDaysUC
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.addWorkingDaysBtn);
@@ -345,9 +328,8 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.NoOfDaysPerWeek);
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "AddWorkingDaysUC";
-            this.Size = new System.Drawing.Size(1387, 912);
+            this.Size = new System.Drawing.Size(1040, 741);
             this.ResumeLayout(false);
             this.PerformLayout();
 
