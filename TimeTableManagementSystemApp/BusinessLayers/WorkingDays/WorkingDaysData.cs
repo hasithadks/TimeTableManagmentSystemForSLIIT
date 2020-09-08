@@ -30,9 +30,5 @@ namespace BusinessLayers.WorkingDays
             }
             return workingdayID;
         }
-        //public int updateWorkingDaysData()
-        //{
-        //    return workingdayID;
-        //}
     }
 }
