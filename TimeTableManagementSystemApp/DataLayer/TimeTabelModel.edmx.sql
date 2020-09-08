@@ -2,8 +2,8 @@
 -- --------------------------------------------------
 -- Entity Designer DDL Script for SQL Server 2005, 2008, 2012 and Azure
 -- --------------------------------------------------
--- Date Created: 08/22/2020 22:19:22
--- Generated from EDMX file: C:\Users\devin\source\repos\TimeTableManagmentSystemForSLIIT\TimeTableManagementSystemApp\DataLayer\TimeTabelModel.edmx
+-- Date Created: 09/07/2020 23:23:23
+-- Generated from EDMX file: C:\Users\Hasitha Samarasekara\source\repos\TimeTableManagmentSystemForSLIIT\TimeTableManagementSystemApp\DataLayer\TimeTabelModel.edmx
 -- --------------------------------------------------
 
 SET QUOTED_IDENTIFIER OFF;
@@ -21,10 +21,10 @@ IF OBJECT_ID(N'[dbo].[FK_BuildingID]', 'F') IS NOT NULL
     ALTER TABLE [dbo].[Rooms] DROP CONSTRAINT [FK_BuildingID];
 GO
 IF OBJECT_ID(N'[dbo].[FK_BuildingIDLocation]', 'F') IS NOT NULL
-    ALTER TABLE [dbo].[Location] DROP CONSTRAINT [FK_BuildingIDLocation];
+    ALTER TABLE [dbo].[Locations] DROP CONSTRAINT [FK_BuildingIDLocation];
 GO
 IF OBJECT_ID(N'[dbo].[FK_RoomIDLocation]', 'F') IS NOT NULL
-    ALTER TABLE [dbo].[Location] DROP CONSTRAINT [FK_RoomIDLocation];
+    ALTER TABLE [dbo].[Locations] DROP CONSTRAINT [FK_RoomIDLocation];
 GO
 
 -- --------------------------------------------------
@@ -34,11 +34,14 @@ GO
 IF OBJECT_ID(N'[dbo].[Buildings]', 'U') IS NOT NULL
     DROP TABLE [dbo].[Buildings];
 GO
-IF OBJECT_ID(N'[dbo].[Location]', 'U') IS NOT NULL
-    DROP TABLE [dbo].[Location];
+IF OBJECT_ID(N'[dbo].[Locations]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[Locations];
 GO
 IF OBJECT_ID(N'[dbo].[Rooms]', 'U') IS NOT NULL
     DROP TABLE [dbo].[Rooms];
+GO
+IF OBJECT_ID(N'[dbo].[WorkingDays]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[WorkingDays];
 GO
 
 -- --------------------------------------------------
@@ -70,6 +73,24 @@ CREATE TABLE [dbo].[Rooms] (
 );
 GO
 
+-- Creating table 'WorkingDays'
+CREATE TABLE [dbo].[WorkingDays] (
+    [WorkingDayID] int IDENTITY(1,1) NOT NULL,
+    [workingdayGroup] varchar(100)  NULL,
+    [workingdayYear] int  NULL,
+    [workingdaySemester] int  NULL,
+    [workingday1] varchar(100)  NULL,
+    [workingday2] varchar(100)  NULL,
+    [workingday3] varchar(100)  NULL,
+    [workingday4] varchar(100)  NULL,
+    [workingday5] varchar(100)  NULL,
+    [workingday6] varchar(100)  NULL,
+    [workingday7] varchar(100)  NULL,
+    [workingdayOneHourTimeSlots] int  NULL,
+    [ThirtyMinutesTimeSlots] int  NULL
+);
+GO
+
 -- --------------------------------------------------
 -- Creating all PRIMARY KEY constraints
 -- --------------------------------------------------
@@ -90,6 +111,12 @@ GO
 ALTER TABLE [dbo].[Rooms]
 ADD CONSTRAINT [PK_Rooms]
     PRIMARY KEY CLUSTERED ([id] ASC);
+GO
+
+-- Creating primary key on [WorkingDayID] in table 'WorkingDays'
+ALTER TABLE [dbo].[WorkingDays]
+ADD CONSTRAINT [PK_WorkingDays]
+    PRIMARY KEY CLUSTERED ([WorkingDayID] ASC);
 GO
 
 -- --------------------------------------------------

@@ -9,7 +9,8 @@ namespace BusinessLayers.WorkingDays
 {
     class WorkingDaysData
     {
-        public int insertWorkingDaysData() {
+        public int insertWorkingDaysData()
+        {
             int workingdayID = 0;
 
             using (var context = new TimetableManagementSystemEntities2())
@@ -19,7 +20,7 @@ namespace BusinessLayers.WorkingDays
                     workingdayGroup = "Y1Y2",
                     workingdayYear = 2017,
                     workingdaySemester = 2,
-                    workingday1 ="Monday"
+                    workingday1 = "Monday"
                 };
 
                 context.WorkingDays.Add(working);
@@ -29,8 +30,9 @@ namespace BusinessLayers.WorkingDays
             }
             return workingdayID;
         }
-        public int updateWorkingDaysData()
-        {
-            return workingdayID;
-        }
+        //public int updateWorkingDaysData()
+        //{
+        //    return workingdayID;
+        //}
+    }
 }
