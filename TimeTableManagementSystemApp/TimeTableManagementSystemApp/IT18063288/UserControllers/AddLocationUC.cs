@@ -32,15 +32,9 @@ namespace TimeTableManagementSystemApp.IT18063288.UserControllers
 
             locationBO = new LocationBO();
 
-            txtNewBuilding.Visible = false;
-            btnBuildingSave.Visible = false;
-            btnBuildingUpdate.Visible = false;
-            btnDeleteBuilding.Visible = false;
+            SetBuildingbuttonVisibilityFalse();
 
-            txtNewRoom.Visible = false;
-            btnRoomSave.Visible = false;
-            btnRoomUpdate.Visible = false;
-            btnDeleteRoom.Visible = false;
+            SetRoomButtonVisibilityFalse();
 
             //Room Details
             labelRoom.Visible = false;
@@ -63,12 +57,20 @@ namespace TimeTableManagementSystemApp.IT18063288.UserControllers
 
         private void btnChangeBuildingName_Click(object sender, EventArgs e)
         {
-            txtNewBuilding.Text = comboBoxBuilding.Text;
-            locationBO.BuildingID = comboBoxBuilding.SelectedIndex;
-            txtNewBuilding.Visible = true;
-            btnBuildingUpdate.Visible = true;
-            btnDeleteBuilding.Visible = true;
-            btnBuildingSave.Visible = false;
+            if(comboBoxBuilding.Text == "")
+            {
+                
+            }
+            else
+            {
+                txtNewBuilding.Text = comboBoxBuilding.Text;
+                //locationBO.BuildingID = comboBoxBuilding.SelectedIndex;
+                txtNewBuilding.Visible = true;
+                btnBuildingUpdate.Visible = true;
+                btnDeleteBuilding.Visible = true;
+                btnBuildingSave.Visible = false;
+            }
+            
         }
 
         private void btnAddNewBuilding_Click(object sender, EventArgs e)
@@ -98,11 +100,22 @@ namespace TimeTableManagementSystemApp.IT18063288.UserControllers
 
         private void btnChangeRoomName_Click(object sender, EventArgs e)
         {
-            txtNewRoom.Text = comboBoxRoom.Text;
-            txtNewRoom.Visible = true;
-            btnRoomUpdate.Visible = true;
-            btnDeleteRoom.Visible = true;
-            btnRoomSave.Visible = false;
+            if(comboBoxRoom.Text != "")
+            {
+                txtNewRoom.Text = comboBoxRoom.Text;
+                txtNewRoom.Visible = true;
+                btnRoomUpdate.Visible = true;
+                btnDeleteRoom.Visible = true;
+                btnRoomSave.Visible = false;
+            }
+            else
+            {
+
+
+
+            }
+            
+            
         }
 
         private void btnRoomSave_Click(object sender, EventArgs e)
@@ -120,6 +133,8 @@ namespace TimeTableManagementSystemApp.IT18063288.UserControllers
             if (RoomID > 0)
             {
                 locationBO.RoomID = RoomID;
+                SetRoomButtonVisibilityFalse();
+                SetRoomDropDown();
             }
             else
             {
@@ -168,15 +183,18 @@ namespace TimeTableManagementSystemApp.IT18063288.UserControllers
             if (buildingID > 0)
             {
                 locationBO.BuildingID = buildingID;
+                SetBuildingbuttonVisibilityFalse();
             }
             else
             {
                 locationBO.BuildingID = 0;
             }
+            setBuildingDropdown();
+
 
         }
 
-        
+
         private void fillByToolStripButton_Click(object sender, EventArgs e)
         {
             try
@@ -295,6 +313,148 @@ namespace TimeTableManagementSystemApp.IT18063288.UserControllers
 
         }
 
-        
+        private void btnBuildingUpdate_Click(object sender, EventArgs e)
+        {
+            if (txtNewBuilding.Text != "")
+            {
+                locationContol = new LocationController();
+
+                
+                int no = locationContol.UpdateBuildingName(locationBO.BuildingID, txtNewBuilding.Text);
+
+                if(no == 1)
+                {
+                    // success message
+                    txtNewBuilding.Text = "";
+                    SetBuildingbuttonVisibilityFalse();
+                    setBuildingDropdown();
+                }
+                else
+                {
+
+                }
+
+
+            }
+            else
+            {
+                //error msg 
+            }
+
+
+
+        }
+
+        private void btnDeleteBuilding_Click(object sender, EventArgs e)
+        {
+
+            if (comboBoxBuilding.Text != "")
+            {
+                locationContol = new LocationController();
+
+
+                int no = locationContol.DeleteBuilding(locationBO.BuildingID);
+
+                if (no == 1)
+                {
+                    // success message
+                    txtNewBuilding.Text = "";
+                    SetBuildingbuttonVisibilityFalse();
+                    setBuildingDropdown();
+                }
+                else
+                {
+
+                }
+
+
+            }
+            else
+            {
+                //error msg 
+            }
+
+
+        }
+
+        private void btnRoomUpdate_Click(object sender, EventArgs e)
+        {
+
+            if (txtNewRoom.Text != "")
+            {
+                locationContol = new LocationController();
+
+
+                int no = locationContol.UpdateRoomName(locationBO.RoomID, txtNewRoom.Text);
+
+                if (no == 1)
+                {
+                    // success message
+                    txtNewRoom.Text = "";
+                    SetRoomButtonVisibilityFalse();
+                    SetRoomDropDown();
+                }
+                else
+                {
+
+                }
+
+
+            }
+            else
+            {
+                //error msg 
+            }
+
+
+        }
+
+        public void SetBuildingbuttonVisibilityFalse()
+        {
+
+            txtNewBuilding.Visible = false;
+            btnBuildingSave.Visible = false;
+            btnBuildingUpdate.Visible = false;
+            btnDeleteBuilding.Visible = false;
+        }
+
+
+        public void SetRoomButtonVisibilityFalse()
+        {
+
+            txtNewRoom.Visible = false;
+            btnRoomSave.Visible = false;
+            btnRoomUpdate.Visible = false;
+            btnDeleteRoom.Visible = false;
+        }
+
+        private void btnDeleteRoom_Click(object sender, EventArgs e)
+        {
+            if (comboBoxRoom.Text != "")
+            {
+                locationContol = new LocationController();
+
+
+                int no = locationContol.DeleteRoom(locationBO.RoomID);
+
+                if (no == 1)
+                {
+                    // success message
+
+                    SetRoomButtonVisibilityFalse();
+                    SetRoomDropDown();
+                }
+                else
+                {
+
+                }
+
+
+            }
+            else
+            {
+                //error msg 
+            }
+        }
     }
 }

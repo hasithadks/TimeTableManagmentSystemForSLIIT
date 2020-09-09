@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using BusinessLayers.Location;
 using DataLayer;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace TimeTableManagementSystemApp.IT18063288.UserControllers.SubUserControllers
 {
@@ -88,10 +89,11 @@ namespace TimeTableManagementSystemApp.IT18063288.UserControllers.SubUserControl
             if(roomID > 0)
             {
                 //success Message
-                txtRoomCapacity.Text = "";
-                checkBoxLecture.Checked = false;
-                checkBoxLab.Checked = false;
-                LocationBO locationBO = new LocationBO();
+                //txtRoomCapacity.Text = "";
+                //checkBoxLecture.Checked = false;
+                //checkBoxLab.Checked = false;
+                //LocationBO locationBO = new LocationBO();
+                this.Parent.Controls.Remove(this);
             }
             else
             {
