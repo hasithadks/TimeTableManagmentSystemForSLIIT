@@ -59,6 +59,18 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CommonFiles\CommonClass.cs" />
+    <Compile Include="CommonFiles\ErrorDialogBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CommonFiles\ErrorDialogBox.Designer.cs">
+      <DependentUpon>ErrorDialogBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CommonFiles\SuccessfullMessageBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CommonFiles\SuccessfullMessageBox.Designer.cs">
+      <DependentUpon>SuccessfullMessageBox.cs</DependentUpon>
+    </Compile>
     <Compile Include="CommonFiles\TopManuBarUC.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -131,6 +143,7 @@
     <Compile Include="IT18050240\UserControllers\GenerateTimeTableUC.Designer.cs">
       <DependentUpon>GenerateTimeTableUC.cs</DependentUpon>
     </Compile>
+    <Compile Include="IT18050240\UserControllers\TimeTableModel.cs" />
     <Compile Include="IT18050240\UserControllers\ViewTimeTableUC.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -270,6 +283,17 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>TimetableManagementSystemDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="TimetableManagementSystemDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TimetableManagementSystemDataSet1.xsd</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="CommonFiles\ErrorDialogBox.resx">
+      <DependentUpon>ErrorDialogBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CommonFiles\SuccessfullMessageBox.resx">
+      <DependentUpon>SuccessfullMessageBox.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CommonFiles\TopManuBarUC.resx">
       <DependentUpon>TopManuBarUC.cs</DependentUpon>
     </EmbeddedResource>
@@ -394,6 +418,17 @@
     <None Include="TimetableManagementSystemDataSet.xss">
       <DependentUpon>TimetableManagementSystemDataSet.xsd</DependentUpon>
     </None>
+    <None Include="TimetableManagementSystemDataSet1.xsc">
+      <DependentUpon>TimetableManagementSystemDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="TimetableManagementSystemDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TimetableManagementSystemDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="TimetableManagementSystemDataSet1.xss">
+      <DependentUpon>TimetableManagementSystemDataSet1.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -416,6 +451,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Resources\add-square-button.png" />
+    <None Include="Resources\success.png" />
+    <None Include="Resources\error.png" />
     <None Include="Resources\SLIIT.png" />
     <None Include="Resources\minibtn.png" />
     <None Include="Resources\Maxibtn.png" />

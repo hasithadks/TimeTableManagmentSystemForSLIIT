@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using BusinessLayers.WorkingDays;
+using TimeTableManagementSystemApp.CommonFiles;
 
 namespace TimeTableManagementSystemApp.IT18058338.UserControllers
 {
@@ -105,6 +106,16 @@ namespace TimeTableManagementSystemApp.IT18058338.UserControllers
             //{
             //    locationBO.BuildingID = 0;
             //}
+            ErrorDialogBox.ShowDialog("All Repair Informations are Required", "Failed");
+        }
+
+        private void AddWorkingDaysUC_Load(object sender, EventArgs e)
+        {
+            WorkingDaysController workingDaysController = new WorkingDaysController();
+
+            var source = new BindingSource();
+            source.DataSource = workingDaysController.SelectAllWorkingDays();
+            WorkingDayData.DataSource = source;
         }
     }
 }
