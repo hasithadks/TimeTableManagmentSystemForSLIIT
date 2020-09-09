@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DataLayer;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -15,5 +16,12 @@ namespace BusinessLayers.WorkingDays
             int id = workingDaysData.insertWorkingDaysData();
             return id;
         }
+
+        public List<WorkingDay> SelectAllWorkingDays()
+        {
+            workingDaysData = new WorkingDaysData();
+            return workingDaysData.getAllWorkingDayData();
+        }
+
     }
 }
