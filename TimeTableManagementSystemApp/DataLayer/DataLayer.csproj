@@ -60,6 +60,9 @@
     <Compile Include="Location.cs">
       <DependentUpon>TimeTabelModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Location1.cs">
+      <DependentUpon>TimeTabelModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Programme.cs">
       <DependentUpon>TimeTabelModel.tt</DependentUpon>
     </Compile>

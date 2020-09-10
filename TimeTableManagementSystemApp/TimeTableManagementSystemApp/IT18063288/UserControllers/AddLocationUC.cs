@@ -9,10 +9,10 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using TimeTableManagementSystemApp.IT18063288.UserControllers.SubUserControllers;
 using TimeTableManagementSystemApp.CommonFiles;
-using BusinessLayers.Location;
 using DataLayer;
 using System.Data.Entity;
 using System.Data.Entity.Core.Common.EntitySql;
+using BusinessLayers.Location;
 
 namespace TimeTableManagementSystemApp.IT18063288.UserControllers
 {

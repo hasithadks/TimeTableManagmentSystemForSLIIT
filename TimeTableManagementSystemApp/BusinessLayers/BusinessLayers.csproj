@@ -63,6 +63,9 @@
     <Compile Include="Tag\TagController.cs" />
     <Compile Include="Tag\TagData.cs" />
     <Compile Include="Tag\TagModel.cs" />
+    <Compile Include="WorkingDays\WorkingDaysClass.cs" />
+    <Compile Include="WorkingDays\WorkingDaysController.cs" />
+    <Compile Include="WorkingDays\WorkingDaysData.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
