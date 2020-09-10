@@ -27,6 +27,9 @@ namespace DataLayer
     
         public virtual DbSet<Building> Buildings { get; set; }
         public virtual DbSet<Location> Locations { get; set; }
+        public virtual DbSet<Programme> Programmes { get; set; }
         public virtual DbSet<Room> Rooms { get; set; }
+        public virtual DbSet<StudentDetail> StudentDetails { get; set; }
+        public virtual DbSet<Tag> Tags { get; set; }
     }
 }
