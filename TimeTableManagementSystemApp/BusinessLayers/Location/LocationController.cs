@@ -36,6 +36,14 @@ namespace BusinessLayers.Location
 
         }
 
+        public List<DataLayer.Location> getLocations()
+        {
+            locationData = new LocationData();
+
+            return locationData.GetLocation();
+
+        }
+
         public List<Room> getAllRooms(int buildingID)
         {
             locationData = new LocationData();
@@ -59,5 +67,30 @@ namespace BusinessLayers.Location
             return locationData.SaveRoomOtherDetails(locationBO);
 
         }
+
+        public int UpdateBuildingName(int bid, string bname)
+        {
+            locationData = new LocationData();
+            return locationData.UpdateBuildingName(bid, bname);
+        }
+
+        public int DeleteBuilding(int bid)
+        {
+            locationData = new LocationData();
+            return locationData.DeleteBuilding(bid);
+        }
+
+        public int UpdateRoomName(int rid, string rname)
+        {
+            locationData = new LocationData();
+            return locationData.UpdateRoomName(rid, rname);
+        }
+
+        public int DeleteRoom(int rid)
+        {
+            locationData = new LocationData();
+            return locationData.DeleteRoom(rid);
+        }
+
     }
 }

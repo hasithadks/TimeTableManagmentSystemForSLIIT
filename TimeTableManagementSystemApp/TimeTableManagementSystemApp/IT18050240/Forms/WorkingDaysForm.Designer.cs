@@ -59,7 +59,7 @@
             this.addWorkingDaysBtn.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.addWorkingDaysBtn.ForeColor = System.Drawing.Color.White;
             this.addWorkingDaysBtn.Location = new System.Drawing.Point(4, 110);
-            this.addWorkingDaysBtn.Margin = new System.Windows.Forms.Padding(2);
+            this.addWorkingDaysBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.addWorkingDaysBtn.Name = "addWorkingDaysBtn";
             this.addWorkingDaysBtn.Size = new System.Drawing.Size(220, 40);
             this.addWorkingDaysBtn.TabIndex = 0;
@@ -76,7 +76,7 @@
             this.genarateTimeTableBtn.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.genarateTimeTableBtn.ForeColor = System.Drawing.Color.White;
             this.genarateTimeTableBtn.Location = new System.Drawing.Point(4, 198);
-            this.genarateTimeTableBtn.Margin = new System.Windows.Forms.Padding(2);
+            this.genarateTimeTableBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.genarateTimeTableBtn.Name = "genarateTimeTableBtn";
             this.genarateTimeTableBtn.Size = new System.Drawing.Size(220, 40);
             this.genarateTimeTableBtn.TabIndex = 1;
@@ -93,7 +93,7 @@
             this.viewTimeTableBtn.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.viewTimeTableBtn.ForeColor = System.Drawing.Color.White;
             this.viewTimeTableBtn.Location = new System.Drawing.Point(4, 154);
-            this.viewTimeTableBtn.Margin = new System.Windows.Forms.Padding(2);
+            this.viewTimeTableBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.viewTimeTableBtn.Name = "viewTimeTableBtn";
             this.viewTimeTableBtn.Size = new System.Drawing.Size(220, 40);
             this.viewTimeTableBtn.TabIndex = 2;
@@ -105,7 +105,7 @@
             // workingDaysPanel
             // 
             this.workingDaysPanel.Location = new System.Drawing.Point(231, 43);
-            this.workingDaysPanel.Margin = new System.Windows.Forms.Padding(2);
+            this.workingDaysPanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.workingDaysPanel.Name = "workingDaysPanel";
             this.workingDaysPanel.Size = new System.Drawing.Size(1040, 720);
             this.workingDaysPanel.TabIndex = 3;
@@ -221,7 +221,7 @@
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(3, 8);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(265, 25);
+            this.label1.Size = new System.Drawing.Size(287, 24);
             this.label1.TabIndex = 7;
             this.label1.Text = "Time Table Management";
             // 
@@ -236,7 +236,7 @@
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.workingDaysPanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "WorkingDaysForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "WorkingDaysForm";

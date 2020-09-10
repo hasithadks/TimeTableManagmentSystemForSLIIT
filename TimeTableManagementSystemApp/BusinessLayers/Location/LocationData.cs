@@ -65,7 +65,7 @@ namespace BusinessLayers.Location
 
         public int SaveRoomData(string rName, int buildingID)
         {
-            int RoomID = 0;
+            int rID = 0;
 
             using (var context = new TimetableManagementSystemEntities2())
             {
@@ -81,9 +81,18 @@ namespace BusinessLayers.Location
                 context.Rooms.Add(NewRoom);
                 context.SaveChanges();
 
-                RoomID = NewRoom.id;
+                rID = NewRoom.id;
+
+                DataLayer.Location location = new DataLayer.Location()
+                {
+                    BuildingID = buildingID,
+                    RoomID = rID
+                };
+
+                context.Locations.Add(location);
+                context.SaveChanges();
             }
-            return RoomID;
+            return rID;
         }
 
 
@@ -96,11 +105,25 @@ namespace BusinessLayers.Location
                List<Building> multiple = context.Buildings.ToList();
 
 
-
                 return multiple;
             }
 
             
+        }
+
+        public List<DataLayer.Location> GetLocation()
+        {
+
+            using (var context = new TimetableManagementSystemEntities2())
+            {
+
+                List<DataLayer.Location> multiple = context.Locations.ToList();
+
+
+                return multiple;
+            }
+
+
         }
 
 
@@ -133,9 +156,9 @@ namespace BusinessLayers.Location
                 if(Roomdetails != null)
                 {
                     locationBO.RoomID = Roomdetails.id;
-                    locationBO.RoomName = Roomdetails.RoomName.ToString();
-                    locationBO.RoomCapacity = (int)Roomdetails.Capacity;  // Handle If != null 
-                    locationBO.RoomType = (int)Roomdetails.RoomType;
+                    locationBO.RoomName = Roomdetails.RoomName == null ? string.Empty : Roomdetails.RoomName.ToString();
+                    locationBO.RoomCapacity = Roomdetails.Capacity ==  null ? 0 : (int)Roomdetails.Capacity;  // Handle If != null  // Donne
+                    locationBO.RoomType = Roomdetails.RoomType == null ? 0 : (int)Roomdetails.RoomType;
                 }
                 
 
@@ -169,5 +192,113 @@ namespace BusinessLayers.Location
 
             return RoomID;
         }
+
+
+        public int UpdateBuildingName(int bid, string bname)
+        {
+
+            using (var context = new TimetableManagementSystemEntities2())
+            {
+
+                //update
+                var updatingBuilding = context.Buildings.Where(q => q.id == bid).FirstOrDefault();
+
+                if (updatingBuilding != null)
+                {
+                    updatingBuilding.BuidingName = bname;
+                    context.SaveChanges();
+                    return 1;
+                }
+                else
+                {
+                    return 0;
+                }
+
+
+            }
+
+
+        }
+
+        public int UpdateRoomName(int rid, string rname)
+        {
+
+            using (var context = new TimetableManagementSystemEntities2())
+            {
+
+                //update
+                var updatingRoom = context.Rooms.Where(q => q.id == rid).FirstOrDefault();
+
+                if (updatingRoom != null)
+                {
+                    updatingRoom.RoomName = rname;
+                    context.SaveChanges();
+                    return 1;
+                }
+                else
+                {
+                    return 0;
+                }
+
+
+            }
+
+
+        }
+
+
+        public int DeleteBuilding(int bid)
+        {
+
+            using (var context = new TimetableManagementSystemEntities2())
+            {
+
+                //update
+                var deletingBuilding = context.Buildings.Where(q => q.id == bid).FirstOrDefault();
+
+                if (deletingBuilding != null)
+                {
+                    context.Buildings.Remove(deletingBuilding);
+                    context.SaveChanges();
+                    return 1;
+                }
+                else
+                {
+                    return 0;
+                }
+
+
+            }
+
+
+        }
+
+        public int DeleteRoom(int rid)
+        {
+
+            using (var context = new TimetableManagementSystemEntities2())
+            {
+
+                //update
+                var deletingRoom = context.Rooms.Where(q => q.id == rid).FirstOrDefault();
+
+                if (deletingRoom != null)
+                {
+                    context.Rooms.Remove(deletingRoom);
+                    context.SaveChanges();
+                    return 1;
+                }
+                else
+                {
+                    return 0;
+                }
+
+
+            }
+
+
+        }
+
+
     }
 }

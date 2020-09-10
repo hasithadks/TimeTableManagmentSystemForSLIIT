@@ -31,5 +31,6 @@ namespace DataLayer
         public virtual DbSet<Room> Rooms { get; set; }
         public virtual DbSet<StudentDetail> StudentDetails { get; set; }
         public virtual DbSet<Tag> Tags { get; set; }
+        public virtual DbSet<WorkingDay> WorkingDays { get; set; }
     }
 }

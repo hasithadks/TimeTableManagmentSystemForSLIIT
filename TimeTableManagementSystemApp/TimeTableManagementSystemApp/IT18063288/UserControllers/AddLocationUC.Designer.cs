@@ -131,6 +131,7 @@
             this.btnBuildingUpdate.TabIndex = 16;
             this.btnBuildingUpdate.Text = "Update";
             this.btnBuildingUpdate.UseVisualStyleBackColor = false;
+            this.btnBuildingUpdate.Click += new System.EventHandler(this.btnBuildingUpdate_Click);
             // 
             // btnChangeBuildingName
             // 
@@ -160,6 +161,7 @@
             this.btnDeleteBuilding.TabIndex = 18;
             this.btnDeleteBuilding.Text = "Delete";
             this.btnDeleteBuilding.UseVisualStyleBackColor = false;
+            this.btnDeleteBuilding.Click += new System.EventHandler(this.btnDeleteBuilding_Click);
             // 
             // btnAddNewBuilding
             // 
@@ -204,6 +206,7 @@
             this.btnDeleteRoom.TabIndex = 26;
             this.btnDeleteRoom.Text = "Delete";
             this.btnDeleteRoom.UseVisualStyleBackColor = false;
+            this.btnDeleteRoom.Click += new System.EventHandler(this.btnDeleteRoom_Click);
             // 
             // btnChangeRoomName
             // 
@@ -233,6 +236,7 @@
             this.btnRoomUpdate.TabIndex = 24;
             this.btnRoomUpdate.Text = "Update";
             this.btnRoomUpdate.UseVisualStyleBackColor = false;
+            this.btnRoomUpdate.Click += new System.EventHandler(this.btnRoomUpdate_Click);
             // 
             // btnRoomSave
             // 
@@ -292,6 +296,7 @@
             // 
             // fillByToolStrip
             // 
+            this.fillByToolStrip.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.fillByToolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.fillByToolStripButton});
             this.fillByToolStrip.Location = new System.Drawing.Point(0, 0);
@@ -312,6 +317,7 @@
             // fillToolStrip
             // 
             this.fillToolStrip.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
+            this.fillToolStrip.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.fillToolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.fillToolStripButton,
             this.toolStripButton1});
@@ -336,7 +342,7 @@
             this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
             this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(23, 22);
+            this.toolStripButton1.Size = new System.Drawing.Size(24, 22);
             this.toolStripButton1.Text = "toolStripButton1";
             // 
             // btnViewRoomDetails

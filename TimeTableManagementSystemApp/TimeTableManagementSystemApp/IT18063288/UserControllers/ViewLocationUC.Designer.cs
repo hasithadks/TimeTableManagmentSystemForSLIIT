@@ -30,16 +30,15 @@
         {
             this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.buildingDataGrid = new System.Windows.Forms.DataGridView();
+            this.roomDatagrid = new System.Windows.Forms.DataGridView();
             this.label2 = new System.Windows.Forms.Label();
             this.pnlEditRecords = new System.Windows.Forms.Panel();
-            this.btnEditRecordLocationUC = new System.Windows.Forms.Button();
             this.timetableManagementSystemDataSet = new TimeTableManagementSystemApp.TimetableManagementSystemDataSet();
             this.buildingsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.buildingsTableAdapter = new TimeTableManagementSystemApp.TimetableManagementSystemDataSetTableAdapters.BuildingsTableAdapter();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.buildingDataGrid)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.roomDatagrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.timetableManagementSystemDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.buildingsBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -55,25 +54,31 @@
             this.label1.Text = "Buildings";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
-            // dataGridView1
+            // buildingDataGrid
             // 
-            this.dataGridView1.AllowUserToOrderColumns = true;
-            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ControlLight;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(86, 71);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(376, 216);
-            this.dataGridView1.TabIndex = 1;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.buildingDataGrid.AllowUserToOrderColumns = true;
+            this.buildingDataGrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.buildingDataGrid.BackgroundColor = System.Drawing.Color.White;
+            this.buildingDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.buildingDataGrid.Location = new System.Drawing.Point(86, 71);
+            this.buildingDataGrid.Name = "buildingDataGrid";
+            this.buildingDataGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.buildingDataGrid.Size = new System.Drawing.Size(376, 216);
+            this.buildingDataGrid.TabIndex = 1;
+            this.buildingDataGrid.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.buildingDataGrid.DoubleClick += new System.EventHandler(this.buildingDataGrid_DoubleClick);
             // 
-            // dataGridView2
+            // roomDatagrid
             // 
-            this.dataGridView2.BackgroundColor = System.Drawing.SystemColors.ControlLight;
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(543, 71);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(376, 216);
-            this.dataGridView2.TabIndex = 2;
+            this.roomDatagrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.roomDatagrid.BackgroundColor = System.Drawing.Color.White;
+            this.roomDatagrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.roomDatagrid.Location = new System.Drawing.Point(543, 71);
+            this.roomDatagrid.Name = "roomDatagrid";
+            this.roomDatagrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.roomDatagrid.Size = new System.Drawing.Size(376, 216);
+            this.roomDatagrid.TabIndex = 2;
+            this.roomDatagrid.DoubleClick += new System.EventHandler(this.roomDatagrid_DoubleClick);
             // 
             // label2
             // 
@@ -91,22 +96,6 @@
             this.pnlEditRecords.Name = "pnlEditRecords";
             this.pnlEditRecords.Size = new System.Drawing.Size(830, 315);
             this.pnlEditRecords.TabIndex = 4;
-            // 
-            // btnEditRecordLocationUC
-            // 
-            this.btnEditRecordLocationUC.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(43)))), ((int)(((byte)(104)))));
-            this.btnEditRecordLocationUC.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnEditRecordLocationUC.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnEditRecordLocationUC.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEditRecordLocationUC.ForeColor = System.Drawing.Color.White;
-            this.btnEditRecordLocationUC.Location = new System.Drawing.Point(754, 302);
-            this.btnEditRecordLocationUC.Margin = new System.Windows.Forms.Padding(0);
-            this.btnEditRecordLocationUC.Name = "btnEditRecordLocationUC";
-            this.btnEditRecordLocationUC.Size = new System.Drawing.Size(163, 42);
-            this.btnEditRecordLocationUC.TabIndex = 10;
-            this.btnEditRecordLocationUC.Text = "Edit Records";
-            this.btnEditRecordLocationUC.UseVisualStyleBackColor = false;
-            this.btnEditRecordLocationUC.Click += new System.EventHandler(this.btnEditRecordLocationUC_Click);
             // 
             // timetableManagementSystemDataSet
             // 
@@ -127,17 +116,16 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.Controls.Add(this.btnEditRecordLocationUC);
             this.Controls.Add(this.pnlEditRecords);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.dataGridView2);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.roomDatagrid);
+            this.Controls.Add(this.buildingDataGrid);
             this.Controls.Add(this.label1);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "ViewLocationUC";
             this.Size = new System.Drawing.Size(1025, 700);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.buildingDataGrid)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.roomDatagrid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.timetableManagementSystemDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.buildingsBindingSource)).EndInit();
             this.ResumeLayout(false);
@@ -148,11 +136,10 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.DataGridView buildingDataGrid;
+        private System.Windows.Forms.DataGridView roomDatagrid;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel pnlEditRecords;
-        private System.Windows.Forms.Button btnEditRecordLocationUC;
         private System.Windows.Forms.BindingSource buildingsBindingSource;
         private TimetableManagementSystemDataSet timetableManagementSystemDataSet;
         private TimetableManagementSystemDataSetTableAdapters.BuildingsTableAdapter buildingsTableAdapter;

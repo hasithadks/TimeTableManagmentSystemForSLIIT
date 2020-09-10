@@ -49,5 +49,10 @@ namespace TimeTableManagementSystemApp.IT18058338.Forms
             Form1 f = new Form1();
             f.Show();
         }
+
+        private void closeBtn_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
