@@ -450,10 +450,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\BusinessLayers\BusinessLayers.csproj">
-      <Project>{2a5c5aac-9032-4ca5-aa39-7e186585b03a}</Project>
-      <Name>BusinessLayers</Name>
-    </ProjectReference>
     <ProjectReference Include="..\DataLayer\DataLayer.csproj">
       <Project>{ba602ac1-5989-44fe-8f64-897505a6c742}</Project>
       <Name>DataLayer</Name>
