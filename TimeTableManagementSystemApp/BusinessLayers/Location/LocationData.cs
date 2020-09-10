@@ -105,11 +105,25 @@ namespace BusinessLayers.Location
                List<Building> multiple = context.Buildings.ToList();
 
 
-
                 return multiple;
             }
 
             
+        }
+
+        public List<DataLayer.Location> GetLocation()
+        {
+
+            using (var context = new TimetableManagementSystemEntities2())
+            {
+
+                List<DataLayer.Location> multiple = context.Locations.ToList();
+
+
+                return multiple;
+            }
+
+
         }
 
 

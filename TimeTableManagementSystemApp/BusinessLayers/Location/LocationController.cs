@@ -36,6 +36,14 @@ namespace BusinessLayers.Location
 
         }
 
+        public List<DataLayer.Location> getLocations()
+        {
+            locationData = new LocationData();
+
+            return locationData.GetLocation();
+
+        }
+
         public List<Room> getAllRooms(int buildingID)
         {
             locationData = new LocationData();

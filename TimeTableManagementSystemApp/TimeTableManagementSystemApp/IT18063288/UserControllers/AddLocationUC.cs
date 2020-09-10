@@ -24,11 +24,14 @@ namespace TimeTableManagementSystemApp.IT18063288.UserControllers
         private int buildingID = 0;
         private int RoomID = 0;
 
+
+        
+
         public AddLocationUC()
         {
             InitializeComponent();
 
-            
+            string abc = "Y1.S2";
 
             locationBO = new LocationBO();
 
@@ -125,21 +128,32 @@ namespace TimeTableManagementSystemApp.IT18063288.UserControllers
             locationContol = new LocationController();
             string RoomName = string.Empty;
 
-            RoomName = txtNewRoom.Text;
-            locationBO.RoomName = RoomName.ToString();
-            RoomID = locationContol.saveRoom(RoomName,locationBO.BuildingID);
-            txtNewRoom.Text = "";
-
-            if (RoomID > 0)
+            if(txtNewRoom.Text != "")
             {
-                locationBO.RoomID = RoomID;
-                SetRoomButtonVisibilityFalse();
-                SetRoomDropDown();
+                RoomName = txtNewRoom.Text;
+                locationBO.RoomName = RoomName.ToString();
+                RoomID = locationContol.saveRoom(RoomName, locationBO.BuildingID);
+                txtNewRoom.Text = "";
+
+                if (RoomID > 0)
+                {
+                    locationBO.RoomID = RoomID;
+                    SetRoomButtonVisibilityFalse();
+                    SetRoomDropDown();
+                    SuccessfullMessageBox.ShowDialog("Room Added successfully!!!", "Success!!!");
+                }
+                else
+                {
+                    locationBO.RoomID = 0;
+                    ErrorDialogBox.ShowDialog("Somthing Worng, Please restart the App...", "Warning!!!");
+                }
             }
             else
             {
-                locationBO.RoomID = 0;
+                ErrorDialogBox.ShowDialog("Please Enter Room Name", "Warning!!!");
             }
+
+            
 
             //MoreRoomDetailsUC moreRoomDetailsUC = new MoreRoomDetailsUC(locationBO);
             //CommonClass.showControl(moreRoomDetailsUC, panelRoomDetails);
@@ -175,21 +189,31 @@ namespace TimeTableManagementSystemApp.IT18063288.UserControllers
             locationContol = new LocationController();
             string buildingName = string.Empty;
             
-            buildingName = txtNewBuilding.Text;
-            locationBO.BuildingName = buildingName.ToString();
-            buildingID = locationContol.saveBuilding(buildingName);
-            txtNewBuilding.Text = "";
-
-            if (buildingID > 0)
+            if(txtNewBuilding.Text != "")
             {
-                locationBO.BuildingID = buildingID;
-                SetBuildingbuttonVisibilityFalse();
+                buildingName = txtNewBuilding.Text;
+                locationBO.BuildingName = buildingName.ToString();
+                buildingID = locationContol.saveBuilding(buildingName);
+                txtNewBuilding.Text = "";
+
+                if (buildingID > 0)
+                {
+                    locationBO.BuildingID = buildingID;
+                    SetBuildingbuttonVisibilityFalse();
+                    SuccessfullMessageBox.ShowDialog("Building Added successfully!!!", "Success!!!");
+                }
+                else
+                {
+                    locationBO.BuildingID = 0;
+                    ErrorDialogBox.ShowDialog("Somthing Worng, Please restart the App...", "Warning!!!");
+                }
+                setBuildingDropdown();
             }
             else
             {
-                locationBO.BuildingID = 0;
+                ErrorDialogBox.ShowDialog("Please Enter Building Name", "Warning!!!");
             }
-            setBuildingDropdown();
+            
 
 
         }
@@ -328,17 +352,18 @@ namespace TimeTableManagementSystemApp.IT18063288.UserControllers
                     txtNewBuilding.Text = "";
                     SetBuildingbuttonVisibilityFalse();
                     setBuildingDropdown();
+                    SuccessfullMessageBox.ShowDialog("Building Updated successfully!!!", "Success!!!");
                 }
                 else
                 {
-
+                    ErrorDialogBox.ShowDialog("Cannot Update This Record!!!", "Warning!!!");
                 }
 
 
             }
             else
             {
-                //error msg 
+                ErrorDialogBox.ShowDialog("Please Enter New BuildingName.", "Warning!!!");
             }
 
 
@@ -361,17 +386,18 @@ namespace TimeTableManagementSystemApp.IT18063288.UserControllers
                     txtNewBuilding.Text = "";
                     SetBuildingbuttonVisibilityFalse();
                     setBuildingDropdown();
+                    SuccessfullMessageBox.ShowDialog("Building Delete successfully!!!", "Success!!!");
                 }
                 else
                 {
-
+                    ErrorDialogBox.ShowDialog("Failed to Delete this Building!!! please Try again.", "Warning!!!");
                 }
 
 
             }
             else
             {
-                //error msg 
+                ErrorDialogBox.ShowDialog("Please Select a bilding", "Warning!!!");
             }
 
 
@@ -393,17 +419,18 @@ namespace TimeTableManagementSystemApp.IT18063288.UserControllers
                     txtNewRoom.Text = "";
                     SetRoomButtonVisibilityFalse();
                     SetRoomDropDown();
+                    SuccessfullMessageBox.ShowDialog("Room Updated successfully!!!", "Success!!!");
                 }
                 else
                 {
-
+                    ErrorDialogBox.ShowDialog("Failed to Updated this Room!!! please Try again.", "Warning!!!");
                 }
 
 
             }
             else
             {
-                //error msg 
+                ErrorDialogBox.ShowDialog("Please Enter a Room Name.", "Warning!!!");
             }
 
 
@@ -443,17 +470,18 @@ namespace TimeTableManagementSystemApp.IT18063288.UserControllers
 
                     SetRoomButtonVisibilityFalse();
                     SetRoomDropDown();
+                    SuccessfullMessageBox.ShowDialog("Room Deleted successfully!!!", "Success!!!");
                 }
                 else
                 {
-
+                    ErrorDialogBox.ShowDialog("Somthing Worng, Please restart the App...", "Warning!!!");
                 }
 
 
             }
             else
             {
-                //error msg 
+                ErrorDialogBox.ShowDialog("Please select a Room.", "Warning!!!");
             }
         }
     }
