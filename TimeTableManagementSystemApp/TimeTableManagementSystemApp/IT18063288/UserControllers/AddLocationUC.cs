@@ -260,13 +260,6 @@ namespace TimeTableManagementSystemApp.IT18063288.UserControllers
             }
             
 
-            //locationBO.BuildingID = int.Parse(((System.Collections.Generic.KeyValuePair<string, string>)comboBoxBuilding.SelectedValue).Key);
-
-
-            //locationBO.BuildingID = int.Parse(comboBoxBuilding.SelectedValue.ToString());
-
-
-
             SetRoomDropDown();
 
         }
