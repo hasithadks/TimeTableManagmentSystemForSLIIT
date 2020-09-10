@@ -36,17 +36,23 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
-            this.checkedListBox2 = new System.Windows.Forms.CheckedListBox();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.studentId = new System.Windows.Forms.TextBox();
+            this.groupNo = new System.Windows.Forms.NumericUpDown();
+            this.groupId = new System.Windows.Forms.TextBox();
+            this.subGroupNo = new System.Windows.Forms.NumericUpDown();
+            this.subGroupId = new System.Windows.Forms.TextBox();
             this.addstdbut = new System.Windows.Forms.Button();
             this.resetbut = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
+            this.year = new System.Windows.Forms.ComboBox();
+            this.semester = new System.Windows.Forms.ComboBox();
+            this.programme = new System.Windows.Forms.ComboBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.groupNo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.subGroupNo)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -77,16 +83,16 @@
             this.label3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(121, 157);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(245, 21);
+            this.label3.Size = new System.Drawing.Size(134, 21);
             this.label3.TabIndex = 2;
-            this.label3.Text = "Academic Year and Semester";
+            this.label3.Text = "Academic Year";
             this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(121, 273);
+            this.label4.Location = new System.Drawing.Point(121, 247);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(101, 21);
             this.label4.TabIndex = 3;
@@ -96,7 +102,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(121, 389);
+            this.label5.Location = new System.Drawing.Point(121, 293);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(127, 21);
             this.label5.TabIndex = 4;
@@ -107,7 +113,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(121, 432);
+            this.label6.Location = new System.Drawing.Point(121, 469);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(81, 21);
             this.label6.TabIndex = 5;
@@ -127,89 +133,57 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(121, 475);
+            this.label8.Location = new System.Drawing.Point(121, 343);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(161, 21);
             this.label8.TabIndex = 7;
             this.label8.Text = "Sub-Group Number";
             // 
-            // textBox1
+            // studentId
             // 
-            this.textBox1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(427, 111);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(229, 27);
-            this.textBox1.TabIndex = 10;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.studentId.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.studentId.Location = new System.Drawing.Point(427, 111);
+            this.studentId.Name = "studentId";
+            this.studentId.Size = new System.Drawing.Size(229, 27);
+            this.studentId.TabIndex = 10;
+            this.studentId.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
-            // checkedListBox1
+            // groupNo
             // 
-            this.checkedListBox1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkedListBox1.FormattingEnabled = true;
-            this.checkedListBox1.Items.AddRange(new object[] {
-            "Y1.S1",
-            "Y1.S2",
-            "Y2.S1",
-            "Y2.S2",
-            "Y3.S1",
-            "Y3.S2",
-            "Y4.S1",
-            "Y4.S2"});
-            this.checkedListBox1.Location = new System.Drawing.Point(427, 157);
-            this.checkedListBox1.Name = "checkedListBox1";
-            this.checkedListBox1.Size = new System.Drawing.Size(229, 94);
-            this.checkedListBox1.TabIndex = 11;
+            this.groupNo.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupNo.Location = new System.Drawing.Point(427, 293);
+            this.groupNo.Name = "groupNo";
+            this.groupNo.Size = new System.Drawing.Size(229, 27);
+            this.groupNo.TabIndex = 13;
             // 
-            // checkedListBox2
+            // groupId
             // 
-            this.checkedListBox2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkedListBox2.FormattingEnabled = true;
-            this.checkedListBox2.Items.AddRange(new object[] {
-            "IT",
-            "SE",
-            "IM",
-            "CS",
-            "DS",
-            "ISE",
-            "CSNE"});
-            this.checkedListBox2.Location = new System.Drawing.Point(427, 273);
-            this.checkedListBox2.Name = "checkedListBox2";
-            this.checkedListBox2.Size = new System.Drawing.Size(229, 94);
-            this.checkedListBox2.TabIndex = 12;
+            this.groupId.BackColor = System.Drawing.Color.DarkGray;
+            this.groupId.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupId.Location = new System.Drawing.Point(427, 469);
+            this.groupId.Name = "groupId";
+            this.groupId.ReadOnly = true;
+            this.groupId.Size = new System.Drawing.Size(229, 27);
+            this.groupId.TabIndex = 14;
+            this.groupId.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
-            // numericUpDown1
+            // subGroupNo
             // 
-            this.numericUpDown1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDown1.Location = new System.Drawing.Point(427, 389);
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(229, 27);
-            this.numericUpDown1.TabIndex = 13;
+            this.subGroupNo.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.subGroupNo.Location = new System.Drawing.Point(427, 343);
+            this.subGroupNo.Name = "subGroupNo";
+            this.subGroupNo.Size = new System.Drawing.Size(229, 27);
+            this.subGroupNo.TabIndex = 15;
             // 
-            // textBox2
+            // subGroupId
             // 
-            this.textBox2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(427, 432);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.ReadOnly = true;
-            this.textBox2.Size = new System.Drawing.Size(229, 27);
-            this.textBox2.TabIndex = 14;
-            // 
-            // numericUpDown2
-            // 
-            this.numericUpDown2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDown2.Location = new System.Drawing.Point(427, 475);
-            this.numericUpDown2.Name = "numericUpDown2";
-            this.numericUpDown2.Size = new System.Drawing.Size(229, 27);
-            this.numericUpDown2.TabIndex = 15;
-            // 
-            // textBox3
-            // 
-            this.textBox3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(427, 515);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.ReadOnly = true;
-            this.textBox3.Size = new System.Drawing.Size(229, 27);
-            this.textBox3.TabIndex = 16;
+            this.subGroupId.BackColor = System.Drawing.Color.DarkGray;
+            this.subGroupId.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.subGroupId.Location = new System.Drawing.Point(427, 515);
+            this.subGroupId.Name = "subGroupId";
+            this.subGroupId.ReadOnly = true;
+            this.subGroupId.Size = new System.Drawing.Size(229, 27);
+            this.subGroupId.TabIndex = 16;
             // 
             // addstdbut
             // 
@@ -224,6 +198,7 @@
             this.addstdbut.TabIndex = 17;
             this.addstdbut.Text = "Add ";
             this.addstdbut.UseVisualStyleBackColor = false;
+            this.addstdbut.Click += new System.EventHandler(this.addstdbut_Click);
             // 
             // resetbut
             // 
@@ -239,19 +214,115 @@
             this.resetbut.Text = "Reset";
             this.resetbut.UseVisualStyleBackColor = false;
             // 
+            // year
+            // 
+            this.year.FormattingEnabled = true;
+            this.year.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4"});
+            this.year.Location = new System.Drawing.Point(427, 160);
+            this.year.Name = "year";
+            this.year.Size = new System.Drawing.Size(229, 21);
+            this.year.TabIndex = 19;
+            this.year.SelectedIndexChanged += new System.EventHandler(this.year_SelectedIndexChanged);
+            // 
+            // semester
+            // 
+            this.semester.FormattingEnabled = true;
+            this.semester.Items.AddRange(new object[] {
+            "1",
+            "2"});
+            this.semester.Location = new System.Drawing.Point(427, 199);
+            this.semester.Name = "semester";
+            this.semester.Size = new System.Drawing.Size(229, 21);
+            this.semester.TabIndex = 20;
+            // 
+            // programme
+            // 
+            this.programme.FormattingEnabled = true;
+            this.programme.Items.AddRange(new object[] {
+            "IT",
+            "SE",
+            "IM",
+            "CS",
+            "DS",
+            "ISE",
+            "CSNE"});
+            this.programme.Location = new System.Drawing.Point(427, 247);
+            this.programme.Name = "programme";
+            this.programme.Size = new System.Drawing.Size(229, 21);
+            this.programme.TabIndex = 21;
+            // 
+            // textBox1
+            // 
+            this.textBox1.BackColor = System.Drawing.Color.DarkGray;
+            this.textBox1.Location = new System.Drawing.Point(427, 431);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.ReadOnly = true;
+            this.textBox1.Size = new System.Drawing.Size(229, 20);
+            this.textBox1.TabIndex = 22;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(43)))), ((int)(((byte)(104)))));
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.button1.Location = new System.Drawing.Point(493, 383);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(81, 32);
+            this.button1.TabIndex = 23;
+            this.button1.Text = "Set";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // maskedTextBox1
+            // 
+            this.maskedTextBox1.Location = new System.Drawing.Point(1577, 567);
+            this.maskedTextBox1.Name = "maskedTextBox1";
+            this.maskedTextBox1.Size = new System.Drawing.Size(100, 20);
+            this.maskedTextBox1.TabIndex = 24;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(121, 196);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(168, 21);
+            this.label9.TabIndex = 25;
+            this.label9.Text = "Academic Semester";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(121, 431);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(245, 21);
+            this.label10.TabIndex = 26;
+            this.label10.Text = "Academic Year and Semester";
+            // 
             // AddStudent
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.label10);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.maskedTextBox1);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.programme);
+            this.Controls.Add(this.semester);
+            this.Controls.Add(this.year);
             this.Controls.Add(this.resetbut);
             this.Controls.Add(this.addstdbut);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.numericUpDown2);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.numericUpDown1);
-            this.Controls.Add(this.checkedListBox2);
-            this.Controls.Add(this.checkedListBox1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.subGroupId);
+            this.Controls.Add(this.subGroupNo);
+            this.Controls.Add(this.groupId);
+            this.Controls.Add(this.groupNo);
+            this.Controls.Add(this.studentId);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
@@ -262,8 +333,9 @@
             this.Controls.Add(this.label1);
             this.Name = "AddStudent";
             this.Size = new System.Drawing.Size(1025, 700);
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
+            this.Load += new System.EventHandler(this.AddStudent_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.groupNo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.subGroupNo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -279,14 +351,20 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.CheckedListBox checkedListBox1;
-        private System.Windows.Forms.CheckedListBox checkedListBox2;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.NumericUpDown numericUpDown2;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox studentId;
+        private System.Windows.Forms.NumericUpDown groupNo;
+        private System.Windows.Forms.TextBox groupId;
+        private System.Windows.Forms.NumericUpDown subGroupNo;
+        private System.Windows.Forms.TextBox subGroupId;
         private System.Windows.Forms.Button addstdbut;
         private System.Windows.Forms.Button resetbut;
+        private System.Windows.Forms.ComboBox year;
+        private System.Windows.Forms.ComboBox semester;
+        private System.Windows.Forms.ComboBox programme;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.MaskedTextBox maskedTextBox1;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label10;
     }
 }
