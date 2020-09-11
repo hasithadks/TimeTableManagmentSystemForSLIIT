@@ -2,8 +2,8 @@
 -- --------------------------------------------------
 -- Entity Designer DDL Script for SQL Server 2005, 2008, 2012 and Azure
 -- --------------------------------------------------
--- Date Created: 09/08/2020 20:43:06
--- Generated from EDMX file: C:\Users\Tharaka\source\repos\new\TimeTableManagmentSystemForSLIIT\TimeTableManagementSystemApp\DataLayer\TimeTabelModel.edmx
+-- Date Created: 09/12/2020 01:21:41
+-- Generated from EDMX file: C:\Users\Hasitha Samarasekara\source\repos\TimeTableManagmentSystemForSLIIT\TimeTableManagementSystemApp\DataLayer\TimeTabelModel.edmx
 -- --------------------------------------------------
 
 SET QUOTED_IDENTIFIER OFF;
@@ -34,17 +34,23 @@ GO
 IF OBJECT_ID(N'[dbo].[Buildings]', 'U') IS NOT NULL
     DROP TABLE [dbo].[Buildings];
 GO
-IF OBJECT_ID(N'[dbo].[Lecturer]', 'U') IS NOT NULL
-    DROP TABLE [dbo].[Lecturer];
-GO
 IF OBJECT_ID(N'[dbo].[Locations]', 'U') IS NOT NULL
     DROP TABLE [dbo].[Locations];
+GO
+IF OBJECT_ID(N'[dbo].[Programmes]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[Programmes];
 GO
 IF OBJECT_ID(N'[dbo].[Rooms]', 'U') IS NOT NULL
     DROP TABLE [dbo].[Rooms];
 GO
-IF OBJECT_ID(N'[dbo].[Subject]', 'U') IS NOT NULL
-    DROP TABLE [dbo].[Subject];
+IF OBJECT_ID(N'[dbo].[StudentDetails]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[StudentDetails];
+GO
+IF OBJECT_ID(N'[dbo].[Tags]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[Tags];
+GO
+IF OBJECT_ID(N'[dbo].[WorkingDays]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[WorkingDays];
 GO
 
 -- --------------------------------------------------
@@ -55,6 +61,54 @@ GO
 CREATE TABLE [dbo].[Buildings] (
     [id] int IDENTITY(1,1) NOT NULL,
     [BuidingName] varchar(255)  NOT NULL
+);
+GO
+
+-- Creating table 'Locations'
+CREATE TABLE [dbo].[Locations] (
+    [id] int IDENTITY(1,1) NOT NULL,
+    [BuildingID] int  NULL,
+    [RoomID] int  NULL
+);
+GO
+
+-- Creating table 'Programmes'
+CREATE TABLE [dbo].[Programmes] (
+    [id] int IDENTITY(1,1) NOT NULL,
+    [ProgrammeName] varchar(255)  NOT NULL
+);
+GO
+
+-- Creating table 'Rooms'
+CREATE TABLE [dbo].[Rooms] (
+    [id] int IDENTITY(1,1) NOT NULL,
+    [RoomName] varchar(255)  NOT NULL,
+    [Capacity] int  NULL,
+    [RoomType] int  NULL,
+    [BuildingID] int  NULL
+);
+GO
+
+-- Creating table 'StudentDetails'
+CREATE TABLE [dbo].[StudentDetails] (
+    [StudentId] varchar(255)  NOT NULL,
+    [AcademicYearSemester] varchar(255)  NULL,
+    [Programme] varchar(255)  NULL,
+    [GroupNumber] int  NULL,
+    [GroupId] varchar(255)  NULL,
+    [SubGroupNumber] int  NULL,
+    [SubGroupId] varchar(255)  NULL
+);
+GO
+
+-- Creating table 'Tags'
+CREATE TABLE [dbo].[Tags] (
+    [id] int IDENTITY(1,1) NOT NULL,
+    [TagName] varchar(255)  NOT NULL,
+    [ShortName] varchar(255)  NULL
+);
+GO
+
 -- Creating table 'WorkingDays'
 CREATE TABLE [dbo].[WorkingDays] (
     [WorkingDayID] int IDENTITY(1,1) NOT NULL,
@@ -73,56 +127,6 @@ CREATE TABLE [dbo].[WorkingDays] (
 );
 GO
 
--- Creating table 'Lecturers'
-CREATE TABLE [dbo].[Lecturers] (
-    [id] int IDENTITY(1,1) NOT NULL,
-    [lId] char(6)  NULL,
-    [lName] varchar(255)  NOT NULL,
-    [lFaculty] varchar(255)  NULL,
-    [lDepartment] varchar(255)  NULL,
-    [lCenter] varchar(255)  NULL,
-    [lBuilding] varchar(255)  NULL,
-    [lLevel] int  NOT NULL,
-    [lRank] varchar(10)  NULL
-);
-GO
-
--- Creating table 'Locations'
-CREATE TABLE [dbo].[Locations] (
-    [id] int IDENTITY(1,1) NOT NULL,
-    [BuildingID] int  NULL,
-    [RoomID] int  NULL
-);
--- Creating primary key on [WorkingDayID] in table 'WorkingDays'
-ALTER TABLE [dbo].[WorkingDays]
-ADD CONSTRAINT [PK_WorkingDays]
-    PRIMARY KEY CLUSTERED ([WorkingDayID] ASC);
-GO
-
--- Creating table 'Rooms'
-CREATE TABLE [dbo].[Rooms] (
-    [id] int IDENTITY(1,1) NOT NULL,
-    [RoomName] varchar(255)  NOT NULL,
-    [Capacity] int  NULL,
-    [RoomType] int  NULL,
-    [BuildingID] int  NULL
-);
-GO
-
--- Creating table 'Subjects'
-CREATE TABLE [dbo].[Subjects] (
-    [id] int IDENTITY(1,1) NOT NULL,
-    [sCode] varchar(10)  NOT NULL,
-    [sName] varchar(255)  NOT NULL,
-    [offYear] int  NOT NULL,
-    [offSemester] int  NOT NULL,
-    [lecHours] int  NULL,
-    [tutHours] int  NULL,
-    [labHours] int  NULL,
-    [evaHours] int  NULL
-);
-GO
-
 -- --------------------------------------------------
 -- Creating all PRIMARY KEY constraints
 -- --------------------------------------------------
@@ -133,15 +137,15 @@ ADD CONSTRAINT [PK_Buildings]
     PRIMARY KEY CLUSTERED ([id] ASC);
 GO
 
--- Creating primary key on [id] in table 'Lecturers'
-ALTER TABLE [dbo].[Lecturers]
-ADD CONSTRAINT [PK_Lecturers]
-    PRIMARY KEY CLUSTERED ([id] ASC);
-GO
-
 -- Creating primary key on [id] in table 'Locations'
 ALTER TABLE [dbo].[Locations]
 ADD CONSTRAINT [PK_Locations]
+    PRIMARY KEY CLUSTERED ([id] ASC);
+GO
+
+-- Creating primary key on [id] in table 'Programmes'
+ALTER TABLE [dbo].[Programmes]
+ADD CONSTRAINT [PK_Programmes]
     PRIMARY KEY CLUSTERED ([id] ASC);
 GO
 
@@ -151,10 +155,22 @@ ADD CONSTRAINT [PK_Rooms]
     PRIMARY KEY CLUSTERED ([id] ASC);
 GO
 
--- Creating primary key on [id] in table 'Subjects'
-ALTER TABLE [dbo].[Subjects]
-ADD CONSTRAINT [PK_Subjects]
+-- Creating primary key on [StudentId] in table 'StudentDetails'
+ALTER TABLE [dbo].[StudentDetails]
+ADD CONSTRAINT [PK_StudentDetails]
+    PRIMARY KEY CLUSTERED ([StudentId] ASC);
+GO
+
+-- Creating primary key on [id] in table 'Tags'
+ALTER TABLE [dbo].[Tags]
+ADD CONSTRAINT [PK_Tags]
     PRIMARY KEY CLUSTERED ([id] ASC);
+GO
+
+-- Creating primary key on [WorkingDayID] in table 'WorkingDays'
+ALTER TABLE [dbo].[WorkingDays]
+ADD CONSTRAINT [PK_WorkingDays]
+    PRIMARY KEY CLUSTERED ([WorkingDayID] ASC);
 GO
 
 -- --------------------------------------------------
