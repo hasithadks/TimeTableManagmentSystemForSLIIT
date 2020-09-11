@@ -2,8 +2,8 @@
 -- --------------------------------------------------
 -- Entity Designer DDL Script for SQL Server 2005, 2008, 2012 and Azure
 -- --------------------------------------------------
--- Date Created: 09/12/2020 04:22:22
--- Generated from EDMX file: C:\Users\Hasitha Samarasekara\source\repos\TimeTableManagmentSystemForSLIIT\TimeTableManagementSystemApp\DataLayer\TimeTabelModel.edmx
+-- Date Created: 09/12/2020 04:36:14
+-- Generated from EDMX file: C:\Users\devin\source\repos\TimeTableManagmentSystemForSLIIT\TimeTableManagementSystemApp\DataLayer\TimeTabelModel.edmx
 -- --------------------------------------------------
 
 SET QUOTED_IDENTIFIER OFF;
@@ -21,10 +21,10 @@ IF OBJECT_ID(N'[dbo].[FK_BuildingID]', 'F') IS NOT NULL
     ALTER TABLE [dbo].[Rooms] DROP CONSTRAINT [FK_BuildingID];
 GO
 IF OBJECT_ID(N'[dbo].[FK_BuildingIDLocation]', 'F') IS NOT NULL
-    ALTER TABLE [dbo].[Location] DROP CONSTRAINT [FK_BuildingIDLocation];
+    ALTER TABLE [dbo].[Locations] DROP CONSTRAINT [FK_BuildingIDLocation];
 GO
 IF OBJECT_ID(N'[dbo].[FK_RoomIDLocation]', 'F') IS NOT NULL
-    ALTER TABLE [dbo].[Location] DROP CONSTRAINT [FK_RoomIDLocation];
+    ALTER TABLE [dbo].[Locations] DROP CONSTRAINT [FK_RoomIDLocation];
 GO
 
 -- --------------------------------------------------
@@ -37,8 +37,8 @@ GO
 IF OBJECT_ID(N'[dbo].[Lecturers]', 'U') IS NOT NULL
     DROP TABLE [dbo].[Lecturers];
 GO
-IF OBJECT_ID(N'[dbo].[Location]', 'U') IS NOT NULL
-    DROP TABLE [dbo].[Location];
+IF OBJECT_ID(N'[dbo].[Locations]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[Locations];
 GO
 IF OBJECT_ID(N'[dbo].[Programmes]', 'U') IS NOT NULL
     DROP TABLE [dbo].[Programmes];
