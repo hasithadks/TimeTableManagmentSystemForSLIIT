@@ -198,12 +198,6 @@
     <Compile Include="IT18058338\UserControllers\EditSubjectUC.designer.cs">
       <DependentUpon>EditSubjectUC.cs</DependentUpon>
     </Compile>
-    <Compile Include="IT18058338\UserControllers\UserControl1.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="IT18058338\UserControllers\UserControl1.Designer.cs">
-      <DependentUpon>UserControl1.cs</DependentUpon>
-    </Compile>
     <Compile Include="IT18058338\UserControllers\ViewLecturerUC.cs">
       <SubType>UserControl</SubType>
     </Compile>

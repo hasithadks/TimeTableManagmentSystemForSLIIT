@@ -4,139 +4,171 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-    <Schema Namespace="TimetableManagementSystemModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2012" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
-  <EntityContainer Name="TimetableManagementSystemModelStoreContainer">
-    <EntitySet Name="Buildings" EntityType="TimetableManagementSystemModel.Store.Buildings" store:Type="Tables" Schema="dbo" />
-    <EntitySet Name="Locations" EntityType="TimetableManagementSystemModel.Store.Locations" store:Type="Tables" Schema="dbo" />
-    <EntitySet Name="Programmes" EntityType="TimetableManagementSystemModel.Store.Programmes" store:Type="Tables" Schema="dbo" />
-    <EntitySet Name="Rooms" EntityType="TimetableManagementSystemModel.Store.Rooms" store:Type="Tables" Schema="dbo" />
-    <EntitySet Name="StudentDetails" EntityType="TimetableManagementSystemModel.Store.StudentDetails" store:Type="Tables" Schema="dbo" />
-    <EntitySet Name="Tags" EntityType="TimetableManagementSystemModel.Store.Tags" store:Type="Tables" Schema="dbo" />
-    <EntitySet Name="WorkingDays" EntityType="TimetableManagementSystemModel.Store.WorkingDays" store:Type="Tables" Schema="dbo" />
-    <AssociationSet Name="FK_BuildingID" Association="TimetableManagementSystemModel.Store.FK_BuildingID">
-      <End Role="Building" EntitySet="Buildings" />
-      <End Role="Room" EntitySet="Rooms" />
-    </AssociationSet>
-    <AssociationSet Name="FK_BuildingIDLocation" Association="TimetableManagementSystemModel.Store.FK_BuildingIDLocation">
-      <End Role="Building" EntitySet="Buildings" />
-      <End Role="Location" EntitySet="Locations" />
-    </AssociationSet>
-    <AssociationSet Name="FK_RoomIDLocation" Association="TimetableManagementSystemModel.Store.FK_RoomIDLocation">
-      <End Role="Room" EntitySet="Rooms" />
-      <End Role="Location" EntitySet="Locations" />
-    </AssociationSet>
-  </EntityContainer>
-  <EntityType Name="Buildings">
-    <Key>
-      <PropertyRef Name="id" />
-    </Key>
-    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="BuidingName" Type="varchar" Nullable="false" MaxLength="255" />
-  </EntityType>
-  <EntityType Name="Locations">
-    <Key>
-      <PropertyRef Name="id" />
-    </Key>
-    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="BuildingID" Type="int" Nullable="true" />
-    <Property Name="RoomID" Type="int" Nullable="true" />
-  </EntityType>
-  <EntityType Name="Programmes">
-    <Key>
-      <PropertyRef Name="id" />
-    </Key>
-    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="ProgrammeName" Type="varchar" Nullable="false" MaxLength="255" />
-  </EntityType>
-  <EntityType Name="Rooms">
-    <Key>
-      <PropertyRef Name="id" />
-    </Key>
-    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="RoomName" Type="varchar" Nullable="false" MaxLength="255" />
-    <Property Name="Capacity" Type="int" Nullable="true" />
-    <Property Name="RoomType" Type="int" Nullable="true" />
-    <Property Name="BuildingID" Type="int" Nullable="true" />
-  </EntityType>
-  <EntityType Name="StudentDetails">
-    <Key>
-      <PropertyRef Name="StudentId" />
-    </Key>
-    <Property Name="StudentId" Type="varchar" Nullable="false" MaxLength="255" />
-    <Property Name="AcademicYearSemester" Type="varchar" Nullable="true" MaxLength="255" />
-    <Property Name="Programme" Type="varchar" Nullable="true" MaxLength="255" />
-    <Property Name="GroupNumber" Type="int" Nullable="true" />
-    <Property Name="GroupId" Type="varchar" Nullable="true" MaxLength="255" />
-    <Property Name="SubGroupNumber" Type="int" Nullable="true" />
-    <Property Name="SubGroupId" Type="varchar" Nullable="true" MaxLength="255" />
-  </EntityType>
-  <EntityType Name="Tags">
-    <Key>
-      <PropertyRef Name="id" />
-    </Key>
-    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="TagName" Type="varchar" Nullable="false" MaxLength="255" />
-    <Property Name="ShortName" Type="varchar" Nullable="true" MaxLength="255" />
-  </EntityType>
-  <EntityType Name="WorkingDays">
-    <Key>
-      <PropertyRef Name="WorkingDayID" />
-    </Key>
-    <Property Name="WorkingDayID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="workingdayGroup" Type="varchar" Nullable="true" MaxLength="100" />
-    <Property Name="workingdayYear" Type="int" Nullable="true" />
-    <Property Name="workingdaySemester" Type="int" Nullable="true" />
-    <Property Name="workingday1" Type="varchar" Nullable="true" MaxLength="100" />
-    <Property Name="workingday2" Type="varchar" Nullable="true" MaxLength="100" />
-    <Property Name="workingday3" Type="varchar" Nullable="true" MaxLength="100" />
-    <Property Name="workingday4" Type="varchar" Nullable="true" MaxLength="100" />
-    <Property Name="workingday5" Type="varchar" Nullable="true" MaxLength="100" />
-    <Property Name="workingday6" Type="varchar" Nullable="true" MaxLength="100" />
-    <Property Name="workingday7" Type="varchar" Nullable="true" MaxLength="100" />
-    <Property Name="workingdayOneHourTimeSlots" Type="int" Nullable="true" />
-    <Property Name="ThirtyMinutesTimeSlots" Type="int" Nullable="true" />
-  </EntityType>
-  <Association Name="FK_BuildingID">
-    <End Role="Building" Type="TimetableManagementSystemModel.Store.Buildings" Multiplicity="0..1" />
-    <End Role="Room" Type="TimetableManagementSystemModel.Store.Rooms" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Building">
-        <PropertyRef Name="id" />
-      </Principal>
-      <Dependent Role="Room">
-        <PropertyRef Name="BuildingID" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK_BuildingIDLocation">
-    <End Role="Building" Type="TimetableManagementSystemModel.Store.Buildings" Multiplicity="0..1" />
-    <End Role="Location" Type="TimetableManagementSystemModel.Store.Locations" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Building">
-        <PropertyRef Name="id" />
-      </Principal>
-      <Dependent Role="Location">
-        <PropertyRef Name="BuildingID" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK_RoomIDLocation">
-    <End Role="Room" Type="TimetableManagementSystemModel.Store.Rooms" Multiplicity="0..1" />
-    <End Role="Location" Type="TimetableManagementSystemModel.Store.Locations" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Room">
-        <PropertyRef Name="id" />
-      </Principal>
-      <Dependent Role="Location">
-        <PropertyRef Name="RoomID" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-</Schema></edmx:StorageModels>
+    <Schema Namespace="TimetableManagementSystemModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Buildings">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="BuidingName" Type="varchar" MaxLength="255" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Lecturer">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="lId" Type="char" MaxLength="6" />
+          <Property Name="lName" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="lFaculty" Type="varchar" MaxLength="255" />
+          <Property Name="lDepartment" Type="varchar" MaxLength="255" />
+          <Property Name="lCenter" Type="varchar" MaxLength="255" />
+          <Property Name="lBuilding" Type="varchar" MaxLength="255" />
+          <Property Name="lLevel" Type="int" Nullable="false" />
+          <Property Name="lRank" Type="varchar" MaxLength="10" />
+        </EntityType>
+        <EntityType Name="Locations">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="BuildingID" Type="int" />
+          <Property Name="RoomID" Type="int" />
+        </EntityType>
+        <EntityType Name="Programmes">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ProgrammeName" Type="varchar" MaxLength="255" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Rooms">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="RoomName" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="Capacity" Type="int" />
+          <Property Name="RoomType" Type="int" />
+          <Property Name="BuildingID" Type="int" />
+        </EntityType>
+        <EntityType Name="StudentDetails">
+          <Key>
+            <PropertyRef Name="StudentId" />
+          </Key>
+          <Property Name="StudentId" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="AcademicYearSemester" Type="varchar" MaxLength="255" />
+          <Property Name="Programme" Type="varchar" MaxLength="255" />
+          <Property Name="GroupNumber" Type="int" />
+          <Property Name="GroupId" Type="varchar" MaxLength="255" />
+          <Property Name="SubGroupNumber" Type="int" />
+          <Property Name="SubGroupId" Type="varchar" MaxLength="255" />
+        </EntityType>
+        <EntityType Name="Subject">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="sCode" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="sName" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="offYear" Type="int" Nullable="false" />
+          <Property Name="offSemester" Type="int" Nullable="false" />
+          <Property Name="lecHours" Type="int" />
+          <Property Name="tutHours" Type="int" />
+          <Property Name="labHours" Type="int" />
+          <Property Name="evaHours" Type="int" />
+        </EntityType>
+        <EntityType Name="Tags">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="TagName" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="ShortName" Type="varchar" MaxLength="255" />
+        </EntityType>
+        <EntityType Name="WorkingDays">
+          <Key>
+            <PropertyRef Name="WorkingDayID" />
+          </Key>
+          <Property Name="WorkingDayID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="workingdayGroup" Type="varchar" MaxLength="100" />
+          <Property Name="workingdayYear" Type="int" />
+          <Property Name="workingdaySemester" Type="int" />
+          <Property Name="workingday1" Type="varchar" MaxLength="100" />
+          <Property Name="workingday2" Type="varchar" MaxLength="100" />
+          <Property Name="workingday3" Type="varchar" MaxLength="100" />
+          <Property Name="workingday4" Type="varchar" MaxLength="100" />
+          <Property Name="workingday5" Type="varchar" MaxLength="100" />
+          <Property Name="workingday6" Type="varchar" MaxLength="100" />
+          <Property Name="workingday7" Type="varchar" MaxLength="100" />
+          <Property Name="workingdayOneHourTimeSlots" Type="int" />
+          <Property Name="ThirtyMinutesTimeSlots" Type="int" />
+        </EntityType>
+        <Association Name="FK_BuildingID">
+          <End Role="Buildings" Type="Self.Buildings" Multiplicity="0..1" />
+          <End Role="Rooms" Type="Self.Rooms" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Buildings">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Rooms">
+              <PropertyRef Name="BuildingID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_BuildingIDLocation">
+          <End Role="Buildings" Type="Self.Buildings" Multiplicity="0..1" />
+          <End Role="Locations" Type="Self.Locations" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Buildings">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Locations">
+              <PropertyRef Name="BuildingID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_RoomIDLocation">
+          <End Role="Rooms" Type="Self.Rooms" Multiplicity="0..1" />
+          <End Role="Locations" Type="Self.Locations" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Rooms">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Locations">
+              <PropertyRef Name="RoomID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="TimetableManagementSystemModelStoreContainer">
+          <EntitySet Name="Buildings" EntityType="Self.Buildings" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Lecturer" EntityType="Self.Lecturer" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Locations" EntityType="Self.Locations" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Programmes" EntityType="Self.Programmes" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Rooms" EntityType="Self.Rooms" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="StudentDetails" EntityType="Self.StudentDetails" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Subject" EntityType="Self.Subject" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Tags" EntityType="Self.Tags" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="WorkingDays" EntityType="Self.WorkingDays" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_BuildingID" Association="Self.FK_BuildingID">
+            <End Role="Buildings" EntitySet="Buildings" />
+            <End Role="Rooms" EntitySet="Rooms" />
+          </AssociationSet>
+          <AssociationSet Name="FK_BuildingIDLocation" Association="Self.FK_BuildingIDLocation">
+            <End Role="Buildings" EntitySet="Buildings" />
+            <End Role="Locations" EntitySet="Locations" />
+          </AssociationSet>
+          <AssociationSet Name="FK_RoomIDLocation" Association="Self.FK_RoomIDLocation">
+            <End Role="Rooms" EntitySet="Rooms" />
+            <End Role="Locations" EntitySet="Locations" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="TimetableManagementSystemModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
         <EntityContainer Name="TimetableManagementSystemEntities2" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Lecturers" EntityType="TimetableManagementSystemModel.Lecturer" />
+          <EntitySet Name="Subjects" EntityType="TimetableManagementSystemModel.Subject" />
           <EntitySet Name="Buildings" EntityType="TimetableManagementSystemModel.Building" />
           <EntitySet Name="Locations" EntityType="TimetableManagementSystemModel.Location" />
           <EntitySet Name="Programmes" EntityType="TimetableManagementSystemModel.Programme" />
@@ -156,7 +188,35 @@
             <End Role="Room" EntitySet="Rooms" />
             <End Role="Location" EntitySet="Locations" />
           </AssociationSet>
-        </EntityContainer>
+          </EntityContainer>
+        <EntityType Name="Lecturer">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="lId" Type="String" MaxLength="6" FixedLength="true" Unicode="false" />
+          <Property Name="lName" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="lFaculty" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="lDepartment" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="lCenter" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="lBuilding" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="lLevel" Type="Int32" Nullable="false" />
+          <Property Name="lRank" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="Subject">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="sCode" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="sName" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="offYear" Type="Int32" Nullable="false" />
+          <Property Name="offSemester" Type="Int32" Nullable="false" />
+          <Property Name="lecHours" Type="Int32" />
+          <Property Name="tutHours" Type="Int32" />
+          <Property Name="labHours" Type="Int32" />
+          <Property Name="evaHours" Type="Int32" />
+        </EntityType>
         <EntityType Name="Building">
           <Key>
             <PropertyRef Name="id" />
@@ -275,84 +335,114 @@
     <edmx:Mappings>
     <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
   <EntityContainerMapping StorageEntityContainer="TimetableManagementSystemModelStoreContainer" CdmEntityContainer="TimetableManagementSystemEntities2">
-    <EntitySetMapping Name="Buildings">
-      <EntityTypeMapping TypeName="IsTypeOf(TimetableManagementSystemModel.Building)">
-        <MappingFragment StoreEntitySet="Buildings">
-          <ScalarProperty Name="id" ColumnName="id" />
-          <ScalarProperty Name="BuidingName" ColumnName="BuidingName" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="Locations">
-      <EntityTypeMapping TypeName="IsTypeOf(TimetableManagementSystemModel.Location)">
-        <MappingFragment StoreEntitySet="Locations">
-          <ScalarProperty Name="id" ColumnName="id" />
-          <ScalarProperty Name="BuildingID" ColumnName="BuildingID" />
-          <ScalarProperty Name="RoomID" ColumnName="RoomID" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="Programmes">
-      <EntityTypeMapping TypeName="IsTypeOf(TimetableManagementSystemModel.Programme)">
-        <MappingFragment StoreEntitySet="Programmes">
-          <ScalarProperty Name="id" ColumnName="id" />
-          <ScalarProperty Name="ProgrammeName" ColumnName="ProgrammeName" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="Rooms">
-      <EntityTypeMapping TypeName="IsTypeOf(TimetableManagementSystemModel.Room)">
-        <MappingFragment StoreEntitySet="Rooms">
-          <ScalarProperty Name="id" ColumnName="id" />
-          <ScalarProperty Name="RoomName" ColumnName="RoomName" />
-          <ScalarProperty Name="Capacity" ColumnName="Capacity" />
-          <ScalarProperty Name="RoomType" ColumnName="RoomType" />
-          <ScalarProperty Name="BuildingID" ColumnName="BuildingID" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="StudentDetails">
-      <EntityTypeMapping TypeName="IsTypeOf(TimetableManagementSystemModel.StudentDetail)">
-        <MappingFragment StoreEntitySet="StudentDetails">
-          <ScalarProperty Name="StudentId" ColumnName="StudentId" />
-          <ScalarProperty Name="AcademicYearSemester" ColumnName="AcademicYearSemester" />
-          <ScalarProperty Name="Programme" ColumnName="Programme" />
-          <ScalarProperty Name="GroupNumber" ColumnName="GroupNumber" />
-          <ScalarProperty Name="GroupId" ColumnName="GroupId" />
-          <ScalarProperty Name="SubGroupNumber" ColumnName="SubGroupNumber" />
-          <ScalarProperty Name="SubGroupId" ColumnName="SubGroupId" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="Tags">
-      <EntityTypeMapping TypeName="IsTypeOf(TimetableManagementSystemModel.Tag)">
-        <MappingFragment StoreEntitySet="Tags">
-          <ScalarProperty Name="id" ColumnName="id" />
-          <ScalarProperty Name="TagName" ColumnName="TagName" />
-          <ScalarProperty Name="ShortName" ColumnName="ShortName" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="WorkingDays">
-      <EntityTypeMapping TypeName="IsTypeOf(TimetableManagementSystemModel.WorkingDay)">
-        <MappingFragment StoreEntitySet="WorkingDays">
-          <ScalarProperty Name="WorkingDayID" ColumnName="WorkingDayID" />
-          <ScalarProperty Name="workingdayGroup" ColumnName="workingdayGroup" />
-          <ScalarProperty Name="workingdayYear" ColumnName="workingdayYear" />
-          <ScalarProperty Name="workingdaySemester" ColumnName="workingdaySemester" />
-          <ScalarProperty Name="workingday1" ColumnName="workingday1" />
-          <ScalarProperty Name="workingday2" ColumnName="workingday2" />
-          <ScalarProperty Name="workingday3" ColumnName="workingday3" />
-          <ScalarProperty Name="workingday4" ColumnName="workingday4" />
-          <ScalarProperty Name="workingday5" ColumnName="workingday5" />
-          <ScalarProperty Name="workingday6" ColumnName="workingday6" />
-          <ScalarProperty Name="workingday7" ColumnName="workingday7" />
-          <ScalarProperty Name="workingdayOneHourTimeSlots" ColumnName="workingdayOneHourTimeSlots" />
-          <ScalarProperty Name="ThirtyMinutesTimeSlots" ColumnName="ThirtyMinutesTimeSlots" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-  </EntityContainerMapping>
+    <EntitySetMapping Name="Lecturers">
+            <EntityTypeMapping TypeName="TimetableManagementSystemModel.Lecturer">
+              <MappingFragment StoreEntitySet="Lecturer">
+                <ScalarProperty Name="lRank" ColumnName="lRank" />
+                <ScalarProperty Name="lLevel" ColumnName="lLevel" />
+                <ScalarProperty Name="lBuilding" ColumnName="lBuilding" />
+                <ScalarProperty Name="lCenter" ColumnName="lCenter" />
+                <ScalarProperty Name="lDepartment" ColumnName="lDepartment" />
+                <ScalarProperty Name="lFaculty" ColumnName="lFaculty" />
+                <ScalarProperty Name="lName" ColumnName="lName" />
+                <ScalarProperty Name="lId" ColumnName="lId" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Subjects">
+            <EntityTypeMapping TypeName="TimetableManagementSystemModel.Subject">
+              <MappingFragment StoreEntitySet="Subject">
+                <ScalarProperty Name="evaHours" ColumnName="evaHours" />
+                <ScalarProperty Name="labHours" ColumnName="labHours" />
+                <ScalarProperty Name="tutHours" ColumnName="tutHours" />
+                <ScalarProperty Name="lecHours" ColumnName="lecHours" />
+                <ScalarProperty Name="offSemester" ColumnName="offSemester" />
+                <ScalarProperty Name="offYear" ColumnName="offYear" />
+                <ScalarProperty Name="sName" ColumnName="sName" />
+                <ScalarProperty Name="sCode" ColumnName="sCode" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Buildings">
+            <EntityTypeMapping TypeName="TimetableManagementSystemModel.Building">
+              <MappingFragment StoreEntitySet="Buildings">
+                <ScalarProperty Name="BuidingName" ColumnName="BuidingName" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Locations">
+            <EntityTypeMapping TypeName="TimetableManagementSystemModel.Location">
+              <MappingFragment StoreEntitySet="Locations">
+                <ScalarProperty Name="RoomID" ColumnName="RoomID" />
+                <ScalarProperty Name="BuildingID" ColumnName="BuildingID" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Programmes">
+            <EntityTypeMapping TypeName="TimetableManagementSystemModel.Programme">
+              <MappingFragment StoreEntitySet="Programmes">
+                <ScalarProperty Name="ProgrammeName" ColumnName="ProgrammeName" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Rooms">
+            <EntityTypeMapping TypeName="TimetableManagementSystemModel.Room">
+              <MappingFragment StoreEntitySet="Rooms">
+                <ScalarProperty Name="BuildingID" ColumnName="BuildingID" />
+                <ScalarProperty Name="RoomType" ColumnName="RoomType" />
+                <ScalarProperty Name="Capacity" ColumnName="Capacity" />
+                <ScalarProperty Name="RoomName" ColumnName="RoomName" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="StudentDetails">
+            <EntityTypeMapping TypeName="TimetableManagementSystemModel.StudentDetail">
+              <MappingFragment StoreEntitySet="StudentDetails">
+                <ScalarProperty Name="SubGroupId" ColumnName="SubGroupId" />
+                <ScalarProperty Name="SubGroupNumber" ColumnName="SubGroupNumber" />
+                <ScalarProperty Name="GroupId" ColumnName="GroupId" />
+                <ScalarProperty Name="GroupNumber" ColumnName="GroupNumber" />
+                <ScalarProperty Name="Programme" ColumnName="Programme" />
+                <ScalarProperty Name="AcademicYearSemester" ColumnName="AcademicYearSemester" />
+                <ScalarProperty Name="StudentId" ColumnName="StudentId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Tags">
+            <EntityTypeMapping TypeName="TimetableManagementSystemModel.Tag">
+              <MappingFragment StoreEntitySet="Tags">
+                <ScalarProperty Name="ShortName" ColumnName="ShortName" />
+                <ScalarProperty Name="TagName" ColumnName="TagName" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="WorkingDays">
+            <EntityTypeMapping TypeName="TimetableManagementSystemModel.WorkingDay">
+              <MappingFragment StoreEntitySet="WorkingDays">
+                <ScalarProperty Name="ThirtyMinutesTimeSlots" ColumnName="ThirtyMinutesTimeSlots" />
+                <ScalarProperty Name="workingdayOneHourTimeSlots" ColumnName="workingdayOneHourTimeSlots" />
+                <ScalarProperty Name="workingday7" ColumnName="workingday7" />
+                <ScalarProperty Name="workingday6" ColumnName="workingday6" />
+                <ScalarProperty Name="workingday5" ColumnName="workingday5" />
+                <ScalarProperty Name="workingday4" ColumnName="workingday4" />
+                <ScalarProperty Name="workingday3" ColumnName="workingday3" />
+                <ScalarProperty Name="workingday2" ColumnName="workingday2" />
+                <ScalarProperty Name="workingday1" ColumnName="workingday1" />
+                <ScalarProperty Name="workingdaySemester" ColumnName="workingdaySemester" />
+                <ScalarProperty Name="workingdayYear" ColumnName="workingdayYear" />
+                <ScalarProperty Name="workingdayGroup" ColumnName="workingdayGroup" />
+                <ScalarProperty Name="WorkingDayID" ColumnName="WorkingDayID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          </EntityContainerMapping>
 </Mapping></edmx:Mappings>
   </edmx:Runtime>
   <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->

@@ -32,7 +32,6 @@
             this.homeBtn = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.viewlecturerbtn = new System.Windows.Forms.Button();
-            this.editlecturerbtn = new System.Windows.Forms.Button();
             this.addlecturerbtn = new System.Windows.Forms.Button();
             this.mainpanel = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -56,12 +55,10 @@
             this.navigationpanel.Controls.Add(this.homeBtn);
             this.navigationpanel.Controls.Add(this.panel3);
             this.navigationpanel.Controls.Add(this.viewlecturerbtn);
-            this.navigationpanel.Controls.Add(this.editlecturerbtn);
             this.navigationpanel.Controls.Add(this.addlecturerbtn);
             this.navigationpanel.Location = new System.Drawing.Point(0, 0);
-            this.navigationpanel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.navigationpanel.Name = "navigationpanel";
-            this.navigationpanel.Size = new System.Drawing.Size(299, 960);
+            this.navigationpanel.Size = new System.Drawing.Size(224, 780);
             this.navigationpanel.TabIndex = 0;
             // 
             // homeBtn
@@ -75,10 +72,9 @@
             this.homeBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.homeBtn.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.homeBtn.ForeColor = System.Drawing.Color.White;
-            this.homeBtn.Location = new System.Drawing.Point(7, 297);
-            this.homeBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.homeBtn.Location = new System.Drawing.Point(5, 204);
             this.homeBtn.Name = "homeBtn";
-            this.homeBtn.Size = new System.Drawing.Size(293, 49);
+            this.homeBtn.Size = new System.Drawing.Size(215, 40);
             this.homeBtn.TabIndex = 15;
             this.homeBtn.Text = "Home";
             this.homeBtn.UseVisualStyleBackColor = false;
@@ -88,9 +84,8 @@
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(165)))), ((int)(((byte)(0)))));
             this.panel3.Location = new System.Drawing.Point(0, 0);
-            this.panel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(7, 960);
+            this.panel3.Size = new System.Drawing.Size(5, 780);
             this.panel3.TabIndex = 12;
             // 
             // viewlecturerbtn
@@ -101,33 +96,15 @@
             this.viewlecturerbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.viewlecturerbtn.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.viewlecturerbtn.ForeColor = System.Drawing.Color.White;
-            this.viewlecturerbtn.Location = new System.Drawing.Point(5, 244);
+            this.viewlecturerbtn.Location = new System.Drawing.Point(0, 100);
             this.viewlecturerbtn.Margin = new System.Windows.Forms.Padding(0);
             this.viewlecturerbtn.Name = "viewlecturerbtn";
             this.viewlecturerbtn.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.viewlecturerbtn.Size = new System.Drawing.Size(293, 49);
+            this.viewlecturerbtn.Size = new System.Drawing.Size(220, 40);
             this.viewlecturerbtn.TabIndex = 5;
             this.viewlecturerbtn.Text = "View Lecturer";
             this.viewlecturerbtn.UseVisualStyleBackColor = false;
             this.viewlecturerbtn.Click += new System.EventHandler(this.viewlecturerbtn_Click);
-            // 
-            // editlecturerbtn
-            // 
-            this.editlecturerbtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(43)))), ((int)(((byte)(104)))));
-            this.editlecturerbtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.editlecturerbtn.FlatAppearance.BorderSize = 0;
-            this.editlecturerbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.editlecturerbtn.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.editlecturerbtn.ForeColor = System.Drawing.Color.White;
-            this.editlecturerbtn.Location = new System.Drawing.Point(5, 190);
-            this.editlecturerbtn.Margin = new System.Windows.Forms.Padding(0);
-            this.editlecturerbtn.Name = "editlecturerbtn";
-            this.editlecturerbtn.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.editlecturerbtn.Size = new System.Drawing.Size(293, 49);
-            this.editlecturerbtn.TabIndex = 4;
-            this.editlecturerbtn.Text = "Edit Lecturer";
-            this.editlecturerbtn.UseVisualStyleBackColor = false;
-            this.editlecturerbtn.Click += new System.EventHandler(this.editlecturerbtn_Click);
             // 
             // addlecturerbtn
             // 
@@ -137,11 +114,11 @@
             this.addlecturerbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.addlecturerbtn.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.addlecturerbtn.ForeColor = System.Drawing.Color.White;
-            this.addlecturerbtn.Location = new System.Drawing.Point(5, 135);
+            this.addlecturerbtn.Location = new System.Drawing.Point(0, 152);
             this.addlecturerbtn.Margin = new System.Windows.Forms.Padding(0);
             this.addlecturerbtn.Name = "addlecturerbtn";
             this.addlecturerbtn.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.addlecturerbtn.Size = new System.Drawing.Size(293, 49);
+            this.addlecturerbtn.Size = new System.Drawing.Size(220, 40);
             this.addlecturerbtn.TabIndex = 3;
             this.addlecturerbtn.Text = "Add Lecturer";
             this.addlecturerbtn.UseVisualStyleBackColor = false;
@@ -149,19 +126,17 @@
             // 
             // mainpanel
             // 
-            this.mainpanel.Location = new System.Drawing.Point(308, 53);
-            this.mainpanel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.mainpanel.Location = new System.Drawing.Point(231, 43);
             this.mainpanel.Name = "mainpanel";
-            this.mainpanel.Size = new System.Drawing.Size(1387, 886);
+            this.mainpanel.Size = new System.Drawing.Size(1040, 720);
             this.mainpanel.TabIndex = 2;
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::TimeTableManagementSystemApp.Properties.Resources.SLIIT;
-            this.pictureBox1.Location = new System.Drawing.Point(20, 10);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox1.Location = new System.Drawing.Point(15, 8);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(252, 94);
+            this.pictureBox1.Size = new System.Drawing.Size(189, 76);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 8;
             this.pictureBox1.TabStop = false;
@@ -170,10 +145,9 @@
             // 
             this.panel4.BackColor = System.Drawing.Color.White;
             this.panel4.Controls.Add(this.pictureBox1);
-            this.panel4.Location = new System.Drawing.Point(7, 1);
-            this.panel4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel4.Location = new System.Drawing.Point(5, 1);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(291, 123);
+            this.panel4.Size = new System.Drawing.Size(218, 100);
             this.panel4.TabIndex = 10;
             // 
             // panel1
@@ -183,10 +157,9 @@
             this.panel1.Controls.Add(this.maxBtn);
             this.panel1.Controls.Add(this.miniBtn);
             this.panel1.Controls.Add(this.closeBtn);
-            this.panel1.Location = new System.Drawing.Point(293, -1);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Location = new System.Drawing.Point(220, -1);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1416, 49);
+            this.panel1.Size = new System.Drawing.Size(1062, 40);
             this.panel1.TabIndex = 11;
             // 
             // label1
@@ -194,20 +167,18 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(4, 9);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(3, 7);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(365, 33);
+            this.label1.Size = new System.Drawing.Size(265, 25);
             this.label1.TabIndex = 7;
             this.label1.Text = "Time Table Management";
             // 
             // maxBtn
             // 
             this.maxBtn.Image = global::TimeTableManagementSystemApp.Properties.Resources.Maxibtn;
-            this.maxBtn.Location = new System.Drawing.Point(1297, 9);
-            this.maxBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.maxBtn.Location = new System.Drawing.Point(973, 7);
             this.maxBtn.Name = "maxBtn";
-            this.maxBtn.Size = new System.Drawing.Size(47, 31);
+            this.maxBtn.Size = new System.Drawing.Size(35, 25);
             this.maxBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.maxBtn.TabIndex = 5;
             this.maxBtn.TabStop = false;
@@ -215,10 +186,9 @@
             // miniBtn
             // 
             this.miniBtn.Image = global::TimeTableManagementSystemApp.Properties.Resources.minibtn;
-            this.miniBtn.Location = new System.Drawing.Point(1243, 7);
-            this.miniBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.miniBtn.Location = new System.Drawing.Point(932, 6);
             this.miniBtn.Name = "miniBtn";
-            this.miniBtn.Size = new System.Drawing.Size(47, 31);
+            this.miniBtn.Size = new System.Drawing.Size(35, 25);
             this.miniBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.miniBtn.TabIndex = 4;
             this.miniBtn.TabStop = false;
@@ -226,27 +196,24 @@
             // closeBtn
             // 
             this.closeBtn.Image = global::TimeTableManagementSystemApp.Properties.Resources.closebtn;
-            this.closeBtn.Location = new System.Drawing.Point(1352, 9);
-            this.closeBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.closeBtn.Location = new System.Drawing.Point(1014, 7);
             this.closeBtn.Name = "closeBtn";
-            this.closeBtn.Size = new System.Drawing.Size(47, 31);
+            this.closeBtn.Size = new System.Drawing.Size(35, 25);
             this.closeBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.closeBtn.TabIndex = 6;
             this.closeBtn.TabStop = false;
-            this.closeBtn.Click += new System.EventHandler(this.closeBtn_Click);
             // 
             // LecturerForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1707, 945);
+            this.ClientSize = new System.Drawing.Size(1280, 768);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.mainpanel);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.navigationpanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "LecturerForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
@@ -268,7 +235,6 @@
         private System.Windows.Forms.Panel navigationpanel;
         private System.Windows.Forms.Panel mainpanel;
         private System.Windows.Forms.Button addlecturerbtn;
-        private System.Windows.Forms.Button editlecturerbtn;
         private System.Windows.Forms.Button viewlecturerbtn;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel4;
