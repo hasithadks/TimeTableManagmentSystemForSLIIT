@@ -9,10 +9,10 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using TimeTableManagementSystemApp.IT18063288.UserControllers.SubUserControllers;
 using TimeTableManagementSystemApp.CommonFiles;
-using BusinessLayers.Location;
 using DataLayer;
 using System.Data.Entity;
 using System.Data.Entity.Core.Common.EntitySql;
+using BusinessLayers.Location;
 
 namespace TimeTableManagementSystemApp.IT18063288.UserControllers
 {
@@ -24,23 +24,20 @@ namespace TimeTableManagementSystemApp.IT18063288.UserControllers
         private int buildingID = 0;
         private int RoomID = 0;
 
+
+        
+
         public AddLocationUC()
         {
             InitializeComponent();
 
-            
+            string abc = "Y1.S2";
 
             locationBO = new LocationBO();
 
-            txtNewBuilding.Visible = false;
-            btnBuildingSave.Visible = false;
-            btnBuildingUpdate.Visible = false;
-            btnDeleteBuilding.Visible = false;
+            SetBuildingbuttonVisibilityFalse();
 
-            txtNewRoom.Visible = false;
-            btnRoomSave.Visible = false;
-            btnRoomUpdate.Visible = false;
-            btnDeleteRoom.Visible = false;
+            SetRoomButtonVisibilityFalse();
 
             //Room Details
             labelRoom.Visible = false;
@@ -63,12 +60,20 @@ namespace TimeTableManagementSystemApp.IT18063288.UserControllers
 
         private void btnChangeBuildingName_Click(object sender, EventArgs e)
         {
-            txtNewBuilding.Text = comboBoxBuilding.Text;
-            locationBO.BuildingID = comboBoxBuilding.SelectedIndex;
-            txtNewBuilding.Visible = true;
-            btnBuildingUpdate.Visible = true;
-            btnDeleteBuilding.Visible = true;
-            btnBuildingSave.Visible = false;
+            if(comboBoxBuilding.Text == "")
+            {
+                ErrorDialogBox.ShowDialog("Plaease Select a Building.", "Warning!!!");
+            }
+            else
+            {
+                txtNewBuilding.Text = comboBoxBuilding.Text;
+                //locationBO.BuildingID = comboBoxBuilding.SelectedIndex;
+                txtNewBuilding.Visible = true;
+                btnBuildingUpdate.Visible = true;
+                btnDeleteBuilding.Visible = true;
+                btnBuildingSave.Visible = false;
+            }
+            
         }
 
         private void btnAddNewBuilding_Click(object sender, EventArgs e)
@@ -98,11 +103,22 @@ namespace TimeTableManagementSystemApp.IT18063288.UserControllers
 
         private void btnChangeRoomName_Click(object sender, EventArgs e)
         {
-            txtNewRoom.Text = comboBoxRoom.Text;
-            txtNewRoom.Visible = true;
-            btnRoomUpdate.Visible = true;
-            btnDeleteRoom.Visible = true;
-            btnRoomSave.Visible = false;
+            if(comboBoxRoom.Text != "")
+            {
+                txtNewRoom.Text = comboBoxRoom.Text;
+                txtNewRoom.Visible = true;
+                btnRoomUpdate.Visible = true;
+                btnDeleteRoom.Visible = true;
+                btnRoomSave.Visible = false;
+            }
+            else
+            {
+
+                ErrorDialogBox.ShowDialog("Plaease Select a Room.", "Warning!!!");
+
+            }
+            
+            
         }
 
         private void btnRoomSave_Click(object sender, EventArgs e)
@@ -112,19 +128,32 @@ namespace TimeTableManagementSystemApp.IT18063288.UserControllers
             locationContol = new LocationController();
             string RoomName = string.Empty;
 
-            RoomName = txtNewRoom.Text;
-            locationBO.RoomName = RoomName.ToString();
-            RoomID = locationContol.saveRoom(RoomName,locationBO.BuildingID);
-            txtNewRoom.Text = "";
-
-            if (RoomID > 0)
+            if(txtNewRoom.Text != "")
             {
-                locationBO.RoomID = RoomID;
+                RoomName = txtNewRoom.Text;
+                locationBO.RoomName = RoomName.ToString();
+                RoomID = locationContol.saveRoom(RoomName, locationBO.BuildingID);
+                txtNewRoom.Text = "";
+
+                if (RoomID > 0)
+                {
+                    locationBO.RoomID = RoomID;
+                    SetRoomButtonVisibilityFalse();
+                    SetRoomDropDown();
+                    SuccessfullMessageBox.ShowDialog("Room Added successfully!!!", "Success!!!");
+                }
+                else
+                {
+                    locationBO.RoomID = 0;
+                    ErrorDialogBox.ShowDialog("Somthing Worng, Please restart the App...", "Warning!!!");
+                }
             }
             else
             {
-                locationBO.RoomID = 0;
+                ErrorDialogBox.ShowDialog("Please Enter Room Name", "Warning!!!");
             }
+
+            
 
             //MoreRoomDetailsUC moreRoomDetailsUC = new MoreRoomDetailsUC(locationBO);
             //CommonClass.showControl(moreRoomDetailsUC, panelRoomDetails);
@@ -160,23 +189,36 @@ namespace TimeTableManagementSystemApp.IT18063288.UserControllers
             locationContol = new LocationController();
             string buildingName = string.Empty;
             
-            buildingName = txtNewBuilding.Text;
-            locationBO.BuildingName = buildingName.ToString();
-            buildingID = locationContol.saveBuilding(buildingName);
-            txtNewBuilding.Text = "";
-
-            if (buildingID > 0)
+            if(txtNewBuilding.Text != "")
             {
-                locationBO.BuildingID = buildingID;
+                buildingName = txtNewBuilding.Text;
+                locationBO.BuildingName = buildingName.ToString();
+                buildingID = locationContol.saveBuilding(buildingName);
+                txtNewBuilding.Text = "";
+
+                if (buildingID > 0)
+                {
+                    locationBO.BuildingID = buildingID;
+                    SetBuildingbuttonVisibilityFalse();
+                    SuccessfullMessageBox.ShowDialog("Building Added successfully!!!", "Success!!!");
+                }
+                else
+                {
+                    locationBO.BuildingID = 0;
+                    ErrorDialogBox.ShowDialog("Somthing Worng, Please restart the App...", "Warning!!!");
+                }
+                setBuildingDropdown();
             }
             else
             {
-                locationBO.BuildingID = 0;
+                ErrorDialogBox.ShowDialog("Please Enter Building Name", "Warning!!!");
             }
+            
+
 
         }
 
-        
+
         private void fillByToolStripButton_Click(object sender, EventArgs e)
         {
             try
@@ -217,13 +259,6 @@ namespace TimeTableManagementSystemApp.IT18063288.UserControllers
                 locationBO.BuildingID = int.Parse(selectedEntry.Key);
             }
             
-
-            //locationBO.BuildingID = int.Parse(((System.Collections.Generic.KeyValuePair<string, string>)comboBoxBuilding.SelectedValue).Key);
-
-
-            //locationBO.BuildingID = int.Parse(comboBoxBuilding.SelectedValue.ToString());
-
-
 
             SetRoomDropDown();
 
@@ -295,6 +330,152 @@ namespace TimeTableManagementSystemApp.IT18063288.UserControllers
 
         }
 
-        
+        private void btnBuildingUpdate_Click(object sender, EventArgs e)
+        {
+            if (txtNewBuilding.Text != "")
+            {
+                locationContol = new LocationController();
+
+                
+                int no = locationContol.UpdateBuildingName(locationBO.BuildingID, txtNewBuilding.Text);
+
+                if(no == 1)
+                {
+                    // success message
+                    txtNewBuilding.Text = "";
+                    SetBuildingbuttonVisibilityFalse();
+                    setBuildingDropdown();
+                    SuccessfullMessageBox.ShowDialog("Building Updated successfully!!!", "Success!!!");
+                }
+                else
+                {
+                    ErrorDialogBox.ShowDialog("Cannot Update This Record!!!", "Warning!!!");
+                }
+
+
+            }
+            else
+            {
+                ErrorDialogBox.ShowDialog("Please Enter New BuildingName.", "Warning!!!");
+            }
+
+
+
+        }
+
+        private void btnDeleteBuilding_Click(object sender, EventArgs e)
+        {
+
+            if (comboBoxBuilding.Text != "")
+            {
+                locationContol = new LocationController();
+
+
+                int no = locationContol.DeleteBuilding(locationBO.BuildingID);
+
+                if (no == 1)
+                {
+                    // success message
+                    txtNewBuilding.Text = "";
+                    SetBuildingbuttonVisibilityFalse();
+                    setBuildingDropdown();
+                    SuccessfullMessageBox.ShowDialog("Building Delete successfully!!!", "Success!!!");
+                }
+                else
+                {
+                    ErrorDialogBox.ShowDialog("Failed to Delete this Building!!! please Try again.", "Warning!!!");
+                }
+
+
+            }
+            else
+            {
+                ErrorDialogBox.ShowDialog("Please Select a bilding", "Warning!!!");
+            }
+
+
+        }
+
+        private void btnRoomUpdate_Click(object sender, EventArgs e)
+        {
+
+            if (txtNewRoom.Text != "")
+            {
+                locationContol = new LocationController();
+
+
+                int no = locationContol.UpdateRoomName(locationBO.RoomID, txtNewRoom.Text);
+
+                if (no == 1)
+                {
+                    // success message
+                    txtNewRoom.Text = "";
+                    SetRoomButtonVisibilityFalse();
+                    SetRoomDropDown();
+                    SuccessfullMessageBox.ShowDialog("Room Updated successfully!!!", "Success!!!");
+                }
+                else
+                {
+                    ErrorDialogBox.ShowDialog("Failed to Updated this Room!!! please Try again.", "Warning!!!");
+                }
+
+
+            }
+            else
+            {
+                ErrorDialogBox.ShowDialog("Please Enter a Room Name.", "Warning!!!");
+            }
+
+
+        }
+
+        public void SetBuildingbuttonVisibilityFalse()
+        {
+
+            txtNewBuilding.Visible = false;
+            btnBuildingSave.Visible = false;
+            btnBuildingUpdate.Visible = false;
+            btnDeleteBuilding.Visible = false;
+        }
+
+
+        public void SetRoomButtonVisibilityFalse()
+        {
+
+            txtNewRoom.Visible = false;
+            btnRoomSave.Visible = false;
+            btnRoomUpdate.Visible = false;
+            btnDeleteRoom.Visible = false;
+        }
+
+        private void btnDeleteRoom_Click(object sender, EventArgs e)
+        {
+            if (comboBoxRoom.Text != "")
+            {
+                locationContol = new LocationController();
+
+
+                int no = locationContol.DeleteRoom(locationBO.RoomID);
+
+                if (no == 1)
+                {
+                    // success message
+
+                    SetRoomButtonVisibilityFalse();
+                    SetRoomDropDown();
+                    SuccessfullMessageBox.ShowDialog("Room Deleted successfully!!!", "Success!!!");
+                }
+                else
+                {
+                    ErrorDialogBox.ShowDialog("Somthing Worng, Please restart the App...", "Warning!!!");
+                }
+
+
+            }
+            else
+            {
+                ErrorDialogBox.ShowDialog("Please select a Room.", "Warning!!!");
+            }
+        }
     }
 }

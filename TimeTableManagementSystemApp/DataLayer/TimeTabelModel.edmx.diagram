@@ -6,6 +6,16 @@
     <edmx:Diagrams>
       <Diagram DiagramId="84e53a5807974d748155b7b70e6fe03e" Name="Diagram1">
         <EntityTypeShape EntityType="TimetableManagementSystemModel.Building" Width="1.5" PointX="0.75" PointY="1.25" />
+        <EntityTypeShape EntityType="TimetableManagementSystemModel.Location" Width="1.5" PointX="5.25" PointY="1.125" />
+        <EntityTypeShape EntityType="TimetableManagementSystemModel.Programme" Width="1.5" PointX="0.75" PointY="4.75" />
+        <EntityTypeShape EntityType="TimetableManagementSystemModel.Room" Width="1.5" PointX="3" PointY="1" />
+        <EntityTypeShape EntityType="TimetableManagementSystemModel.StudentDetail" Width="1.5" PointX="2.75" PointY="4.75" />
+        <EntityTypeShape EntityType="TimetableManagementSystemModel.Tag" Width="1.5" PointX="4.75" PointY="4.75" />
+        <EntityTypeShape EntityType="TimetableManagementSystemModel.WorkingDay" Width="1.5" PointX="6.75" PointY="4.75" />
+        <AssociationConnector Association="TimetableManagementSystemModel.FK_BuildingID" />
+        <AssociationConnector Association="TimetableManagementSystemModel.FK_BuildingIDLocation" />
+        <AssociationConnector Association="TimetableManagementSystemModel.FK_RoomIDLocation" />
+        <EntityTypeShape EntityType="TimetableManagementSystemModel.Building" Width="1.5" PointX="0.75" PointY="1.25" />
         <EntityTypeShape EntityType="TimetableManagementSystemModel.Lecturer" Width="1.5" PointX="0.75" PointY="4.75" />
         <EntityTypeShape EntityType="TimetableManagementSystemModel.Location" Width="1.5" PointX="5.25" PointY="1.125" />
         <EntityTypeShape EntityType="TimetableManagementSystemModel.Room" Width="1.5" PointX="3" PointY="1" />

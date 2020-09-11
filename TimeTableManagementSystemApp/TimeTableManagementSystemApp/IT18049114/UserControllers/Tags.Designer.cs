@@ -30,16 +30,12 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.tagname = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.shName = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Tagsname = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ShortName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Action = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.addedittagbut = new System.Windows.Forms.Button();
-            this.editstdpagebut = new System.Windows.Forms.Button();
-            this.deletestdbut = new System.Windows.Forms.Button();
+            this.tagDeleteBut = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -47,11 +43,12 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(458, 2);
+            this.label1.Location = new System.Drawing.Point(477, 35);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(46, 21);
             this.label1.TabIndex = 19;
             this.label1.Text = "Tags";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
@@ -64,14 +61,14 @@
             this.label2.Text = "Tag Name";
             this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
-            // textBox1
+            // tagname
             // 
-            this.textBox1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(274, 146);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(147, 27);
-            this.textBox1.TabIndex = 21;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.tagname.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tagname.Location = new System.Drawing.Point(274, 146);
+            this.tagname.Name = "tagname";
+            this.tagname.Size = new System.Drawing.Size(147, 27);
+            this.tagname.TabIndex = 21;
+            this.tagname.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // label3
             // 
@@ -84,48 +81,29 @@
             this.label3.Text = "Short Name";
             this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
-            // textBox2
+            // shName
             // 
-            this.textBox2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(545, 146);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(147, 27);
-            this.textBox2.TabIndex = 23;
-            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            this.shName.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.shName.Location = new System.Drawing.Point(542, 146);
+            this.shName.Name = "shName";
+            this.shName.Size = new System.Drawing.Size(147, 27);
+            this.shName.TabIndex = 23;
+            this.shName.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Tagsname,
-            this.ShortName,
-            this.Action});
+            this.dataGridView1.GridColor = System.Drawing.Color.White;
             this.dataGridView1.Location = new System.Drawing.Point(178, 229);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(643, 111);
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridView1.Size = new System.Drawing.Size(643, 300);
             this.dataGridView1.TabIndex = 26;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            // 
-            // Tagsname
-            // 
-            this.Tagsname.HeaderText = "Tags";
-            this.Tagsname.Name = "Tagsname";
-            this.Tagsname.ReadOnly = true;
-            this.Tagsname.Width = 200;
-            // 
-            // ShortName
-            // 
-            this.ShortName.HeaderText = "Short Name";
-            this.ShortName.Name = "ShortName";
-            this.ShortName.ReadOnly = true;
-            this.ShortName.Width = 200;
-            // 
-            // Action
-            // 
-            this.Action.HeaderText = "Action";
-            this.Action.Name = "Action";
-            this.Action.ReadOnly = true;
-            this.Action.Width = 200;
             // 
             // addedittagbut
             // 
@@ -140,46 +118,33 @@
             this.addedittagbut.TabIndex = 29;
             this.addedittagbut.Text = "Add / Edit";
             this.addedittagbut.UseVisualStyleBackColor = false;
+            this.addedittagbut.Click += new System.EventHandler(this.addedittagbut_Click);
             // 
-            // editstdpagebut
+            // tagDeleteBut
             // 
-            this.editstdpagebut.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(43)))), ((int)(((byte)(104)))));
-            this.editstdpagebut.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.editstdpagebut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.editstdpagebut.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.editstdpagebut.ForeColor = System.Drawing.Color.White;
-            this.editstdpagebut.Location = new System.Drawing.Point(653, 250);
-            this.editstdpagebut.Name = "editstdpagebut";
-            this.editstdpagebut.Size = new System.Drawing.Size(55, 21);
-            this.editstdpagebut.TabIndex = 30;
-            this.editstdpagebut.Text = "Edit";
-            this.editstdpagebut.UseVisualStyleBackColor = false;
-            // 
-            // deletestdbut
-            // 
-            this.deletestdbut.BackColor = System.Drawing.Color.Red;
-            this.deletestdbut.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.deletestdbut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.deletestdbut.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.deletestdbut.ForeColor = System.Drawing.Color.White;
-            this.deletestdbut.Location = new System.Drawing.Point(746, 250);
-            this.deletestdbut.Name = "deletestdbut";
-            this.deletestdbut.Size = new System.Drawing.Size(55, 21);
-            this.deletestdbut.TabIndex = 31;
-            this.deletestdbut.Text = "Delete";
-            this.deletestdbut.UseVisualStyleBackColor = false;
+            this.tagDeleteBut.BackColor = System.Drawing.Color.Red;
+            this.tagDeleteBut.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.tagDeleteBut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.tagDeleteBut.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tagDeleteBut.ForeColor = System.Drawing.Color.White;
+            this.tagDeleteBut.Location = new System.Drawing.Point(698, 546);
+            this.tagDeleteBut.Name = "tagDeleteBut";
+            this.tagDeleteBut.Size = new System.Drawing.Size(123, 31);
+            this.tagDeleteBut.TabIndex = 30;
+            this.tagDeleteBut.Text = "Delete";
+            this.tagDeleteBut.UseVisualStyleBackColor = false;
+            this.tagDeleteBut.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // Tags
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.deletestdbut);
-            this.Controls.Add(this.editstdpagebut);
+            this.Controls.Add(this.tagDeleteBut);
             this.Controls.Add(this.addedittagbut);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.shName);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.tagname);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "Tags";
@@ -195,15 +160,11 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox tagname;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox shName;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Tagsname;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ShortName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Action;
         private System.Windows.Forms.Button addedittagbut;
-        private System.Windows.Forms.Button editstdpagebut;
-        private System.Windows.Forms.Button deletestdbut;
+        private System.Windows.Forms.Button tagDeleteBut;
     }
 }

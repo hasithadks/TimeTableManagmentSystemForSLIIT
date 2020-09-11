@@ -63,8 +63,17 @@
     <Compile Include="Location.cs">
       <DependentUpon>TimeTabelModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Programme.cs">
+      <DependentUpon>TimeTabelModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Room.cs">
+      <DependentUpon>TimeTabelModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="StudentDetail.cs">
+      <DependentUpon>TimeTabelModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Tag.cs">
       <DependentUpon>TimeTabelModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Subject.cs">

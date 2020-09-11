@@ -59,6 +59,18 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CommonFiles\CommonClass.cs" />
+    <Compile Include="CommonFiles\ErrorDialogBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CommonFiles\ErrorDialogBox.Designer.cs">
+      <DependentUpon>ErrorDialogBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CommonFiles\SuccessfullMessageBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CommonFiles\SuccessfullMessageBox.Designer.cs">
+      <DependentUpon>SuccessfullMessageBox.cs</DependentUpon>
+    </Compile>
     <Compile Include="CommonFiles\TopManuBarUC.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -131,6 +143,7 @@
     <Compile Include="IT18050240\UserControllers\GenerateTimeTableUC.Designer.cs">
       <DependentUpon>GenerateTimeTableUC.cs</DependentUpon>
     </Compile>
+    <Compile Include="IT18050240\UserControllers\TimeTableModel.cs" />
     <Compile Include="IT18050240\UserControllers\ViewTimeTableUC.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -203,6 +216,12 @@
     <Compile Include="IT18063288\Forms\LocationForm.Designer.cs">
       <DependentUpon>LocationForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="IT18063288\Forms\Statistics.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IT18063288\Forms\Statistics.Designer.cs">
+      <DependentUpon>Statistics.cs</DependentUpon>
+    </Compile>
     <Compile Include="IT18063288\UserControllers\AddLocationUC.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -264,6 +283,17 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>TimetableManagementSystemDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="TimetableManagementSystemDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TimetableManagementSystemDataSet1.xsd</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="CommonFiles\ErrorDialogBox.resx">
+      <DependentUpon>ErrorDialogBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CommonFiles\SuccessfullMessageBox.resx">
+      <DependentUpon>SuccessfullMessageBox.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CommonFiles\TopManuBarUC.resx">
       <DependentUpon>TopManuBarUC.cs</DependentUpon>
     </EmbeddedResource>
@@ -388,13 +418,24 @@
     <None Include="TimetableManagementSystemDataSet.xss">
       <DependentUpon>TimetableManagementSystemDataSet.xsd</DependentUpon>
     </None>
+    <None Include="TimetableManagementSystemDataSet1.xsc">
+      <DependentUpon>TimetableManagementSystemDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="TimetableManagementSystemDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TimetableManagementSystemDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="TimetableManagementSystemDataSet1.xss">
+      <DependentUpon>TimetableManagementSystemDataSet1.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BusinessLayers\BusinessLayers.csproj">
-      <Project>{2a5c5aac-9032-4ca5-aa39-7e186585b03a}</Project>
+      <Project>{2A5C5AAC-9032-4CA5-AA39-7E186585B03A}</Project>
       <Name>BusinessLayers</Name>
     </ProjectReference>
     <ProjectReference Include="..\DataLayer\DataLayer.csproj">
@@ -410,6 +451,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Resources\add-square-button.png" />
+    <None Include="Resources\success.png" />
+    <None Include="Resources\error.png" />
     <None Include="Resources\SLIIT.png" />
     <None Include="Resources\minibtn.png" />
     <None Include="Resources\Maxibtn.png" />

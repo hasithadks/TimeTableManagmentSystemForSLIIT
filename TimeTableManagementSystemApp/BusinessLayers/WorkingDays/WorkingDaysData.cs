@@ -30,5 +30,15 @@ namespace BusinessLayers.WorkingDays
             }
             return workingdayID;
         }
+
+        public List<WorkingDay> getAllWorkingDayData() {
+
+            using (var context = new TimetableManagementSystemEntities2())
+            {
+
+                List<WorkingDay> multiple = context.WorkingDays.ToList();
+                return multiple;
+            }
+        }
     }
 }

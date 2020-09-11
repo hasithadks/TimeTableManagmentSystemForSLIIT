@@ -9,6 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using BusinessLayers.Location;
 using DataLayer;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using TimeTableManagementSystemApp.CommonFiles;
 
 namespace TimeTableManagementSystemApp.IT18063288.UserControllers.SubUserControllers
 {
@@ -88,14 +90,17 @@ namespace TimeTableManagementSystemApp.IT18063288.UserControllers.SubUserControl
             if(roomID > 0)
             {
                 //success Message
-                txtRoomCapacity.Text = "";
-                checkBoxLecture.Checked = false;
-                checkBoxLab.Checked = false;
-                LocationBO locationBO = new LocationBO();
+                SuccessfullMessageBox.ShowDialog("Room Details Updated successfully!!!", "Success!!!");
+                //txtRoomCapacity.Text = "";
+                //checkBoxLecture.Checked = false;
+                //checkBoxLab.Checked = false;
+                //LocationBO locationBO = new LocationBO();
+                this.Parent.Controls.Remove(this);
+
             }
             else
             {
-                //Error Message
+                ErrorDialogBox.ShowDialog("Cannot update room Details.", "Warning!!!");
             }
 
 
