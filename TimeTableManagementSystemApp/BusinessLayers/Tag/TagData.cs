@@ -22,7 +22,6 @@ namespace BusinessLayers.Tag
                     ShortName = tag.shortName
                 };
 
-                
                 //Tag newTag = new Tag()
                 //{
                 //    id = tag.tagId,
@@ -32,8 +31,6 @@ namespace BusinessLayers.Tag
 
                 context.Tags.Add(tag1);
                 context.SaveChanges();
-
-                MessageBox.Show("Successfull Added");
             }
 
         }
@@ -42,6 +39,7 @@ namespace BusinessLayers.Tag
         {
             using (var context = new TimetableManagementSystemEntities2())
             {
+                //get All
                 List<DataLayer.Tag> multiple = context.Tags.ToList();
 
                 return multiple;
@@ -54,7 +52,7 @@ namespace BusinessLayers.Tag
         {
             using (var context = new TimetableManagementSystemEntities2())
             {
-
+                //Update
                 var updatingTag = context.Tags.Where(p => p.id == tag.tagId).FirstOrDefault();
 
                 if (updatingTag != null)
@@ -63,7 +61,6 @@ namespace BusinessLayers.Tag
                     updatingTag.ShortName = tag.shortName;
                     context.SaveChanges();
                 }
-                MessageBox.Show("Successfull Updated");
             }
         }
 
@@ -71,7 +68,7 @@ namespace BusinessLayers.Tag
         {
             using (var context = new TimetableManagementSystemEntities2())
             {
-
+                //Delete
                 var DeleteTag = context.Tags.Where(p => p.id == tag.tagId).FirstOrDefault();
 
                 if (DeleteTag != null)
@@ -79,7 +76,6 @@ namespace BusinessLayers.Tag
                     context.Tags.Remove(DeleteTag);
                     context.SaveChanges();
                 }
-                MessageBox.Show("Successfull Deleted");
             }
         }
     }
