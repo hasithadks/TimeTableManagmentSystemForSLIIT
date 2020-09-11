@@ -21,6 +21,13 @@ namespace TimeTableManagementSystemApp.IT18063288.UserControllers.SubUserControl
             
             InitializeComponent();
             statisticBo = new StatisticBO();
+
+            label5.Visible = false;
+            comboBoxGroup.Visible = false;
+            label7.Visible = false;
+            comboBoxSubGroup.Visible = false;
+            btnStudentSearch.Visible = false;
+
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -427,16 +434,24 @@ namespace TimeTableManagementSystemApp.IT18063288.UserControllers.SubUserControl
             
             string studentId = txtStudentId.Text;
 
-            StatisticBO statisticBO = new StatisticBO();
+            if(studentId != "")
+            {
+                StatisticBO statisticBO = new StatisticBO();
 
-            statisticBO.StudentID = studentId;
+                statisticBO.StudentID = studentId;
 
-            StatisticController statisticController = new StatisticController();
-            List<StudentDetail> studentDetails = statisticController.GetStudentDataFromID(statisticBO);
+                StatisticController statisticController = new StatisticController();
+                List<StudentDetail> studentDetails = statisticController.GetStudentDataFromID(statisticBO);
 
-            dataGridViewStatistic.DataSource = studentDetails;
+                dataGridViewStatistic.DataSource = studentDetails;
 
-            lblCount.Text = studentDetails.Count.ToString();
+                lblCount.Text = studentDetails.Count.ToString();
+            }
+            else
+            {
+                ErrorDialogBox.ShowDialog("No Record Found!!!", "Sorry!!!");
+            }
+            
 
 
 
@@ -458,6 +473,9 @@ namespace TimeTableManagementSystemApp.IT18063288.UserControllers.SubUserControl
             statisticBO.SubGroup = int.Parse(comboBoxSubGroup.Text);
 
 
+
         }
+
+        
     }
 }

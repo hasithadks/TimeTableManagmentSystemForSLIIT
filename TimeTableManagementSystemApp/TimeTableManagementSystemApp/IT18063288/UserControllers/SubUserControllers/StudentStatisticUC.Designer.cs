@@ -210,6 +210,7 @@
             this.comboBoxGroup.Name = "comboBoxGroup";
             this.comboBoxGroup.Size = new System.Drawing.Size(157, 27);
             this.comboBoxGroup.TabIndex = 41;
+           
             // 
             // label5
             // 
@@ -221,6 +222,7 @@
             this.label5.Size = new System.Drawing.Size(69, 19);
             this.label5.TabIndex = 42;
             this.label5.Text = "Group : ";
+            
             // 
             // comboBoxSubGroup
             // 
@@ -235,6 +237,7 @@
             this.comboBoxSubGroup.Name = "comboBoxSubGroup";
             this.comboBoxSubGroup.Size = new System.Drawing.Size(157, 27);
             this.comboBoxSubGroup.TabIndex = 43;
+            
             // 
             // label7
             // 
@@ -246,6 +249,7 @@
             this.label7.Size = new System.Drawing.Size(101, 19);
             this.label7.TabIndex = 44;
             this.label7.Text = "Sub Group : ";
+            
             // 
             // btnStudentSearch
             // 
@@ -310,6 +314,7 @@
             this.Controls.Add(this.comboYear);
             this.Name = "StudentStatisticUC";
             this.Size = new System.Drawing.Size(1021, 541);
+            
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewStatistic)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
