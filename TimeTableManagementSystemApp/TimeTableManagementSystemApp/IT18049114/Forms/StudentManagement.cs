@@ -97,8 +97,7 @@ namespace TimeTableManagementSystemApp.IT18049114.Forms
 
         private void editStudentBtn_Click(object sender, EventArgs e)
         {
-            EditStudent EditStudent = new EditStudent();
-            CommonClass.showControl(EditStudent, contentPanel);
+           
         }
 
         private void homeBtn_Click(object sender, EventArgs e)

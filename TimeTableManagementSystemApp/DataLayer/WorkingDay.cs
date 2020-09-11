@@ -27,5 +27,6 @@ namespace DataLayer
         public string workingday7 { get; set; }
         public Nullable<int> workingdayOneHourTimeSlots { get; set; }
         public Nullable<int> ThirtyMinutesTimeSlots { get; set; }
+        public Nullable<int> workingDaysPerWeek { get; set; }
     }
 }

@@ -288,6 +288,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>TimetableManagementSystemDataSet1.xsd</DependentUpon>
     </Compile>
+    <Compile Include="TimetableManagementSystemDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TimetableManagementSystemDataSet2.xsd</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="CommonFiles\ErrorDialogBox.resx">
       <DependentUpon>ErrorDialogBox.cs</DependentUpon>
     </EmbeddedResource>
@@ -428,6 +433,17 @@
     </None>
     <None Include="TimetableManagementSystemDataSet1.xss">
       <DependentUpon>TimetableManagementSystemDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="TimetableManagementSystemDataSet2.xsc">
+      <DependentUpon>TimetableManagementSystemDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="TimetableManagementSystemDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TimetableManagementSystemDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="TimetableManagementSystemDataSet2.xss">
+      <DependentUpon>TimetableManagementSystemDataSet2.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>

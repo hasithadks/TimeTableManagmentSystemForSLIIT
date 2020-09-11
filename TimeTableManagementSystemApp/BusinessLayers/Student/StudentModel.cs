@@ -37,7 +37,6 @@ namespace BusinessLayers.Student
 
         public StudentModel(string StudentId, string AcademicYearSemester, string Programme, int GroupNumber, string GroupId,int SubGroupNumber,string SubGroupId)
         {
-
             this.studentId = StudentId;
             this.academicYearSemester = AcademicYearSemester;
             this.programme = Programme;

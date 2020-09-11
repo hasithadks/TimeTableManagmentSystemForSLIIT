@@ -11,16 +11,28 @@ namespace BusinessLayers.WorkingDays
     {
         private WorkingDaysData workingDaysData;
 
-        public int InsertWorkingDays() {
+        public int InsertWorkingDays(WorkingDaysClass workingDaysClass) {
             workingDaysData = new WorkingDaysData();
-            int id = workingDaysData.insertWorkingDaysData();
+            int id = workingDaysData.insertWorkingDaysData(workingDaysClass);
             return id;
         }
 
-        public List<WorkingDay> SelectAllWorkingDays()
+        public List<workingDaysAndHour> SelectAllWorkingDays()
         {
             workingDaysData = new WorkingDaysData();
             return workingDaysData.getAllWorkingDayData();
+        }
+
+        public void UpdateWorkingDays(WorkingDaysClass workingDaysClass)
+        {
+            workingDaysData = new WorkingDaysData();
+            workingDaysData.UpdateWorkingDaysData(workingDaysClass);
+        }
+
+        public void DeleteWorkingDays(WorkingDaysClass workingDaysClass)
+        {
+            workingDaysData = new WorkingDaysData();
+            workingDaysData.DeleteWorkingDaysData(workingDaysClass);
         }
 
     }
