@@ -12,14 +12,6 @@
           <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="BuidingName" Type="varchar" MaxLength="255" Nullable="false" />
         </EntityType>
-        <EntityType Name="Location">
-          <Key>
-            <PropertyRef Name="id" />
-          </Key>
-          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="BuildingID" Type="int" />
-          <Property Name="RoomID" Type="int" />
-        </EntityType>
         <EntityType Name="Locations">
           <Key>
             <PropertyRef Name="id" />
@@ -97,31 +89,30 @@
         </Association>
         <Association Name="FK_BuildingIDLocation">
           <End Role="Buildings" Type="Self.Buildings" Multiplicity="0..1" />
-          <End Role="Location" Type="Self.Location" Multiplicity="*" />
+          <End Role="Locations" Type="Self.Locations" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Buildings">
               <PropertyRef Name="id" />
             </Principal>
-            <Dependent Role="Location">
+            <Dependent Role="Locations">
               <PropertyRef Name="BuildingID" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_RoomIDLocation">
           <End Role="Rooms" Type="Self.Rooms" Multiplicity="0..1" />
-          <End Role="Location" Type="Self.Location" Multiplicity="*" />
+          <End Role="Locations" Type="Self.Locations" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Rooms">
               <PropertyRef Name="id" />
             </Principal>
-            <Dependent Role="Location">
+            <Dependent Role="Locations">
               <PropertyRef Name="RoomID" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
         <EntityContainer Name="TimetableManagementSystemModelStoreContainer">
           <EntitySet Name="Buildings" EntityType="Self.Buildings" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="Location" EntityType="Self.Location" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Locations" EntityType="Self.Locations" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Programmes" EntityType="Self.Programmes" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Rooms" EntityType="Self.Rooms" Schema="dbo" store:Type="Tables" />
@@ -134,11 +125,11 @@
           </AssociationSet>
           <AssociationSet Name="FK_BuildingIDLocation" Association="Self.FK_BuildingIDLocation">
             <End Role="Buildings" EntitySet="Buildings" />
-            <End Role="Location" EntitySet="Location" />
+            <End Role="Locations" EntitySet="Locations" />
           </AssociationSet>
           <AssociationSet Name="FK_RoomIDLocation" Association="Self.FK_RoomIDLocation">
             <End Role="Rooms" EntitySet="Rooms" />
-            <End Role="Location" EntitySet="Location" />
+            <End Role="Locations" EntitySet="Locations" />
           </AssociationSet>
         </EntityContainer>
       </Schema></edmx:StorageModels>
@@ -148,7 +139,6 @@
         <EntityContainer Name="TimetableManagementSystemEntities2" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Buildings" EntityType="TimetableManagementSystemModel.Building" />
           <EntitySet Name="Locations" EntityType="TimetableManagementSystemModel.Location" />
-          <EntitySet Name="Locations1" EntityType="TimetableManagementSystemModel.Location1" />
           <EntitySet Name="Programmes" EntityType="TimetableManagementSystemModel.Programme" />
           <EntitySet Name="Rooms" EntityType="TimetableManagementSystemModel.Room" />
           <EntitySet Name="StudentDetails" EntityType="TimetableManagementSystemModel.StudentDetail" />
@@ -185,14 +175,6 @@
           <Property Name="RoomID" Type="Int32" />
           <NavigationProperty Name="Building" Relationship="TimetableManagementSystemModel.FK_BuildingIDLocation" FromRole="Location" ToRole="Building" />
           <NavigationProperty Name="Room" Relationship="TimetableManagementSystemModel.FK_RoomIDLocation" FromRole="Location" ToRole="Room" />
-        </EntityType>
-        <EntityType Name="Location1">
-          <Key>
-            <PropertyRef Name="id" />
-          </Key>
-          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="BuildingID" Type="Int32" />
-          <Property Name="RoomID" Type="Int32" />
         </EntityType>
         <EntityType Name="Programme">
           <Key>
@@ -303,15 +285,6 @@
           </EntitySetMapping>
           <EntitySetMapping Name="Locations">
             <EntityTypeMapping TypeName="TimetableManagementSystemModel.Location">
-              <MappingFragment StoreEntitySet="Location">
-                <ScalarProperty Name="RoomID" ColumnName="RoomID" />
-                <ScalarProperty Name="BuildingID" ColumnName="BuildingID" />
-                <ScalarProperty Name="id" ColumnName="id" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="Locations1">
-            <EntityTypeMapping TypeName="TimetableManagementSystemModel.Location1">
               <MappingFragment StoreEntitySet="Locations">
                 <ScalarProperty Name="RoomID" ColumnName="RoomID" />
                 <ScalarProperty Name="BuildingID" ColumnName="BuildingID" />

@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using BusinessLayers.Student;
+using TimeTableManagementSystemApp.CommonFiles;
 
 namespace TimeTableManagementSystemApp.IT18049114.UserControllers
 {
@@ -43,23 +44,6 @@ namespace TimeTableManagementSystemApp.IT18049114.UserControllers
 
         }
 
-        private void addstdbut_Click(object sender, EventArgs e)
-        {
-            if (studentId.Text != "")
-            {
-                StudentModel studentModel = new StudentModel(studentId.Text, textBox1.Text, programme.Text, Convert.ToInt32(groupNo.Value), groupId.Text, Convert.ToInt32(subGroupNo.Value), subGroupId.Text);
-
-                StudentController studentController = new StudentController();
-                studentController.InsertStudent(studentModel);
-            }
-            else
-            {
-                MessageBox.Show("Error");
-            }
-
-                
-        }
-
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
 
@@ -85,6 +69,7 @@ namespace TimeTableManagementSystemApp.IT18049114.UserControllers
             
         }
 
+        //Set Button Function
         private void button1_Click(object sender, EventArgs e)
         {
             var a = year.Text;
@@ -93,9 +78,47 @@ namespace TimeTableManagementSystemApp.IT18049114.UserControllers
             var d = Convert.ToInt32(groupNo.Value);
             var f = Convert.ToInt32(subGroupNo.Value);
 
-            textBox1.Text = "Y"+a+"." +"S"+ b;
-            groupId.Text = "Y" + a + "." + "S" + b + "." + c + "." + 0 +d;
-            subGroupId.Text = "Y" + a + "." + "S" + b + "." + c + "." + 0 + d + "." + f;
+            if (a != "" && b != "" && c != "" && d != 0 && f != 0)
+            {
+                textBox1.Text = "Y" + a + "." + "S" + b;
+                groupId.Text = "Y" + a + "." + "S" + b + "." + c + "." + 0 + d;
+                subGroupId.Text = "Y" + a + "." + "S" + b + "." + c + "." + 0 + d + "." + f;
+            }
+            else
+            {
+                ErrorDialogBox.ShowDialog("Please Fill All Fields", "Warning!!!");
+            }
+        }
+
+        //Student Details Add Function
+        private void addstdbut_Click(object sender, EventArgs e)
+        {
+            if (studentId.Text != "" && programme.Text != "" && groupNo.Value != 0 && subGroupNo.Value != 0)
+            {
+                StudentModel studentModel = new StudentModel(studentId.Text, textBox1.Text, programme.Text, Convert.ToInt32(groupNo.Value), groupId.Text, Convert.ToInt32(subGroupNo.Value), subGroupId.Text);
+
+                StudentController studentController = new StudentController();
+                studentController.InsertStudent(studentModel);
+
+                //Successfull message
+                SuccessfullMessageBox.ShowDialog("Student Details Added Successfully!!!", "Success!!!");
+
+                //Fields Clear
+                studentId.Clear();
+                year.Text = "";
+                semester.Text = "";
+                programme.Text = "";
+                groupNo.Value = 0;
+                subGroupNo.Value = 0;
+                textBox1.Clear();
+                groupId.Clear();
+                subGroupId.Clear();
+            }
+            else
+            {
+                ErrorDialogBox.ShowDialog("Please Enter All Fields", "Warning!!!");
+            }
+
 
         }
 

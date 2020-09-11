@@ -48,6 +48,7 @@ namespace BusinessLayers.Student
         {
             using (var context = new TimetableManagementSystemEntities2())
             {
+                //update
                 var updatingStudent = context.StudentDetails.Where(p => p.StudentId == studentModel.studentId).FirstOrDefault();
 
                 if (updatingStudent != null)
@@ -62,7 +63,7 @@ namespace BusinessLayers.Student
 
                     context.SaveChanges();
                 }
-                MessageBox.Show("Successfull Updated");
+               
             }
         }
         
@@ -70,7 +71,7 @@ namespace BusinessLayers.Student
         {
             using (var context = new TimetableManagementSystemEntities2())
             {
-
+                //delete
                 var DeleteStudent = context.StudentDetails.Where(p => p.StudentId == studentModel.studentId).FirstOrDefault();
 
                 if (DeleteStudent != null)
@@ -78,7 +79,7 @@ namespace BusinessLayers.Student
                     context.StudentDetails.Remove(DeleteStudent);
                     context.SaveChanges();
                 }
-                MessageBox.Show("Successfull Deleted");
+                
             }
         }
     }
