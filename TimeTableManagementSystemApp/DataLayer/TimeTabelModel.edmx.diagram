@@ -5,13 +5,15 @@
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
       <Diagram DiagramId="84e53a5807974d748155b7b70e6fe03e" Name="Diagram1">
-        <EntityTypeShape EntityType="TimetableManagementSystemModel.Building" Width="1.5" PointX="0.75" PointY="1.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="TimetableManagementSystemModel.Location" Width="1.5" PointX="5.25" PointY="1.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="TimetableManagementSystemModel.Room" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
-        <AssociationConnector Association="TimetableManagementSystemModel.FK_BuildingID" ManuallyRouted="false" />
-        <AssociationConnector Association="TimetableManagementSystemModel.FK_BuildingIDLocation" ManuallyRouted="false" />
-        <AssociationConnector Association="TimetableManagementSystemModel.FK_RoomIDLocation" ManuallyRouted="false" />
-        <EntityTypeShape EntityType="TimetableManagementSystemModel.WorkingDay" Width="1.5" PointX="0.75" PointY="4.75" />
+        <EntityTypeShape EntityType="TimetableManagementSystemModel.Building" Width="1.5" PointX="0.75" PointY="1.25" />
+        <EntityTypeShape EntityType="TimetableManagementSystemModel.Lecturer" Width="1.5" PointX="0.75" PointY="4.75" />
+        <EntityTypeShape EntityType="TimetableManagementSystemModel.Location" Width="1.5" PointX="5.25" PointY="1.125" />
+        <EntityTypeShape EntityType="TimetableManagementSystemModel.Room" Width="1.5" PointX="3" PointY="1" />
+        <EntityTypeShape EntityType="TimetableManagementSystemModel.Subject" Width="1.5" PointX="2.75" PointY="4.75" />
+        <AssociationConnector Association="TimetableManagementSystemModel.FK_BuildingID" />
+        <AssociationConnector Association="TimetableManagementSystemModel.FK_BuildingIDLocation" />
+        <AssociationConnector Association="TimetableManagementSystemModel.FK_RoomIDLocation" />
+        <EntityTypeShape EntityType="TimetableManagementSystemModel.WorkingDay" Width="1.5" PointX="5.375" PointY="4.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

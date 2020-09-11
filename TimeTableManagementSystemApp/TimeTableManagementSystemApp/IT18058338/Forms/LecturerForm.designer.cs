@@ -32,7 +32,6 @@
             this.homeBtn = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.viewlecturerbtn = new System.Windows.Forms.Button();
-            this.editlecturerbtn = new System.Windows.Forms.Button();
             this.addlecturerbtn = new System.Windows.Forms.Button();
             this.mainpanel = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -56,7 +55,6 @@
             this.navigationpanel.Controls.Add(this.homeBtn);
             this.navigationpanel.Controls.Add(this.panel3);
             this.navigationpanel.Controls.Add(this.viewlecturerbtn);
-            this.navigationpanel.Controls.Add(this.editlecturerbtn);
             this.navigationpanel.Controls.Add(this.addlecturerbtn);
             this.navigationpanel.Location = new System.Drawing.Point(0, 0);
             this.navigationpanel.Name = "navigationpanel";
@@ -74,9 +72,9 @@
             this.homeBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.homeBtn.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.homeBtn.ForeColor = System.Drawing.Color.White;
-            this.homeBtn.Location = new System.Drawing.Point(5, 241);
+            this.homeBtn.Location = new System.Drawing.Point(5, 204);
             this.homeBtn.Name = "homeBtn";
-            this.homeBtn.Size = new System.Drawing.Size(220, 40);
+            this.homeBtn.Size = new System.Drawing.Size(215, 40);
             this.homeBtn.TabIndex = 15;
             this.homeBtn.Text = "Home";
             this.homeBtn.UseVisualStyleBackColor = false;
@@ -98,7 +96,7 @@
             this.viewlecturerbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.viewlecturerbtn.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.viewlecturerbtn.ForeColor = System.Drawing.Color.White;
-            this.viewlecturerbtn.Location = new System.Drawing.Point(4, 198);
+            this.viewlecturerbtn.Location = new System.Drawing.Point(0, 100);
             this.viewlecturerbtn.Margin = new System.Windows.Forms.Padding(0);
             this.viewlecturerbtn.Name = "viewlecturerbtn";
             this.viewlecturerbtn.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -108,24 +106,6 @@
             this.viewlecturerbtn.UseVisualStyleBackColor = false;
             this.viewlecturerbtn.Click += new System.EventHandler(this.viewlecturerbtn_Click);
             // 
-            // editlecturerbtn
-            // 
-            this.editlecturerbtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(43)))), ((int)(((byte)(104)))));
-            this.editlecturerbtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.editlecturerbtn.FlatAppearance.BorderSize = 0;
-            this.editlecturerbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.editlecturerbtn.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.editlecturerbtn.ForeColor = System.Drawing.Color.White;
-            this.editlecturerbtn.Location = new System.Drawing.Point(4, 154);
-            this.editlecturerbtn.Margin = new System.Windows.Forms.Padding(0);
-            this.editlecturerbtn.Name = "editlecturerbtn";
-            this.editlecturerbtn.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.editlecturerbtn.Size = new System.Drawing.Size(220, 40);
-            this.editlecturerbtn.TabIndex = 4;
-            this.editlecturerbtn.Text = "Edit Lecturer";
-            this.editlecturerbtn.UseVisualStyleBackColor = false;
-            this.editlecturerbtn.Click += new System.EventHandler(this.editlecturerbtn_Click);
-            // 
             // addlecturerbtn
             // 
             this.addlecturerbtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(43)))), ((int)(((byte)(104)))));
@@ -134,7 +114,7 @@
             this.addlecturerbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.addlecturerbtn.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.addlecturerbtn.ForeColor = System.Drawing.Color.White;
-            this.addlecturerbtn.Location = new System.Drawing.Point(4, 110);
+            this.addlecturerbtn.Location = new System.Drawing.Point(0, 152);
             this.addlecturerbtn.Margin = new System.Windows.Forms.Padding(0);
             this.addlecturerbtn.Name = "addlecturerbtn";
             this.addlecturerbtn.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -255,7 +235,6 @@
         private System.Windows.Forms.Panel navigationpanel;
         private System.Windows.Forms.Panel mainpanel;
         private System.Windows.Forms.Button addlecturerbtn;
-        private System.Windows.Forms.Button editlecturerbtn;
         private System.Windows.Forms.Button viewlecturerbtn;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel4;
