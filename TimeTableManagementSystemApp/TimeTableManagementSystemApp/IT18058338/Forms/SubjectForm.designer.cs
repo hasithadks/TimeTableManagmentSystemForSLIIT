@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.panel2 = new System.Windows.Forms.Panel();
+            this.homeBtn = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.viewlecturerbtn = new System.Windows.Forms.Button();
             this.mainpanelsubject = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -41,7 +41,6 @@
             this.miniBtn = new System.Windows.Forms.PictureBox();
             this.closeBtn = new System.Windows.Forms.PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.homeBtn = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -56,11 +55,29 @@
             this.panel2.Controls.Add(this.homeBtn);
             this.panel2.Controls.Add(this.button2);
             this.panel2.Controls.Add(this.button1);
-            this.panel2.Controls.Add(this.viewlecturerbtn);
             this.panel2.Location = new System.Drawing.Point(0, 2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(224, 780);
             this.panel2.TabIndex = 1;
+            // 
+            // homeBtn
+            // 
+            this.homeBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.homeBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(43)))), ((int)(((byte)(104)))));
+            this.homeBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.homeBtn.FlatAppearance.BorderSize = 0;
+            this.homeBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.homeBtn.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.homeBtn.ForeColor = System.Drawing.Color.White;
+            this.homeBtn.Location = new System.Drawing.Point(5, 201);
+            this.homeBtn.Name = "homeBtn";
+            this.homeBtn.Size = new System.Drawing.Size(220, 40);
+            this.homeBtn.TabIndex = 16;
+            this.homeBtn.Text = "Home";
+            this.homeBtn.UseVisualStyleBackColor = false;
+            this.homeBtn.Click += new System.EventHandler(this.homeBtn_Click);
             // 
             // button2
             // 
@@ -70,7 +87,7 @@
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(4, 154);
+            this.button2.Location = new System.Drawing.Point(4, 103);
             this.button2.Margin = new System.Windows.Forms.Padding(0);
             this.button2.Name = "button2";
             this.button2.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -88,7 +105,7 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(4, 110);
+            this.button1.Location = new System.Drawing.Point(3, 152);
             this.button1.Margin = new System.Windows.Forms.Padding(0);
             this.button1.Name = "button1";
             this.button1.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -97,24 +114,6 @@
             this.button1.Text = "Add Subject";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // viewlecturerbtn
-            // 
-            this.viewlecturerbtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(43)))), ((int)(((byte)(104)))));
-            this.viewlecturerbtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.viewlecturerbtn.FlatAppearance.BorderSize = 0;
-            this.viewlecturerbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.viewlecturerbtn.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.viewlecturerbtn.ForeColor = System.Drawing.Color.White;
-            this.viewlecturerbtn.Location = new System.Drawing.Point(4, 198);
-            this.viewlecturerbtn.Margin = new System.Windows.Forms.Padding(0);
-            this.viewlecturerbtn.Name = "viewlecturerbtn";
-            this.viewlecturerbtn.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.viewlecturerbtn.Size = new System.Drawing.Size(220, 40);
-            this.viewlecturerbtn.TabIndex = 6;
-            this.viewlecturerbtn.Text = "Edit Subject";
-            this.viewlecturerbtn.UseVisualStyleBackColor = false;
-            this.viewlecturerbtn.Click += new System.EventHandler(this.viewlecturerbtn_Click);
             // 
             // mainpanelsubject
             // 
@@ -204,25 +203,6 @@
             this.panel3.Size = new System.Drawing.Size(5, 780);
             this.panel3.TabIndex = 1;
             // 
-            // homeBtn
-            // 
-            this.homeBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.homeBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(43)))), ((int)(((byte)(104)))));
-            this.homeBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.homeBtn.FlatAppearance.BorderSize = 0;
-            this.homeBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.homeBtn.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.homeBtn.ForeColor = System.Drawing.Color.White;
-            this.homeBtn.Location = new System.Drawing.Point(4, 241);
-            this.homeBtn.Name = "homeBtn";
-            this.homeBtn.Size = new System.Drawing.Size(220, 40);
-            this.homeBtn.TabIndex = 16;
-            this.homeBtn.Text = "Home";
-            this.homeBtn.UseVisualStyleBackColor = false;
-            this.homeBtn.Click += new System.EventHandler(this.homeBtn_Click);
-            // 
             // SubjectForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -255,7 +235,6 @@
         private System.Windows.Forms.Panel mainpanelsubject;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button viewlecturerbtn;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;

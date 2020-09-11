@@ -53,16 +53,25 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class1.cs" />
+    <Compile Include="Lecturer\LecturerClass.cs" />
+    <Compile Include="Lecturer\LecturerController.cs" />
+    <Compile Include="Lecturer\LecturerData.cs" />
     <Compile Include="Location\LocationBO.cs" />
     <Compile Include="Location\LocationController.cs" />
     <Compile Include="Location\LocationData.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StatisticF\StatisticBO.cs" />
+    <Compile Include="StatisticF\StatisticController.cs" />
+    <Compile Include="StatisticF\StatisticData.cs" />
     <Compile Include="Student\StudentController.cs" />
     <Compile Include="Student\StudentData.cs" />
     <Compile Include="Student\StudentModel.cs" />
     <Compile Include="Tag\TagController.cs" />
     <Compile Include="Tag\TagData.cs" />
     <Compile Include="Tag\TagModel.cs" />
+    <Compile Include="Subject\SubjectClass.cs" />
+    <Compile Include="Subject\SubjectController.cs" />
+    <Compile Include="Subject\SubjectData.cs" />
     <Compile Include="WorkingDays\WorkingDaysClass.cs" />
     <Compile Include="WorkingDays\WorkingDaysController.cs" />
     <Compile Include="WorkingDays\WorkingDaysData.cs" />

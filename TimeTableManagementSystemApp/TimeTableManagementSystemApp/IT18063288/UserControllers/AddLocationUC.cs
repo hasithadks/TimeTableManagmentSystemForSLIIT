@@ -62,7 +62,7 @@ namespace TimeTableManagementSystemApp.IT18063288.UserControllers
         {
             if(comboBoxBuilding.Text == "")
             {
-                
+                ErrorDialogBox.ShowDialog("Plaease Select a Building.", "Warning!!!");
             }
             else
             {
@@ -114,7 +114,7 @@ namespace TimeTableManagementSystemApp.IT18063288.UserControllers
             else
             {
 
-
+                ErrorDialogBox.ShowDialog("Plaease Select a Room.", "Warning!!!");
 
             }
             

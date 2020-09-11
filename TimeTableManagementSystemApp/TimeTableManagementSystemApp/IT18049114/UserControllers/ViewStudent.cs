@@ -23,6 +23,7 @@ namespace TimeTableManagementSystemApp.IT18049114.UserControllers
 
         }
 
+        //DataGrid View Function
         private void ViewStudent_Load(object sender, EventArgs e)
         {
             StudentController studentController = new StudentController();
@@ -57,6 +58,7 @@ namespace TimeTableManagementSystemApp.IT18049114.UserControllers
             //AddStudent.Show();
         }
 
+        //DataGrid Cell Click Function
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             var stId = dataGridView1.SelectedRows[0].Cells[0].Value.ToString();
@@ -67,10 +69,11 @@ namespace TimeTableManagementSystemApp.IT18049114.UserControllers
             var subgroupno = Convert.ToInt32(dataGridView1.SelectedRows[0].Cells[5].Value);
             var subgroupid = dataGridView1.SelectedRows[0].Cells[6].Value.ToString();
 
+            //Pass Row values to edit page function
             EditStudent editusercontroller = new EditStudent();
-
             editusercontroller.editStudentDetailsView(stId, yearsem, program, groupno,groupid, subgroupno, subgroupid);
 
+            //Redirect to Edit Page
             this.Hide();
             this.Parent.Controls.Add(editusercontroller);
         }

@@ -198,12 +198,6 @@
     <Compile Include="IT18058338\UserControllers\EditSubjectUC.designer.cs">
       <DependentUpon>EditSubjectUC.cs</DependentUpon>
     </Compile>
-    <Compile Include="IT18058338\UserControllers\UserControl1.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="IT18058338\UserControllers\UserControl1.Designer.cs">
-      <DependentUpon>UserControl1.cs</DependentUpon>
-    </Compile>
     <Compile Include="IT18058338\UserControllers\ViewLecturerUC.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -221,6 +215,12 @@
     </Compile>
     <Compile Include="IT18063288\Forms\LocationForm.Designer.cs">
       <DependentUpon>LocationForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IT18063288\Forms\Statistics.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IT18063288\Forms\Statistics.Designer.cs">
+      <DependentUpon>Statistics.cs</DependentUpon>
     </Compile>
     <Compile Include="IT18063288\UserControllers\AddLocationUC.cs">
       <SubType>UserControl</SubType>

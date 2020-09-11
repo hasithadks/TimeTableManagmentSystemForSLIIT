@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using BusinessLayers.Student;
+using TimeTableManagementSystemApp.CommonFiles;
 
 namespace TimeTableManagementSystemApp.IT18049114.UserControllers
 {
@@ -42,7 +43,7 @@ namespace TimeTableManagementSystemApp.IT18049114.UserControllers
                 acYear = 4;
             }else
             {
-                MessageBox.Show("Academic Year Error");
+                ErrorDialogBox.ShowDialog("Academic Year Error", "Warning!!!");
             }
 
             if (yearsem.Contains("S1"))
@@ -53,9 +54,10 @@ namespace TimeTableManagementSystemApp.IT18049114.UserControllers
                 acSem = 2;
             }else
             {
-                MessageBox.Show("Academic Semester Error");
+                ErrorDialogBox.ShowDialog("Academic Semester Error", "Warning!!!");
             }
 
+            //Assign existing values to fields
             editIDtext.Text = stId;
             editYearText.Text = acYear.ToString();
             editSemeserText.Text = acSem.ToString();
@@ -67,6 +69,7 @@ namespace TimeTableManagementSystemApp.IT18049114.UserControllers
             editSubGroupIdView.Text = subgroupid;
         }
 
+        //Edit Values Set Button Function
         private void EditSet_Click(object sender, EventArgs e)
         {
             var a = editYearText.Text;
@@ -75,25 +78,66 @@ namespace TimeTableManagementSystemApp.IT18049114.UserControllers
             var d = Convert.ToInt32(editGroupNoText.Value);
             var f = Convert.ToInt32(editSubGroupNo.Value);
 
-            editYearSemView.Text = "Y" + a + "." + "S" + b;
-            editGroupIdView.Text = "Y" + a + "." + "S" + b + "." + c + "." + d;
-            editSubGroupIdView.Text = "Y" + a + "." + "S" + b + "." + c + "." + d + "." + f;
+            if (a != "" && b != "" && c != "" && d != 0 && f != 0)
+            {
+                editYearSemView.Text = "Y" + a + "." + "S" + b;
+                editGroupIdView.Text = "Y" + a + "." + "S" + b + "." + c + "." + 0 + d;
+                editSubGroupIdView.Text = "Y" + a + "." + "S" + b + "." + c + "." + 0 + d + "." + f;
+            }
+            else
+            {
+                ErrorDialogBox.ShowDialog("Please Fill All Fields", "Warning!!!");
+            }
         }
 
+        //Update Button Function
         private void editstdbut_Click(object sender, EventArgs e)
         {
-            StudentModel studentModel = new StudentModel(editIDtext.Text, editYearSemView.Text, editProgrammeText.Text, Convert.ToInt32(editGroupNoText.Value), editGroupIdView.Text, Convert.ToInt32(editSubGroupNo.Value), editSubGroupIdView.Text);
+            if (editIDtext.Text != "" && editProgrammeText.Text != "" && editGroupNoText.Value != 0 && editSubGroupNo.Value != 0)
+            {
 
-            StudentController studentController = new StudentController();
-            studentController.updateStudentDetails(studentModel);
+                StudentModel studentModel = new StudentModel(editIDtext.Text, editYearSemView.Text, editProgrammeText.Text, Convert.ToInt32(editGroupNoText.Value), editGroupIdView.Text, Convert.ToInt32(editSubGroupNo.Value), editSubGroupIdView.Text);
+
+                StudentController studentController = new StudentController();
+                studentController.updateStudentDetails(studentModel);
+
+                //Successfull message
+                SuccessfullMessageBox.ShowDialog("Student Details Updated Successfully!!!", "Success!!!");
+
+                //Redirect to View Page
+                ViewStudent viewStudent = new ViewStudent();
+                this.Hide();
+                this.Parent.Controls.Add(viewStudent);
+            }
+            else
+            {
+                ErrorDialogBox.ShowDialog("Please Enter All Fields", "Warning!!!");
+            }
         }
 
+        //Delete Button Function
         private void deletebut_Click(object sender, EventArgs e)
         {
-            StudentModel studentModel = new StudentModel(editIDtext.Text, editYearSemView.Text, editProgrammeText.Text, Convert.ToInt32(editGroupNoText.Value), editGroupIdView.Text, Convert.ToInt32(editSubGroupNo.Value), editSubGroupIdView.Text);
+            if (editIDtext.Text != "" && editProgrammeText.Text != "" && editGroupNoText.Value != 0 && editSubGroupNo.Value != 0)
+            {
+                StudentModel studentModel = new StudentModel(editIDtext.Text, editYearSemView.Text, editProgrammeText.Text, Convert.ToInt32(editGroupNoText.Value), editGroupIdView.Text, Convert.ToInt32(editSubGroupNo.Value), editSubGroupIdView.Text);
 
-            StudentController studentController = new StudentController();
-            studentController.deleteStudentDetails(studentModel);
+                StudentController studentController = new StudentController();
+                studentController.deleteStudentDetails(studentModel);
+
+                //Successfull message
+                SuccessfullMessageBox.ShowDialog("Student Details Deleted!!!", "DELETE!!!");
+
+
+                //Redirect to View Page
+                ViewStudent viewStudent = new ViewStudent();
+                this.Hide();
+                this.Parent.Controls.Add(viewStudent);
+            }
+            else
+            {
+                ErrorDialogBox.ShowDialog("Something Wrong. Cannot Delete", "Warning!!!");
+            }
         }
     }
 }
