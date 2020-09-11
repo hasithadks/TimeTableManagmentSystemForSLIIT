@@ -57,6 +57,9 @@
     <Compile Include="Location\LocationController.cs" />
     <Compile Include="Location\LocationData.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StatisticF\StatisticBO.cs" />
+    <Compile Include="StatisticF\StatisticController.cs" />
+    <Compile Include="StatisticF\StatisticData.cs" />
     <Compile Include="Student\StudentController.cs" />
     <Compile Include="Student\StudentData.cs" />
     <Compile Include="Student\StudentModel.cs" />

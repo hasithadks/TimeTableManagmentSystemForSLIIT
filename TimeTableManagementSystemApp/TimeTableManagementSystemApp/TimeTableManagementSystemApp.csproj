@@ -222,6 +222,12 @@
     <Compile Include="IT18063288\Forms\LocationForm.Designer.cs">
       <DependentUpon>LocationForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="IT18063288\Forms\Statistics.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IT18063288\Forms\Statistics.Designer.cs">
+      <DependentUpon>Statistics.cs</DependentUpon>
+    </Compile>
     <Compile Include="IT18063288\UserControllers\AddLocationUC.cs">
       <SubType>UserControl</SubType>
     </Compile>
