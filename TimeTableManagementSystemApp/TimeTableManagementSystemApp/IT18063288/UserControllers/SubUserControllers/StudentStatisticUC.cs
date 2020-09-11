@@ -54,6 +54,12 @@ namespace TimeTableManagementSystemApp.IT18063288.UserControllers.SubUserControl
             }
             else
             {
+                if(comboYear.Text == "" && comboBoxSemester.Text == "" && comboBoxProgramme.Text == "")
+                {
+                    ErrorDialogBox.ShowDialog("Please select atleast One of These, \n Year ,  Semester or Program.", "Warning!!!");
+                }
+
+
                 if(comboYear.Text != "" && comboBoxSemester.Text != "")
                 {
                     
@@ -416,6 +422,42 @@ namespace TimeTableManagementSystemApp.IT18063288.UserControllers.SubUserControl
 
         }
 
-        
+        private void btnEditLocationUC_Click(object sender, EventArgs e)
+        {
+            
+            string studentId = txtStudentId.Text;
+
+            StatisticBO statisticBO = new StatisticBO();
+
+            statisticBO.StudentID = studentId;
+
+            StatisticController statisticController = new StatisticController();
+            List<StudentDetail> studentDetails = statisticController.GetStudentDataFromID(statisticBO);
+
+            dataGridViewStatistic.DataSource = studentDetails;
+
+            lblCount.Text = studentDetails.Count.ToString();
+
+
+
+        }
+
+        private void btnStudentSearch_Click(object sender, EventArgs e)
+        {
+            string year = SetYear(comboYear.SelectedIndex);
+            string semester = SetSemester(comboBoxSemester.SelectedIndex);
+            string YS = year + "." + semester;
+            string programme = comboBoxProgramme.Text;
+
+            StatisticBO statisticBO = new StatisticBO();
+            statisticBO.Year = year;
+            statisticBO.Semester = semester;
+            statisticBO.AcadmicY_S = YS;
+            statisticBO.Programme = programme;
+            statisticBO.Group =int.Parse(comboBoxGroup.Text);
+            statisticBO.SubGroup = int.Parse(comboBoxSubGroup.Text);
+
+
+        }
     }
 }

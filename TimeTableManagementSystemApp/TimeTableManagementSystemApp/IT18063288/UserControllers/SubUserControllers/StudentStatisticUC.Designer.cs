@@ -32,20 +32,18 @@
             this.dataGridViewStatistic = new System.Windows.Forms.DataGridView();
             this.btnEditLocationUC = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtStudentId = new System.Windows.Forms.TextBox();
             this.comboBoxSemester = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.comboBoxProgramme = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.comboYear = new System.Windows.Forms.ComboBox();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.comboBoxGroup = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
+            this.comboBoxSubGroup = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnStudentSearch = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
             this.lblCount = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewStatistic)).BeginInit();
@@ -90,6 +88,7 @@
             this.btnEditLocationUC.TabIndex = 38;
             this.btnEditLocationUC.Text = "Search";
             this.btnEditLocationUC.UseVisualStyleBackColor = false;
+            this.btnEditLocationUC.Click += new System.EventHandler(this.btnEditLocationUC_Click);
             // 
             // label6
             // 
@@ -102,34 +101,14 @@
             this.label6.TabIndex = 37;
             this.label6.Text = "Student ID :";
             // 
-            // textBox2
+            // txtStudentId
             // 
-            this.textBox2.BackColor = System.Drawing.Color.White;
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(799, 30);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(189, 26);
-            this.textBox2.TabIndex = 36;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(670, 33);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(120, 19);
-            this.label4.TabIndex = 35;
-            this.label4.Text = "Student Name :";
-            // 
-            // textBox1
-            // 
-            this.textBox1.BackColor = System.Drawing.Color.White;
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(799, 71);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(189, 26);
-            this.textBox1.TabIndex = 34;
+            this.txtStudentId.BackColor = System.Drawing.Color.White;
+            this.txtStudentId.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtStudentId.Location = new System.Drawing.Point(799, 71);
+            this.txtStudentId.Name = "txtStudentId";
+            this.txtStudentId.Size = new System.Drawing.Size(189, 26);
+            this.txtStudentId.TabIndex = 34;
             // 
             // comboBoxSemester
             // 
@@ -208,11 +187,11 @@
             this.comboYear.Size = new System.Drawing.Size(195, 27);
             this.comboYear.TabIndex = 28;
             // 
-            // comboBox3
+            // comboBoxGroup
             // 
-            this.comboBox3.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Items.AddRange(new object[] {
+            this.comboBoxGroup.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxGroup.FormattingEnabled = true;
+            this.comboBoxGroup.Items.AddRange(new object[] {
             "01",
             "02",
             "03",
@@ -227,10 +206,10 @@
             "12",
             "13",
             "14"});
-            this.comboBox3.Location = new System.Drawing.Point(483, 31);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(157, 27);
-            this.comboBox3.TabIndex = 41;
+            this.comboBoxGroup.Location = new System.Drawing.Point(483, 31);
+            this.comboBoxGroup.Name = "comboBoxGroup";
+            this.comboBoxGroup.Size = new System.Drawing.Size(157, 27);
+            this.comboBoxGroup.TabIndex = 41;
             // 
             // label5
             // 
@@ -243,19 +222,19 @@
             this.label5.TabIndex = 42;
             this.label5.Text = "Group : ";
             // 
-            // comboBox4
+            // comboBoxSubGroup
             // 
-            this.comboBox4.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Items.AddRange(new object[] {
+            this.comboBoxSubGroup.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxSubGroup.FormattingEnabled = true;
+            this.comboBoxSubGroup.Items.AddRange(new object[] {
             "1",
             "2",
             "3",
             "4"});
-            this.comboBox4.Location = new System.Drawing.Point(483, 71);
-            this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(157, 27);
-            this.comboBox4.TabIndex = 43;
+            this.comboBoxSubGroup.Location = new System.Drawing.Point(483, 71);
+            this.comboBoxSubGroup.Name = "comboBoxSubGroup";
+            this.comboBoxSubGroup.Size = new System.Drawing.Size(157, 27);
+            this.comboBoxSubGroup.TabIndex = 43;
             // 
             // label7
             // 
@@ -268,20 +247,21 @@
             this.label7.TabIndex = 44;
             this.label7.Text = "Sub Group : ";
             // 
-            // button2
+            // btnStudentSearch
             // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(43)))), ((int)(((byte)(104)))));
-            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button2.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(483, 107);
-            this.button2.Margin = new System.Windows.Forms.Padding(0);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(157, 41);
-            this.button2.TabIndex = 45;
-            this.button2.Text = "Search";
-            this.button2.UseVisualStyleBackColor = false;
+            this.btnStudentSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(43)))), ((int)(((byte)(104)))));
+            this.btnStudentSearch.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnStudentSearch.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnStudentSearch.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnStudentSearch.ForeColor = System.Drawing.Color.White;
+            this.btnStudentSearch.Location = new System.Drawing.Point(483, 107);
+            this.btnStudentSearch.Margin = new System.Windows.Forms.Padding(0);
+            this.btnStudentSearch.Name = "btnStudentSearch";
+            this.btnStudentSearch.Size = new System.Drawing.Size(157, 41);
+            this.btnStudentSearch.TabIndex = 45;
+            this.btnStudentSearch.Text = "Search";
+            this.btnStudentSearch.UseVisualStyleBackColor = false;
+            this.btnStudentSearch.Click += new System.EventHandler(this.btnStudentSearch_Click);
             // 
             // label8
             // 
@@ -312,18 +292,16 @@
             this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.lblCount);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.btnStudentSearch);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.comboBox4);
+            this.Controls.Add(this.comboBoxSubGroup);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.comboBox3);
+            this.Controls.Add(this.comboBoxGroup);
             this.Controls.Add(this.BtnYSPsearch01);
             this.Controls.Add(this.dataGridViewStatistic);
             this.Controls.Add(this.btnEditLocationUC);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtStudentId);
             this.Controls.Add(this.comboBoxSemester);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.comboBoxProgramme);
@@ -344,20 +322,18 @@
         private System.Windows.Forms.DataGridView dataGridViewStatistic;
         private System.Windows.Forms.Button btnEditLocationUC;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtStudentId;
         private System.Windows.Forms.ComboBox comboBoxSemester;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ComboBox comboBoxProgramme;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox comboYear;
-        private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.ComboBox comboBoxGroup;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.ComboBox comboBox4;
+        private System.Windows.Forms.ComboBox comboBoxSubGroup;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnStudentSearch;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label lblCount;
     }

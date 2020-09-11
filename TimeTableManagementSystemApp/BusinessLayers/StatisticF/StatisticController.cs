@@ -26,5 +26,11 @@ namespace BusinessLayers.StatisticF
             StatisticData statisticData = new StatisticData();
             return statisticData.GetYearSemesterStudentData(statisticBO);
         }
+
+        public List<DataLayer.StudentDetail> GetStudentDataFromID(StatisticBO statisticBO)
+        {
+            StatisticData statisticData = new StatisticData();
+            return statisticData.GetStudentDataFromID(statisticBO);
+        }
     }
 }

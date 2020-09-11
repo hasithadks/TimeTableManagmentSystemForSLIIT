@@ -52,6 +52,20 @@ namespace BusinessLayers.StatisticF
 
         }
 
+        public List<StudentDetail> GetStudentDataFromID(StatisticBO statisticBO)
+        {
+
+            using (var context = new TimetableManagementSystemEntities2())
+            {
+
+                List<StudentDetail> multiple = context.StudentDetails.Where(q => q.StudentId == statisticBO.StudentID).ToList();
+
+
+                return multiple;
+            }
+
+        }
+
 
     }
 }
