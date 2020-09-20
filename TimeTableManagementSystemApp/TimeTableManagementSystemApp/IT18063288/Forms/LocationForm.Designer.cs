@@ -33,27 +33,27 @@
             this.btnAddLocation = new System.Windows.Forms.Button();
             this.btnStatistic = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.panelLeft = new System.Windows.Forms.Button();
             this.homeBtn = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.panelLeft = new System.Windows.Forms.Button();
-            this.closeBtn = new System.Windows.Forms.PictureBox();
-            this.miniBtn = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.panel4 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.topPanel = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.closeBtn = new System.Windows.Forms.PictureBox();
+            this.miniBtn = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.closeBtn)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.miniBtn)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel4.SuspendLayout();
             this.topPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.closeBtn)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.miniBtn)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // btnViewLocation
@@ -139,6 +139,31 @@
             this.panel2.Size = new System.Drawing.Size(224, 780);
             this.panel2.TabIndex = 1;
             // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.White;
+            this.panel4.Controls.Add(this.pictureBox1);
+            this.panel4.Location = new System.Drawing.Point(6, 3);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(218, 100);
+            this.panel4.TabIndex = 10;
+            // 
+            // panelLeft
+            // 
+            this.panelLeft.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(43)))), ((int)(((byte)(104)))));
+            this.panelLeft.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.panelLeft.FlatAppearance.BorderSize = 0;
+            this.panelLeft.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.panelLeft.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panelLeft.ForeColor = System.Drawing.Color.White;
+            this.panelLeft.Location = new System.Drawing.Point(214, 110);
+            this.panelLeft.Margin = new System.Windows.Forms.Padding(0);
+            this.panelLeft.Name = "panelLeft";
+            this.panelLeft.Padding = new System.Windows.Forms.Padding(3);
+            this.panelLeft.Size = new System.Drawing.Size(10, 40);
+            this.panelLeft.TabIndex = 3;
+            this.panelLeft.UseVisualStyleBackColor = false;
+            // 
             // homeBtn
             // 
             this.homeBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -165,63 +190,6 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(10, 780);
             this.panel3.TabIndex = 13;
-            // 
-            // panelLeft
-            // 
-            this.panelLeft.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(43)))), ((int)(((byte)(104)))));
-            this.panelLeft.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.panelLeft.FlatAppearance.BorderSize = 0;
-            this.panelLeft.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.panelLeft.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panelLeft.ForeColor = System.Drawing.Color.White;
-            this.panelLeft.Location = new System.Drawing.Point(214, 110);
-            this.panelLeft.Margin = new System.Windows.Forms.Padding(0);
-            this.panelLeft.Name = "panelLeft";
-            this.panelLeft.Padding = new System.Windows.Forms.Padding(3);
-            this.panelLeft.Size = new System.Drawing.Size(10, 40);
-            this.panelLeft.TabIndex = 3;
-            this.panelLeft.UseVisualStyleBackColor = false;
-            // 
-            // closeBtn
-            // 
-            this.closeBtn.Image = global::TimeTableManagementSystemApp.Properties.Resources.closebtn;
-            this.closeBtn.Location = new System.Drawing.Point(1244, -1);
-            this.closeBtn.Name = "closeBtn";
-            this.closeBtn.Size = new System.Drawing.Size(35, 25);
-            this.closeBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.closeBtn.TabIndex = 9;
-            this.closeBtn.TabStop = false;
-            this.closeBtn.Click += new System.EventHandler(this.closeBtn_Click);
-            // 
-            // miniBtn
-            // 
-            this.miniBtn.Image = global::TimeTableManagementSystemApp.Properties.Resources.minibtn;
-            this.miniBtn.Location = new System.Drawing.Point(1162, -1);
-            this.miniBtn.Name = "miniBtn";
-            this.miniBtn.Size = new System.Drawing.Size(35, 25);
-            this.miniBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.miniBtn.TabIndex = 7;
-            this.miniBtn.TabStop = false;
-            this.miniBtn.Click += new System.EventHandler(this.miniBtn_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::TimeTableManagementSystemApp.Properties.Resources.SLIIT;
-            this.pictureBox1.Location = new System.Drawing.Point(17, 12);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(189, 76);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 8;
-            this.pictureBox1.TabStop = false;
-            // 
-            // panel4
-            // 
-            this.panel4.BackColor = System.Drawing.Color.White;
-            this.panel4.Controls.Add(this.pictureBox1);
-            this.panel4.Location = new System.Drawing.Point(6, 3);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(218, 100);
-            this.panel4.TabIndex = 10;
             // 
             // label1
             // 
@@ -265,6 +233,7 @@
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox3.TabIndex = 7;
             this.pictureBox3.TabStop = false;
+            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
             // 
             // pictureBox4
             // 
@@ -276,6 +245,38 @@
             this.pictureBox4.TabIndex = 9;
             this.pictureBox4.TabStop = false;
             this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click);
+            // 
+            // closeBtn
+            // 
+            this.closeBtn.Image = global::TimeTableManagementSystemApp.Properties.Resources.closebtn;
+            this.closeBtn.Location = new System.Drawing.Point(1244, -1);
+            this.closeBtn.Name = "closeBtn";
+            this.closeBtn.Size = new System.Drawing.Size(35, 25);
+            this.closeBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.closeBtn.TabIndex = 9;
+            this.closeBtn.TabStop = false;
+            this.closeBtn.Click += new System.EventHandler(this.closeBtn_Click);
+            // 
+            // miniBtn
+            // 
+            this.miniBtn.Image = global::TimeTableManagementSystemApp.Properties.Resources.minibtn;
+            this.miniBtn.Location = new System.Drawing.Point(1162, -1);
+            this.miniBtn.Name = "miniBtn";
+            this.miniBtn.Size = new System.Drawing.Size(35, 25);
+            this.miniBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.miniBtn.TabIndex = 7;
+            this.miniBtn.TabStop = false;
+            this.miniBtn.Click += new System.EventHandler(this.miniBtn_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::TimeTableManagementSystemApp.Properties.Resources.SLIIT;
+            this.pictureBox1.Location = new System.Drawing.Point(17, 12);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(189, 76);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 8;
+            this.pictureBox1.TabStop = false;
             // 
             // LocationForm
             // 
@@ -293,15 +294,15 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "LocationForm";
             this.panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.closeBtn)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.miniBtn)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel4.ResumeLayout(false);
             this.topPanel.ResumeLayout(false);
             this.topPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.closeBtn)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.miniBtn)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }

@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using TimeTableManagementSystemApp.IT18049114.Forms;
 using TimeTableManagementSystemApp.IT18058338.Forms;
 using TimeTableManagementSystemApp.IT18063288;
+using TimeTableManagementSystemApp.IT18063288.Forms;
 
 namespace TimeTableManagementSystemApp
 {
@@ -39,11 +40,7 @@ namespace TimeTableManagementSystemApp
             att.Show();
         }
 
-        private void studentBtn_Click(object sender, EventArgs e)
-        {
-        
-        }
-
+       
         private void daysBtn_Click(object sender, EventArgs e)
         {
             this.Hide();
@@ -69,6 +66,13 @@ namespace TimeTableManagementSystemApp
             this.Hide();
             LecturerForm att = new LecturerForm();
             att.Show();
+        }
+
+        private void StatisticBtn_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Statistics statistics = new Statistics();
+            statistics.Show();
         }
     }
 }

@@ -43,7 +43,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.studentBtn = new System.Windows.Forms.Button();
+            this.StatisticBtn = new System.Windows.Forms.Button();
             this.lecBtn = new System.Windows.Forms.Button();
             this.topPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.maxBtn)).BeginInit();
@@ -234,21 +234,21 @@
             this.label4.TabIndex = 70;
             this.label4.Text = "2020";
             // 
-            // studentBtn
+            // StatisticBtn
             // 
-            this.studentBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(43)))), ((int)(((byte)(104)))));
-            this.studentBtn.FlatAppearance.BorderSize = 0;
-            this.studentBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.studentBtn.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.studentBtn.ForeColor = System.Drawing.Color.White;
-            this.studentBtn.Location = new System.Drawing.Point(922, 328);
-            this.studentBtn.Margin = new System.Windows.Forms.Padding(2);
-            this.studentBtn.Name = "studentBtn";
-            this.studentBtn.Size = new System.Drawing.Size(220, 40);
-            this.studentBtn.TabIndex = 10;
-            this.studentBtn.Text = "Statistics";
-            this.studentBtn.UseVisualStyleBackColor = false;
-            this.studentBtn.Click += new System.EventHandler(this.studentBtn_Click);
+            this.StatisticBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(43)))), ((int)(((byte)(104)))));
+            this.StatisticBtn.FlatAppearance.BorderSize = 0;
+            this.StatisticBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.StatisticBtn.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.StatisticBtn.ForeColor = System.Drawing.Color.White;
+            this.StatisticBtn.Location = new System.Drawing.Point(922, 328);
+            this.StatisticBtn.Margin = new System.Windows.Forms.Padding(2);
+            this.StatisticBtn.Name = "StatisticBtn";
+            this.StatisticBtn.Size = new System.Drawing.Size(220, 40);
+            this.StatisticBtn.TabIndex = 10;
+            this.StatisticBtn.Text = "Statistics";
+            this.StatisticBtn.UseVisualStyleBackColor = false;
+            this.StatisticBtn.Click += new System.EventHandler(this.StatisticBtn_Click);
             // 
             // lecBtn
             // 
@@ -277,7 +277,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.topPanel);
-            this.Controls.Add(this.studentBtn);
+            this.Controls.Add(this.StatisticBtn);
             this.Controls.Add(this.SubjectBtn);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.locationManagementBtn);
@@ -315,7 +315,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Button studentBtn;
+        private System.Windows.Forms.Button StatisticBtn;
         private System.Windows.Forms.Button lecBtn;
     }
 }

@@ -83,5 +83,10 @@ namespace TimeTableManagementSystemApp.IT18063288
         {
             Environment.Exit(0);
         }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

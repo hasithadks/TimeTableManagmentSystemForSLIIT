@@ -365,6 +365,9 @@
     <EmbeddedResource Include="IT18063288\Forms\LocationForm.resx">
       <DependentUpon>LocationForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="IT18063288\Forms\Statistics.resx">
+      <DependentUpon>Statistics.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="IT18063288\UserControllers\AddLocationUC.resx">
       <DependentUpon>AddLocationUC.cs</DependentUpon>
     </EmbeddedResource>
