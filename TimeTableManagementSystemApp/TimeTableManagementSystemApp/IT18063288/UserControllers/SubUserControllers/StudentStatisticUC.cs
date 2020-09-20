@@ -28,6 +28,19 @@ namespace TimeTableManagementSystemApp.IT18063288.UserControllers.SubUserControl
             comboBoxSubGroup.Visible = false;
             btnStudentSearch.Visible = false;
 
+            StatisticController statisticController2 = new StatisticController();
+            List<StudentDetail> StudentDetailsall;
+            StudentDetailsall = statisticController2.GetYearSemesterStudentData();
+
+            if (StudentDetailsall.Count == 0)
+            {
+                ErrorDialogBox.ShowDialog("No Records Found! \nPlease Add Students to the System.", "Sorry!!!");
+            }
+            dataGridViewStatistic.DataSource = StudentDetailsall;
+
+            lblCount.Text = StudentDetailsall.Count.ToString();
+
+
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -73,7 +86,7 @@ namespace TimeTableManagementSystemApp.IT18063288.UserControllers.SubUserControl
                     
 
                     StatisticController statisticController = new StatisticController();
-                    List<StudentDetail> studentDetails = statisticController.GetYearSemesterStudentData(statisticBO);
+                    List<StudentDetail> studentDetails = statisticController.GetYearSemesterStudentData();
 
                     List<StudentDetail> StYear01Sem01 = new List<StudentDetail>();
                     List<StudentDetail> StYear01Sem02 = new List<StudentDetail>();
@@ -193,7 +206,7 @@ namespace TimeTableManagementSystemApp.IT18063288.UserControllers.SubUserControl
                 {
 
                     StatisticController statisticController = new StatisticController();
-                    List<StudentDetail> studentDetails = statisticController.GetYearSemesterStudentData(statisticBO);
+                    List<StudentDetail> studentDetails = statisticController.GetYearSemesterStudentData();
 
                     List<StudentDetail> StYear01 = new List<StudentDetail>();
                     List<StudentDetail> StYear02 = new List<StudentDetail>();
@@ -266,7 +279,7 @@ namespace TimeTableManagementSystemApp.IT18063288.UserControllers.SubUserControl
                 {
 
                     StatisticController statisticController = new StatisticController();
-                    List<StudentDetail> studentDetails = statisticController.GetYearSemesterStudentData(statisticBO);
+                    List<StudentDetail> studentDetails = statisticController.GetYearSemesterStudentData();
 
                     List<StudentDetail> StYear01 = new List<StudentDetail>();
                     List<StudentDetail> StYear02 = new List<StudentDetail>();
@@ -327,7 +340,7 @@ namespace TimeTableManagementSystemApp.IT18063288.UserControllers.SubUserControl
                     SuccessfullMessageBox.ShowDialog("These Records are Not meaningful. \n Please Select both Year and Semester!!!", "Information");
 
                     StatisticController statisticController = new StatisticController();
-                    List<StudentDetail> studentDetails = statisticController.GetYearSemesterStudentData(statisticBO);
+                    List<StudentDetail> studentDetails = statisticController.GetYearSemesterStudentData();
 
                     List<StudentDetail> StSem01 = new List<StudentDetail>();
                     List<StudentDetail> StSem02 = new List<StudentDetail>();

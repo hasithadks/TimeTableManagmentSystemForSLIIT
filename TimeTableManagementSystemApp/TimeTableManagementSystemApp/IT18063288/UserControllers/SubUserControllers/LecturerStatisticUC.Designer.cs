@@ -28,37 +28,41 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.comboBoxBuilding = new System.Windows.Forms.ComboBox();
+            this.comboBoxFaculty = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.comboBoxCenter = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.comboBoxLevel = new System.Windows.Forms.ComboBox();
+            this.textId = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.btnEditLocationUC = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.button1 = new System.Windows.Forms.Button();
-            this.label9 = new System.Windows.Forms.Label();
+            this.btnSearchNameID = new System.Windows.Forms.Button();
+            this.dataGridLecStatistic = new System.Windows.Forms.DataGridView();
+            this.btnLecStatSearch01 = new System.Windows.Forms.Button();
+            this.lblLecCount = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.comboBoxLecName = new System.Windows.Forms.ComboBox();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridLecStatistic)).BeginInit();
             this.SuspendLayout();
             // 
-            // comboBoxBuilding
+            // comboBoxFaculty
             // 
-            this.comboBoxBuilding.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBoxBuilding.FormattingEnabled = true;
-            this.comboBoxBuilding.Items.AddRange(new object[] {
-            "Computing Faculty",
-            "Engineering Faculty",
-            "Business Management Faculty",
-            "Humanities & Sciences"});
-            this.comboBoxBuilding.Location = new System.Drawing.Point(125, 26);
-            this.comboBoxBuilding.Name = "comboBoxBuilding";
-            this.comboBoxBuilding.Size = new System.Drawing.Size(217, 27);
-            this.comboBoxBuilding.TabIndex = 11;
+            this.comboBoxFaculty.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.comboBoxFaculty.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.comboBoxFaculty.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxFaculty.FormattingEnabled = true;
+            this.comboBoxFaculty.Items.AddRange(new object[] {
+            "Faculty Of Computing",
+            "Faculty Of Engineering",
+            "Faculty Of Business",
+            "Faculty Of Humanities & Science",
+            "School Of Architecture",
+            "Other"});
+            this.comboBoxFaculty.Location = new System.Drawing.Point(125, 26);
+            this.comboBoxFaculty.Name = "comboBoxFaculty";
+            this.comboBoxFaculty.Size = new System.Drawing.Size(217, 27);
+            this.comboBoxFaculty.TabIndex = 11;
             // 
             // label1
             // 
@@ -82,20 +86,20 @@
             this.label2.TabIndex = 13;
             this.label2.Text = "Center : ";
             // 
-            // comboBox1
+            // comboBoxCenter
             // 
-            this.comboBox1.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.comboBoxCenter.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxCenter.FormattingEnabled = true;
+            this.comboBoxCenter.Items.AddRange(new object[] {
             "Malabe Center",
             "Metro Center",
             "Matara Center",
             "Kurunegala Center",
             "Jaffna Center"});
-            this.comboBox1.Location = new System.Drawing.Point(125, 102);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(217, 27);
-            this.comboBox1.TabIndex = 14;
+            this.comboBoxCenter.Location = new System.Drawing.Point(125, 102);
+            this.comboBoxCenter.Name = "comboBoxCenter";
+            this.comboBoxCenter.Size = new System.Drawing.Size(217, 27);
+            this.comboBoxCenter.TabIndex = 14;
             // 
             // label3
             // 
@@ -109,11 +113,11 @@
             this.label3.Text = "Level :";
             this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
-            // comboBox2
+            // comboBoxLevel
             // 
-            this.comboBox2.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
+            this.comboBoxLevel.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxLevel.FormattingEnabled = true;
+            this.comboBoxLevel.Items.AddRange(new object[] {
             "1",
             "2",
             "3",
@@ -121,19 +125,19 @@
             "5",
             "6",
             "7"});
-            this.comboBox2.Location = new System.Drawing.Point(125, 63);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(217, 27);
-            this.comboBox2.TabIndex = 16;
+            this.comboBoxLevel.Location = new System.Drawing.Point(125, 63);
+            this.comboBoxLevel.Name = "comboBoxLevel";
+            this.comboBoxLevel.Size = new System.Drawing.Size(217, 27);
+            this.comboBoxLevel.TabIndex = 16;
             // 
-            // textBox1
+            // textId
             // 
-            this.textBox1.BackColor = System.Drawing.Color.White;
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(777, 60);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(217, 26);
-            this.textBox1.TabIndex = 21;
+            this.textId.BackColor = System.Drawing.Color.White;
+            this.textId.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textId.Location = new System.Drawing.Point(777, 60);
+            this.textId.Name = "textId";
+            this.textId.Size = new System.Drawing.Size(217, 26);
+            this.textId.TabIndex = 21;
             // 
             // label4
             // 
@@ -147,15 +151,6 @@
             this.label4.Text = "Lecutrer Name :";
             this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
-            // textBox2
-            // 
-            this.textBox2.BackColor = System.Drawing.Color.White;
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(777, 19);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(217, 26);
-            this.textBox2.TabIndex = 23;
-            // 
             // label6
             // 
             this.label6.AutoSize = true;
@@ -167,54 +162,57 @@
             this.label6.TabIndex = 24;
             this.label6.Text = "Lecutrer ID :";
             // 
-            // btnEditLocationUC
+            // btnSearchNameID
             // 
-            this.btnEditLocationUC.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(43)))), ((int)(((byte)(104)))));
-            this.btnEditLocationUC.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnEditLocationUC.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnEditLocationUC.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEditLocationUC.ForeColor = System.Drawing.Color.White;
-            this.btnEditLocationUC.Location = new System.Drawing.Point(777, 102);
-            this.btnEditLocationUC.Margin = new System.Windows.Forms.Padding(0);
-            this.btnEditLocationUC.Name = "btnEditLocationUC";
-            this.btnEditLocationUC.Size = new System.Drawing.Size(217, 41);
-            this.btnEditLocationUC.TabIndex = 25;
-            this.btnEditLocationUC.Text = "Search";
-            this.btnEditLocationUC.UseVisualStyleBackColor = false;
+            this.btnSearchNameID.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(43)))), ((int)(((byte)(104)))));
+            this.btnSearchNameID.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnSearchNameID.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSearchNameID.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSearchNameID.ForeColor = System.Drawing.Color.White;
+            this.btnSearchNameID.Location = new System.Drawing.Point(777, 102);
+            this.btnSearchNameID.Margin = new System.Windows.Forms.Padding(0);
+            this.btnSearchNameID.Name = "btnSearchNameID";
+            this.btnSearchNameID.Size = new System.Drawing.Size(217, 41);
+            this.btnSearchNameID.TabIndex = 25;
+            this.btnSearchNameID.Text = "Search";
+            this.btnSearchNameID.UseVisualStyleBackColor = false;
+            this.btnSearchNameID.Click += new System.EventHandler(this.btnSearchNameID_Click);
             // 
-            // dataGridView1
+            // dataGridLecStatistic
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(125, 198);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(869, 319);
-            this.dataGridView1.TabIndex = 26;
+            this.dataGridLecStatistic.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridLecStatistic.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridLecStatistic.Location = new System.Drawing.Point(125, 198);
+            this.dataGridLecStatistic.Name = "dataGridLecStatistic";
+            this.dataGridLecStatistic.Size = new System.Drawing.Size(869, 319);
+            this.dataGridLecStatistic.TabIndex = 26;
             // 
-            // button1
+            // btnLecStatSearch01
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(43)))), ((int)(((byte)(104)))));
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(125, 141);
-            this.button1.Margin = new System.Windows.Forms.Padding(0);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(217, 41);
-            this.button1.TabIndex = 27;
-            this.button1.Text = "Search";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnLecStatSearch01.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(43)))), ((int)(((byte)(104)))));
+            this.btnLecStatSearch01.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnLecStatSearch01.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnLecStatSearch01.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLecStatSearch01.ForeColor = System.Drawing.Color.White;
+            this.btnLecStatSearch01.Location = new System.Drawing.Point(125, 141);
+            this.btnLecStatSearch01.Margin = new System.Windows.Forms.Padding(0);
+            this.btnLecStatSearch01.Name = "btnLecStatSearch01";
+            this.btnLecStatSearch01.Size = new System.Drawing.Size(217, 41);
+            this.btnLecStatSearch01.TabIndex = 27;
+            this.btnLecStatSearch01.Text = "Search";
+            this.btnLecStatSearch01.UseVisualStyleBackColor = false;
+            this.btnLecStatSearch01.Click += new System.EventHandler(this.btnLecStatSearch01_Click);
             // 
-            // label9
+            // lblLecCount
             // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.DimGray;
-            this.label9.Location = new System.Drawing.Point(973, 176);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(18, 19);
-            this.label9.TabIndex = 49;
-            this.label9.Text = "0";
+            this.lblLecCount.AutoSize = true;
+            this.lblLecCount.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLecCount.ForeColor = System.Drawing.Color.DimGray;
+            this.lblLecCount.Location = new System.Drawing.Point(973, 176);
+            this.lblLecCount.Name = "lblLecCount";
+            this.lblLecCount.Size = new System.Drawing.Size(18, 19);
+            this.lblLecCount.TabIndex = 49;
+            this.lblLecCount.Text = "0";
             // 
             // label8
             // 
@@ -227,29 +225,47 @@
             this.label8.TabIndex = 48;
             this.label8.Text = "Count : ";
             // 
+            // comboBoxLecName
+            // 
+            this.comboBoxLecName.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.comboBoxLecName.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.comboBoxLecName.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxLecName.FormattingEnabled = true;
+            this.comboBoxLecName.Items.AddRange(new object[] {
+            "Faculty Of Computing",
+            "Faculty Of Engineering",
+            "Faculty Of Business",
+            "Faculty Of Humanities & Science",
+            "School Of Architecture",
+            "Other"});
+            this.comboBoxLecName.Location = new System.Drawing.Point(777, 22);
+            this.comboBoxLecName.Name = "comboBoxLecName";
+            this.comboBoxLecName.Size = new System.Drawing.Size(217, 27);
+            this.comboBoxLecName.TabIndex = 50;
+            // 
             // LecturerStatisticUC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.Controls.Add(this.label9);
+            this.Controls.Add(this.comboBoxLecName);
+            this.Controls.Add(this.lblLecCount);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.btnEditLocationUC);
+            this.Controls.Add(this.btnLecStatSearch01);
+            this.Controls.Add(this.dataGridLecStatistic);
+            this.Controls.Add(this.btnSearchNameID);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.textBox2);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.comboBox2);
+            this.Controls.Add(this.textId);
+            this.Controls.Add(this.comboBoxLevel);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.comboBoxCenter);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.comboBoxBuilding);
+            this.Controls.Add(this.comboBoxFaculty);
             this.Name = "LecturerStatisticUC";
             this.Size = new System.Drawing.Size(1021, 541);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridLecStatistic)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -257,20 +273,20 @@
 
         #endregion
 
-        private System.Windows.Forms.ComboBox comboBoxBuilding;
+        private System.Windows.Forms.ComboBox comboBoxFaculty;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox comboBoxCenter;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.ComboBox comboBoxLevel;
+        private System.Windows.Forms.TextBox textId;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Button btnEditLocationUC;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Button btnSearchNameID;
+        private System.Windows.Forms.DataGridView dataGridLecStatistic;
+        private System.Windows.Forms.Button btnLecStatSearch01;
+        private System.Windows.Forms.Label lblLecCount;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.ComboBox comboBoxLecName;
     }
 }

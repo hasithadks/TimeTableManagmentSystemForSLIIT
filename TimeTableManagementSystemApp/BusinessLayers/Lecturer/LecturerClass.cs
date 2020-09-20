@@ -38,5 +38,19 @@ namespace BusinessLayers.Lecturer
             this.lLevel = llevel;
             this.lRank = lrank;
         }
+
+        public LecturerClass()
+        {
+            this.id = 0;
+            this.lID = "";
+            this.lName = "";
+            this.lFaculty = "";
+            this.lDepartment = "";
+            this.lCenter = "";
+            this.lBuilding = "";
+            this.lLevel = 0;
+            this.lRank = "";
+
+        }
     }
 }
