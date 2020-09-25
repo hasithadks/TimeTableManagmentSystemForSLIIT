@@ -253,7 +253,7 @@ namespace BusinessLayers.Location
             using (var context = new TimetableManagementSystemEntities2())
             {
 
-                //update
+                //Delete Building
                 var deletingBuilding = context.Buildings.Where(q => q.id == bid).FirstOrDefault();
 
                 if (deletingBuilding != null)
@@ -279,7 +279,7 @@ namespace BusinessLayers.Location
             using (var context = new TimetableManagementSystemEntities2())
             {
 
-                //update
+                //Delete Room
                 var deletingRoom = context.Rooms.Where(q => q.id == rid).FirstOrDefault();
 
                 if (deletingRoom != null)

@@ -9,7 +9,6 @@
     <EntitySet Name="Buildings" EntityType="TimetableManagementSystemModel.Store.Buildings" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="Lecturers" EntityType="TimetableManagementSystemModel.Store.Lecturers" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="Locations" EntityType="TimetableManagementSystemModel.Store.Locations" store:Type="Tables" Schema="dbo" />
-    <EntitySet Name="Locations1" EntityType="TimetableManagementSystemModel.Store.Locations1" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="Programmes" EntityType="TimetableManagementSystemModel.Store.Programmes" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="Rooms" EntityType="TimetableManagementSystemModel.Store.Rooms" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="StudentDetails" EntityType="TimetableManagementSystemModel.Store.StudentDetails" store:Type="Tables" Schema="dbo" />
@@ -51,14 +50,6 @@
     <Property Name="lRank" Type="varchar" Nullable="true" MaxLength="10" />
   </EntityType>
   <EntityType Name="Locations">
-    <Key>
-      <PropertyRef Name="id" />
-    </Key>
-    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="BuildingID" Type="int" Nullable="true" />
-    <Property Name="RoomID" Type="int" Nullable="true" />
-  </EntityType>
-  <EntityType Name="Locations1">
     <Key>
       <PropertyRef Name="id" />
     </Key>
@@ -178,7 +169,6 @@
           <EntitySet Name="Buildings" EntityType="TimetableManagementSystemModel.Building" />
           <EntitySet Name="Lecturers" EntityType="TimetableManagementSystemModel.Lecturer" />
           <EntitySet Name="Locations" EntityType="TimetableManagementSystemModel.Location" />
-          <EntitySet Name="Locations1" EntityType="TimetableManagementSystemModel.Location1" />
           <EntitySet Name="Programmes" EntityType="TimetableManagementSystemModel.Programme" />
           <EntitySet Name="Rooms" EntityType="TimetableManagementSystemModel.Room" />
           <EntitySet Name="StudentDetails" EntityType="TimetableManagementSystemModel.StudentDetail" />
@@ -230,14 +220,6 @@
           <Property Name="RoomID" Type="Int32" />
           <NavigationProperty Name="Building" Relationship="TimetableManagementSystemModel.FK_BuildingIDLocation" FromRole="Location" ToRole="Building" />
           <NavigationProperty Name="Room" Relationship="TimetableManagementSystemModel.FK_RoomIDLocation" FromRole="Location" ToRole="Room" />
-        </EntityType>
-        <EntityType Name="Location1">
-          <Key>
-            <PropertyRef Name="id" />
-          </Key>
-          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="BuildingID" Type="Int32" />
-          <Property Name="RoomID" Type="Int32" />
         </EntityType>
         <EntityType Name="Programme">
           <Key>
@@ -377,15 +359,6 @@
     <EntitySetMapping Name="Locations">
       <EntityTypeMapping TypeName="IsTypeOf(TimetableManagementSystemModel.Location)">
         <MappingFragment StoreEntitySet="Locations">
-          <ScalarProperty Name="id" ColumnName="id" />
-          <ScalarProperty Name="BuildingID" ColumnName="BuildingID" />
-          <ScalarProperty Name="RoomID" ColumnName="RoomID" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="Locations1">
-      <EntityTypeMapping TypeName="IsTypeOf(TimetableManagementSystemModel.Location1)">
-        <MappingFragment StoreEntitySet="Locations1">
           <ScalarProperty Name="id" ColumnName="id" />
           <ScalarProperty Name="BuildingID" ColumnName="BuildingID" />
           <ScalarProperty Name="RoomID" ColumnName="RoomID" />
