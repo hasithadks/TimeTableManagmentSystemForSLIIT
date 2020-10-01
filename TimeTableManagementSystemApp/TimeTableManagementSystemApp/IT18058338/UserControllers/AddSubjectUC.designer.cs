@@ -46,6 +46,8 @@
             this.comboBoxYear = new System.Windows.Forms.ComboBox();
             this.comboBoxSemester = new System.Windows.Forms.ComboBox();
             this.textBoxEvaHours = new System.Windows.Forms.TextBox();
+            this.specializedTxtBox = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // buttonaddlecturer
@@ -54,7 +56,7 @@
             this.buttonaddlecturer.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonaddlecturer.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.buttonaddlecturer.ForeColor = System.Drawing.Color.White;
-            this.buttonaddlecturer.Location = new System.Drawing.Point(657, 498);
+            this.buttonaddlecturer.Location = new System.Drawing.Point(660, 574);
             this.buttonaddlecturer.Name = "buttonaddlecturer";
             this.buttonaddlecturer.Size = new System.Drawing.Size(150, 30);
             this.buttonaddlecturer.TabIndex = 52;
@@ -66,7 +68,7 @@
             // 
             this.labellevel.AutoSize = true;
             this.labellevel.Font = new System.Drawing.Font("Century Gothic", 12F);
-            this.labellevel.Location = new System.Drawing.Point(254, 268);
+            this.labellevel.Location = new System.Drawing.Point(257, 344);
             this.labellevel.Name = "labellevel";
             this.labellevel.Size = new System.Drawing.Size(201, 21);
             this.labellevel.TabIndex = 45;
@@ -76,7 +78,7 @@
             // 
             this.labelfaculty.AutoSize = true;
             this.labelfaculty.Font = new System.Drawing.Font("Century Gothic", 12F);
-            this.labelfaculty.Location = new System.Drawing.Point(254, 166);
+            this.labelfaculty.Location = new System.Drawing.Point(257, 242);
             this.labelfaculty.Name = "labelfaculty";
             this.labelfaculty.Size = new System.Drawing.Size(111, 21);
             this.labelfaculty.TabIndex = 32;
@@ -84,7 +86,7 @@
             // 
             // textBoxName
             // 
-            this.textBoxName.Location = new System.Drawing.Point(525, 67);
+            this.textBoxName.Location = new System.Drawing.Point(528, 143);
             this.textBoxName.Name = "textBoxName";
             this.textBoxName.Size = new System.Drawing.Size(282, 20);
             this.textBoxName.TabIndex = 31;
@@ -94,7 +96,7 @@
             // 
             this.labelname.AutoSize = true;
             this.labelname.Font = new System.Drawing.Font("Century Gothic", 12F);
-            this.labelname.Location = new System.Drawing.Point(254, 64);
+            this.labelname.Location = new System.Drawing.Point(257, 140);
             this.labelname.Name = "labelname";
             this.labelname.Size = new System.Drawing.Size(121, 21);
             this.labelname.TabIndex = 30;
@@ -116,7 +118,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 12F);
-            this.label2.Location = new System.Drawing.Point(253, 115);
+            this.label2.Location = new System.Drawing.Point(256, 191);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(117, 21);
             this.label2.TabIndex = 53;
@@ -124,16 +126,16 @@
             // 
             // textBoxCode
             // 
-            this.textBoxCode.Location = new System.Drawing.Point(525, 118);
+            this.textBoxCode.Location = new System.Drawing.Point(528, 194);
             this.textBoxCode.Name = "textBoxCode";
-            this.textBoxCode.Size = new System.Drawing.Size(100, 20);
+            this.textBoxCode.Size = new System.Drawing.Size(282, 20);
             this.textBoxCode.TabIndex = 54;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 12F);
-            this.label3.Location = new System.Drawing.Point(254, 217);
+            this.label3.Location = new System.Drawing.Point(257, 293);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(145, 21);
             this.label3.TabIndex = 59;
@@ -143,7 +145,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Century Gothic", 12F);
-            this.label4.Location = new System.Drawing.Point(253, 319);
+            this.label4.Location = new System.Drawing.Point(256, 395);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(199, 21);
             this.label4.TabIndex = 62;
@@ -151,16 +153,16 @@
             // 
             // textBoxLecHours
             // 
-            this.textBoxLecHours.Location = new System.Drawing.Point(525, 271);
+            this.textBoxLecHours.Location = new System.Drawing.Point(528, 347);
             this.textBoxLecHours.Name = "textBoxLecHours";
-            this.textBoxLecHours.Size = new System.Drawing.Size(100, 20);
+            this.textBoxLecHours.Size = new System.Drawing.Size(282, 20);
             this.textBoxLecHours.TabIndex = 63;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Century Gothic", 12F);
-            this.label5.Location = new System.Drawing.Point(253, 370);
+            this.label5.Location = new System.Drawing.Point(256, 446);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(171, 21);
             this.label5.TabIndex = 64;
@@ -168,16 +170,16 @@
             // 
             // textBoxTutHours
             // 
-            this.textBoxTutHours.Location = new System.Drawing.Point(525, 322);
+            this.textBoxTutHours.Location = new System.Drawing.Point(528, 398);
             this.textBoxTutHours.Name = "textBoxTutHours";
-            this.textBoxTutHours.Size = new System.Drawing.Size(100, 20);
+            this.textBoxTutHours.Size = new System.Drawing.Size(282, 20);
             this.textBoxTutHours.TabIndex = 65;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Century Gothic", 12F);
-            this.label6.Location = new System.Drawing.Point(253, 421);
+            this.label6.Location = new System.Drawing.Point(256, 497);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(222, 21);
             this.label6.TabIndex = 66;
@@ -185,9 +187,9 @@
             // 
             // textBoxLabHours
             // 
-            this.textBoxLabHours.Location = new System.Drawing.Point(525, 373);
+            this.textBoxLabHours.Location = new System.Drawing.Point(528, 449);
             this.textBoxLabHours.Name = "textBoxLabHours";
-            this.textBoxLabHours.Size = new System.Drawing.Size(100, 20);
+            this.textBoxLabHours.Size = new System.Drawing.Size(282, 20);
             this.textBoxLabHours.TabIndex = 67;
             // 
             // comboBoxYear
@@ -198,9 +200,9 @@
             "2",
             "3",
             "4"});
-            this.comboBoxYear.Location = new System.Drawing.Point(525, 169);
+            this.comboBoxYear.Location = new System.Drawing.Point(528, 245);
             this.comboBoxYear.Name = "comboBoxYear";
-            this.comboBoxYear.Size = new System.Drawing.Size(121, 21);
+            this.comboBoxYear.Size = new System.Drawing.Size(282, 21);
             this.comboBoxYear.TabIndex = 68;
             // 
             // comboBoxSemester
@@ -209,22 +211,42 @@
             this.comboBoxSemester.Items.AddRange(new object[] {
             "1",
             "2"});
-            this.comboBoxSemester.Location = new System.Drawing.Point(525, 220);
+            this.comboBoxSemester.Location = new System.Drawing.Point(528, 296);
             this.comboBoxSemester.Name = "comboBoxSemester";
-            this.comboBoxSemester.Size = new System.Drawing.Size(121, 21);
+            this.comboBoxSemester.Size = new System.Drawing.Size(282, 21);
             this.comboBoxSemester.TabIndex = 69;
             // 
             // textBoxEvaHours
             // 
-            this.textBoxEvaHours.Location = new System.Drawing.Point(525, 424);
+            this.textBoxEvaHours.Location = new System.Drawing.Point(528, 500);
             this.textBoxEvaHours.Name = "textBoxEvaHours";
-            this.textBoxEvaHours.Size = new System.Drawing.Size(100, 20);
+            this.textBoxEvaHours.Size = new System.Drawing.Size(282, 20);
             this.textBoxEvaHours.TabIndex = 70;
+            // 
+            // specializedTxtBox
+            // 
+            this.specializedTxtBox.Location = new System.Drawing.Point(528, 87);
+            this.specializedTxtBox.Name = "specializedTxtBox";
+            this.specializedTxtBox.Size = new System.Drawing.Size(282, 20);
+            this.specializedTxtBox.TabIndex = 72;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Century Gothic", 12F);
+            this.label7.Location = new System.Drawing.Point(257, 84);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(97, 21);
+            this.label7.TabIndex = 71;
+            this.label7.Text = "Specialized";
             // 
             // AddSubjectUC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.specializedTxtBox);
+            this.Controls.Add(this.label7);
             this.Controls.Add(this.textBoxEvaHours);
             this.Controls.Add(this.comboBoxSemester);
             this.Controls.Add(this.comboBoxYear);
@@ -270,5 +292,7 @@
         private System.Windows.Forms.ComboBox comboBoxYear;
         private System.Windows.Forms.ComboBox comboBoxSemester;
         private System.Windows.Forms.TextBox textBoxEvaHours;
+        private System.Windows.Forms.TextBox specializedTxtBox;
+        private System.Windows.Forms.Label label7;
     }
 }

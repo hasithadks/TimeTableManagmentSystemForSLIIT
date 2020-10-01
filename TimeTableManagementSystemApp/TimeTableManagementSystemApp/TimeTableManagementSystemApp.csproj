@@ -45,6 +45,11 @@
     <Reference Include="System">
       <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.dll</HintPath>
     </Reference>
+    <Reference Include="System.Collections.NonGeneric, Version=4.0.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Collections.NonGeneric.4.3.0\lib\net46\System.Collections.NonGeneric.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -59,6 +64,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CommonFiles\CommonClass.cs" />
+    <Compile Include="CommonFiles\ConfirmationBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CommonFiles\ConfirmationBox.Designer.cs">
+      <DependentUpon>ConfirmationBox.cs</DependentUpon>
+    </Compile>
     <Compile Include="CommonFiles\ErrorDialogBox.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -210,6 +221,12 @@
     <Compile Include="IT18058338\UserControllers\ViewSubjectUC.designer.cs">
       <DependentUpon>ViewSubjectUC.cs</DependentUpon>
     </Compile>
+    <Compile Include="IT18063288\Forms\GenerateTimeTable.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IT18063288\Forms\GenerateTimeTable.Designer.cs">
+      <DependentUpon>GenerateTimeTable.cs</DependentUpon>
+    </Compile>
     <Compile Include="IT18063288\Forms\LocationForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -245,6 +262,12 @@
     </Compile>
     <Compile Include="IT18063288\UserControllers\AddSessionsUC.Designer.cs">
       <DependentUpon>AddSessionsUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IT18063288\UserControllers\StudentTimeTableUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="IT18063288\UserControllers\StudentTimeTableUC.Designer.cs">
+      <DependentUpon>StudentTimeTableUC.cs</DependentUpon>
     </Compile>
     <Compile Include="IT18063288\UserControllers\StatisticUC.cs">
       <SubType>UserControl</SubType>
@@ -317,6 +340,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>TimetableManagementSystemDataSet2.xsd</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="CommonFiles\ConfirmationBox.resx">
+      <DependentUpon>ConfirmationBox.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CommonFiles\ErrorDialogBox.resx">
       <DependentUpon>ErrorDialogBox.cs</DependentUpon>
     </EmbeddedResource>
@@ -386,6 +412,9 @@
     <EmbeddedResource Include="IT18058338\UserControllers\ViewSubjectUC.resx">
       <DependentUpon>ViewSubjectUC.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="IT18063288\Forms\GenerateTimeTable.resx">
+      <DependentUpon>GenerateTimeTable.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="IT18063288\Forms\LocationForm.resx">
       <DependentUpon>LocationForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -403,6 +432,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="IT18063288\UserControllers\AddSessionsUC.resx">
       <DependentUpon>AddSessionsUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IT18063288\UserControllers\StudentTimeTableUC.resx">
+      <DependentUpon>StudentTimeTableUC.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="IT18063288\UserControllers\StatisticUC.resx">
       <DependentUpon>StatisticUC.cs</DependentUpon>

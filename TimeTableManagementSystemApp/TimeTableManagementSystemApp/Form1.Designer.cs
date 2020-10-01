@@ -29,28 +29,29 @@
         private void InitializeComponent()
         {
             this.topPanel = new System.Windows.Forms.Panel();
-            this.maxBtn = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.miniBtn = new System.Windows.Forms.PictureBox();
-            this.closeBtn = new System.Windows.Forms.PictureBox();
             this.tagbtn = new System.Windows.Forms.Button();
             this.addStudentBut = new System.Windows.Forms.Button();
             this.daysBtn = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.SubjectBtn = new System.Windows.Forms.Button();
             this.locationManagementBtn = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.StatisticBtn = new System.Windows.Forms.Button();
             this.lecBtn = new System.Windows.Forms.Button();
             this.buttonSessions = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.maxBtn = new System.Windows.Forms.PictureBox();
+            this.miniBtn = new System.Windows.Forms.PictureBox();
+            this.closeBtn = new System.Windows.Forms.PictureBox();
+            this.buttonTimeTable = new System.Windows.Forms.Button();
             this.topPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.maxBtn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.miniBtn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.closeBtn)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // topPanel
@@ -65,16 +66,6 @@
             this.topPanel.Size = new System.Drawing.Size(1286, 40);
             this.topPanel.TabIndex = 3;
             // 
-            // maxBtn
-            // 
-            this.maxBtn.Image = global::TimeTableManagementSystemApp.Properties.Resources.Maxibtn;
-            this.maxBtn.Location = new System.Drawing.Point(1204, 10);
-            this.maxBtn.Name = "maxBtn";
-            this.maxBtn.Size = new System.Drawing.Size(35, 25);
-            this.maxBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.maxBtn.TabIndex = 8;
-            this.maxBtn.TabStop = false;
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -85,27 +76,6 @@
             this.label1.Size = new System.Drawing.Size(265, 25);
             this.label1.TabIndex = 8;
             this.label1.Text = "Time Table Management";
-            // 
-            // miniBtn
-            // 
-            this.miniBtn.Image = global::TimeTableManagementSystemApp.Properties.Resources.minibtn;
-            this.miniBtn.Location = new System.Drawing.Point(1163, 9);
-            this.miniBtn.Name = "miniBtn";
-            this.miniBtn.Size = new System.Drawing.Size(35, 25);
-            this.miniBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.miniBtn.TabIndex = 7;
-            this.miniBtn.TabStop = false;
-            // 
-            // closeBtn
-            // 
-            this.closeBtn.Image = global::TimeTableManagementSystemApp.Properties.Resources.closebtn;
-            this.closeBtn.Location = new System.Drawing.Point(1245, 10);
-            this.closeBtn.Name = "closeBtn";
-            this.closeBtn.Size = new System.Drawing.Size(35, 25);
-            this.closeBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.closeBtn.TabIndex = 9;
-            this.closeBtn.TabStop = false;
-            this.closeBtn.Click += new System.EventHandler(this.closeBtn_Click);
             // 
             // tagbtn
             // 
@@ -195,16 +165,6 @@
             this.locationManagementBtn.UseVisualStyleBackColor = false;
             this.locationManagementBtn.Click += new System.EventHandler(this.button1_Click);
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::TimeTableManagementSystemApp.Properties.Resources.SLIIT;
-            this.pictureBox1.Location = new System.Drawing.Point(1084, 683);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(189, 76);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 8;
-            this.pictureBox1.TabStop = false;
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -283,11 +243,69 @@
             this.buttonSessions.UseVisualStyleBackColor = false;
             this.buttonSessions.Click += new System.EventHandler(this.buttonSessions_Click);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::TimeTableManagementSystemApp.Properties.Resources.SLIIT;
+            this.pictureBox1.Location = new System.Drawing.Point(1084, 683);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(189, 76);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 8;
+            this.pictureBox1.TabStop = false;
+            // 
+            // maxBtn
+            // 
+            this.maxBtn.Image = global::TimeTableManagementSystemApp.Properties.Resources.Maxibtn;
+            this.maxBtn.Location = new System.Drawing.Point(1204, 10);
+            this.maxBtn.Name = "maxBtn";
+            this.maxBtn.Size = new System.Drawing.Size(35, 25);
+            this.maxBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.maxBtn.TabIndex = 8;
+            this.maxBtn.TabStop = false;
+            // 
+            // miniBtn
+            // 
+            this.miniBtn.Image = global::TimeTableManagementSystemApp.Properties.Resources.minibtn;
+            this.miniBtn.Location = new System.Drawing.Point(1163, 9);
+            this.miniBtn.Name = "miniBtn";
+            this.miniBtn.Size = new System.Drawing.Size(35, 25);
+            this.miniBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.miniBtn.TabIndex = 7;
+            this.miniBtn.TabStop = false;
+            // 
+            // closeBtn
+            // 
+            this.closeBtn.Image = global::TimeTableManagementSystemApp.Properties.Resources.closebtn;
+            this.closeBtn.Location = new System.Drawing.Point(1245, 10);
+            this.closeBtn.Name = "closeBtn";
+            this.closeBtn.Size = new System.Drawing.Size(35, 25);
+            this.closeBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.closeBtn.TabIndex = 9;
+            this.closeBtn.TabStop = false;
+            this.closeBtn.Click += new System.EventHandler(this.closeBtn_Click);
+            // 
+            // buttonTimeTable
+            // 
+            this.buttonTimeTable.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(43)))), ((int)(((byte)(104)))));
+            this.buttonTimeTable.FlatAppearance.BorderSize = 0;
+            this.buttonTimeTable.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonTimeTable.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonTimeTable.ForeColor = System.Drawing.Color.White;
+            this.buttonTimeTable.Location = new System.Drawing.Point(854, 234);
+            this.buttonTimeTable.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonTimeTable.Name = "buttonTimeTable";
+            this.buttonTimeTable.Size = new System.Drawing.Size(220, 40);
+            this.buttonTimeTable.TabIndex = 73;
+            this.buttonTimeTable.Text = "TimeTable";
+            this.buttonTimeTable.UseVisualStyleBackColor = false;
+            this.buttonTimeTable.Click += new System.EventHandler(this.buttonTimeTable_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1280, 768);
+            this.Controls.Add(this.buttonTimeTable);
             this.Controls.Add(this.buttonSessions);
             this.Controls.Add(this.lecBtn);
             this.Controls.Add(this.label4);
@@ -308,10 +326,10 @@
             this.Text = "Form1";
             this.topPanel.ResumeLayout(false);
             this.topPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.maxBtn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.miniBtn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.closeBtn)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -336,6 +354,7 @@
         private System.Windows.Forms.Button StatisticBtn;
         private System.Windows.Forms.Button lecBtn;
         private System.Windows.Forms.Button buttonSessions;
+        private System.Windows.Forms.Button buttonTimeTable;
     }
 }
 

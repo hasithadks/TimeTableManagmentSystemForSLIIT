@@ -83,6 +83,60 @@ namespace BusinessLayers.TimeSessions
 
         }
 
+        public TimeSession GetDeleteSession(int sessionID)
+        {
+
+            using (var context = new TimetableManagementSystemEntities2())
+            {
+
+                return context.TimeSessions.Where(q => q.id == sessionID).FirstOrDefault();
+
+                
+            }
+
+
+        }
+
+        public int DeleteSession(int sessionID, int? concecativeSessionID)
+        {
+
+            using (var context = new TimetableManagementSystemEntities2())
+            {
+
+                //Delete Session
+                var deletingSession = context.TimeSessions.Where(q => q.id == sessionID).FirstOrDefault();
+
+                if (deletingSession != null)
+                {
+
+                    if(concecativeSessionID > 0)
+                    {
+                        var deletingSession02 = context.TimeSessions.Where(q => q.id == concecativeSessionID).FirstOrDefault();
+
+                        if(deletingSession02 != null)
+                        {
+                            context.TimeSessions.Remove(deletingSession02);
+                            context.SaveChanges();
+                        }
+                        
+                    }
+
+                    context.TimeSessions.Remove(deletingSession);
+                    context.SaveChanges();
+                    return 1;
+                }
+                else
+                {
+                    return 0;
+                }
+
+
+            }
+
+
+        }
+
+
         public List<TimeSession> GetLocationNotAddedTimeSessions()
         {
 

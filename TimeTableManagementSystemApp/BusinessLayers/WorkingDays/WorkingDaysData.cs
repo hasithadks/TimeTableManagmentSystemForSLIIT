@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -44,6 +45,17 @@ namespace BusinessLayers.WorkingDays
             {
 
                 List<workingDaysAndHour> multiple = context.workingDaysAndHours.ToList();
+                return multiple;
+            }
+        }
+
+        public workingDaysAndHour SelectWorkingDay(int id)
+        {
+
+            using (var context = new TimetableManagementSystemEntities2())
+            {
+
+                workingDaysAndHour multiple = context.workingDaysAndHours.Where(q => q.Id == id).FirstOrDefault();
                 return multiple;
             }
         }

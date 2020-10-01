@@ -9,7 +9,7 @@ namespace BusinessLayers.Subject
 {
     class SubjectData
     {
-        public int SaveSubjectData(string scode,string sname,int offyear,int offsemester,int lechours,int tuthours,int labhours,int evahours)
+        public int SaveSubjectData(string specialized, string scode,string sname,int offyear,int offsemester,int lechours,int tuthours,int labhours,int evahours)
         {
             int id = 0;
 
@@ -25,7 +25,8 @@ namespace BusinessLayers.Subject
                     lecHours = lechours,
                     tutHours = tuthours,
                     labHours = labhours,
-                    evaHours = evahours
+                    evaHours = evahours,
+                    specialization = specialized
                 };
                 context.Subjects.Add(subject);
                 context.SaveChanges();

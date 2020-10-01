@@ -59,6 +59,7 @@
             this.label14 = new System.Windows.Forms.Label();
             this.comboBoxGroup = new System.Windows.Forms.ComboBox();
             this.buttonSearchView = new System.Windows.Forms.Button();
+            this.buttonDeleteSession = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.DataGridSessions)).BeginInit();
             this.SuspendLayout();
             // 
@@ -437,11 +438,28 @@
             this.buttonSearchView.UseVisualStyleBackColor = false;
             this.buttonSearchView.Click += new System.EventHandler(this.buttonSearchView_Click);
             // 
+            // buttonDeleteSession
+            // 
+            this.buttonDeleteSession.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(43)))), ((int)(((byte)(104)))));
+            this.buttonDeleteSession.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.buttonDeleteSession.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonDeleteSession.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonDeleteSession.ForeColor = System.Drawing.Color.White;
+            this.buttonDeleteSession.Location = new System.Drawing.Point(849, 358);
+            this.buttonDeleteSession.Margin = new System.Windows.Forms.Padding(0);
+            this.buttonDeleteSession.Name = "buttonDeleteSession";
+            this.buttonDeleteSession.Size = new System.Drawing.Size(176, 36);
+            this.buttonDeleteSession.TabIndex = 79;
+            this.buttonDeleteSession.Text = "Delete Session";
+            this.buttonDeleteSession.UseVisualStyleBackColor = false;
+            this.buttonDeleteSession.Click += new System.EventHandler(this.buttonDeleteSession_Click);
+            // 
             // ViewSessionsUC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.buttonDeleteSession);
             this.Controls.Add(this.buttonSearchView);
             this.Controls.Add(this.comboBoxGroup);
             this.Controls.Add(this.label14);
@@ -513,5 +531,6 @@
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.ComboBox comboBoxGroup;
         private System.Windows.Forms.Button buttonSearchView;
+        private System.Windows.Forms.Button buttonDeleteSession;
     }
 }

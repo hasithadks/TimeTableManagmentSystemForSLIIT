@@ -102,5 +102,16 @@ namespace BusinessLayers.TimeSessions
             return sessionData.GetTimeSessionsAssignGroupListed(group);
         }
 
+        public TimeSession GetDeleteSession(int sessionID)
+        {
+            SessionData sessionData = new SessionData();
+            return sessionData.GetDeleteSession(sessionID);
+        }
+
+        public int DeleteSession(int sessionID, int? concecativeSessionID)
+        {
+            SessionData sessionData = new SessionData();
+            return sessionData.DeleteSession(sessionID, concecativeSessionID);
+        }
     }
 }

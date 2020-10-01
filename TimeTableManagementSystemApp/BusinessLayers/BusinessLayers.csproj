@@ -75,6 +75,7 @@
     <Compile Include="TimeSessions\SessionBO.cs" />
     <Compile Include="TimeSessions\SessionController.cs" />
     <Compile Include="TimeSessions\SessionData.cs" />
+    <Compile Include="TimeSessions\SlotsList.cs" />
     <Compile Include="WorkingDays\WorkingDaysClass.cs" />
     <Compile Include="WorkingDays\WorkingDaysController.cs" />
     <Compile Include="WorkingDays\WorkingDaysData.cs" />

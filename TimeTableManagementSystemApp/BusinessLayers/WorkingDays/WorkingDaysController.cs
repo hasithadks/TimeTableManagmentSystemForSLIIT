@@ -23,6 +23,14 @@ namespace BusinessLayers.WorkingDays
             return workingDaysData.getAllWorkingDayData();
         }
 
+
+        public workingDaysAndHour SelectWorkingDay(int id)
+        {
+            workingDaysData = new WorkingDaysData();
+            return workingDaysData.SelectWorkingDay(id);
+        }
+
+
         public void UpdateWorkingDays(WorkingDaysClass workingDaysClass)
         {
             workingDaysData = new WorkingDaysData();

@@ -76,6 +76,7 @@
           <Property Name="tutHours" Type="int" />
           <Property Name="labHours" Type="int" />
           <Property Name="evaHours" Type="int" />
+          <Property Name="specialization" Type="varchar" MaxLength="150" />
         </EntityType>
         <EntityType Name="Tags">
           <Key>
@@ -290,6 +291,7 @@
           <Property Name="tutHours" Type="Int32" />
           <Property Name="labHours" Type="Int32" />
           <Property Name="evaHours" Type="Int32" />
+          <Property Name="specialization" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
         </EntityType>
         <EntityType Name="Tag">
           <Key>
@@ -448,6 +450,7 @@
           <EntitySetMapping Name="Subjects">
             <EntityTypeMapping TypeName="TimetableManagementSystemModel.Subject">
               <MappingFragment StoreEntitySet="Subjects">
+                <ScalarProperty Name="specialization" ColumnName="specialization" />
                 <ScalarProperty Name="evaHours" ColumnName="evaHours" />
                 <ScalarProperty Name="labHours" ColumnName="labHours" />
                 <ScalarProperty Name="tutHours" ColumnName="tutHours" />

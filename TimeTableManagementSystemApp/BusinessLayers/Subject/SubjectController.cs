@@ -10,10 +10,10 @@ namespace BusinessLayers.Subject
     {
         private SubjectData subjectData;
 
-        public int saveSubject(string scode, string sname, int offyear, int offsemester, int lechours, int tuthours, int labhours, int evahours) 
+        public int saveSubject(string specialized, string scode, string sname, int offyear, int offsemester, int lechours, int tuthours, int labhours, int evahours) 
         {
             subjectData = new SubjectData();
-            int id = subjectData.SaveSubjectData(scode,sname,offyear,offsemester,lechours,tuthours,labhours,evahours);
+            int id = subjectData.SaveSubjectData(specialized,scode, sname,offyear,offsemester,lechours,tuthours,labhours,evahours);
 
             return id;
         }

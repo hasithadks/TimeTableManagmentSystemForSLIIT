@@ -23,5 +23,6 @@ namespace DataLayer
         public Nullable<int> tutHours { get; set; }
         public Nullable<int> labHours { get; set; }
         public Nullable<int> evaHours { get; set; }
+        public string specialization { get; set; }
     }
 }

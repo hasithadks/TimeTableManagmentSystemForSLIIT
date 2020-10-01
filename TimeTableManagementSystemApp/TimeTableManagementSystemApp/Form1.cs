@@ -81,5 +81,12 @@ namespace TimeTableManagementSystemApp
             SessionsForm att = new SessionsForm();
             att.Show();
         }
+
+        private void buttonTimeTable_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            GenerateTimeTable att = new GenerateTimeTable();
+            att.Show();
+        }
     }
 }

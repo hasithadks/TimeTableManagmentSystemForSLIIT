@@ -33,7 +33,7 @@ namespace TimeTableManagementSystemApp.IT18058338.UserControllers
         private void buttonaddlecturer_Click(object sender, EventArgs e)
         {
             subjectController = new SubjectController();
-
+            string specialized = specializedTxtBox.Text;
             string scode = textBoxCode.Text;
             string sname = textBoxName.Text;
             int offyear = Convert.ToInt32(comboBoxYear.Text);
@@ -43,7 +43,7 @@ namespace TimeTableManagementSystemApp.IT18058338.UserControllers
             int labhours = Convert.ToInt32(textBoxLabHours.Text);
             int evahours = Convert.ToInt32(textBoxEvaHours.Text);
 
-            subjectController.saveSubject(scode,sname,offyear,offsemester,lechours,tuthours,labhours,evahours);
+            subjectController.saveSubject(specialized,scode, sname,offyear,offsemester,lechours,tuthours,labhours,evahours);
 
             MessageBox.Show("New Subject Added Successfully", "Saved", MessageBoxButtons.OK, MessageBoxIcon.Information);
 

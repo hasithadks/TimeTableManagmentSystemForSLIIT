@@ -33,11 +33,13 @@ namespace TimeTableManagementSystemApp.IT18063288.UserControllers
             SetSubjectstoDropDown();
             setTagsDropDown();
             setDropdownToDefault();
+            lecturerCount = 0;
         }
 
         private void btnCreateSession_Click(object sender, EventArgs e)
         {
-            if(Lecturer01.Text == "")
+            lecturerCount = 0;
+            if (Lecturer01.Text == "")
             {
                 ErrorDialogBox.ShowDialog("Please Add atleast one Lecturer.", "Warning!!!");
             }

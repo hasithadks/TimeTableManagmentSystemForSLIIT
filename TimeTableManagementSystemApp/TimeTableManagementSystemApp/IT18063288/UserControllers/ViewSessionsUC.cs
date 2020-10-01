@@ -44,7 +44,7 @@ namespace TimeTableManagementSystemApp.IT18063288.UserControllers
 
             if (SessionDetailsall.Count == 0)
             {
-                ErrorDialogBox.ShowDialog("No Records Found! \nPlease Add Sessions to the System.", "Sorry!!!");
+                ErrorDialogBox.ShowDialog("Session Table is Empty! \nPlease Add Sessions to the System.", "Informaton!!!");
             }
             DataGridSessions.DataSource = SessionDetailsall;
 
@@ -169,7 +169,7 @@ namespace TimeTableManagementSystemApp.IT18063288.UserControllers
             {
                 SuccessfullMessageBox.ShowDialog("Consecutive Sessions Created Successfully.", "Successfully!!!");
             }
-
+            sessionCount = 1;
             setSessionTextEmpty();
             setVisibleSession01False();
             setVisibleSession02False();
@@ -287,6 +287,47 @@ namespace TimeTableManagementSystemApp.IT18063288.UserControllers
             comboBoxGroup.ValueMember = "Key";
             comboBoxGroup.DisplayMember = "Value";
             comboBoxGroup.SelectedIndex = -1;
+        }
+
+        private void buttonDeleteSession_Click(object sender, EventArgs e)
+        {
+
+            int sessionID = int.Parse(DataGridSessions.SelectedRows[0].Cells[0].Value.ToString());
+
+            //ConfirmationBox.ShowDialog("Do You want to Delete " + sessionID + " Record??", "Confirmation!!!");
+            SessionController sessionController = new SessionController();
+            TimeSession Session = sessionController.GetDeleteSession(sessionID);
+
+            if(Session.sConsecutiveSessionID > 0)
+            {
+                ConfirmationBox.ShowDialog("Ther is Consecutive Session. This Consecutive SessionID(" + Session.sConsecutiveSessionID + ")\nWill Delete by system. ", "Information!!!");
+                int id = sessionController.DeleteSession(sessionID, Session.sConsecutiveSessionID);
+                if(id > 0)
+                {
+                    SuccessfullMessageBox.ShowDialog("Both Sessions Delete successfully!!!", "Success!!!");
+                    setDataGrid();
+                }
+                else
+                {
+                    ErrorDialogBox.ShowDialog("Failed to Delete Sessions!!! please Try again.", "Warning!!!");
+                }
+            }
+            else
+            {
+                int id = sessionController.DeleteSession(sessionID, Session.sConsecutiveSessionID);
+
+                if (id > 0)
+                {
+                    SuccessfullMessageBox.ShowDialog("Session Delete successfully!!!", "Success!!!");
+                    setDataGrid();
+                }
+                else
+                {
+                    ErrorDialogBox.ShowDialog("Failed to Delete Session!!! please Try again.", "Warning!!!");
+                }
+            }
+
+
         }
     }
 }
