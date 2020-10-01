@@ -44,5 +44,7 @@ namespace BusinessLayers.Lecturer
             lecturerData = new LecturerData();
             lecturerData.DeleteLecturerData(lecturer);
         }
+
+
     }
 }

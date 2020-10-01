@@ -49,7 +49,15 @@ namespace BusinessLayers.Location
             locationData = new LocationData();
 
             return locationData.GetAllRoomDetails(buildingID);
+            
+        }
 
+        public List<Room> GetAllRoomsAccordingtostudentCount(int stdCount, string tag)
+        {
+            locationData = new LocationData();
+
+            return locationData.GetAllRoomsAccordingtostudentCount(stdCount, tag);
+            
         }
 
         public LocationBO GetRoomDetails(int RoomID)

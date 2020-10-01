@@ -84,5 +84,15 @@ namespace BusinessLayers.Subject
                 //}
             }
         }
+
+        public List<DataLayer.Subject> getAllSubjectsMatchToYearAndSem(int year, int sem)
+        {
+            using (var context = new TimetableManagementSystemEntities2())
+            {
+                //View
+                List<DataLayer.Subject> multiple = context.Subjects.Where(q => q.offYear == year && q.offSemester == sem).ToList();
+                return multiple;
+            }
+        }
     }
 }

@@ -84,6 +84,7 @@
             this.panelContent.Name = "panelContent";
             this.panelContent.Size = new System.Drawing.Size(1040, 720);
             this.panelContent.TabIndex = 2;
+            
             // 
             // btnAddLocation
             // 
@@ -147,7 +148,7 @@
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(218, 100);
             this.panel4.TabIndex = 10;
-            // 
+            
             // panelLeft
             // 
             this.panelLeft.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(43)))), ((int)(((byte)(104)))));
@@ -163,6 +164,7 @@
             this.panelLeft.Size = new System.Drawing.Size(10, 40);
             this.panelLeft.TabIndex = 3;
             this.panelLeft.UseVisualStyleBackColor = false;
+            
             // 
             // homeBtn
             // 
@@ -190,6 +192,7 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(10, 780);
             this.panel3.TabIndex = 13;
+            
             // 
             // label1
             // 
@@ -201,6 +204,7 @@
             this.label1.Size = new System.Drawing.Size(265, 25);
             this.label1.TabIndex = 8;
             this.label1.Text = "Time Table Management";
+            
             // 
             // topPanel
             // 
@@ -213,6 +217,7 @@
             this.topPanel.Name = "topPanel";
             this.topPanel.Size = new System.Drawing.Size(1062, 40);
             this.topPanel.TabIndex = 9;
+           
             // 
             // pictureBox2
             // 
@@ -233,7 +238,7 @@
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox3.TabIndex = 7;
             this.pictureBox3.TabStop = false;
-            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
+           
             // 
             // pictureBox4
             // 
@@ -277,6 +282,7 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 8;
             this.pictureBox1.TabStop = false;
+            
             // 
             // LocationForm
             // 

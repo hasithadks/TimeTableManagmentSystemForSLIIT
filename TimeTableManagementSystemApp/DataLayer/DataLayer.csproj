@@ -79,6 +79,9 @@
     <Compile Include="Subject.cs">
       <DependentUpon>TimeTabelModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="TimeSession.cs">
+      <DependentUpon>TimeTabelModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="TimeTabelModel.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

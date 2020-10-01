@@ -35,5 +35,11 @@ namespace BusinessLayers.Subject
             subjectData = new SubjectData();
             subjectData.DeleteSubjectData(subject);
         }
+
+        public List<DataLayer.Subject> getAllSubjectsMatchToYearAndSem(int year, int sem)
+        {
+            subjectData = new SubjectData();
+            return subjectData.getAllSubjectsMatchToYearAndSem(year, sem);
+        }
     }
 }

@@ -33,6 +33,7 @@ namespace DataLayer
         public virtual DbSet<StudentDetail> StudentDetails { get; set; }
         public virtual DbSet<Subject> Subjects { get; set; }
         public virtual DbSet<Tag> Tags { get; set; }
+        public virtual DbSet<TimeSession> TimeSessions { get; set; }
         public virtual DbSet<workingDaysAndHour> workingDaysAndHours { get; set; }
     }
 }

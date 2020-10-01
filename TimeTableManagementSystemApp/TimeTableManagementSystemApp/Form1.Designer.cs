@@ -45,6 +45,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.StatisticBtn = new System.Windows.Forms.Button();
             this.lecBtn = new System.Windows.Forms.Button();
+            this.buttonSessions = new System.Windows.Forms.Button();
             this.topPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.maxBtn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.miniBtn)).BeginInit();
@@ -266,11 +267,28 @@
             this.lecBtn.UseVisualStyleBackColor = false;
             this.lecBtn.Click += new System.EventHandler(this.lecBtn_Click);
             // 
+            // buttonSessions
+            // 
+            this.buttonSessions.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(43)))), ((int)(((byte)(104)))));
+            this.buttonSessions.FlatAppearance.BorderSize = 0;
+            this.buttonSessions.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonSessions.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonSessions.ForeColor = System.Drawing.Color.White;
+            this.buttonSessions.Location = new System.Drawing.Point(945, 122);
+            this.buttonSessions.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonSessions.Name = "buttonSessions";
+            this.buttonSessions.Size = new System.Drawing.Size(220, 40);
+            this.buttonSessions.TabIndex = 72;
+            this.buttonSessions.Text = "Sessions";
+            this.buttonSessions.UseVisualStyleBackColor = false;
+            this.buttonSessions.Click += new System.EventHandler(this.buttonSessions_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1280, 768);
+            this.Controls.Add(this.buttonSessions);
             this.Controls.Add(this.lecBtn);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label2);
@@ -317,6 +335,7 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button StatisticBtn;
         private System.Windows.Forms.Button lecBtn;
+        private System.Windows.Forms.Button buttonSessions;
     }
 }
 

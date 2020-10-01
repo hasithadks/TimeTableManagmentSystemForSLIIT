@@ -142,6 +142,35 @@ namespace BusinessLayers.Location
 
 
         }
+        public List<Room> GetAllRoomsAccordingtostudentCount(int stdCount, string tag)
+        {
+
+            using (var context = new TimetableManagementSystemEntities2())
+            {
+                //Room Types 
+                //    1- LectureHall
+                //    2- Lab
+
+                int type = 0;
+                if(tag == "Lecture" || tag == "Tutorial")
+                {
+                    type = 1;
+                }
+                else if(tag == "Practical")
+                {
+                    type = 2;
+                }
+
+                List<Room> multiple = context.Rooms.Where(q => q.Capacity > stdCount && q.RoomType == type).ToList();
+
+
+
+                return multiple;
+            }
+
+
+        }
+
 
 
         public LocationBO GetRoomDetails(int RoomID)

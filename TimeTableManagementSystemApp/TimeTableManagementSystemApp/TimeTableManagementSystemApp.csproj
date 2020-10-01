@@ -216,17 +216,35 @@
     <Compile Include="IT18063288\Forms\LocationForm.Designer.cs">
       <DependentUpon>LocationForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="IT18063288\Forms\SessionsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IT18063288\Forms\SessionsForm.Designer.cs">
+      <DependentUpon>SessionsForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="IT18063288\Forms\Statistics.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="IT18063288\Forms\Statistics.Designer.cs">
       <DependentUpon>Statistics.cs</DependentUpon>
     </Compile>
+    <Compile Include="IT18063288\UserControllers\AddLocationToSessionUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="IT18063288\UserControllers\AddLocationToSessionUC.Designer.cs">
+      <DependentUpon>AddLocationToSessionUC.cs</DependentUpon>
+    </Compile>
     <Compile Include="IT18063288\UserControllers\AddLocationUC.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="IT18063288\UserControllers\AddLocationUC.Designer.cs">
       <DependentUpon>AddLocationUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IT18063288\UserControllers\AddSessionsUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="IT18063288\UserControllers\AddSessionsUC.Designer.cs">
+      <DependentUpon>AddSessionsUC.cs</DependentUpon>
     </Compile>
     <Compile Include="IT18063288\UserControllers\StatisticUC.cs">
       <SubType>UserControl</SubType>
@@ -275,6 +293,12 @@
     </Compile>
     <Compile Include="IT18063288\UserControllers\ViewLocationUC.Designer.cs">
       <DependentUpon>ViewLocationUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IT18063288\UserControllers\ViewSessionsUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="IT18063288\UserControllers\ViewSessionsUC.Designer.cs">
+      <DependentUpon>ViewSessionsUC.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -365,11 +389,20 @@
     <EmbeddedResource Include="IT18063288\Forms\LocationForm.resx">
       <DependentUpon>LocationForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="IT18063288\Forms\SessionsForm.resx">
+      <DependentUpon>SessionsForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="IT18063288\Forms\Statistics.resx">
       <DependentUpon>Statistics.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="IT18063288\UserControllers\AddLocationToSessionUC.resx">
+      <DependentUpon>AddLocationToSessionUC.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="IT18063288\UserControllers\AddLocationUC.resx">
       <DependentUpon>AddLocationUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IT18063288\UserControllers\AddSessionsUC.resx">
+      <DependentUpon>AddSessionsUC.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="IT18063288\UserControllers\StatisticUC.resx">
       <DependentUpon>StatisticUC.cs</DependentUpon>
@@ -394,6 +427,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="IT18063288\UserControllers\ViewLocationUC.resx">
       <DependentUpon>ViewLocationUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IT18063288\UserControllers\ViewSessionsUC.resx">
+      <DependentUpon>ViewSessionsUC.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -454,7 +490,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BusinessLayers\BusinessLayers.csproj">
-      <Project>{2A5C5AAC-9032-4CA5-AA39-7E186585B03A}</Project>
+      <Project>{2a5c5aac-9032-4ca5-aa39-7e186585b03a}</Project>
       <Name>BusinessLayers</Name>
     </ProjectReference>
     <ProjectReference Include="..\DataLayer\DataLayer.csproj">

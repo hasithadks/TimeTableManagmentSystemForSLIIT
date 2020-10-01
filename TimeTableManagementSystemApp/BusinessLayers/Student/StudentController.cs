@@ -26,6 +26,14 @@ namespace BusinessLayers.Student
             return studentData.GetAllStudents();
         }
 
+        public List<DataLayer.StudentDetail> GetAllStudentGroups()
+        {
+            studentData = new StudentData();
+
+            return studentData.GetAllStudentGroups();
+        }
+        
+
         public void updateStudentDetails(StudentModel student)
         {
             studentData = new StudentData();
@@ -37,6 +45,13 @@ namespace BusinessLayers.Student
         {
             studentData = new StudentData();
             studentData.DeleteStudentDetailsInDatabase(student);
+        }
+
+        public List<DataLayer.StudentDetail> SelectStudentsYearAndSem(string text)
+        {
+            studentData = new StudentData();
+
+            return studentData.SelectStudentsYearAndSem(text);
         }
     }
 }

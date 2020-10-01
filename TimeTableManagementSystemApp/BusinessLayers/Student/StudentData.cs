@@ -44,6 +44,41 @@ namespace BusinessLayers.Student
 
         }
 
+        public List<DataLayer.StudentDetail> GetAllStudentGroups()
+        {
+            using (var context = new TimetableManagementSystemEntities2())
+            {
+                List<StudentDetail> distinctPeople = context.StudentDetails
+                .GroupBy(p => new { p.GroupNumber, p.GroupId })
+                .Select(g => g.FirstOrDefault())
+                .ToList();
+
+                return distinctPeople;
+            }
+
+
+        }
+
+
+        public List<DataLayer.StudentDetail> SelectStudentsYearAndSem(string text)
+        {
+            using (var context = new TimetableManagementSystemEntities2())
+            {
+                //List<DataLayer.StudentDetail> multiple = context.StudentDetails.Where(q => q.AcademicYearSemester == text).Distinct().ToList();
+                //List<DataLayer.StudentDetail> multiple = context.StudentDetails.Distinct().Where(q => q.AcademicYearSemester == text).ToList();
+
+                List<StudentDetail> distinctPeople = context.StudentDetails
+                .GroupBy(p => new { p.GroupNumber, p.GroupId })
+                .Select(g => g.FirstOrDefault())
+                .Where(q => q.AcademicYearSemester == text)
+                .ToList();
+
+                return distinctPeople;
+            }
+
+
+        }
+
         public void UpdateStudentInDatabase(StudentModel studentModel)
         {
             using (var context = new TimetableManagementSystemEntities2())

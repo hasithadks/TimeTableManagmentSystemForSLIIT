@@ -74,5 +74,12 @@ namespace TimeTableManagementSystemApp
             Statistics statistics = new Statistics();
             statistics.Show();
         }
+
+        private void buttonSessions_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            SessionsForm att = new SessionsForm();
+            att.Show();
+        }
     }
 }

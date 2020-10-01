@@ -72,6 +72,9 @@
     <Compile Include="Subject\SubjectClass.cs" />
     <Compile Include="Subject\SubjectController.cs" />
     <Compile Include="Subject\SubjectData.cs" />
+    <Compile Include="TimeSessions\SessionBO.cs" />
+    <Compile Include="TimeSessions\SessionController.cs" />
+    <Compile Include="TimeSessions\SessionData.cs" />
     <Compile Include="WorkingDays\WorkingDaysClass.cs" />
     <Compile Include="WorkingDays\WorkingDaysController.cs" />
     <Compile Include="WorkingDays\WorkingDaysData.cs" />
