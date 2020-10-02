@@ -23,7 +23,16 @@ namespace BusinessLayers.TimeSessions
         {
             for (int i = 0; i < slots.Length; i++)
             {
-                slots[i] = -1;
+
+                if(slots.Length/2 == i)
+                {
+                    slots[i] = -99;
+                }
+                else
+                {
+                    slots[i] = -1;
+                }
+               
             }
 
 
